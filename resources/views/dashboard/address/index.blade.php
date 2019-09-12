@@ -10,20 +10,23 @@
 @section('content')
 
 <div class="container">
+
+  @if (session('success'))
+ <div class="alert alert-success">
+     {{ session('success') }}
+ </div>
+ @endif
+
+ @if (session('update'))
+<div class="alert alert-success">
+    {{ session('update') }}
+</div>
+@endif
+
   <div class="row">
 
-    @if (session('success'))
-   <div class="alert alert-success">
-       {{ session('success') }}
-   </div>
-   @endif
 
-   @if (session('update'))
-  <div class="alert alert-success">
-      {{ session('update') }}
-  </div>
-  @endif
-  
+
     <div class="col-lg-6">
 
 
@@ -36,6 +39,12 @@
               <div class="form-group">
                 <label class="form-label">Address</label>
                 <textarea class="form-control" name="address" rows="3" placeholder="Address.."></textarea>
+              </div>
+
+
+              <div class="form-group">
+                <label class="form-label">Map</label>
+                <textarea class="form-control" name="map" rows="3" placeholder="Map.."></textarea>
               </div>
 
 
@@ -101,6 +110,7 @@
 												<tr>
 													<th>Action</th>
 													<th>address</th>
+													<th>map</th>
 													<th>phone</th>
 													<th>mobile</th>
 													<th>email1</th>
@@ -122,6 +132,7 @@
                             <a href="{{ url('/admin/edit_address') }}/{{ $address->id }}" class="btn-sm btn-primary">Edit</a>
                           </th>
                           <td>{{ Str::limit($address->address,6) }}</td>
+                          <td>{{ Str::limit($address->map,6) }}</td>
                           <td>{{ Str::limit($address->phone,8) }}</td>
                           <td>{{ Str::limit($address->mobile,8) }}</td>
                           <td>{{ Str::limit($address->email1,8) }}</td>

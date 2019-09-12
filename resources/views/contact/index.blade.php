@@ -28,7 +28,9 @@ Contact
 
 <!-- map -->
 <div class="xs-map">
-    <div id="xs-map"></div>
+    <!-- <div id="xs-map"></div> -->
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.8530525899987!2d90.40053811498342!3d23.85935128453583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c432847eacf7%3A0xd02f082dce6d913!2sXubisoft%20Ltd.!5e0!3m2!1sen!2sbd!4v1568285563570!5m2!1sen!2sbd" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
 </div><!-- End map -->
 
 <!-- agency contact section -->
@@ -36,36 +38,43 @@ Contact
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="contact-info-wraper">
-                    <ul class="contact-info-list">
-                        <li>
-                            <i class="icon icon-map-marker2"></i>
-                            <div class="list-content">
-                                <a href="https://www.google.com/maps/place/Baker+St,+Marylebone,+London,+UK/@51.5206114,-0.1589883,17z/data=!3m1!4b1!4m5!3m4!1s0x48761ace9a2e67d7:0xd458de8d0fdc498e!8m2!3d51.5206114!4d-0.1567996" target="_blank">155 Mark Street, Dixon Avenue New York, NY-45845</a>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="icon icon-phone3"></i>
-                            <div class="list-content">
-                                <a href="tel:+1%20(254)%20587-2548">+1 (254) 587-2548</a>
-                                <a href="tel:+1%20(548)%20215-3658">+1(548) 215-3658</a>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="icon icon-envelope2"></i>
-                            <div class="list-content">
-                                <a href="mailto:info@website.com">info@website.com</a>
-                                <a href="mailto:query@website.com">query@website.com</a>
-                            </div>
-                        </li>
-                    </ul><!-- .contact-info-list END -->
-                    <ul class="social-list version-2">
-                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                </div><!-- .contact-info-wraper END -->
+
+@foreach($addressess as $address)
+
+<div class="contact-info-wraper">
+		<ul class="contact-info-list">
+				<li>
+						<i class="icon icon-map-marker2"></i>
+						<div class="list-content">
+								<a href="https://goo.gl/maps/QJyb48gb1RVkqV3Q8" target="_blank">{{ $address->address }}</a>
+						</div>
+				</li>
+				<li>
+						<i class="icon icon-phone3"></i>
+						<div class="list-content">
+								<a href="{{ $address->phone }}">{{ $address->phone }}</a>
+								<a href="{{ $address->mobile }}">{{ $address->mobile }}</a>
+						</div>
+				</li>
+				<li>
+						<i class="icon icon-envelope2"></i>
+						<div class="list-content">
+								<a href="{{ $address->email1 }}">{{ $address->email1 }}</a>
+								<a href="{{ $address->email2 }}">{{ $address->email2 }}</a>
+						</div>
+				</li>
+		</ul><!-- .contact-info-list END -->
+		<ul class="social-list version-2">
+				<li><a href="{{ $address->facebook }}" class="facebook"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="{{ $address->twitter }}" class="twitter"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="{{ $address->linkedin }}" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+				<li><a href="{{ $address->youtube }}" class="youtube"><i class="fa fa-youtube"></i></a></li>
+		</ul>
+</div><!-- .contact-info-wraper END -->
+
+@endforeach
+
+
             </div>
             <div class="col-md-8">
 
@@ -115,142 +124,4 @@ Contact
     </div><!-- .container END -->
 </div><!-- agency contact section end -->
 
-<!-- language switcher strart -->
-<!-- xs modal -->
-<div class="zoom-anim-dialog mfp-hide modal-language" id="modal-popup-1">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="language-content">
-                <p>Switch The Language</p>
-                <ul class="flag-lists">
-                    <li><a href="#"><img src="assets/images/flags/006-united-states.svg" alt=""><span>English</span></a></li>
-                    <li><a href="#"><img src="assets/images/flags/002-canada.svg" alt=""><span>English</span></a></li>
-                    <li><a href="#"><img src="assets/images/flags/003-vietnam.svg" alt=""><span>Vietnamese</span></a></li>
-                    <li><a href="#"><img src="assets/images/flags/004-france.svg" alt=""><span>French</span></a></li>
-                    <li><a href="#"><img src="assets/images/flags/005-germany.svg" alt=""><span>German</span></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div><!-- End xs modal --><!-- end language switcher strart -->
-
-<!-- search panel strart -->
-<!-- xs modal -->
-<div class="zoom-anim-dialog mfp-hide modal-searchPanel" id="modal-popup-2">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="xs-search-panel">
-                <form action="#" method="POST" class="xs-search-group">
-                    <input type="search" class="form-control" name="search" id="search" placeholder="Search">
-                    <button type="submit" class="search-button"><i class="icon icon-search"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div><!-- End xs modal --><!-- end search panel strart -->
-
-<!-- offset cart strart -->
-<!-- sidebar cart item -->
-<div class="xs-sidebar-group cart-group">
-    <div class="xs-overlay black-bg"></div>
-    <div class="xs-sidebar-widget">
-        <div class="sidebar-widget-container">
-            <div class="widget-heading media">
-                <div class="media-body">
-                    <a href="#" class="close-side-widget">
-                        X
-                    </a>
-                </div>
-            </div>
-            <div class="xs-empty-content">
-                <h3 class="widget-title">Shopping cart</h3>
-                <h4 class="xs-title">No products in the cart.</h4>
-                <p class="empty-cart-icon">
-                    <i class="icon icon-shopping-cart"></i>
-                </p>
-                <p class="xs-btn-wraper">
-                    <a class="btn btn-primary" href="shop.html">Return To Shop</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>    <!-- END sidebar cart item -->    <!-- END offset cart strart -->
-
-<!-- offset cart strart -->
-<!-- sidebar cart item -->
-<div class="xs-sidebar-group info-group">
-    <div class="xs-overlay black-bg"></div>
-    <div class="xs-sidebar-widget">
-        <div class="sidebar-widget-container">
-            <div class="widget-heading">
-                <a href="#" class="close-side-widget">
-                    <i class="icon icon-cross"></i>
-                </a>
-            </div>
-            <div class="sidebar-textwidget">
-                <div class="sidebar-logo-wraper">
-                    <a href="index.html">
-                        <img src="assets/images/color-logo.png" alt="sidebar logo">
-                    </a>
-                </div>
-                <p>Far far away, behind the word moun tains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of  </p>
-                <ul class="sideabr-list-widget">
-                    <li>
-                        <div class="media">
-                            <div class="d-flex">
-                                <img src="assets/images/location.png" alt="">
-                            </div>
-                            <div class="media-body">
-                                <p>759 Pinewood Avenue</p>
-                                <span>Marquette, Michigan</span>
-                            </div>
-                        </div><!-- address 1 -->
-                    </li>
-                    <li>
-                        <div class="media">
-                            <div class="d-flex">
-                                <img src="assets/images/mail.png" alt="">
-                            </div>
-                            <div class="media-body">
-                                <a href="mailto:info@domain.com">info@domain.com</a>
-                                <span>Online Support</span>
-                            </div>
-                        </div><!-- address 1 -->
-                    </li>
-                    <li>
-                        <div class="media">
-                            <div class="d-flex">
-                                <img src="assets/images/phone.png" alt="">
-                            </div>
-                            <div class="media-body">
-                                <a href="tel:906-624-2565">906-624-2565</a>
-                                <span>Mon-Fri 8am-5pm</span>
-                            </div>
-                        </div><!-- address 1 -->
-                    </li>
-                </ul><!-- .sideabr-list-widget -->
-                <div class="subscribe-form-wraper">
-                    <p>Get Subscribed!</p>
-                    <form action="#" method="POST" class="subscribe-form">
-                        <label for="sub-input"></label>
-                        <div class="form-group">
-                            <input type="email" name="email" id="sub-input" placeholder="Enter your mail here" class="form-control">
-                            <button class="sub-btn" type="submit"><i class="icon icon-arrow-right"></i></button>
-                        </div>
-                    </form>
-                </div>
-                <ul class="social-list version-2">
-                    <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#" class="vimeo"><i class="fa fa-vimeo"></i></a></li>
-                </ul><!-- .social-list -->
-                <div class="text-center">
-                    <a href="https://themeforest.net/user/xpeedstudio/portfolio" class="btn btn-primary">Purchase Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>    <!-- END sidebar widget item -->
 @endsection

@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Contact;
+use App\Address;
 use Carbon\Carbon;
 
 class ContactController extends Controller
 {
     public function index()
     {
-
-        return view('contact.index');
+        $addressess = Address::all();
+        return view('contact.index',compact('addressess'));
     }
 
     function contact_insert(Request $request)

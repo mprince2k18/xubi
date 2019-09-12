@@ -13,7 +13,7 @@
   <div class="row">
     <div class="col-lg-8 offset-md-2">
 
-    
+
 
           <form action="{{ route('update_address') }}" method="post" class="card">
             @csrf
@@ -23,6 +23,11 @@
               <div class="form-group">
                 <label class="form-label">Address</label>
                 <textarea class="form-control" name="address" rows="3" placeholder="Address..">{{ $old_addresses->address }}</textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Map</label>
+                <textarea class="form-control" name="map" rows="3" placeholder="Map..">{{ $old_addresses->map }}</textarea>
               </div>
 
 

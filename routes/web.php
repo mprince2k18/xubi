@@ -28,6 +28,7 @@ Route::get('/clipping-path-services','ServicesController@clipping_path_services'
 
 // contact
 Route::get('/contact','ContactController@index')->name('contact');
+// contact_insert
 Route::post('/contact/insert','ContactController@contact_insert')->name('contact_insert');
 
 

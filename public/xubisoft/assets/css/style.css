@@ -1380,6 +1380,15 @@ button:focus {
     border-color: currentColor
 }
 
+.social-list.version-2 li a.youtube {
+    background-color: #c4302b
+}
+
+.social-list.version-2 li a.youtube:hover {
+    color: #e8715c;
+    border-color: currentColor
+}
+
 .social-list.version-2 li a.googlePlus {
     background-color: #dc4a38
 }

@@ -31,6 +31,7 @@ class AddressController extends Controller
     {
       Address::find($request->address_id)->update([
         'address'   => $request->address,
+        'map'       => $request->map,
         'phone'     => $request->phone,
         'mobile'    => $request->mobile,
         'email1'    => $request->email1,
