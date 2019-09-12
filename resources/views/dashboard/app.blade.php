@@ -248,6 +248,10 @@
 											<a href="{{ route('info') }}">Info</a>
 										</li>
 
+										<li>
+											<a href="{{ route('footer') }}">Footer</a>
+										</li>
+
 									</ul>
 								</div>
 								<!-- dropdown-menu -->

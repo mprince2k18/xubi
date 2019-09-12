@@ -79,6 +79,19 @@ Route::get('/admin/all_unread_messages','ContactController@all_unread_messages')
 // open_message
 Route::get('/admin/open_message/{message_id}','ContactController@open_message')->name('open_message');
 
+// FOOTER
+
+// Address
+// address_index
+Route::get('/admin/footer','AddressController@index')->name('footer');
+// add_address
+Route::post('/admin/add_address','AddressController@add_address')->name('add_address');
+// edit_address
+Route::get('/admin/edit_address/{address_id}','AddressController@edit_address')->name('edit_address');
+// update_address
+Route::post('/admin/update_address','AddressController@update_address')->name('update_address');
+
+
 
 
 
