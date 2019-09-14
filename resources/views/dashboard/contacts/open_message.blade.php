@@ -67,6 +67,11 @@
                                                            <p>{{ $single_contact_read->created_at->format('d-m-Y') }}</p>
                                                          </div>
 
+                                                         <label class="col-sm-2">Email</label>
+                                                         <div class="col-sm-10">
+                                                           <p>{{ $single_contact_read->email }}</p>
+                                                         </div>
+
                                                          <label class="col-sm-2">Subject</label>
                                                          <div class="col-sm-10">
                                                            <p>{{ $single_contact_read->subject }}</p>

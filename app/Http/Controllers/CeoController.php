@@ -20,7 +20,7 @@ class CeoController extends Controller
     {
 
       $request->validate([
-        'ceo_name'   => 'required',
+        'ceo_name'      => 'required',
         'ceo_message'   => 'required',
         'ceo_position'  => 'required',
         'ceo_photo'     => 'required',
