@@ -256,6 +256,10 @@
 											<a href="{{ route('footer') }}">Footer</a>
 										</li>
 
+										<li>
+											<a href="{{ route('portfolio') }}">Portfolio</a>
+										</li>
+
 									</ul>
 								</div>
 								<!-- dropdown-menu -->

@@ -99,9 +99,16 @@ Route::get('/admin/edit_address/{address_id}','AddressController@edit_address')-
 Route::post('/admin/update_address','AddressController@update_address')->name('update_address');
 
 // CEO
+
+// ceo index
 Route::get('/admin/ceo','CeoController@index')->name('ceo');
 // ceo_talks
 Route::post('/admin/ceo/talks','CeoController@ceo_talks')->name('ceo_talks');
+
+// Portfolio
+
+// portfolio index
+Route::get('/admin/portfolio','PortfolioController@index')->name('portfolio');
 
 
 
