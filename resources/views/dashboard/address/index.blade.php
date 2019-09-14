@@ -35,7 +35,6 @@
             @csrf
             <div class="card-body">
 
-
               <div class="form-group">
                 <label class="form-label">Address</label>
                 <textarea class="form-control" name="address" rows="3" placeholder="Address.."></textarea>
@@ -90,8 +89,8 @@
                 <button type="submit" class="btn btn-primary ml-auto">Send data</button>
               </div>
             </div>
+          </div>
           </form>
-        </div>
       </div>
 
 
