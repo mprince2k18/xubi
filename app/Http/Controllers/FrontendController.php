@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Banner;
 use App\Info;
+use App\Ceo;
 use Alert;
 
 class FrontendController extends Controller
@@ -13,7 +14,8 @@ class FrontendController extends Controller
     {
       $banners = Banner::all();
       $infos   = Info::all();
+      $ceos    = Ceo::all();
       // Alert::success('Success Title', 'Success Message');
-      return view('homepage.index',compact('banners','infos'));
+      return view('homepage.index',compact('banners','infos','ceos'));
     }
 }

@@ -249,6 +249,10 @@
 										</li>
 
 										<li>
+											<a href="{{ route('ceo') }}">Ceo</a>
+										</li>
+
+										<li>
 											<a href="{{ route('footer') }}">Footer</a>
 										</li>
 
@@ -721,6 +725,13 @@
 
 										<!-- Custom Js-->
 										<script src="{{ asset('dashboard/assets/js/custom.js') }}"></script>
+
+
+										<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.js"></script>
+
+										<script>
+										  @include('sweetalert::alert')
+										</script>
 
 										<script type="text/javascript">
 								            $('.dropify').dropify({

@@ -24,13 +24,14 @@
                 										<a href=" {{ route('contact_index') }} " class="list-group-item list-group-item-action d-flex align-items-center active">
                 											<span class="icon mr-3"><i class="fe fe-inbox"></i></span>Inbox <span class="ml-auto badge badge-success">
                                         {{ $all_contacts->where('status',2)->count() }}
+
                                       </span>
                 										</a>
                 										<a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
                 											<span class="icon mr-3"><i class="fe fe-send"></i></span>Sent Mail
                 										</a>
                 										<a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
-                											<span class="icon mr-3"><i class="fe fe-alert-circle"></i></span>Important <span class="ml-auto badge badge-danger">3</span>
+                											<span class="icon mr-3"><i class="fe fe-alert-circle"></i></span>Unread<span class="ml-auto badge badge-danger">{{ $all_contacts->where('status',2)->count() }}</span>
                 										</a>
                 										<a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
                 											<span class="icon mr-3"><i class="fe fe-star"></i></span>Starred
@@ -61,6 +62,11 @@
 
                                                      <div class="form-group">
                                                        <div class="row align-items-center">
+                                                         <label class="col-sm-2">Date & Time</label>
+                                                         <div class="col-sm-10">
+                                                           <p>{{ $single_contact_read->created_at->format('d-m-Y') }}</p>
+                                                         </div>
+
                                                          <label class="col-sm-2">Subject</label>
                                                          <div class="col-sm-10">
                                                            <p>{{ $single_contact_read->subject }}</p>
@@ -90,8 +96,14 @@
                                                              </span>
                                                            </div> -->
                                                            <div class="col-lg-6 mb-0 col-md-6 col-sm-12 text-right">
-                                                             <a href="{{ URL::previous() }}" class="btn btn-secondary btn-space mt-2 mr-2">Go back</a>
+                                                             <form action="{{ route('i_read_message') }}" method="post">
+                                                               @csrf
+                                                               <input type="hidden" name="message_id" value="{{ $single_contact_read->id }}">
+                                                               <input type="hidden" name="status" value="1">
 
+                                                               <button type="submit" class="btn btn-success btn-space mt-2 mr-2">I Read This Message</button>
+                                                             </form>
+                                                             <a href="{{ URL::previous() }}" class="btn btn-secondary btn-space mt-2 mr-2">Go back</a>
                                                            </div>
                                                          </div>
                                                        </div>

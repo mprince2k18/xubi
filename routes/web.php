@@ -32,6 +32,10 @@ Route::get('/contact','ContactController@index')->name('contact');
 Route::post('/contact/insert','ContactController@contact_insert')->name('contact_insert');
 
 
+// CEO MESSAGE
+
+
+
 
 
 
@@ -79,6 +83,8 @@ Route::get('/admin/all_read_messages','ContactController@all_read_messages')->na
 Route::get('/admin/all_unread_messages','ContactController@all_unread_messages')->name('all_unread_messages');
 // open_message
 Route::get('/admin/open_message/{message_id}','ContactController@open_message')->name('open_message');
+// i_read_message
+Route::post('/admin/i_read_message','ContactController@i_read_message')->name('i_read_message');
 
 // FOOTER
 
@@ -92,7 +98,10 @@ Route::get('/admin/edit_address/{address_id}','AddressController@edit_address')-
 // update_address
 Route::post('/admin/update_address','AddressController@update_address')->name('update_address');
 
-
+// CEO
+Route::get('/admin/ceo','CeoController@index')->name('ceo');
+// ceo_talks
+Route::post('/admin/ceo/talks','CeoController@ceo_talks')->name('ceo_talks');
 
 
 

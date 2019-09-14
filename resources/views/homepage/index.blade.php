@@ -126,31 +126,35 @@ Xubisoft | IT Solution
             </div>
             <div class="col-lg-7">
                 <div class="swiper-container vertical-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="client-comments">
-                                <div class="client-massage">
-                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence
 
-</p>
-                                </div>
-                                <div class="client-info clearfix">
-                                    <div class="client-avatar">
 
-                                        <img src="{{ asset('xubisoft/assets/images/xubi/4.png') }}" alt="">
-                                        <div class="client-sign">
-                                            <img src="{{ asset('xubisoft/assets/images/client-sign.png') }}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="client-bio">
-                                        <h3 class="client-name">Fahad Hasan</h3>
-                                        <p class="designation">Managing Director & CEO</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+@foreach ($ceos as $ceo)
+<div class="swiper-wrapper">
+    <div class="swiper-slide">
+        <div class="client-comments">
+            <div class="client-massage">
+                <p> {{ $ceo->ceo_message }} </p>
+            </div>
+            <div class="client-info clearfix">
+                <div class="client-avatar">
 
-                    </div>
+                    <img src="{{ asset('uploads/ceo')}}/{{ $ceo ->ceo_photo }}" alt="{{ $ceo->ceo_name}}">
+                    <!-- <div class="client-sign">
+                        <img src="{{ asset('xubisoft/assets/images/client-sign.png') }}" alt="">
+                    </div> -->
+                </div>
+                <div class="client-bio">
+                    <h3 class="client-name">{{ $ceo->ceo_name}}</h3>
+                    <p class="designation">{{ $ceo->ceo_position }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@endforeach
+
+
                 </div>
             </div>
         </div><!-- .row END -->

@@ -17,7 +17,6 @@ class ContactController extends Controller
 
         $addressess = Address::all();
         if (session('success')) {
-
           Alert::success('Message Sent Successfully', 'We will connect with you ASAP');
         }
         return view('contact.index',compact('addressess'));
@@ -40,21 +39,24 @@ class ContactController extends Controller
 
     function contact_index()
     {
-      $all_contacts = Contact::paginate(5);
+      $all_contacts = Contact::latest()->paginate(10);
+      // Alert::success('Message Sent Successfully', 'We will connect with you ASAP');
       return view('dashboard.contacts.index',compact('all_contacts'));
     }
 
     function all_read_messages()
     {
-      $all_read_messages = Contact::paginate(10);
+      $all_read_messages = Contact::latest()->paginate(10);
       return view('dashboard.contacts.all_read_messages',compact('all_read_messages'));
     }
 
     function all_unread_messages()
     {
-      $all_unread_messages = Contact::paginate(10);
+      $all_unread_messages = Contact::latest()->paginate(10);
       return view('dashboard.contacts.all_unread_messages',compact('all_unread_messages'));
     }
+
+
 
 
     function open_message($message_id)
@@ -62,6 +64,17 @@ class ContactController extends Controller
       $all_contacts = Contact::all();
       $single_contact_read  =  Contact::findOrFail($message_id);
       return view('dashboard.contacts.open_message',compact('all_contacts','single_contact_read'));
+    }
+
+    function i_read_message(Request $request)
+    {
+      Contact::find($request->message_id)->update([
+        'status'   => $request->status,
+      ]);
+
+      Alert::success('Successfully', 'Done');
+
+      return redirect(route('contact_index'));
     }
 
 

@@ -26,7 +26,7 @@
 											<span class="icon mr-3"><i class="fe fe-send"></i></span>Sent Mail
 										</a>
 										<a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
-											<span class="icon mr-3"><i class="fe fe-alert-circle"></i></span>Important <span class="ml-auto badge badge-danger">3</span>
+											<span class="icon mr-3"><i class="fe fe-alert-circle"></i></span>Unread <span class="ml-auto badge badge-danger">{{ $all_contacts->where('status',2)->count() }}</span>
 										</a>
 										<a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
 											<span class="icon mr-3"><i class="fe fe-star"></i></span>Starred
@@ -84,9 +84,10 @@
 
 													<li>
 
-                            <a class="np-btn" href="{{ $all_contacts->previousPageUrl() }}"><i class="fa fa-angle-left pagination-left"></i></a>
-														<a class="np-btn" href="{{ $all_contacts->nextPageUrl() }}"><i class="fa fa-angle-right pagination-right"></i></a>
+                            <a class="np-btn" style="{{ $all_contacts->firstItem() === 1 ? 'display:none' : ' ' }}" href="{{ $all_contacts->previousPageUrl() }}"><i class="fa fa-angle-left pagination-left"></i></a>
+														<a class="np-btn" style="{{ $all_contacts->firstItem() === $all_contacts->lastItem() ? 'display:none' : ' ' }}" href="{{ $all_contacts->nextPageUrl() }}"><i class="fa fa-angle-right pagination-right"></i></a>
 													</li>
+
 												</ul>
 											</div>
 											<div class="table-responsive">

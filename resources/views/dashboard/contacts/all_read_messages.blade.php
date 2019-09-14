@@ -40,7 +40,7 @@
                               <td>{{ Str::limit($all_read_message->message,10) }}</td>
                               <td>{{ $all_read_message->created_at->format('d-m-Y') }}</td>
                               <td>
-                                <a href="#" class="btn btn-primary">Read</a>
+                                <a href="#" class="btn btn-primary">Edit</a>
                               </td>
                             </tr>
 
