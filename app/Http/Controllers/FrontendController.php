@@ -13,7 +13,7 @@ class FrontendController extends Controller
     {
       $banners = Banner::all();
       $infos   = Info::all();
-      Alert::success('Success Title', 'Success Message');
+      // Alert::success('Success Title', 'Success Message');
       return view('homepage.index',compact('banners','infos'));
     }
 }

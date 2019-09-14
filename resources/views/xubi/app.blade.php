@@ -27,12 +27,18 @@
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/rev-settings.css') }}">
+
     <!--For Plugins external css-->
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/plugins.css') }}" />
     <!--Theme custom css -->
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/style.css') }}">
     <!--Theme Responsive css-->
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/responsive.css') }}" /> </head>
+    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/responsive.css') }}" />
+
+
+
+
+  </head>
 <style>
 
 
@@ -335,6 +341,18 @@
     }
 
 
+    /*PRELOADING------------ */
+
+    #global-loader {
+        position:fixed;
+        z-index:50000;
+        background: url('https://static.wixstatic.com/media/a9c507_e7dfa5241a674cd88e4f79eea3ec1013~mv2.gif') no-repeat 50% 50% rgba(255, 255, 255);
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        margin:0 auto
+    }
 
 
 </style>
@@ -348,7 +366,7 @@
 	<![endif]-->
 
   <!-- Loader Start-->
-
+<div id="global-loader" ></div>
   <!-- Loader End-->
 
     <!-- prelaoder -->
@@ -588,6 +606,12 @@
   @include('sweetalert::alert')
 </script>
 
+<script type="text/javascript">
+// ______________ PAGE LOADING
+	$(window).on("load", function(e) {
+		$("#global-loader").fadeOut("fast");
+	})
+</script>
 
 
 
