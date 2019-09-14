@@ -582,6 +582,15 @@
 <script src="{{ asset('xubisoft/assets/js/skrollr.min.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/shuffle-letters.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/main.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.js"></script>
+
+<script>
+  @include('sweetalert::alert')
+</script>
+
+
+
+
 <!-- End js file -->
 <script>
     var swiper = new Swiper('.blog-slider', {
@@ -598,6 +607,8 @@
         , }
     });
 </script>
+
+
 
 </body>
 

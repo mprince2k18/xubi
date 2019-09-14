@@ -6,12 +6,20 @@ use Illuminate\Http\Request;
 use App\Contact;
 use App\Address;
 use Carbon\Carbon;
+Use Alert;
+
+
 
 class ContactController extends Controller
 {
     public function index()
     {
+
         $addressess = Address::all();
+        if (session('success')) {
+
+          Alert::success('Message Sent Successfully', 'We will connect with you ASAP');
+        }
         return view('contact.index',compact('addressess'));
     }
 
