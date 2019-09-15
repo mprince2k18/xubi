@@ -22,18 +22,19 @@
             </div>
         </form>
    <br/>
+      
       <table class="table table-bordered">
             <tr>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
             </tr>
-            @if(count($users) > 0)
-                @foreach($users as $user)
+            @if(count($company_services) > 0)
+                @foreach($company_services as $company_service)
                 <tr>
-                    <td>{{ $user->id }}</td>
-                    <td>{{ $user->name }}</td>
-                    <td>{{ $user->email }}</td>
+                    <td>{{ $company_service->id }}</td>
+                    <td>{{ $company_service->service_name }}</td>
+                    <td>{{ $company_service->email }}</td>
                 </tr>
                 @endforeach
             @else
