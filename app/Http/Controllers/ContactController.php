@@ -24,6 +24,14 @@ class ContactController extends Controller
 
     function contact_insert(Request $request)
     {
+
+      $request->validate([
+        'name'      => 'required',
+        'email'      => 'required',
+        'subject'      => 'required',
+        'message'      => 'required',
+      ]);
+
       $contacts = Contact::insert([
         'name' => $request->name,
         'email' => $request->email,

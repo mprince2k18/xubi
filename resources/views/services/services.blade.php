@@ -41,152 +41,34 @@ Contact
                 <div class="filter-button-wraper">
                     <ul id="filters" class="option-set clearfix main-filter" data-option-key="filter">
                         <li><a href="#" data-option-value="*" class="selected">ALL PROJECTS</a></li>
-                        <li><a href="#" data-option-value=".item1">TYPE OF WORKS</a></li>
-                        <li><a href="#" data-option-value=".item2">TYPE OF CLIENTS</a></li>
+												@foreach ($company_all_categories as $company_all_category)
+													<li><a href="#" data-option-value=".item{{ $company_all_category->id }}">{{ $company_all_category->service_category_name }}</a></li>
+												@endforeach
                     </ul>
                 </div><!-- .filter-button-wraper END -->
             </div>
-        </div><!-- .row end -->
+        </div>
+				<!-- .row end -->
         <div class="cases-grid">
-					<!-- grid-item 1 -->
-            <div class="grid-item item1">
-                <div class="single-cases-card">
-                    <div class="card-image">
-                        <img src="{{ asset('xubisoft/assets/images/cases-card/case-card-1.jpg')}}" alt="">
-                    </div><!-- .card-image END -->
-                    <div class="cases-content">
-                        <h3 class="xs-title">
-                            <a href="case-details.html">Software Festivals Stall</a>
-                        </h3>
-                        <span class="tag">Packaging  / Photography</span>
-                    </div><!-- .cases-content END -->
-                </div><!-- .single-cases-card END -->
-            </div><!-- .grid-item END -->
-						<!-- grid-item 2 -->
-
-            <div class="grid-item item2">
-                <div class="single-cases-card">
-                    <div class="card-image">
-                        <img src="{{ asset('xubisoft/assets/images/cases-card/case-card-2.jpg')}}" alt="">
-                    </div><!-- .card-image END -->
-                    <div class="cases-content">
-                        <h3 class="xs-title">
-                            <a href="case-details.html">Platform 10: Live Feed</a>
-                        </h3>
-                        <span class="tag">Packaging  / Photography</span>
-                    </div><!-- .cases-content END -->
-                </div><!-- .single-cases-card END -->
-            </div><!-- .grid-item END -->
+					@foreach ($company_all_services as $company_all_service)
+					<div class="grid-item item{{$company_all_service->relationBetweenCategory->id }}">
+							<div class="single-cases-card">
+									<div class="card-image">
+											<img src="{{ asset('uploads/service')}}/{{ $company_all_service ->service_photo }}" alt="">
+									</div><!-- .card-image END -->
+									<div class="cases-content">
+											<h3 class="xs-title">
+													<a href="#">{{ $company_all_service->service_name }}</a>
+											</h3>
+											<span class="tag">{{ $company_all_service->relationBetweenCategory->service_category_name }}</span>
+									</div><!-- .cases-content END -->
+							</div><!-- .single-cases-card END -->
+					</div><!-- .grid-item END -->
+					@endforeach
 
 
-						<!-- grid-item 1 -->
-	            <div class="grid-item item1">
-	                <div class="single-cases-card">
-	                    <div class="card-image">
-	                        <img src="{{ asset('xubisoft/assets/images/cases-card/case-card-1.jpg')}}" alt="">
-	                    </div><!-- .card-image END -->
-	                    <div class="cases-content">
-	                        <h3 class="xs-title">
-	                            <a href="case-details.html">Software Festivals Stall</a>
-	                        </h3>
-	                        <span class="tag">Packaging  / Photography</span>
-	                    </div><!-- .cases-content END -->
-	                </div><!-- .single-cases-card END -->
-	            </div><!-- .grid-item END -->
-							<!-- grid-item 2 -->
-
-	            <div class="grid-item item2">
-	                <div class="single-cases-card">
-	                    <div class="card-image">
-	                        <img src="{{ asset('xubisoft/assets/images/cases-card/case-card-2.jpg')}}" alt="">
-	                    </div><!-- .card-image END -->
-	                    <div class="cases-content">
-	                        <h3 class="xs-title">
-	                            <a href="case-details.html">Platform 10: Live Feed</a>
-	                        </h3>
-	                        <span class="tag">Packaging  / Photography</span>
-	                    </div><!-- .cases-content END -->
-	                </div><!-- .single-cases-card END -->
-	            </div><!-- .grid-item END -->
-
-
-
-							<!-- grid-item 3 -->
-
-							<div class="grid-item item1">
-									<div class="single-cases-card">
-											<div class="card-image">
-													<img src="{{ asset('xubisoft/assets/images/cases-card/case-card-3.jpg')}}" alt="">
-											</div><!-- .card-image END -->
-											<div class="cases-content">
-													<h3 class="xs-title">
-															<a href="case-details.html">Fashion Week (AW18)</a>
-													</h3>
-													<span class="tag">Packaging  / Photography</span>
-											</div><!-- .cases-content END -->
-									</div><!-- .single-cases-card END -->
-							</div><!-- .grid-item END -->
-
-
-
-						<!-- grid-item 3 -->
-
-            <div class="grid-item item1">
-                <div class="single-cases-card">
-                    <div class="card-image">
-                        <img src="{{ asset('xubisoft/assets/images/cases-card/case-card-3.jpg')}}" alt="">
-                    </div><!-- .card-image END -->
-                    <div class="cases-content">
-                        <h3 class="xs-title">
-                            <a href="case-details.html">Fashion Week (AW18)</a>
-                        </h3>
-                        <span class="tag">Packaging  / Photography</span>
-                    </div><!-- .cases-content END -->
-                </div><!-- .single-cases-card END -->
-            </div><!-- .grid-item END -->
-
-						<!-- grid-item 4 -->
-
-            <div class="grid-item item2">
-                <div class="single-cases-card">
-                    <div class="card-image">
-                        <img src="{{ asset('xubisoft/assets/images/cases-card/case-card-4.jpg')}}" alt="">
-                    </div><!-- .card-image END -->
-                    <div class="cases-content">
-                        <h3 class="xs-title">
-                            <a href="case-details.html">Penn Station Concourse</a>
-                        </h3>
-                        <span class="tag">Packaging  / Photography</span>
-                    </div><!-- .cases-content END -->
-                </div><!-- .single-cases-card END -->
-            </div><!-- .grid-item END -->
-            <div class="grid-item item2">
-                <div class="single-cases-card">
-                    <div class="card-image">
-                        <img src="{{ asset('xubisoft/assets/images/cases-card/case-card-5.jpg')}}" alt="">
-                    </div><!-- .card-image END -->
-                    <div class="cases-content">
-                        <h3 class="xs-title">
-                            <a href="case-details.html">Dubai Poster House</a>
-                        </h3>
-                        <span class="tag">Packaging  / Photography</span>
-                    </div><!-- .cases-content END -->
-                </div><!-- .single-cases-card END -->
-            </div><!-- .grid-item END -->
-            <div class="grid-item item1">
-                <div class="single-cases-card">
-                    <div class="card-image">
-                        <img src="{{ asset('xubisoft/assets/images/cases-card/case-card-6.jpg')}}" alt="">
-                    </div><!-- .card-image END -->
-                    <div class="cases-content">
-                        <h3 class="xs-title">
-                            <a href="case-details.html">The Atlantic Theater</a>
-                        </h3>
-                        <span class="tag">Packaging  / Photography</span>
-                    </div><!-- .cases-content END -->
-                </div><!-- .single-cases-card END -->
-            </div><!-- .grid-item END -->
-        </div><!-- .cases-grid END -->
+        </div>
+				<!-- .cases-grid END -->
     </div><!-- .container END -->
 </section><!-- agency cases section end -->
 

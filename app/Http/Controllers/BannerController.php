@@ -17,6 +17,14 @@ class BannerController extends Controller
 
     function add_header_slider(Request $request)
     {
+
+      $request->validate([
+        'header_headline'      => 'required',
+        'header_message'   => 'required',
+        'header_banner'  => 'required',
+      ]);
+
+
       $last_inserted_id = Banner::insertGetId([
         'header_headline' => $request->header_headline,
         'header_message' => $request->header_message,
@@ -101,6 +109,6 @@ class BannerController extends Controller
 
     }
 
-
+// END
 
 }

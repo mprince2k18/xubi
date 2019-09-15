@@ -19,6 +19,13 @@ class InfoController extends Controller
 
     function add_info(Request $request)
     {
+
+      $request->validate([
+        'Info_headline'      => 'required',
+        'Info_message'      => 'required',
+        'Info_banner'      => 'required',
+      ]);
+
         $last_inserted_id = Info::insertGetId([
         'Info_headline' => $request->Info_headline,
         'Info_message' => $request->Info_message,

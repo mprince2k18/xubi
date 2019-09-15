@@ -111,6 +111,22 @@ Route::post('/admin/ceo/talks','CeoController@ceo_talks')->name('ceo_talks');
 Route::get('/admin/portfolio','PortfolioController@index')->name('portfolio');
 
 
+// SERVICES
+
+// service_index
+Route::get('/admin/service','DashboardController@service_index')->name('service_index');
+
+// add_service_category
+Route::post('/admin/add/service/category','CategoryController@add_service_category')->name('add_service_category');
+// add_service
+Route::post('/admin/add/service','CompanyServiceController@add_service')->name('add_service');
+// edit_service
+Route::get('/admin/edit/service/{service_id}','CompanyServiceController@edit_service')->name('edit_service');
+// update_service
+Route::post('/admin/update/service','CompanyServiceController@update_service')->name('update_service');
+
+
+
 
 
 

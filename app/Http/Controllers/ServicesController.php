@@ -3,12 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\CompanyService;
+use App\Category;
+use Carbon\Carbon;
+use Image;
+use Alert;
 
 class ServicesController extends Controller
 {
     public function services()
     {
-        return view('services.services');
+        $company_all_services = CompanyService::all();
+        $company_all_categories = Category::all();
+        return view('services.services',compact('company_all_services','company_all_categories'));
     }
 
 

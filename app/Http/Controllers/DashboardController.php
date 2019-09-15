@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Banner;
 use App\Contact;
+use App\Category;
+use App\CompanyService;
 use Carbon\Carbon;
 use Image;
+use Alert;
 
 class DashboardController extends Controller
 {
@@ -36,8 +39,15 @@ function contact_notification(){
   return view('dashboard.app',compact('all_notis'));
 }
 
+// SERVICES
+
+function service_index()
+{
+  $service_categories = Category::all();
+  $company_services = CompanyService::all();
+  return view('dashboard.services.index',compact('service_categories','company_services'));
+}
 
 
-
-
+// END
 }

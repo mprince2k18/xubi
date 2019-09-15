@@ -286,122 +286,31 @@
 								</div>
 								<!-- dropdown-menu -->
 							</li>
-							<li class="nav-item with-sub mega-dropdown">
-								<a class="nav-link" href="#"><i class="mdi mdi-buffer" title="si-note"></i><span>UI Elements</span></a>
-								<div class="sub-item">
-									<div class="row">
-										<div class="col-lg-12">
-											<label class="section-label">Basic Elements</label>
-											<div class="row">
-												<div class="col">
-													<ul>
-														<li>
-															<a href="alerts.html">Alerts</a>
-														</li>
-														<li>
-															<a href="buttons.html">Buttons</a>
-														</li>
-														<li>
-															<a href="colors.html">Colors</a>
-														</li>
-														<li>
-															<a href="avatars.html">Avatar-Square</a>
-														</li>
-														<li>
-															<a href="avatar-round.html">Avatar-Rounded</a>
-														</li>
-														<li>
-															<a href="avatar-radius.html">Avatar-Radius</a>
-														</li>
-														<li>
-															<a href="dropdown.html">Drop downs</a>
-														</li>
-													</ul>
-												</div>
-												<div class="col-lg">
-													<ul>
-														<li>
-															<a href="list.html">List</a>
-														</li>
-														<li>
-															<a href="tags.html">Tags</a>
-														</li>
-														<li>
-															<a href="pagination.html">Pagination</a>
-														</li>
-														<li>
-															<a href="navigation.html">Navigation</a>
-														</li>
-														<li>
-															<a href="typography.html">Typography</a>
-														</li>
-														<li>
-															<a href="breadcrumbs.html">Breadcrumbs</a>
-														</li>
-														<li>
-															<a href="badge.html">Badges</a>
-														</li>
-													</ul>
-												</div><!-- col -->
-												<div class="col-lg mg-t-30 mg-lg-t-0">
-													<ul>
-														<li>
-															<a href="jumbotron.html">Jumbotron</a>
-														</li>
-														<li>
-															<a href="panels.html">Panels</a>
-														</li>
-														<li>
-															<a href="thumbnails.html">Thumbnails</a>
-														</li>
-														<li>
-															<a href="mediaobject.html">Media Object</a>
-														</li>
-														<li>
-															<a href="accordion.html">Accordions</a>
-														</li>
-														<li>
-															<a href="tabs.html">Tabs</a>
-														</li>
-														<li>
-															<a href="chart.html">Charts</a>
-														</li>
-													</ul>
-												</div><!-- col -->
-												<div class="col-lg mg-t-30 mg-lg-t-0">
-													<ul>
-														<li>
-															<a href="modal.html">Modal</a>
-														</li>
-														<li>
-															<a href="tooltipandpopover.html">Tooltip and popover</a>
-														</li>
-														<li>
-															<a href="progress.html">Progress</a>
+
+
+
+														<li class="nav-item with-sub">
+															<a class="nav-link" href="{{ route('service_index') }}"><i class="fa fa-tachometer"></i> <span>Services</span></a>
+															<div class="sub-item">
+																<ul>
+																	<li>
+																		<a href="#">All Services</a>
+																	</li>
+																	<li>
+																		<a href="#">Add Service Category</a>
+																	</li>
+																	<li>
+																		<a href="#">Add Service</a>
+																	</li>
+
+																</ul>
+															</div>
+															<!-- dropdown-menu -->
 														</li>
 
-														<li>
-															<a href="carousel.html">Carousels</a>
-														</li>
 
-														<li>
-															<a href="headers.html">Headers  </a>
-														</li>
-														<li>
-															<a href="footers.html">Footers  </a>
-														</li>
-														<li>
-															<a href="loaders.html">Loaders</a>
-														</li>
-													</ul>
-												</div><!-- col -->
 
-											</div><!-- row -->
-										</div><!-- col -->
-									</div><!-- row -->
-								</div>
-								<!-- dropdown-menu -->
-							</li>
+
 							<li class="nav-item with-sub">
 								<a class="nav-link" href="#"><i class="mdi mdi-file"></i><span>Pages</span></a>
 								<div class="sub-item">
