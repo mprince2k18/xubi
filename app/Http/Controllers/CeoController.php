@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Laravel\Scout\Searchable;
+
 use Illuminate\Http\Request;
 use App\Ceo;
 use Carbon\Carbon;
@@ -11,6 +13,10 @@ Use Alert;
 
 class CeoController extends Controller
 {
+
+  use Searchable;
+
+  
     function index()
     {
       return view('dashboard.ceo.index');

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Laravel\Scout\Searchable;
+
 use Illuminate\Http\Request;
 use App\Info;
 use Carbon\Carbon;
@@ -9,6 +11,9 @@ use Image;
 
 class InfoController extends Controller
 {
+
+  use Searchable;
+  
     function index()
     {
         $infos = Info::paginate(6);

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Laravel\Scout\Searchable;
+
 use Illuminate\Http\Request;
 use App\CompanyService;
 use App\Category;
@@ -11,6 +13,10 @@ use Alert;
 
 class CompanyServiceController extends Controller
 {
+
+  use Searchable;
+
+  
     function add_service(Request $request)
     {
 

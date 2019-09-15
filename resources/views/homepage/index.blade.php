@@ -755,7 +755,7 @@ Xubisoft | IT Solution
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="xs-search-panel">
-                    <form action="#" method="POST" class="xs-search-group">
+                    <form action="{{ route('search') }}" method="GET" class="xs-search-group">
                         <input type="search" class="form-control" name="search" id="search" placeholder="Search">
                         <button type="submit" class="search-button"><i class="icon icon-search"></i></button>
                     </form>

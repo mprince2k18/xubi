@@ -438,8 +438,19 @@
                     <!-- End menu list -->
                     <ul class="xs-menu-tools">
 <!--                        <li> <a href="#" class="offset-side-bar"><i class="icon icon-cart2"></i></a> </li>-->
-                        <li> <a href="#modal-popup-2" class="navsearch-button xs-modal-popup"><i class="icon icon-search"></i></a> </li>
-                        <li> <a href="#" class="navSidebar-button"><i class="icon icon-burger-menu"></i></a> </li>
+                        <li>
+                          <a href="#modal-popup-2" class="navsearch-button xs-modal-popup">
+                            <i class="icon icon-search"></i>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" class="navSidebar-button">
+                            <i class="icon icon-burger-menu">
+
+                            </i>
+                          </a>
+                        </li>
                     </ul>
                 </div>
             </nav>

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Laravel\Scout\Searchable;
+
 use Illuminate\Http\Request;
 use App\Category;
 use Carbon\Carbon;
@@ -9,6 +11,10 @@ use Alert;
 
 class CategoryController extends Controller
 {
+
+  use Searchable;
+
+  
   // BACKEND
   function add_service_category(Request $request)
   {

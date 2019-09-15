@@ -2,11 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use Laravel\Scout\Searchable;
+
 use Illuminate\Http\Request;
 use App\Address;
 
 class AddressController extends Controller
 {
+
+  
+  use Searchable;
+
+
     function index()
     {
       $addresses = Address::paginate(6);

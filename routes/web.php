@@ -133,7 +133,8 @@ Route::post('/admin/update/service','CompanyServiceController@update_service')->
 
 
 
-
+// search
+Route::get('search','SearchController@search')->name('search');
 
 
 

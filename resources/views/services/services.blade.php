@@ -31,13 +31,13 @@ Contact
 <section class="xs-section-padding">
     <div class="container">
         <div class="row no-gutters agency-filter-wraper">
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <div class="agency-section-title">
                     <h3 class="main-title">Xubisoft <em>Projects</em></h3>
 
                 </div><!-- .agency-section-title END -->
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <div class="filter-button-wraper">
                     <ul id="filters" class="option-set clearfix main-filter" data-option-key="filter">
                         <li><a href="#" data-option-value="*" class="selected">ALL PROJECTS</a></li>

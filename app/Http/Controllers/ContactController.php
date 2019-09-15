@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Laravel\Scout\Searchable;
+
 use Illuminate\Http\Request;
 use App\Contact;
 use App\Address;
@@ -12,6 +14,9 @@ Use Alert;
 
 class ContactController extends Controller
 {
+
+  use Searchable;
+  
     public function index()
     {
 

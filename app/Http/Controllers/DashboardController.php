@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Laravel\Scout\Searchable;
+
 use Illuminate\Http\Request;
 use App\Banner;
 use App\Contact;
@@ -13,6 +15,8 @@ use Alert;
 
 class DashboardController extends Controller
 {
+
+  use Searchable;
 
   public function __construct()
   {

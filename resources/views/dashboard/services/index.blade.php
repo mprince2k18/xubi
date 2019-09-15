@@ -137,7 +137,7 @@
                         @foreach ($company_services as $company_service)
                         <tr>
                           <th scope="row">{{$company_service->id}}</th>
-                          <th>{{$company_service->service_name}}</th>
+                          <th>{{ Str::limit($company_service->service_name,10) }}</th>
                           <td>{{$company_service->relationBetweenCategory->service_category_name}}</td>
                           <td>{{$company_service->service_photo}}</td>
                           <td>

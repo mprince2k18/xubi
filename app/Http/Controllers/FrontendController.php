@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Laravel\Scout\Searchable;
+
 use Illuminate\Http\Request;
 use App\Banner;
 use App\Info;
@@ -10,6 +12,9 @@ use Alert;
 
 class FrontendController extends Controller
 {
+
+  use Searchable;
+  
     public function index()
     {
       $banners = Banner::all();

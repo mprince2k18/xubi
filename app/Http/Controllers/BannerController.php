@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Laravel\Scout\Searchable;
+
 use Illuminate\Http\Request;
 use App\Banner;
 use Carbon\Carbon;
@@ -9,6 +11,10 @@ use Image;
 
 class BannerController extends Controller
 {
+
+  use Searchable;
+
+  
   public function __construct()
   {
       $this->middleware('auth');
