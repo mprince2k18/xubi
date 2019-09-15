@@ -54,6 +54,9 @@
           </div>
 
 
+
+
+
                               <div class="form-group">
                                 <label class="form-label">Service Category</label>
                                 <select name="service_category_id" id="select-countries" class="form-control custom-select">
@@ -67,6 +70,11 @@
           <div class="form-group">
             <label class="form-label">Service Photo</label>
             <input type="file" class="form-control" name="service_photo">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Slug Name</label>
+            <input type="text" class="form-control" name="slug_name" placeholder="Slug Name">
           </div>
 
         </div>
@@ -173,7 +181,7 @@
                           <th scope="row">{{ $service_category->id}}</th>
                           <td> {{ $service_category-> service_category_name }} </td>
                           <td>
-                            <a href="#" class="btn btn-primary btn-sm mb-1">Edit</a>
+                            <a href="{{ url('/admin/edit/service/category') }}/ {{ $service_category->id }}" class="btn btn-primary btn-sm mb-1">Edit</a>
                           </td>
                         </tr>
                         @endforeach

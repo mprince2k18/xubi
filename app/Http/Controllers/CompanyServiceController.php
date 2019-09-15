@@ -18,6 +18,7 @@ class CompanyServiceController extends Controller
         'service_name'             => 'required',
         'service_category_id'      => 'required',
         'service_photo'            => 'required',
+        'slug_name'            => 'required',
       ]);
 
 
@@ -28,6 +29,7 @@ class CompanyServiceController extends Controller
         'service_name'         =>$request->service_name,
         'service_category_id'  =>$request->service_category_id,
         'service_photo'        =>$request->service_photo,
+        'slug_name'        =>$request->slug_name,
         'created_at'           =>Carbon::now()
       ]);
 
@@ -59,7 +61,7 @@ class CompanyServiceController extends Controller
        // }
 
 
-       //edit banner
+       // edit_service
           function edit_service($service_id){
             $service_categories = Category::all();
           $single_service_edit  =  CompanyService::findOrFail($service_id);
@@ -107,6 +109,7 @@ class CompanyServiceController extends Controller
           CompanyService::find($request->service_id)->update([
             'service_name'         =>$request->service_name,
             'service_category_id'  =>$request->service_category_id,
+            'slug_name'  =>$request->slug_name,
             // 'service_photo' => $request->service_photo,
 
         ]);

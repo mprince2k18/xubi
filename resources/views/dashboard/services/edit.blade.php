@@ -73,6 +73,12 @@
             <input type="file" class="form-control" name="service_photo" value="{{ $single_service_edit->service_photo }}">
           </div>
 
+
+          <div class="form-group">
+            <label class="form-label">Slug Name</label>
+            <input type="text" class="form-control" name="slug_name" value="{{ $single_service_edit->slug_name }}">
+          </div>
+
         </div>
         <div class="card-footer text-right">
           <div class="d-flex">

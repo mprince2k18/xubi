@@ -18,6 +18,7 @@ class CreateCompanyServicesTable extends Migration
             $table->string('service_name');
             $table->string('service_category_id');
             $table->string('service_photo');
+            $table->string('slug_name');
             $table->timestamps();
         });
     }

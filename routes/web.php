@@ -118,6 +118,11 @@ Route::get('/admin/service','DashboardController@service_index')->name('service_
 
 // add_service_category
 Route::post('/admin/add/service/category','CategoryController@add_service_category')->name('add_service_category');
+// edit_service_category
+Route::get('/admin/edit/service/category/{category_id}','CategoryController@edit_service_category')->name('edit_service_category');
+// update_category
+Route::post('/admin/update/category','CategoryController@update_category')->name('update_category');
+
 // add_service
 Route::post('/admin/add/service','CompanyServiceController@add_service')->name('add_service');
 // edit_service

@@ -58,7 +58,7 @@ Contact
 									</div><!-- .card-image END -->
 									<div class="cases-content">
 											<h3 class="xs-title">
-													<a href="#">{{ $company_all_service->service_name }}</a>
+													<a href="{{ url('') }}/{{ $company_all_service->slug_name }}">{{ $company_all_service->service_name }}</a>
 											</h3>
 											<span class="tag">{{ $company_all_service->relationBetweenCategory->service_category_name }}</span>
 									</div><!-- .cases-content END -->

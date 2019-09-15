@@ -27,4 +27,35 @@ class CategoryController extends Controller
     return back()->with('success', 'Service Category Added');
 
   }
+
+
+  // edit_service_category
+     function edit_service_category($category_id){
+     $single_category_edit  =  Category::findOrFail($category_id);
+     return view('dashboard.services.catrgory_edit',compact('single_category_edit'));
+   }
+
+
+  // update_category
+  function update_category(Request $request)
+  {
+    Category::find($request->category_id)->update([
+      'service_category_name'         =>$request->service_category_name,
+  ]);
+
+  Alert::success('Category Editted Succesfully', 'Thank you');
+
+  return redirect(route('service_index'))->with('success','Updated Successfully');
+
+  }
+
+
+
+
+
+
+
+
+
+  // END
 }
