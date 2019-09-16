@@ -7,6 +7,7 @@ use App\User;
 use App\CompanyService;
 use App\Product;
 
+
 class SearchController extends Controller
 {
   public function search(Request $request)
