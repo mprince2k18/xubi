@@ -45,7 +45,7 @@ Xubisoft | IT Solution
 
             <!-- .banner-slider END -->
         </div>
-        <div class="banner-overlay-bg"> <img src="{{ asset('xubisoft/assets/images/welcome/home2-banner-icon1.png)') }}" alt="" class="banner-image1"> <img src="{{ asset('xubisoft/assets/images/welcome/home2-banner-icon2.png') }}" alt="" class="banner-image2"> <img src="{{ asset('xubisoft/assets/images/welcome/banner-dots.png') }}" alt="" class="banner-dots banner-dots1"> <img src="{{ asset('xubisoft/assets/images/welcome/banner-dots.png') }}" alt="" class="banner-dots banner-dots2"> </div>
+        <div class="banner-overlay-bg"> <img src="{{ asset('xubisoft/assets/images/welcome/home2-banner-icon1.png') }}" alt="" class="banner-image1"> <img src="{{ asset('xubisoft/assets/images/welcome/home2-banner-icon2.png') }}" alt="" class="banner-image2"> <img src="{{ asset('xubisoft/assets/images/welcome/banner-dots.png') }}" alt="" class="banner-dots banner-dots1"> <img src="{{ asset('xubisoft/assets/images/welcome/banner-dots.png') }}" alt="" class="banner-dots banner-dots2"> </div>
     </section>
     <!-- end agency banner section -->
     <!-- business info section -->
@@ -747,7 +747,7 @@ Xubisoft | IT Solution
     </div>
     <!-- End xs modal -->
     <!-- end language switcher strart -->
-  
+
     <!-- offset cart strart -->
     <!-- sidebar cart item -->
     <div class="xs-sidebar-group cart-group">
