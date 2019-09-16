@@ -2,7 +2,7 @@
 
 
 @section('title')
-Contact
+Services
 @endsection
 
 
@@ -17,7 +17,7 @@ Contact
 					<h2 class="inner-banner-title">Services</h2>
 					<ul class="breadcumbs list-inline">
 						<li><a href="{{ route('homepage') }}">Home</a></li>
-						<li>Contact</li>
+						<li>Services</li>
 					</ul>
 				</div>
 			</div>
@@ -33,7 +33,7 @@ Contact
         <div class="row no-gutters agency-filter-wraper">
             <div class="col-lg-4">
                 <div class="agency-section-title">
-                    <h3 class="main-title">Xubisoft <em>Projects</em></h3>
+                    <h3 class="main-title">Xubisoft <em>Services</em></h3>
 
                 </div><!-- .agency-section-title END -->
             </div>

@@ -312,7 +312,7 @@
 
 
 							<li class="nav-item with-sub">
-								<a class="nav-link" href="#"><i class="mdi mdi-file"></i><span>Pages</span></a>
+								<a class="nav-link" href="{{ route('products_index') }}"><i class="mdi mdi-file"></i><span>Products</span></a>
 								<div class="sub-item">
 									<ul>
 										<li class="sub-with-sub">

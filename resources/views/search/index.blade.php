@@ -22,19 +22,19 @@
             </div>
         </form>
    <br/>
-      
+
       <table class="table table-bordered">
             <tr>
                 <th>Id</th>
                 <th>Name</th>
-                <th>Email</th>
+                <th>Service Category Name</th>
             </tr>
             @if(count($company_services) > 0)
                 @foreach($company_services as $company_service)
                 <tr>
                     <td>{{ $company_service->id }}</td>
                     <td>{{ $company_service->service_name }}</td>
-                    <td>{{ $company_service->email }}</td>
+                    <td>{{ $company_service->relationBetweenCategory->service_category_name }}</td>
                 </tr>
                 @endforeach
             @else

@@ -17,6 +17,7 @@ Xubisoft | IT Solution
             <div class="banner-slider owl-carousel">
 
               {{-- single-banner-slider strats --}}
+              
               @foreach ($banners as $banner)
 
                 <div class="single-banner-slider" style="background-image: url({{ asset('uploads/banner')}}/{{ $banner ->header_banner }}">
@@ -41,9 +42,6 @@ Xubisoft | IT Solution
 
 
             </div>
-
-
-
 
             <!-- .banner-slider END -->
         </div>
@@ -755,7 +753,7 @@ Xubisoft | IT Solution
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="xs-search-panel">
-                    <form action="{{ route('search') }}" method="GET" class="xs-search-group">
+                      <form method="GET" action="{{ route('search') }}" class="xs-search-group">
                         <input type="search" class="form-control" name="search" id="search" placeholder="Search">
                         <button type="submit" class="search-button"><i class="icon icon-search"></i></button>
                     </form>

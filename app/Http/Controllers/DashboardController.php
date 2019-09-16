@@ -9,6 +9,7 @@ use App\Banner;
 use App\Contact;
 use App\Category;
 use App\CompanyService;
+use App\Product;
 use Carbon\Carbon;
 use Image;
 use Alert;
@@ -52,6 +53,14 @@ function service_index()
   return view('dashboard.services.index',compact('service_categories','company_services'));
 }
 
+
+// PRODUCTS
+
+function products_index()
+{
+  $all_products = Product::all();
+  return view('dashboard.products.index',compact('all_products'));
+}
 
 // END
 }

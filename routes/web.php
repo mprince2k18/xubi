@@ -32,7 +32,11 @@ Route::get('/contact','ContactController@index')->name('contact');
 Route::post('/contact/insert','ContactController@contact_insert')->name('contact_insert');
 
 
-// CEO MESSAGE
+// PRODUCTS
+
+Route::get('/products','ProductController@products')->name('products');
+
+
 
 
 
@@ -130,6 +134,15 @@ Route::get('/admin/edit/service/{service_id}','CompanyServiceController@edit_ser
 // update_service
 Route::post('/admin/update/service','CompanyServiceController@update_service')->name('update_service');
 
+// PRODUCTS
+
+Route::get('/admin/products','DashboardController@products_index')->name('products_index');
+// add_product
+Route::post('/admin/add/product','ProductController@add_product')->name('add_product');
+// edit_service
+Route::get('/admin/edit/product/{product_id}','ProductController@edit_product')->name('edit_product');
+// update_service
+Route::post('/admin/update/product','ProductController@update_product')->name('update_product');
 
 
 
