@@ -172,6 +172,25 @@
             </nav>
         </div>
         <!-- .container END -->
+
+        <!-- search panel strart -->
+        <!-- xs modal -->
+        <div class="zoom-anim-dialog mfp-hide modal-searchPanel" id="modal-popup-2">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="xs-search-panel">
+                          <form method="GET" action="{{ route('search') }}" class="xs-search-group">
+                            <input type="search" class="form-control" name="search" id="search" placeholder="Search">
+                            <button type="submit" class="search-button"><i class="icon icon-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End xs modal -->
+        <!-- end search panel strart -->
+
+        
     </header>
 
 

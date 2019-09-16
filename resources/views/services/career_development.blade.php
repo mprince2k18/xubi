@@ -233,19 +233,7 @@ Career Development
 </div><!-- End xs modal --><!-- end language switcher strart -->
 
 <!-- search panel strart -->
-<!-- xs modal -->
-<div class="zoom-anim-dialog mfp-hide modal-searchPanel" id="modal-popup-2">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="xs-search-panel">
-                <form action="#" method="POST" class="xs-search-group">
-                    <input type="search" class="form-control" name="search" id="search" placeholder="Search">
-                    <button type="submit" class="search-button"><i class="icon icon-search"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div><!-- End xs modal --><!-- end search panel strart -->
+<!-- end search panel strart -->
 
 <!-- offset cart strart -->
 <!-- sidebar cart item -->
@@ -344,7 +332,7 @@ Career Development
                     <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
                     <li><a href="#" class="vimeo"><i class="fa fa-vimeo"></i></a></li>
                 </ul><!-- .social-list -->
-                
+
             </div>
         </div>
     </div>

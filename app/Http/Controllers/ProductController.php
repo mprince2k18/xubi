@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Laravel\Scout\Searchable;
 use Carbon\Carbon;
 use App\Category;
 use App\Product;
@@ -12,6 +13,9 @@ use Alert;
 
 class ProductController extends Controller
 {
+
+  use Searchable;
+  
   public function products()
   {
       $company_products = Product::all();
