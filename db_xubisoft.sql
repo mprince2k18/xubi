@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2019 at 12:52 PM
+-- Generation Time: Sep 16, 2019 at 01:33 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -166,13 +166,8 @@ CREATE TABLE `company_services` (
 --
 
 INSERT INTO `company_services` (`id`, `service_name`, `service_category_id`, `service_photo`, `slug_name`, `created_at`, `updated_at`) VALUES
-(1, 'Custom Software', '1', '1.png', 'custom-software', '2019-09-15 06:42:27', '2019-09-15 06:42:27'),
-(2, 'Web Design & Development', '1', '2.png', 'web-design-development', '2019-09-15 07:05:59', '2019-09-15 07:06:00'),
-(3, 'Apps Development', '2', '3.png', 'apps-development', '2019-09-15 08:02:07', '2019-09-15 08:02:07'),
-(4, 'Graphics Development', '3', '4.png', 'graphics-solution', '2019-09-15 08:02:52', '2019-09-15 08:02:52'),
-(5, 'Career Development', '5', '5.png', 'career-development', '2019-09-15 08:03:35', '2019-09-15 08:03:36'),
-(6, 'Domain & Hosting', '4', '6.png', 'domain-hosting', '2019-09-15 08:04:09', '2019-09-15 08:04:09'),
-(7, 'Clipping Path Services', '6', '7.png', 'clipping-path-services', '2019-09-15 08:04:58', '2019-09-15 08:04:58');
+(1, 'Web Design & Development', '1', '1.png', 'web-design-development', '2019-09-16 10:03:24', '2019-09-16 10:03:25'),
+(2, 'Apps Development', '2', '2.png', 'apps-development', '2019-09-16 10:39:35', '2019-09-16 10:39:36');
 
 -- --------------------------------------------------------
 
@@ -196,7 +191,8 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `subject`, `message`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'obayedul', 'obayedul@gmail.com', 'Test Subject', 'bhvg v', 1, '2019-09-14 06:12:55', NULL);
+(1, 'obayedul', 'obayedul@gmail.com', 'Test Subject', 'bhvg v', 1, '2019-09-14 06:12:55', NULL),
+(2, 'Test Name', 'mprince2k16@gmail.com', 'Test Subject', 'asdfghjkl', 2, '2019-09-16 04:13:12', NULL);
 
 -- --------------------------------------------------------
 
@@ -283,7 +279,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (43, '2019_09_14_095603_create_portfolios_table', 7),
 (44, '2019_09_14_111118_create_cache_table', 7),
 (50, '2019_09_15_095951_create_categories_table', 8),
-(51, '2019_09_15_095344_create_company_services_table', 9);
+(54, '2019_09_16_115856_create_products_table', 10),
+(56, '2019_09_15_095344_create_company_services_table', 11);
 
 -- --------------------------------------------------------
 
@@ -308,6 +305,30 @@ CREATE TABLE `portfolios` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `product_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_photo` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `product_name`, `product_photo`, `slug_name`, `created_at`, `updated_at`) VALUES
+(1, 'ERP Software', '1.png', 'erp-software', '2019-09-16 06:31:15', '2019-09-16 06:31:15'),
+(2, 'POS Software', '2.png', 'pos-software', '2019-09-16 07:00:15', '2019-09-16 07:00:16'),
+(3, 'HR & Payroll Software', '3.png', 'hr-&-payroll-software', '2019-09-16 07:00:53', '2019-09-16 07:00:53');
 
 -- --------------------------------------------------------
 
@@ -430,6 +451,12 @@ ALTER TABLE `portfolios`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `services`
 --
 ALTER TABLE `services`
@@ -474,13 +501,13 @@ ALTER TABLE `ceos`
 -- AUTO_INCREMENT for table `company_services`
 --
 ALTER TABLE `company_services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -504,13 +531,19 @@ ALTER TABLE `infos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `portfolios`
 --
 ALTER TABLE `portfolios`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `services`
