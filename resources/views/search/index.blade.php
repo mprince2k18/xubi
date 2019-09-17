@@ -97,7 +97,6 @@ Your Search Result
 
                                 @endforeach
                             @else
-                            no result
                             @endif
 
 
@@ -151,7 +150,7 @@ Your Search Result
 
                                 @endforeach
                             @else
-                            no result
+                          
                             @endif
 
 

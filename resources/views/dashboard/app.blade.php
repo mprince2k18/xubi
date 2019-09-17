@@ -39,7 +39,7 @@
 		<!-- Custom scroll bar css-->
 		<link href="{{ asset('dashboard/assets/plugins/scroll-bar/jquery.mCustomScrollbar.css') }}" rel="stylesheet" />
 		<!-- select2 Plugin -->
-		<link href="{{ asset('dashboard/assets/plugins/select2/select2.min.css.css') }}" rel="stylesheet" />
+		<link href="{{ asset('dashboard/assets/plugins/select2/select2.min.css') }}" rel="stylesheet" />
 
 		<!-- Time picker Plugin -->
 		<link href="{{ asset('dashboard/assets/plugins/time-picker/jquery.timepicker.css.css') }}" rel="stylesheet" />
@@ -48,10 +48,10 @@
 		<link href="{{ asset('dashboard/assets/plugins/date-picker/spectrum.css.css') }}" rel="stylesheet" />
 
 		<!-- Custom scroll bar css-->
-		<link href="{{ asset('dashboard/assets/plugins/scroll-bar/jquery.mCustomScrollbar.css.css') }}" rel="stylesheet" />
+		<link href="{{ asset('dashboard/assets/plugins/scroll-bar/jquery.mCustomScrollbar.css') }}" rel="stylesheet" />
 
 		<!-- file Uploads -->
-    <link href="{{ asset('dashboard/assets/plugins/fileuploads/css/dropify.min.css.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('dashboard/assets/plugins/fileuploads/css/dropify.min.css') }}" rel="stylesheet" type="text/css" />
 
 		<!---Font icons-->
 		<link href="{{ asset('dashboard/assets/css/icons.css') }}" rel="stylesheet" />
@@ -258,6 +258,10 @@
 
 										<li>
 											<a href="{{ route('portfolio') }}">Portfolio</a>
+										</li>
+
+										<li>
+											<a href="{{ route('team') }}">Team</a>
 										</li>
 
 									</ul>
@@ -639,8 +643,8 @@
 										<!-- Custom Js-->
 										<script src="{{ asset('dashboard/assets/js/custom.js') }}"></script>
 
-
-										<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.js"></script>
+<!-- sweetalert2 -->
+										<script src="{{ asset('dashboard/assets/js/sweetalert2.all.js') }}"></script>
 
 										<script>
 										  @include('sweetalert::alert')

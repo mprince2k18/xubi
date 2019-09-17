@@ -10,6 +10,7 @@ use App\Contact;
 use App\Category;
 use App\CompanyService;
 use App\Product;
+use App\Team;
 use Carbon\Carbon;
 use Image;
 use Alert;
@@ -61,6 +62,17 @@ function products_index()
   $all_products = Product::all();
   return view('dashboard.products.index',compact('all_products'));
 }
+
+
+// TEAM
+
+function team_index()
+{
+  $team_members = Team::latest()->paginate(3);
+  return view('dashboard.team.index',compact('team_members'));
+}
+
+
 
 // END
 }

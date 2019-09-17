@@ -146,6 +146,29 @@ Route::post('/admin/update/product','ProductController@update_product')->name('u
 
 
 
+
+// TEAM
+
+// team_index
+Route::get('/admin/team','DashboardController@team_index')->name('team');
+// team_insert
+Route::post('/admin/team/insert','TeamController@team_insert')->name('team_insert');
+// edit_team
+Route::get('/admin/team/edit/{team_id}','TeamController@edit_team')->name('edit_team');
+// update_team
+Route::post('/admin/team/update','TeamController@update_team')->name('update_team');
+// delete_team
+Route::get('/admin/team/delete/{team_id}','TeamController@delete_team')->name('delete_team');
+
+
+
+
+
+
+
+
+
+
 // search
 Route::get('search','SearchController@search')->name('search');
 

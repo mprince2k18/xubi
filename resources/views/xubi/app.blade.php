@@ -39,6 +39,7 @@
 
 
   </head>
+
 <style>
 
 .nav-menu li.active>a{
@@ -190,7 +191,7 @@
         <!-- End xs modal -->
         <!-- end search panel strart -->
 
-        
+
     </header>
 
 
@@ -346,7 +347,7 @@
 <script src="{{ asset('xubisoft/assets/js/skrollr.min.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/shuffle-letters.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/main.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.js"></script>
+<script src="{{ asset('xubisoft/assets/js/sweetalert2.all.js') }}"></script>
 
 <script>
   @include('sweetalert::alert')

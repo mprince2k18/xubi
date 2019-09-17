@@ -13681,3 +13681,21 @@ input[type=number] {
             width: 30px;
         }
     }
+
+    .single-team-style2{
+
+      padding: 15px 0 !important;
+    }
+    .single-team-style2 .image{
+      border-radius: 15px !important;
+    }
+
+    .footer-widget .xs-list li a{
+      color: #fff !important;
+    }
+    .footer-widget p{
+      color: #22c8e5 !important;
+    }
+    .footer-widget p a{
+      color: #fff !important;
+    }

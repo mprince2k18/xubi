@@ -362,12 +362,14 @@ Xubisoft | IT Solution
             </div>
             <!-- .row end -->
             <div class="row xs-mb-5">
+              @foreach ($teams as $team)
                 <div class="col-lg-3 col-md-6">
                     <div class="single-team-style2">
-                        <div class="image"> <img src="{{ asset('xubisoft/assets/images/team/team-5.jpg') }}" alt="">
+                        <div class="image">
+                          <img src="{{ asset('uploads/team')}}/{{ $team->team_photo }}" alt="{{ $team->name }}">
                             <div class="hover-area text-center">
                                 <div class="team-content">
-                                    <h4 class="xs-title">CHARLOTTE GRACE</h4> <span>Chief Executive</span> </div>
+                                    <h4 class="xs-title">{{ $team->name }}</h4> <span>{{ $team->designation }}</span> </div>
                                 <ul class="social-list version-5">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -380,64 +382,9 @@ Xubisoft | IT Solution
                         </div>
                     </div>
                     <!-- .single-team-style2 END -->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-team-style2">
-                        <div class="image"> <img src="{{ asset('xubisoft/assets/images/team/team-6.jpg') }}" alt="">
-                            <div class="hover-area text-center">
-                                <div class="team-content">
-                                    <h4 class="xs-title">ROBERT S NUNN</h4> <span>Talent Director</span> </div>
-                                <ul class="social-list version-5">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul>
-                                <!-- .social-list -->
-                            </div>
-                            <!-- .hover-area END -->
-                        </div>
-                    </div>
-                    <!-- .single-team-style2 END -->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-team-style2">
-                        <div class="image"> <img src="{{ asset('xubisoft/assets/images/team/team-7.jpg') }}" alt="">
-                            <div class="hover-area text-center">
-                                <div class="team-content">
-                                    <h4 class="xs-title">JOSEPH L KEESLER</h4> <span>Interior Design</span> </div>
-                                <ul class="social-list version-5">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul>
-                                <!-- .social-list -->
-                            </div>
-                            <!-- .hover-area END -->
-                        </div>
-                    </div>
-                    <!-- .single-team-style2 END -->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-team-style2">
-                        <div class="image"> <img src="{{ asset('xubisoft/assets/images/team/team-8.jpg') }}" alt="">
-                            <div class="hover-area text-center">
-                                <div class="team-content">
-                                    <h4 class="xs-title">GERALD Y KOHL</h4> <span>Product Investigator</span> </div>
-                                <ul class="social-list version-5">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                </ul>
-                                <!-- .social-list -->
-                            </div>
-                            <!-- .hover-area END -->
-                        </div>
-                    </div>
-                    <!-- .single-team-style2 END -->
-                </div>
+                  </div>
+              @endforeach
+
             </div>
             <div class="team-bottom-info text-center">
                 <h4 class="content-title">Interested to Working With?</h4> <a href="contact.html" class="btn btn-primary btn-gradient3">Join Our Team</a> </div>
