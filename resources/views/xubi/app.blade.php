@@ -71,6 +71,51 @@
         margin:0 auto
     }
 
+.header-transparent{
+  position: fixed;
+}
+
+.case-details-banner{
+  margin-top: 105px;
+}
+
+/* scroll bar */
+
+body::-webkit-scrollbar {
+    width: 0.7em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+  outline: 1px solid slategrey;
+  border-radius: 15px;
+}
+
+/* scroll bar end */
+.main-menu{
+background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+border-radius: 0 0 8px 8px;
+}
+
+
+.xs-footer-section{
+  background-image: url({{ asset('xubisoft/assets/images/footer-bg.jpg') }});
+  background-repeat:no-repeat;
+  background-size: cover;
+
+}
+
+.xs-footer-section .footer-top-area{
+  background-color: rgba(0,0,0,0.8);
+}
+
+.xs-footer-section.footer-style3 .footer-bottom-area{
+  background-color: #2d3436;
+}
 
 </style>
 
@@ -96,7 +141,7 @@
 -->
     <!-- END prelaoder -->
     <!-- header section -->
-    <header class="xs-header header-transparent header-style4 bg-dark">
+    <header class="xs-header header-transparent header-style4 bg-dark fixed main-menu">
         <div class="container">
             <nav class="xs-menus clearfix">
                 <div class="nav-header">
@@ -194,6 +239,7 @@
 
     </header>
 
+<!-- header end -->
 
 @yield('content')
 
@@ -211,8 +257,13 @@
                         <div class="footer-logo-wraper">
                             <a href="index.html" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/xubi_logo2.png') }}" alt="footer logo"> </a>
                         </div>
-                        <p>Address <a href="https://www.google.com/maps/place/London,+UK/@51.528308,-0.3817812,10z/data=!3m1!4b1!4m5!3m4!1s0x47d8a00baf21de75:0x52963a5addd52a99!8m2!3d51.5073509!4d-0.1277583" target="_blank">5272 Lyngate Ct Burke, VA 2015-1688</a></p>
-                        <p>Contact Info <a href="tel:+1%20998%20150%30%2020"> +1 998 150 30 20</a> <a href="mailto:info@agencify.com">info@agencify.com</a></p>
+                        <p>Address <a href="https://goo.gl/maps/QJyb48gb1RVkqV3Q8" target="_blank">HOUSE-19, ROAD-4, SECTOR-4, UTTARA, DHAKA-1230</a></p>
+                        <p>Contact Info
+                          <a href="+880258955125">+880258955125</a>
+                          <a href="+8801611609372">+8801611609372</a>
+                           <a href="mailto:contact@xubisoft.com">contact@xubisoft.com</a>
+                           <a href="mailto:info@xubisoft.com">info@xubisoft.com</a>
+                         </p>
                     </div>
                     <!-- .footer-widget END -->
                 </div>
