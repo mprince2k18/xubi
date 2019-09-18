@@ -60,7 +60,8 @@
             <label class="form-label"> Add Ceo Message
 
              </label>
-            <textarea class="form-control" name="ceo_message" rows="7" placeholder="text here.."></textarea>
+
+            <textarea class="form-control" name="ceo_message" id="editor" rows="7" placeholder="text here.."></textarea>
 
 
             <label class="form-label"> Add Ceo Name

@@ -67,7 +67,7 @@
             <label class="form-label">Message
                {{-- <span class="form-label-small ml-3">56/100</span> --}}
              </label>
-            <textarea class="form-control" name="header_message" rows="7" placeholder="text here.."></textarea>
+            <textarea class="form-control" id="editor" name="header_message" rows="7" placeholder="text here.."></textarea>
 
             @error('header_message')
             <span class="invalid-feedback" role="alert">

@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/rev-settings.css') }}">
 
+
     <!--For Plugins external css-->
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/plugins.css') }}" />
     <!--Theme custom css -->

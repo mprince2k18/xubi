@@ -52,6 +52,8 @@
 
 		<!-- file Uploads -->
     <link href="{{ asset('dashboard/assets/plugins/fileuploads/css/dropify.min.css') }}" rel="stylesheet" type="text/css" />
+		<!-- file Uploads -->
+    <link href="{{ asset('dashboard/assets/css/quill.snow.css') }}" rel="stylesheet" type="text/css" />
 
 		<!---Font icons-->
 		<link href="{{ asset('dashboard/assets/css/icons.css') }}" rel="stylesheet" />
@@ -516,8 +518,8 @@
 										</div>
 										<div class="col-8">
 											<div class="card-body card-padding">
-												<h1 class="mb-2">546</h1>
-												<h5 class="font-weight-normal mb-3">Projects</h5>
+												<h1 class="mb-2">{{ App\Contact::where('status', 2)->count() }}</h1>
+												<h5 class="font-weight-normal mb-3">Message</h5>
 											</div>
 									    </div>
 								    </div>
@@ -531,8 +533,8 @@
 										</div>
 										<div class="col-8">
 											<div class="card-body card-padding">
-												<h1 class="mb-2">$7,908</h1>
-												<h5 class="font-weight-normal mb-3">Profits</h5>
+												<h1 class="mb-2">{{ App\Team::count() }}</h1>
+												<h5 class="font-weight-normal mb-3">Members</h5>
 											</div>
 									    </div>
 								    </div>
@@ -547,8 +549,8 @@
 										</div>
 										<div class="col-8">
 											<div class="card-body card-padding">
-												<h1 class="mb-2">9,523</h1>
-												<h5 class="font-weight-normal mb-3">Page views</h5>
+												<h1 class="mb-2">{{ App\CompanyService::count() }}</h1>
+												<h5 class="font-weight-normal mb-3">Services</h5>
 											</div>
 									    </div>
 								    </div>
@@ -562,8 +564,8 @@
 										</div>
 										<div class="col-8">
 											<div class="card-body card-padding">
-												<h1 class="mb-2">6,723</h1>
-												<h5 class="font-weight-normal mb-3">Reviews</h5>
+												<h1 class="mb-2">{{ App\Product::count() }}</h1>
+												<h5 class="font-weight-normal mb-3">Products</h5>
 											</div>
 									    </div>
 								    </div>
@@ -638,13 +640,15 @@
 										<script src="{{ asset('dashboard/assets/js/select2.js') }}"></script>
 										<!-- file uploads js -->
 								    <script src="{{ asset('dashboard/assets/plugins/fileuploads/js/dropify.min.js') }}"></script>
+										<!-- file uploads js -->
+								    <script src="{{ asset('dashboard/assets/js/quill.js') }}"></script>
 
+										<!-- sweetalert2 -->
+										<script src="{{ asset('dashboard/assets/js/sweetalert2.all.js') }}"></script>
 
 										<!-- Custom Js-->
 										<script src="{{ asset('dashboard/assets/js/custom.js') }}"></script>
 
-<!-- sweetalert2 -->
-										<script src="{{ asset('dashboard/assets/js/sweetalert2.all.js') }}"></script>
 
 										<script>
 										  @include('sweetalert::alert')
@@ -662,10 +666,15 @@
 								                    'fileSize': 'The file size is too big (2M max).'
 								                }
 								            });
-								        </script>
+								     </script>
 
 
-
+												<!-- Initialize Quill editor -->
+												<script>
+												  var quill = new Quill('#editor', {
+												    theme: 'snow'
+												  });
+												</script>
 
 
 							</body>
