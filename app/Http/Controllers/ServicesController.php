@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Laravel\Scout\Searchable;
 
 use Illuminate\Http\Request;
 use App\CompanyService;
@@ -14,8 +13,7 @@ use Alert;
 class ServicesController extends Controller
 {
 
-  use Searchable;
-  
+
     public function services()
     {
         $company_all_services = CompanyService::all();

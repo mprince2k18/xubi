@@ -27,7 +27,7 @@ class DashboardController extends Controller
 
     function index()
     {
-      return view('dashboard.index',compact('messages'));
+      return view('dashboard.index');
     }
 
 

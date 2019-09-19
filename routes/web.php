@@ -113,6 +113,12 @@ Route::post('/admin/ceo/talks','CeoController@ceo_talks')->name('ceo_talks');
 
 // portfolio index
 Route::get('/admin/portfolio','PortfolioController@index')->name('portfolio');
+// portfolio create
+Route::post('/admin/portfolio/create','PortfolioController@create')->name('create');
+// portfolio edit
+Route::get('/admin/portfolio/edit/{portfolio_id}','PortfolioController@edit')->name('edit');
+// portfolio update
+Route::post('/admin/portfolio/update','PortfolioController@update')->name('update');
 
 
 // SERVICES

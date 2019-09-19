@@ -214,87 +214,22 @@ Xubisoft | IT Solution
     <!-- agency portfolio area section -->
     <section class="agency_portfolio_section">
         <div class="agency-portfolio-slider owl-carousel owl-theme">
-            <div class="single-portfolio portfolio-style2"> <img src="{{ asset('xubisoft/assets/images/portfolio-slider/portfolio-slider-6.jpg') }}" alt="">
-                <div class="hover-area">
-                    <div class="hover-content">
-                        <h4 class="xs-title"><a href="#">Software Lounge</a></h4> <a href="#" class="portfolio-tag">Interface Design</a> </div>
-                </div>
-                <!-- .hover-area END -->
-            </div>
-            <!-- .single-portfolio END -->
-            <div class="single-portfolio portfolio-style2"> <img src="{{ asset('xubisoft/assets/images/portfolio-slider/portfolio-slider-7.jpg') }}" alt="">
-                <div class="hover-area">
-                    <div class="hover-content">
-                        <h4 class="xs-title"><a href="#">Software Lounge</a></h4> <a href="#" class="portfolio-tag">Interface Design</a> </div>
-                </div>
-                <!-- .hover-area END -->
-            </div>
-            <!-- .single-portfolio END -->
-            <div class="single-portfolio portfolio-style2"> <img src="{{ asset('xubisoft/assets/images/portfolio-slider/portfolio-slider-8.jpg') }}" alt="">
-                <div class="hover-area">
-                    <div class="hover-content">
-                        <h4 class="xs-title"><a href="#">Software Lounge</a></h4> <a href="#" class="portfolio-tag">Interface Design</a> </div>
-                </div>
-                <!-- .hover-area END -->
-            </div>
-            <!-- .single-portfolio END -->
-            <div class="single-portfolio portfolio-style2"> <img src="{{ asset('xubisoft/assets/images/portfolio-slider/portfolio-slider-9.jpg') }}" alt="">
-                <div class="hover-area">
-                    <div class="hover-content">
-                        <h4 class="xs-title"><a href="#">Software Lounge</a></h4> <a href="#" class="portfolio-tag">Interface Design</a> </div>
-                </div>
-                <!-- .hover-area END -->
-            </div>
-            <!-- .single-portfolio END -->
-            <div class="single-portfolio portfolio-style2"> <img src="{{ asset('xubisoft/assets/images/portfolio-slider/portfolio-slider-10.jpg') }}" alt="">
-                <div class="hover-area">
-                    <div class="hover-content">
-                        <h4 class="xs-title"><a href="#">Software Lounge</a></h4> <a href="#" class="portfolio-tag">Interface Design</a> </div>
-                </div>
-                <!-- .hover-area END -->
-            </div>
-            <!-- .single-portfolio END -->
 
-            <div class="single-portfolio portfolio-style2"> <img src="{{ asset('xubisoft/assets/images/portfolio-slider/portfolio-slider-6.jpg') }}" alt="">
-                <div class="hover-area">
-                    <div class="hover-content">
-                        <h4 class="xs-title"><a href="#">Software Lounge</a></h4> <a href="#" class="portfolio-tag">Interface Design</a> </div>
-                </div>
-                <!-- .hover-area END -->
-            </div>
-            <!-- .single-portfolio END -->
-            <div class="single-portfolio portfolio-style2"> <img src="{{ asset('xubisoft/assets/images/portfolio-slider/portfolio-slider-7.jpg') }}" alt="">
-                <div class="hover-area">
-                    <div class="hover-content">
-                        <h4 class="xs-title"><a href="#">Software Lounge</a></h4> <a href="#" class="portfolio-tag">Interface Design</a> </div>
-                </div>
-                <!-- .hover-area END -->
-            </div>
-            <!-- .single-portfolio END -->
-            <div class="single-portfolio portfolio-style2"> <img src="{{ asset('xubisoft/assets/images/portfolio-slider/portfolio-slider-8.jpg') }}" alt="">
-                <div class="hover-area">
-                    <div class="hover-content">
-                        <h4 class="xs-title"><a href="#">Software Lounge</a></h4> <a href="#" class="portfolio-tag">Interface Design</a> </div>
-                </div>
-                <!-- .hover-area END -->
-            </div>
-            <!-- .single-portfolio END -->
-            <div class="single-portfolio portfolio-style2"> <img src="{{ asset('xubisoft/assets/images/portfolio-slider/portfolio-slider-9.jpg') }}" alt="">
-                <div class="hover-area">
-                    <div class="hover-content">
-                        <h4 class="xs-title"><a href="#">Software Lounge</a></h4> <a href="#" class="portfolio-tag">Interface Design</a> </div>
-                </div>
-                <!-- .hover-area END -->
-            </div>
-            <!-- .single-portfolio END -->
+          <!-- .single-portfolio START -->
 
-            <div class="single-portfolio portfolio-style2"> <img src="{{ asset('xubisoft/assets/images/portfolio-slider/portfolio-slider-10.jpg') }}" alt="">
-                <div class="hover-area">
-                    <div class="hover-content">
-                        <h4 class="xs-title"><a href="#">Software Lounge</a></h4> <a href="#" class="portfolio-tag">Interface Design</a> </div>
-                </div>
-                <!-- .hover-area END -->
-            </div>
+
+              @foreach ($portfolios as $portfolio)
+              <div class="single-portfolio portfolio-style2"> <img src="{{ asset('uploads/portfolio') }}/{{ $portfolio->portfolio_image }}" alt="">
+                  <div class="hover-area">
+                      <div class="hover-content">
+                          <h4 class="xs-title"><a href="#">{{ $portfolio->portfolio_name }}</a></h4> <a href="#" class="portfolio-tag">{{ $portfolio->relationBetweenCategory->service_category_name }}</a> </div>
+                  </div>
+                  <!-- .hover-area END -->
+              </div>
+              @endforeach
+
+
+
             <!-- .single-portfolio END -->
         </div>
     </section>

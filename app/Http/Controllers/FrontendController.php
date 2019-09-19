@@ -9,6 +9,7 @@ use App\Banner;
 use App\Info;
 use App\Ceo;
 use App\Team;
+use App\Portfolio;
 use Alert;
 
 class FrontendController extends Controller
@@ -22,7 +23,8 @@ class FrontendController extends Controller
       $infos   = Info::all();
       $ceos    = Ceo::all();
       $teams    = Team::all();
+      $portfolios  = Portfolio::all();
       // Alert::success('Success Title', 'Success Message');
-      return view('homepage.index',compact('banners','infos','ceos','teams'));
+      return view('homepage.index',compact('banners','infos','ceos','teams','portfolios'));
     }
 }
