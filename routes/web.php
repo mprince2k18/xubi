@@ -119,6 +119,10 @@ Route::post('/admin/portfolio/create','PortfolioController@create')->name('creat
 Route::get('/admin/portfolio/edit/{portfolio_id}','PortfolioController@edit')->name('edit');
 // portfolio update
 Route::post('/admin/portfolio/update','PortfolioController@update')->name('update');
+// portfolio delete
+Route::get('/admin/portfolio/delete/{portfolio_id}','PortfolioController@delete')->name('delete');
+// portfolio restore
+Route::get('/admin/portfolio/restore/{portfolio_id}','PortfolioController@restore')->name('restore');
 
 
 // SERVICES

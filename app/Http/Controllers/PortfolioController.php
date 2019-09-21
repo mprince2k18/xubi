@@ -15,9 +15,10 @@ class PortfolioController extends Controller
 
     function index()
     {
-      $categories = Category::all();
-      $portfolios   = Portfolio::latest()->paginate(5);
-      return view('dashboard.portfolio.index',compact('categories','portfolios'));
+      $categories         = Category::all();
+      $portfolios         = Portfolio::latest()->paginate(5);
+      $trashed_portfolios = Portfolio::onlyTrashed()->paginate(5);
+      return view('dashboard.portfolio.index',compact('categories','portfolios','trashed_portfolios'));
     }
 
 // create
@@ -26,10 +27,10 @@ class PortfolioController extends Controller
     {
       // Portfolio::insert($request->except('_token'));
       $last_inserted_id = Portfolio::insertGetId([
-        'portfolio_name'      =>$request->portfolio_name,
+        'portfolio_name'         =>$request->portfolio_name,
         'portfolio_category_id'  =>$request->portfolio_category_id,
-        'portfolio_image'     =>$request->portfolio_image,
-        'created_at'          =>Carbon::now()
+        'portfolio_image'        =>$request->portfolio_image,
+        'created_at'             =>Carbon::now()
       ]);
 
 
@@ -74,10 +75,10 @@ class PortfolioController extends Controller
         }
 
         else {
-          //delete
+          //delete photo
           $delete_photo=Portfolio::find($request->portfolio_id)->portfolio_image;
           unlink(base_path('public/uploads/portfolio/'.$delete_photo));
-          //update
+          //update photo
           $photo_upload     = $request->portfolio_image;
           $photo_extension  =  $photo_upload->getClientOriginalExtension();
           $photo_name       =  $request->portfolio_id . "." . $photo_extension;
@@ -103,6 +104,25 @@ class PortfolioController extends Controller
     }
 
 
+
+    // delete
+
+    function delete($portfolio_id)
+    {
+      Portfolio::findOrFail($portfolio_id)->delete();
+
+      Alert::success('Deleted', 'Portfolio Deleted Succesfully');
+      return back()->with('success', 'Portfolio Deleted Succesfully');
+    }
+
+
+    // restore Products
+      function restore($portfolio_id){
+      Portfolio::onlyTrashed()->where('id',$portfolio_id)->restore();
+
+      Alert::success('Restore', 'Portfolio Restored Succesfully');
+      return back()->with('Restore','Restored Successfully');
+    }
 
 
 

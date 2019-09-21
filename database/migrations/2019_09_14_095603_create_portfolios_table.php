@@ -18,6 +18,7 @@ class CreatePortfoliosTable extends Migration
             $table->string('portfolio_name');
             $table->string('portfolio_category_id');
             $table->string('portfolio_image');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

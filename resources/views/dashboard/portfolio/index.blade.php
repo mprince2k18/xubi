@@ -102,7 +102,7 @@
 
   <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Team Members</h3>
+              <h3 class="card-title">Portfolios</h3>
             </div>
             <div class="table-responsive">
               <table class="table card-table table-vcenter text-nowrap">
@@ -129,6 +129,7 @@
                     <td>{{ $portfolio->created_at->diffForHumans() }}</td>
                     <td>
                       <a href="{{ url('/admin/portfolio/edit') }}/{{ $portfolio->id }}" class="btn-sm btn-primary">edit</a>
+                      <a href="{{ url('/admin/portfolio/delete') }}/{{ $portfolio->id }}" class="btn-sm btn-danger">Delete</a>
                     </td>
                   </tr>
 
@@ -154,6 +155,63 @@
 </div>
 
 <!-- trashed -->
+
+
+<!--    All Trashed-->
+<div class="col-lg-12 col-sm-12">
+
+  <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Portfolios</h3>
+            </div>
+            <div class="table-responsive">
+              <table class="table card-table table-vcenter text-nowrap">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Image</th>
+                    <th>Created At</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  @forelse ($trashed_portfolios as $trashed_portfolio)
+                  <tr>
+                    <th scope="row">{{ $trashed_portfolio->id }}</th>
+                    <td>{{ $trashed_portfolio->portfolio_name }}</td>
+                    <td>{{ $trashed_portfolio->relationBetweenCategory->service_category_name }}</td>
+                    <td>
+                      <img src="{{ asset('uploads/portfolio') }}/{{ $trashed_portfolio->portfolio_image }}" alt="{{ $trashed_portfolio->portfolio_name }}" width="80px">
+                    </td>
+                    <td>{{ $trashed_portfolio->created_at->diffForHumans() }}</td>
+                    <td>
+                      <a href="{{ url('/admin/portfolio/restore') }}/{{ $trashed_portfolio->id }}" class="btn-sm btn-success">restore</a>
+                    </td>
+                  </tr>
+
+                  @empty
+
+                  <td>No Portfolio Here</td>
+
+                  @endforelse
+
+                </tbody>
+              </table>
+
+
+              {{ $trashed_portfolios->links() }}
+
+
+            </div>
+            <!-- table-responsive -->
+          </div>
+
+
+
+</div>
 
 
 </div>

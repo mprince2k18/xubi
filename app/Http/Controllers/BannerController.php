@@ -14,7 +14,7 @@ class BannerController extends Controller
 
   use Searchable;
 
-  
+
   public function __construct()
   {
       $this->middleware('auth');
@@ -52,7 +52,7 @@ class BannerController extends Controller
     }
 
 
-    //Delete Products
+    // Delete Products
     function delete_banner($banner_id){
      // Products::where('id','=',$product_id)->delete();
      Banner::findOrFail($banner_id)->delete();
@@ -60,13 +60,13 @@ class BannerController extends Controller
    }
 
 
-   //edit banner
+   // edit banner
       function edit_banner($banner_id){
       $single_banner_edit  =  Banner::findOrFail($banner_id);
       return view('dashboard.header.edit',compact('single_banner_edit'));
     }
 
-    //Delete Products
+    // restore Products
       function restore_banner($banner_id){
       Banner::onlyTrashed()->where('id',$banner_id)->restore();
       return back()->with('restore','Restored Successfully');
@@ -74,7 +74,7 @@ class BannerController extends Controller
 
 
 
-    //update
+    // update
 
     function updateBanner(Request $request)
     {

@@ -4,11 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 class Portfolio extends Model
 {
   use Searchable;
+  use SoftDeletes;
 
 
   protected $fillable = [
@@ -17,7 +19,7 @@ class Portfolio extends Model
     'portfolio_image',
   ];
 
-
+  protected $dates=['deleted_at'];
 
   function relationBetweenCategory()
   {
