@@ -1004,7 +1004,7 @@ DEMO
   									<a class="nav-link" href="{{ route('homepage') }}">HOME</a>
   								</li>
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" data-toggle="" href="{{ route('services') }}">SERVICES</a>
+  									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('services') }}">SERVICES</a>
   									<div class="dropdown-menu">
   										<a class="dropdown-item" href="{{ route('custom_software') }}">CUSTOM SOFTWARE DEVELOPMENT</a>
   										<a class="dropdown-item" href="{{ route('web_design_development') }}">WEB DESIGN & DEVELOPMENT</a>
@@ -1018,7 +1018,7 @@ DEMO
 
 
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" data-toggle="" href="{{ route('products') }}">PRODUCTS</a>
+  									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('products') }}">PRODUCTS</a>
   									<div class="dropdown-menu">
   										<a class="dropdown-item" href="{{ route('custom_software') }}">ERP SOFTWARE</a>
   										<a class="dropdown-item" href="{{ route('web_design_development') }}">POS SOFTWARE</a>
@@ -1031,7 +1031,7 @@ DEMO
 
 
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" data-toggle="" href="{{ route('services') }}">TRAINING</a>
+  									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('services') }}">TRAINING</a>
   									<div class="dropdown-menu">
   										<a class="dropdown-item" href="{{ route('custom_software') }}">Web Design & Development</a>
   										<a class="dropdown-item" href="{{ route('web_design_development') }}">Graphics & Animation</a>

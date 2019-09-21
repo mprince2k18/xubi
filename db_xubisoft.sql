@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2019 at 01:33 PM
+-- Generation Time: Sep 21, 2019 at 01:50 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -192,7 +192,9 @@ CREATE TABLE `contacts` (
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `subject`, `message`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'obayedul', 'obayedul@gmail.com', 'Test Subject', 'bhvg v', 1, '2019-09-14 06:12:55', NULL),
-(2, 'Test Name', 'mprince2k16@gmail.com', 'Test Subject', 'asdfghjkl', 2, '2019-09-16 04:13:12', NULL);
+(2, 'Test Name', 'mprince2k16@gmail.com', 'Test Subject', 'asdfghjkl', 2, '2019-09-16 04:13:12', NULL),
+(3, 'Mohammad Prince', 'mprince2k16@gmail.com', 'Test Subject', 'asdfghjkl', 2, '2019-09-18 11:26:11', NULL),
+(4, 'Teemo', 'test@gmail.com', 'Test Subject', 'qwerty', 2, '2019-09-18 11:26:47', NULL);
 
 -- --------------------------------------------------------
 
@@ -276,11 +278,12 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (36, '2019_09_12_071828_create_addresses_table', 5),
 (41, '2019_09_14_081255_create_ceos_table', 6),
 (42, '2019_09_05_164358_create_contacts_table', 7),
-(43, '2019_09_14_095603_create_portfolios_table', 7),
 (44, '2019_09_14_111118_create_cache_table', 7),
 (50, '2019_09_15_095951_create_categories_table', 8),
 (54, '2019_09_16_115856_create_products_table', 10),
-(56, '2019_09_15_095344_create_company_services_table', 11);
+(56, '2019_09_15_095344_create_company_services_table', 11),
+(61, '2019_09_17_113930_create_teams_table', 12),
+(67, '2019_09_14_095603_create_portfolios_table', 13);
 
 -- --------------------------------------------------------
 
@@ -302,9 +305,26 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `portfolios` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `portfolio_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `portfolio_category_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `portfolio_image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `portfolios`
+--
+
+INSERT INTO `portfolios` (`id`, `portfolio_name`, `portfolio_category_id`, `portfolio_image`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'Customer Software Development', '1', '1.jpg', NULL, '2019-09-21 08:51:36', '2019-09-21 09:00:09'),
+(2, 'Web Design & Development', '1', '2.jpg', NULL, '2019-09-21 09:00:50', '2019-09-21 09:00:50'),
+(3, 'Apps Development', '2', '3.jpg', NULL, '2019-09-21 09:01:30', '2019-09-21 09:01:30'),
+(4, 'Graphics Solution', '3', '4.jpg', NULL, '2019-09-21 09:02:39', '2019-09-21 09:02:39'),
+(5, 'Career Development', '5', '5.jpg', NULL, '2019-09-21 09:03:05', '2019-09-21 09:03:05'),
+(6, 'Domain & Hosting', '4', '6.jpg', NULL, '2019-09-21 09:03:47', '2019-09-21 09:03:47'),
+(7, 'Clipping Path Service', '6', '7.jpg', NULL, '2019-09-21 09:04:19', '2019-09-21 09:04:19');
 
 -- --------------------------------------------------------
 
@@ -341,6 +361,32 @@ CREATE TABLE `services` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teams`
+--
+
+CREATE TABLE `teams` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `designation` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `team_photo` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `teams`
+--
+
+INSERT INTO `teams` (`id`, `name`, `designation`, `team_photo`, `slug`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'Teemo', 'COO', '1.jpg', 'teemo', '2019-09-17 09:10:37', '2019-09-17 09:10:25', '2019-09-17 09:10:37'),
+(2, 'Mohammad Prince', 'Web Application Developer', '2.jpg', 'mohammad-prince', NULL, '2019-09-18 10:26:40', '2019-09-18 10:26:41'),
+(3, 'Teemo', 'CEO', '3.jpg', 'teemo', NULL, '2019-09-18 11:29:12', '2019-09-18 11:29:12');
 
 -- --------------------------------------------------------
 
@@ -463,6 +509,12 @@ ALTER TABLE `services`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `teams`
+--
+ALTER TABLE `teams`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -507,7 +559,7 @@ ALTER TABLE `company_services`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -531,13 +583,13 @@ ALTER TABLE `infos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `portfolios`
 --
 ALTER TABLE `portfolios`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -550,6 +602,12 @@ ALTER TABLE `products`
 --
 ALTER TABLE `services`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `teams`
+--
+ALTER TABLE `teams`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
