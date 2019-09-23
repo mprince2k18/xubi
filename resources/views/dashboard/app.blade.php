@@ -52,8 +52,9 @@
 
 		<!-- file Uploads -->
     <link href="{{ asset('dashboard/assets/plugins/fileuploads/css/dropify.min.css') }}" rel="stylesheet" type="text/css" />
-		<!-- file Uploads -->
-    <link href="{{ asset('dashboard/assets/css/quill.snow.css') }}" rel="stylesheet" type="text/css" />
+		<!-- summernote -->
+
+
 
 		<!---Font icons-->
 		<link href="{{ asset('dashboard/assets/css/icons.css') }}" rel="stylesheet" />
@@ -640,8 +641,10 @@
 										<script src="{{ asset('dashboard/assets/js/select2.js') }}"></script>
 										<!-- file uploads js -->
 								    <script src="{{ asset('dashboard/assets/plugins/fileuploads/js/dropify.min.js') }}"></script>
-										<!-- file uploads js -->
-								    <script src="{{ asset('dashboard/assets/js/quill.js') }}"></script>
+										<!-- tinymce -->
+										<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+
+
 
 										<!-- sweetalert2 -->
 										<script src="{{ asset('dashboard/assets/js/sweetalert2.all.js') }}"></script>
@@ -669,12 +672,8 @@
 								     </script>
 
 
-												<!-- Initialize Quill editor -->
-												<script>
-												  var quill = new Quill('#editor', {
-												    theme: 'snow'
-												  });
-												</script>
+												<!-- Initialize ClassicEditor -->
+
 
 
 							</body>

@@ -16,7 +16,7 @@ class ContactController extends Controller
 {
 
   use Searchable;
-  
+
     public function index()
     {
 
@@ -53,8 +53,10 @@ class ContactController extends Controller
     function contact_index()
     {
       $all_contacts = Contact::latest()->paginate(10);
-      // Alert::success('Message Sent Successfully', 'We will connect with you ASAP');
-      return view('dashboard.contacts.index',compact('all_contacts'));
+      // record data through date wise
+      $contacts = Contact::whereDate('created_at', Carbon::today())->get();
+      // record data through date wise end
+      return view('dashboard.contacts.index',compact('all_contacts','contacts'));
     }
 
     function all_read_messages()

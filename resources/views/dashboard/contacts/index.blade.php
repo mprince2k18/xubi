@@ -82,11 +82,20 @@
 												<ul class="unstyled inbox-pagination">
 													<li><span>{{ $all_contacts->firstItem() }}-{{ $all_contacts->lastItem() }} of {{ $all_contacts->total() }}</span></li>
 
-													<li>
+                          <!-- record data through date wise -->
+                          <li><span>Todays Message {{ $contacts->count() }}</span></li>
+                          <!-- record data through date wise end -->
 
+
+
+
+													<li>
+                            <!-- previous next -->
                             <a class="np-btn" style="{{ $all_contacts->firstItem() === 1 ? 'display:none' : ' ' }}" href="{{ $all_contacts->previousPageUrl() }}"><i class="fa fa-angle-left pagination-left"></i></a>
 														<a class="np-btn" style="{{ $all_contacts->firstItem() === $all_contacts->lastItem() ? 'display:none' : ' ' }}" href="{{ $all_contacts->nextPageUrl() }}"><i class="fa fa-angle-right pagination-right"></i></a>
-													</li>
+                            <!-- previous next end-->
+
+                        	</li>
 
 												</ul>
 											</div>

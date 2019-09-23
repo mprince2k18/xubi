@@ -26,9 +26,12 @@ Xubisoft | IT Solution
                         <div class="row">
                             <div class="col-lg-5 mr-auto">
                                 <div class="agency-banner-content banner-style2">
-                                    <h1 class="banner-title">{{ $banner->header_headline  }}</h1>
+                                    <h1 class="banner-title text-left">{{ $banner->header_headline  }}</h1>
                                     <p>{{ $banner->header_message  }}</p>
-                                    <div class="btn-wraper"> <a href="#" class="btn btn-primary btn-gradient3">GET STARTED</a> </div>
+                                    <div class="btn-wraper">
+                                      <a href="#" class="btn btn-primary btn-gradient3">GET STARTED</a>
+                                      <a href="{{ route('contact') }}" class="btn btn-primary btn-gradient3">CONTACT</a>
+                                    </div>
                                 </div>
                                 <!-- .agency-banner-content END -->
                             </div>

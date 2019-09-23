@@ -26,7 +26,6 @@ class BannerController extends Controller
 
       $request->validate([
         'header_headline'      => 'required',
-        'header_message'   => 'required',
         'header_banner'  => 'required',
       ]);
 
