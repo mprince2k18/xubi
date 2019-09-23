@@ -436,66 +436,26 @@
 								</div>
 								<!-- dropdown-menu -->
 							</li>
-							<li class="nav-item with-sub">
-								<a class="nav-link" data-toggle="dropdown" href="#"><i class="mdi mdi-arrange-send-backward"></i> <span>Form Elements</span></a>
-								<div class="sub-item">
-									<ul>
-										<li>
-											<a href="form-elements.html">Form Elements</a>
-										</li>
-										<li>
-											<a href="form-wizard.html">wizard Elements</a>
-										</li>
-										<li>
-											<a href="wysiwyag.html">Text Editor</a>
-										</li>
-									</ul>
-								</div>
-								<!-- dropdown-menu -->
-							</li>
-							<li class="nav-item with-sub ">
-								<a class="nav-link " data-toggle="dropdown" href="#"><i class="fa fa-cogs"></i> <span>Components</span></a>
-								<div class="sub-item">
-									<ul>
-										<li>
-											<a href="maps.html">Maps</a>
-										</li>
-										<li>
-											<a href="crypto-currencies.html">Crypto-currencies</a>
-										</li>
-										<li>
-											<a href="users-list.html">User List</a>
-										</li>
-										<li class="sub-with-sub">
-											<a href="#">Calendar </a>
-											<ul>
-												<li>
-													<a href="calendar.html">Default calendar</a>
-												</li>
-												<li>
-													<a href="calendar2.html">Full calendar</a>
-												</li>
-											</ul>
-										</li>
-										<li class="sub-with-sub">
-											<a href="#">Tables</a>
-											<ul>
-												<li>
-													<a href="tables.html">Default table</a>
-												</li>
-												<li>
-													<a href="datatable.html">Data Table</a>
-												</li>
 
-											</ul>
+							<li class="nav-item with-sub">
+								<a class="nav-link" href="{{ route('client_index') }}"><i class="fa fa-tachometer"></i> <span>Clients</span></a>
+								<div class="sub-item">
+									<ul>
+										<li>
+											<a href="#">All Services</a>
 										</li>
 										<li>
-											<a href="search.html">Search page</a>
+											<a href="#">Add Service Category</a>
 										</li>
+										<li>
+											<a href="#">Add Service</a>
+										</li>
+
 									</ul>
 								</div>
 								<!-- dropdown-menu -->
 							</li>
+
 
 						</ul>
 					</div>

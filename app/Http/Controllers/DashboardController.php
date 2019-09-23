@@ -11,6 +11,7 @@ use App\Category;
 use App\CompanyService;
 use App\Product;
 use App\Team;
+use App\Client;
 use Carbon\Carbon;
 use Image;
 use Alert;
@@ -70,6 +71,13 @@ function team_index()
 {
   $team_members = Team::latest()->paginate(3);
   return view('dashboard.team.index',compact('team_members'));
+}
+// Client
+
+function client_index()
+{
+  $all_clients = Client::latest()->paginate(5);
+  return view('dashboard.clients.index',compact('all_clients'));
 }
 
 

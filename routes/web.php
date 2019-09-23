@@ -172,6 +172,15 @@ Route::get('/admin/team/delete/{team_id}','TeamController@delete_team')->name('d
 
 
 
+// CLIENTS
+
+// client_index
+Route::get('/admin/client','DashboardController@client_index')->name('client_index');
+// insert
+Route::post('/admin/client/insert','ClientController@insert')->name('insert');
+
+
+
 
 
 

@@ -10,6 +10,7 @@ use App\Info;
 use App\Ceo;
 use App\Team;
 use App\Portfolio;
+use App\Client;
 use Alert;
 
 class FrontendController extends Controller
@@ -24,7 +25,8 @@ class FrontendController extends Controller
       $ceos    = Ceo::all();
       $teams    = Team::all();
       $portfolios  = Portfolio::all();
+      $clients  = Client::all();
       // Alert::success('Success Title', 'Success Message');
-      return view('homepage.index',compact('banners','infos','ceos','teams','portfolios'));
+      return view('homepage.index',compact('banners','infos','ceos','teams','portfolios','clients'));
     }
 }

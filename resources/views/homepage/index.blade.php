@@ -556,19 +556,13 @@ Xubisoft | IT Solution
     </section>
     <!-- agency review section end -->
     <!-- agency client slider area section -->
-    <div class="agency_client_slider client-slider-style2 gray-bg">
+    <div class="agency_client_slider client-slider-style1">
         <div class="container">
             <div class="client-slider owl-carousel">
-                <div class="item"> <img src="{{ asset('xubisoft/assets/images/xubi/acer.png') }}" alt=""> </div>
-                <div class="item"> <img src="{{ asset('xubisoft/assets/images/xubi/astrazeneca.png') }}" alt=""> </div>
-                <div class="item"> <img src="{{ asset('xubisoft/assets/images/xubi/bacco.jpg') }}" alt=""> </div>
-                <div class="item"> <img src="{{ asset('xubisoft/assets/images/xubi/basis-1.jpg') }}" alt=""> </div>
-                <div class="item"> <img src="{{ asset('xubisoft/assets/images/xubi/cablenas.png') }}" alt=""> </div>
-                <div class="item"> <img src="{{ asset('xubisoft/assets/images/xubi/dhl.png') }}" alt=""> </div>
-                <div class="item"> <img src="{{ asset('xubisoft/assets/images/xubi/erecsion.png') }}" alt=""> </div>
-                <div class="item"> <img src="{{ asset('xubisoft/assets/images/xubi/frialsa.png') }}" alt=""> </div>
-                <div class="item"> <img src="{{ asset('xubisoft/assets/images/xubi/fuji.png') }}" alt=""> </div>
-                <div class="item"> <img src="{{ asset('xubisoft/assets/images/xubi/astrazeneca.png') }}" alt=""> </div>
+              @foreach ($clients as $client)
+                <div class="item"> <img src="{{ asset('uploads/clients') }}/{{ $client->client_photo }}" alt="{{ $client->client_name }}"> </div>
+              @endforeach
+
             </div>
             <!-- .client-slider end -->
         </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 21, 2019 at 01:50 PM
+-- Generation Time: Sep 23, 2019 at 12:32 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -73,7 +73,7 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `header_headline`, `header_message`, `header_banner`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'We Provide\r\nSolutions that\r\nBrings Joy', NULL, '1.png', NULL, '2019-09-07 03:16:35', '2019-09-10 22:51:16'),
+(1, 'We Provide Solutions that Brings Joy', NULL, '1.png', NULL, '2019-09-07 03:16:35', '2019-09-22 11:01:48'),
 (3, 'test', 'twat', '3.png', '2019-09-10 22:42:55', '2019-09-10 01:42:48', '2019-09-10 22:42:55'),
 (4, 'test', NULL, '4.png', '2019-09-14 05:58:07', '2019-09-10 02:41:21', '2019-09-14 05:58:07'),
 (5, 'test', 'test', '5.png', '2019-09-10 22:42:43', '2019-09-10 22:18:18', '2019-09-10 22:42:43'),
@@ -83,7 +83,10 @@ INSERT INTO `banners` (`id`, `header_headline`, `header_message`, `header_banner
 (9, 'grhrtt', 'trytr', '9.png', '2019-09-10 22:40:00', '2019-09-10 22:27:31', '2019-09-10 22:40:00'),
 (10, 'tret45t5', '5665', '10.png', '2019-09-10 22:40:05', '2019-09-10 22:28:49', '2019-09-10 22:40:05'),
 (11, 'wrr24', '34343', '11.png', '2019-09-10 22:42:23', '2019-09-10 22:29:18', '2019-09-10 22:42:23'),
-(12, 'rtrw4wr', '444545454', '12.png', '2019-09-10 22:42:28', '2019-09-10 22:29:43', '2019-09-10 22:42:28');
+(12, 'rtrw4wr', '444545454', '12.png', '2019-09-10 22:42:28', '2019-09-10 22:29:43', '2019-09-10 22:42:28'),
+(13, '<p>sdsds</p>', NULL, '13.png', '2019-09-22 11:01:15', '2019-09-22 10:45:51', '2019-09-22 11:01:15'),
+(14, '<p>test</p>', NULL, '14.png', '2019-09-22 11:01:07', '2019-09-22 10:55:33', '2019-09-22 11:01:07'),
+(15, '<p>tftf</p>', NULL, '15.png', '2019-09-22 11:00:59', '2019-09-22 10:56:14', '2019-09-22 11:00:59');
 
 -- --------------------------------------------------------
 
@@ -148,6 +151,36 @@ INSERT INTO `ceos` (`id`, `ceo_message`, `ceo_name`, `ceo_position`, `ceo_photo`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `clients`
+--
+
+CREATE TABLE `clients` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `client_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `client_description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `client_photo` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `clients`
+--
+
+INSERT INTO `clients` (`id`, `client_name`, `client_description`, `client_photo`, `created_at`, `updated_at`) VALUES
+(1, 'BASIS', NULL, '1.jpg', '2019-09-23 09:35:23', '2019-09-23 09:35:23'),
+(2, 'BACCO', NULL, '2.jpg', '2019-09-23 09:45:34', '2019-09-23 09:45:34'),
+(3, 'ACER', NULL, '3.png', '2019-09-23 09:53:32', '2019-09-23 09:53:32'),
+(4, 'ASTRAZENECA', NULL, '4.png', '2019-09-23 10:12:25', '2019-09-23 10:12:25'),
+(5, 'CEBLENAS', NULL, '5.png', '2019-09-23 10:16:58', '2019-09-23 10:16:58'),
+(6, 'DHL', NULL, '6.png', '2019-09-23 10:17:22', '2019-09-23 10:17:22'),
+(7, 'ERECSION', NULL, '7.png', '2019-09-23 10:18:07', '2019-09-23 10:18:07'),
+(8, 'FRIALSA', NULL, '8.png', '2019-09-23 10:18:36', '2019-09-23 10:18:37'),
+(9, 'FUJIFILM', NULL, '9.png', '2019-09-23 10:19:10', '2019-09-23 10:19:10');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `company_services`
 --
 
@@ -194,7 +227,10 @@ INSERT INTO `contacts` (`id`, `name`, `email`, `subject`, `message`, `status`, `
 (1, 'obayedul', 'obayedul@gmail.com', 'Test Subject', 'bhvg v', 1, '2019-09-14 06:12:55', NULL),
 (2, 'Test Name', 'mprince2k16@gmail.com', 'Test Subject', 'asdfghjkl', 2, '2019-09-16 04:13:12', NULL),
 (3, 'Mohammad Prince', 'mprince2k16@gmail.com', 'Test Subject', 'asdfghjkl', 2, '2019-09-18 11:26:11', NULL),
-(4, 'Teemo', 'test@gmail.com', 'Test Subject', 'qwerty', 2, '2019-09-18 11:26:47', NULL);
+(4, 'Teemo', 'test@gmail.com', 'Test Subject', 'qwerty', 2, '2019-09-18 11:26:47', NULL),
+(5, 'Mohammad Prince', 'mprince2k16@gmail.com', 'sadasd', 'wadasdas', 2, '2019-09-22 11:40:45', NULL),
+(6, 'Mohammad Prince', 'mprince2k16@gmail.com', 'rerer', 'fsef', 2, '2019-09-22 11:56:58', NULL),
+(7, 'test', 'test@gmail.com', 'Test Subject', 'test', 2, '2019-09-23 02:57:16', NULL);
 
 -- --------------------------------------------------------
 
@@ -283,7 +319,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (54, '2019_09_16_115856_create_products_table', 10),
 (56, '2019_09_15_095344_create_company_services_table', 11),
 (61, '2019_09_17_113930_create_teams_table', 12),
-(67, '2019_09_14_095603_create_portfolios_table', 13);
+(68, '2019_09_14_095603_create_portfolios_table', 13),
+(71, '2019_09_23_130800_create_clients_table', 14);
 
 -- --------------------------------------------------------
 
@@ -312,19 +349,6 @@ CREATE TABLE `portfolios` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `portfolios`
---
-
-INSERT INTO `portfolios` (`id`, `portfolio_name`, `portfolio_category_id`, `portfolio_image`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'Customer Software Development', '1', '1.jpg', NULL, '2019-09-21 08:51:36', '2019-09-21 09:00:09'),
-(2, 'Web Design & Development', '1', '2.jpg', NULL, '2019-09-21 09:00:50', '2019-09-21 09:00:50'),
-(3, 'Apps Development', '2', '3.jpg', NULL, '2019-09-21 09:01:30', '2019-09-21 09:01:30'),
-(4, 'Graphics Solution', '3', '4.jpg', NULL, '2019-09-21 09:02:39', '2019-09-21 09:02:39'),
-(5, 'Career Development', '5', '5.jpg', NULL, '2019-09-21 09:03:05', '2019-09-21 09:03:05'),
-(6, 'Domain & Hosting', '4', '6.jpg', NULL, '2019-09-21 09:03:47', '2019-09-21 09:03:47'),
-(7, 'Clipping Path Service', '6', '7.jpg', NULL, '2019-09-21 09:04:19', '2019-09-21 09:04:19');
 
 -- --------------------------------------------------------
 
@@ -385,7 +409,7 @@ CREATE TABLE `teams` (
 
 INSERT INTO `teams` (`id`, `name`, `designation`, `team_photo`, `slug`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 'Teemo', 'COO', '1.jpg', 'teemo', '2019-09-17 09:10:37', '2019-09-17 09:10:25', '2019-09-17 09:10:37'),
-(2, 'Mohammad Prince', 'Web Application Developer', '2.jpg', 'mohammad-prince', NULL, '2019-09-18 10:26:40', '2019-09-18 10:26:41'),
+(2, 'Fahad Hasan', 'CEO', '2.png', 'mohammad-prince', NULL, '2019-09-18 10:26:40', '2019-09-22 09:30:13'),
 (3, 'Teemo', 'CEO', '3.jpg', 'teemo', NULL, '2019-09-18 11:29:12', '2019-09-18 11:29:12');
 
 -- --------------------------------------------------------
@@ -446,6 +470,12 @@ ALTER TABLE `categories`
 -- Indexes for table `ceos`
 --
 ALTER TABLE `ceos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `clients`
+--
+ALTER TABLE `clients`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -535,7 +565,7 @@ ALTER TABLE `addresses`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -550,6 +580,12 @@ ALTER TABLE `ceos`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `clients`
+--
+ALTER TABLE `clients`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `company_services`
 --
 ALTER TABLE `company_services`
@@ -559,7 +595,7 @@ ALTER TABLE `company_services`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -583,13 +619,13 @@ ALTER TABLE `infos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `portfolios`
 --
 ALTER TABLE `portfolios`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `products`
