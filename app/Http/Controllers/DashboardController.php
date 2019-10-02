@@ -40,45 +40,52 @@ class DashboardController extends Controller
     }
 
 
-function contact_notification(){
+    function contact_notification(){
 
-  $all_notis = Contact::all();
-  return view('dashboard.app',compact('all_notis'));
-}
+      $all_notis = Contact::all();
+      return view('dashboard.app',compact('all_notis'));
+    }
 
-// SERVICES
+    // SERVICES
 
-function service_index()
-{
-  $service_categories = Category::all();
-  $company_services = CompanyService::all();
-  return view('dashboard.services.index',compact('service_categories','company_services'));
-}
+    function service_index()
+    {
+      $service_categories = Category::all();
+      $company_services = CompanyService::all();
+      return view('dashboard.services.index',compact('service_categories','company_services'));
+    }
 
-
-// PRODUCTS
-
-function products_index()
-{
-  $all_products = Product::all();
-  return view('dashboard.products.index',compact('all_products'));
-}
+    // add_service_page
+    public function add_service_page()
+    {
+      $all_service_categories = Category::all();
+      return view('dashboard.services.add_service_page',compact('all_service_categories'));
+    }
 
 
-// TEAM
+    // PRODUCTS
 
-function team_index()
-{
-  $team_members = Team::latest()->paginate(3);
-  return view('dashboard.team.index',compact('team_members'));
-}
-// Client
+    function products_index()
+    {
+      $all_products = Product::all();
+      return view('dashboard.products.index',compact('all_products'));
+    }
 
-function client_index()
-{
-  $all_clients = Client::latest()->paginate(5);
-  return view('dashboard.clients.index',compact('all_clients'));
-}
+
+    // TEAM
+
+    function team_index()
+    {
+      $team_members = Team::latest()->paginate(3);
+      return view('dashboard.team.index',compact('team_members'));
+    }
+    // Client
+
+    function client_index()
+    {
+      $all_clients = Client::latest()->paginate(5);
+      return view('dashboard.clients.index',compact('all_clients'));
+    }
 
 
 

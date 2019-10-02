@@ -14,4 +14,11 @@ class Category extends Model
     'service_category_name',
   ];
 
+
+
+  function relationBetweenServices()
+  {
+    return $this->hasOne('App\Services','service_category_id','id');
+  }
+
 }

@@ -301,13 +301,10 @@
 															<div class="sub-item">
 																<ul>
 																	<li>
-																		<a href="#">All Services</a>
+																		<a href="{{ route('service_index') }}">All Services</a>
 																	</li>
 																	<li>
-																		<a href="#">Add Service Category</a>
-																	</li>
-																	<li>
-																		<a href="#">Add Service</a>
+																		<a href="{{ route('add_service_page') }}">Add Service Page</a>
 																	</li>
 
 																</ul>
@@ -534,6 +531,41 @@
 							</div>
 						</div>
 
+
+
+
+
+						<!-- SESSION -->
+
+						    @if (session('success'))
+						   <div class="alert alert-success">
+						       {{ session('success') }}
+						   </div>
+						   @endif
+
+						    @if (session('restore'))
+						   <div class="alert alert-success">
+						       {{ session('restore') }}
+						   </div>
+						   @endif
+
+						    @if (session('delete'))
+						   <div class="alert alert-success">
+						       {{ session('delete') }}
+						   </div>
+						   @endif
+
+						   @if ($errors->any())
+						   <div class="alert alert-danger">
+						       <ul>
+						           @foreach ($errors->all() as $error)
+						           <li>{{ $error }}</li>
+						           @endforeach
+						       </ul>
+						   </div><br />
+						   @endif
+
+						<!-- SESSION END-->
 
 
 

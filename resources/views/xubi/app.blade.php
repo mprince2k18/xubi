@@ -144,6 +144,10 @@ border-radius: 0 0 8px 8px;
   background-color: #2d3436;
 }
 
+.footer-widget p{
+  text-align: left;
+}
+
 </style>
 
 
@@ -188,13 +192,11 @@ border-radius: 0 0 8px 8px;
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
   									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('services') }}">SERVICES</a>
   									<div class="dropdown-menu">
-  										<a class="dropdown-item" href="{{ route('custom_software') }}">CUSTOM SOFTWARE DEVELOPMENT</a>
-  										<a class="dropdown-item" href="{{ route('web_design_development') }}">WEB DESIGN & DEVELOPMENT</a>
-  										<a class="dropdown-item" href="{{ route('apps_development') }}">APPS DEVELOPMENT</a>
-  										<a class="dropdown-item" href="{{ route('graphics_solution') }}">GRAPHICS SOLUTION</a>
-  										<a class="dropdown-item" href="{{ route('career_development') }}">CAREER DEVELOPMENT</a>
-  										<a class="dropdown-item" href="{{ route('domain_hosting') }}">DOMAIN AND HOSTING</a>
-  										<a class="dropdown-item" href="{{ route('clipping_path_services') }}">CLIPPING PATH SERVICE</a>
+
+                      @foreach (App\Category::all() as $services)
+                        <a class="dropdown-item" href="{{ url('/services') }}/{{ $services->id }}"> {{  $services->service_category_name }} </a>
+                      @endforeach
+
   									</div>
   								</li>
 
@@ -202,12 +204,7 @@ border-radius: 0 0 8px 8px;
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
   									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('products') }}">PRODUCTS</a>
   									<div class="dropdown-menu">
-  										<a class="dropdown-item" href="{{ route('custom_software') }}">ERP SOFTWARE</a>
-  										<a class="dropdown-item" href="{{ route('web_design_development') }}">POS SOFTWARE</a>
-  										<a class="dropdown-item" href="{{ route('apps_development') }}">HR & PAYROLL SOFTWARE</a>
-  										<a class="dropdown-item" href="{{ route('graphics_solution') }}">FREIGHT FORWARDING SOFTWARE</a>
-  										<a class="dropdown-item" href="{{ route('career_development') }}">ACCOUNTING & INVENTORY SOFTWARE</a>
-  										<a class="dropdown-item" href="{{ route('domain_hosting') }}">SCHOOL MANAGEMENT SOFTWARE</a>
+
   									</div>
   								</li>
 
@@ -215,16 +212,7 @@ border-radius: 0 0 8px 8px;
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
   									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('services') }}">TRAINING</a>
   									<div class="dropdown-menu">
-  										<a class="dropdown-item" href="{{ route('custom_software') }}">Web Design & Development</a>
-  										<a class="dropdown-item" href="{{ route('web_design_development') }}">Graphics & Animation</a>
-  										<a class="dropdown-item" href="{{ route('apps_development') }}">Android Apps Development</a>
-  										<a class="dropdown-item" href="{{ route('graphics_solution') }}">NETWORKING</a>
-  										<a class="dropdown-item" href="{{ route('graphics_solution') }}">ADVANCED NETWORKING</a>
-  										<a class="dropdown-item" href="{{ route('career_development') }}">CCNA</a>
-  										<a class="dropdown-item" href="{{ route('domain_hosting') }}">CCNA Security Engineer</a>
-  										<a class="dropdown-item" href="{{ route('domain_hosting') }}">WordPress Customization</a>
-  										<a class="dropdown-item" href="{{ route('domain_hosting') }}">Software Development</a>
-  										<a class="dropdown-item" href="{{ route('domain_hosting') }}">SEIP Training</a>
+
   									</div>
   								</li>
 
@@ -234,7 +222,7 @@ border-radius: 0 0 8px 8px;
   								</li>
 
   								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link" href="#">ABOUT</a>
+  									<a class="nav-link" href="{{ route('about') }}">ABOUT</a>
   								</li>
   								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
   									<!-- <a class="nav-link" href="#">Contact</a> -->
@@ -274,7 +262,7 @@ border-radius: 0 0 8px 8px;
         <a href="{{ route('contact') }}" class="r-link menu__link">CONTACT CENTER</a>
       </li>
       <li class="menu__group">
-        <a href="{{ route('homepage') }}" class="r-link menu__link">ABOUT</a>
+        <a href="{{ route('about') }}" class="r-link menu__link">ABOUT</a>
       </li>
 
     </ul>

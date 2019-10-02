@@ -2,7 +2,7 @@
 
 @section('title')
 
-Graphics Solution
+{{ $single_service_info->service_category_name }}
 
 @endsection
 
@@ -14,9 +14,15 @@ Graphics Solution
             <div class="col-md-8 mx-auto text-center">
                 <div class="case-details-banner-content">
                     <div class="agency-banner-content">
-                        <h1 class="banner-title">Web Design & Development</h1>
-                        <p>A powerful platform for flexible communication</p>
-                        <span class="watermark-title">W</span>
+                        <h1 class="banner-title">
+
+
+                          {{ $single_service_info->relationBetweenServices->title }}
+
+
+                        </h1>
+                        <p>{{ $single_service_info->relationBetweenServices->sub_title }}</p>
+                        <span class="watermark-title">{{ $single_service_info->relationBetweenServices->title_watermark_single }}</span>
                     </div><!-- .agency-banner-content END -->
                     <ul class="case-info-list">
                         <li><i class="icon icon-bell"></i><span>Front-End</span></li>
@@ -24,7 +30,7 @@ Graphics Solution
                         <li><i class="icon icon-money-bag"></i><span>Back-End</span></li>
                     </ul><!-- .case-info-list END -->
                     <div class="case-details-image">
-                        <span class="watermark-title" data-scrollax="properties: { translateY: '-250px' }">Custom Softwere Development</span>
+                        <span class="watermark-title" data-scrollax="properties: { translateY: '-250px' }">{{ $single_service_info->relationBetweenServices->title_watermark_full }}</span>
                         <img src="{{asset('xubisoft/assets/images/welcome/case-details.jpg')}}" alt="">
                     </div><!-- .case-details-image END -->
                 </div><!-- .case-details-banner-content END -->
@@ -42,18 +48,18 @@ Graphics Solution
                 <div class="case-details-about">
                     <div class="agency-section-title">
                         <h3 class="sub-title">OVERVIEW</h3>
-                        <h4 class="main-title">About the <em>Client</em></h4>
+                        <h4 class="main-title">About the <em>{{ $single_service_info->relationBetweenServices->about_service_title }}</em></h4>
                     </div>
-                    <p>We work systematically to integrate corporate responsibility in our core business and make the  our expertise available benefit of the societies where we operate the system. A most successful website the obviously needs great design to be one of the top 10 IT companies in India, but the web design is not enough lorem ipsum.</p>
+                    <p>{{ $single_service_info->relationBetweenServices->details_about_service }}</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="about-info">
                     <h2 class="section-title">Info</h2>
                     <ul class="list-group">
-                        <li><strong>Category :</strong>Web Development</li>
+                        <li><strong>Category :</strong>{{ $single_service_info->service_category_name }}</li>
                         <li><strong>Date :</strong>25 June, 2018</li>
-                        <li><strong>Client :</strong>Oniblue</li>
+                        <!-- <li><strong>Client :</strong>Oniblue</li> -->
                         <li>
                             <strong>Share :</strong>
                             <ul class="simple-social-list">
@@ -90,11 +96,11 @@ Graphics Solution
             </div>
             <div class="col-md-5">
                 <div class="project-brief-content">
-                    <p>Web developers are happy to share their knowledge and expert tise about web development. They can advise you on the most important aspects you will need to consider</p>
+                    <p>{{ $single_service_info->relationBetweenServices->service_info_details }}</p>
                     <ol class="order-list">
-                        <li>Adding functionality to an innovative Business</li>
-                        <li>Managing a complex open source </li>
-                        <li>Taking over the project and handing it </li>
+                        <li>{{ $single_service_info->relationBetweenServices->service_info_items_1 }}</li>
+                        <li>{{ $single_service_info->relationBetweenServices->service_info_items_2 }} </li>
+                        <li>{{ $single_service_info->relationBetweenServices->service_info_items_3 }} </li>
                     </ol>
                 </div>
             </div>

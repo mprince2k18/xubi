@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2019 at 12:32 PM
+-- Generation Time: Oct 02, 2019 at 02:06 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_xubisoft`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `abouts`
+--
+
+CREATE TABLE `abouts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -163,21 +175,6 @@ CREATE TABLE `clients` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `clients`
---
-
-INSERT INTO `clients` (`id`, `client_name`, `client_description`, `client_photo`, `created_at`, `updated_at`) VALUES
-(1, 'BASIS', NULL, '1.jpg', '2019-09-23 09:35:23', '2019-09-23 09:35:23'),
-(2, 'BACCO', NULL, '2.jpg', '2019-09-23 09:45:34', '2019-09-23 09:45:34'),
-(3, 'ACER', NULL, '3.png', '2019-09-23 09:53:32', '2019-09-23 09:53:32'),
-(4, 'ASTRAZENECA', NULL, '4.png', '2019-09-23 10:12:25', '2019-09-23 10:12:25'),
-(5, 'CEBLENAS', NULL, '5.png', '2019-09-23 10:16:58', '2019-09-23 10:16:58'),
-(6, 'DHL', NULL, '6.png', '2019-09-23 10:17:22', '2019-09-23 10:17:22'),
-(7, 'ERECSION', NULL, '7.png', '2019-09-23 10:18:07', '2019-09-23 10:18:07'),
-(8, 'FRIALSA', NULL, '8.png', '2019-09-23 10:18:36', '2019-09-23 10:18:37'),
-(9, 'FUJIFILM', NULL, '9.png', '2019-09-23 10:19:10', '2019-09-23 10:19:10');
-
 -- --------------------------------------------------------
 
 --
@@ -230,7 +227,9 @@ INSERT INTO `contacts` (`id`, `name`, `email`, `subject`, `message`, `status`, `
 (4, 'Teemo', 'test@gmail.com', 'Test Subject', 'qwerty', 2, '2019-09-18 11:26:47', NULL),
 (5, 'Mohammad Prince', 'mprince2k16@gmail.com', 'sadasd', 'wadasdas', 2, '2019-09-22 11:40:45', NULL),
 (6, 'Mohammad Prince', 'mprince2k16@gmail.com', 'rerer', 'fsef', 2, '2019-09-22 11:56:58', NULL),
-(7, 'test', 'test@gmail.com', 'Test Subject', 'test', 2, '2019-09-23 02:57:16', NULL);
+(7, 'test', 'test@gmail.com', 'Test Subject', 'test', 2, '2019-09-23 02:57:16', NULL),
+(8, 'Mohammad Prince', 'mprince2k16@gmail.com', 'gdddddfg', 'dfggg', 2, '2019-09-25 11:24:06', NULL),
+(9, 'Mohammad Prince', 'mprince2k16@gmail.com', 'gdddddfg', 'dfggg', 2, '2019-09-25 11:24:06', NULL);
 
 -- --------------------------------------------------------
 
@@ -308,7 +307,6 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (16, '2019_09_05_082731_create_frontends_table', 2),
-(17, '2019_09_05_120858_create_services_table', 2),
 (19, '2019_09_05_202034_create_banners_table', 2),
 (31, '2019_09_07_135909_create_infos_table', 3),
 (36, '2019_09_12_071828_create_addresses_table', 5),
@@ -320,7 +318,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (56, '2019_09_15_095344_create_company_services_table', 11),
 (61, '2019_09_17_113930_create_teams_table', 12),
 (68, '2019_09_14_095603_create_portfolios_table', 13),
-(71, '2019_09_23_130800_create_clients_table', 14);
+(78, '2019_09_23_130800_create_clients_table', 15),
+(79, '2019_09_29_130535_create_abouts_table', 16),
+(86, '2019_09_05_120858_create_services_table', 17);
 
 -- --------------------------------------------------------
 
@@ -382,9 +382,46 @@ INSERT INTO `products` (`id`, `product_name`, `product_photo`, `slug_name`, `cre
 
 CREATE TABLE `services` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sub_title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title_watermark_single` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `service_category_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title_banner` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title_watermark_full` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `about_service_title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `details_about_service` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `service_info_banner` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `service_info_details` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `service_info_items_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_info_items_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_info_items_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_details_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_banner_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_details_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_banner_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_details_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_banner_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_details_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_banner_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_details_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_banner_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `title`, `sub_title`, `title_watermark_single`, `service_category_id`, `title_banner`, `title_watermark_full`, `about_service_title`, `details_about_service`, `service_info_banner`, `service_info_details`, `service_info_items_1`, `service_info_items_2`, `service_info_items_3`, `service_process_1`, `service_process_details_1`, `service_process_banner_1`, `service_process_2`, `service_process_details_2`, `service_process_banner_2`, `service_process_3`, `service_process_details_3`, `service_process_banner_3`, `service_process_4`, `service_process_details_4`, `service_process_banner_4`, `service_process_5`, `service_process_details_5`, `service_process_banner_5`, `created_at`, `updated_at`) VALUES
+(1, 'test', 'test', 'T', '2', '4.png', 'twst', 'erer', 'ere', '4.png', 'fsdfdsf', 'dsfdsfs', 'sdfds', 'fsdfds', 'dsfsd', 'dfdf', '4.png', 'dfdfdfd', 'dfdf', '4.png', 'dffdf', 'dfdfd', '4.png', 'fdfdf', 'dfdfd', '4.png', 'dfdfdf', 'dfdfdfdf', '4.png', '2019-10-02 08:12:16', NULL),
+(2, 'teemo', 'teemooooooooo', 'T', '1', '4.png', 'Teemo', 'Teemo', 'TeemoTeemoTeemoTeemoTeemoTeemo', '4.png', 'Teemo', 'Teemo', 'Teemo', 'TeemoTeemo', 'Teemo', 'Teemo', 'cropped-download-180x180.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-02 11:25:48', NULL),
+(3, 'test', 'test', 'T', '3', '4.png', 'test', 'Teemo', 'ere', '4.png', 'fsdfdsf', 'Teemo', 'sdfds', 'fsdfds', 'dsfsd', 'dfdf', '4.png', 'dfdfdfd', 'dfdf', 'cropped-download-180x180.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-02 12:04:02', NULL);
 
 -- --------------------------------------------------------
 
@@ -440,6 +477,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `abouts`
+--
+ALTER TABLE `abouts`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `addresses`
@@ -556,6 +599,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `abouts`
+--
+ALTER TABLE `abouts`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `addresses`
 --
 ALTER TABLE `addresses`
@@ -583,7 +632,7 @@ ALTER TABLE `ceos`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `company_services`
@@ -595,7 +644,7 @@ ALTER TABLE `company_services`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -619,7 +668,7 @@ ALTER TABLE `infos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- AUTO_INCREMENT for table `portfolios`
@@ -637,7 +686,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `teams`

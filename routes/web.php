@@ -9,20 +9,9 @@ Route::get('/index','FrontendController@index')->name('homepage');
 // SERVICE PAGES --------------------------------------------------------------
 Route::get('/services','ServicesController@services')->name('services');
 
-// custom_software
-Route::get('/custom-software','ServicesController@custom_software')->name('custom_software');
-// web_design_development
-Route::get('/web-design-development','ServicesController@web_design_development')->name('web_design_development');
-// apps_development
-Route::get('/apps-development','ServicesController@apps_development')->name('apps_development');
-// graphics_solution
-Route::get('/graphics-solution','ServicesController@graphics_solution')->name('graphics_solution');
-// career_development
-Route::get('/career-development','ServicesController@career_development')->name('career_development');
-// domain_hosting
-Route::get('/domain-hosting','ServicesController@domain_hosting')->name('domain_hosting');
-// clipping_path_services
-Route::get('/clipping-path-services','ServicesController@clipping_path_services')->name('clipping_path_services');
+// Single Service Page
+Route::get('/services/{service_id}','ServicesController@index')->name('services_signle_index');
+
 
 // CONTACT PAGE ---------------------------------------------------------------
 
@@ -35,6 +24,10 @@ Route::post('/contact/insert','ContactController@contact_insert')->name('contact
 // PRODUCTS
 
 Route::get('/products','ProductController@products')->name('products');
+
+// ABOUT
+
+Route::get('/about','AboutController@index')->name('about');
 
 
 
@@ -129,6 +122,10 @@ Route::get('/admin/portfolio/restore/{portfolio_id}','PortfolioController@restor
 
 // service_index
 Route::get('/admin/service','DashboardController@service_index')->name('service_index');
+// add_service_page
+Route::get('/admin/add_service_page','DashboardController@add_service_page')->name('add_service_page');
+// create_service_page
+Route::post('/admin/service_page/create','ServicesController@create')->name('create');
 
 // add_service_category
 Route::post('/admin/add/service/category','CategoryController@add_service_category')->name('add_service_category');
