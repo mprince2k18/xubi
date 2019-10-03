@@ -10,7 +10,7 @@ Route::get('/index','FrontendController@index')->name('homepage');
 Route::get('/services','ServicesController@services')->name('services');
 
 // Single Service Page
-Route::get('/services/{service_id}','ServicesController@index')->name('services_signle_index');
+Route::get('/services/{service_id}','ServicesController@index')->name('services_single_index');
 
 
 // CONTACT PAGE ---------------------------------------------------------------
@@ -24,6 +24,10 @@ Route::post('/contact/insert','ContactController@contact_insert')->name('contact
 // PRODUCTS
 
 Route::get('/products','ProductController@products')->name('products');
+
+// PRODUCTS Service Page
+Route::get('/products/{products_id}','ProductController@index')->name('products_single_index');
+
 
 // ABOUT
 
@@ -150,6 +154,9 @@ Route::post('/admin/add/product','ProductController@add_product')->name('add_pro
 Route::get('/admin/edit/product/{product_id}','ProductController@edit_product')->name('edit_product');
 // update_service
 Route::post('/admin/update/product','ProductController@update_product')->name('update_product');
+// add_product_page
+Route::get('/admin/add_product_page','DashboardController@add_product_page')->name('add_product_page');
+Route::post('/admin/add_product_page/create','ProductPageController@create')->name('create');
 
 
 

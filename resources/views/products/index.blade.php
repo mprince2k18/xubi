@@ -1,12 +1,21 @@
 @extends('xubi.app')
 
-@section('title')
 
-Web Design & Development
-
+@section('css')
+  <style media="screen">
+    .case-details-banner{
+      background-color: #00A39A;
+    }
+  </style>
 @endsection
 
+@section('title')
+ {{ $products_single_index->product_name }}
+@endsection
+
+
 @section('content')
+
 <!-- agency banner case details section -->
 <section class="case-details-banner" data-scrollax-parent="true">
     <div class="container">
@@ -14,9 +23,11 @@ Web Design & Development
             <div class="col-md-8 mx-auto text-center">
                 <div class="case-details-banner-content">
                     <div class="agency-banner-content">
-                        <h1 class="banner-title">Web Design & Development</h1>
-                        <p>A powerful platform for flexible communication</p>
-                        <span class="watermark-title">W</span>
+                        <h1 class="banner-title">
+                          Title
+                        </h1>
+                        <p>Sub Title</p>
+                        <span class="watermark-title">T</span>
                     </div><!-- .agency-banner-content END -->
                     <ul class="case-info-list">
                         <li><i class="icon icon-bell"></i><span>Front-End</span></li>
@@ -24,7 +35,7 @@ Web Design & Development
                         <li><i class="icon icon-money-bag"></i><span>Back-End</span></li>
                     </ul><!-- .case-info-list END -->
                     <div class="case-details-image">
-                        <span class="watermark-title" data-scrollax="properties: { translateY: '-250px' }">Custom Softwere Development</span>
+                        <span class="watermark-title" data-scrollax="properties: { translateY: '-250px' }">Watermark</span>
                         <img src="{{asset('xubisoft/assets/images/welcome/case-details.jpg')}}" alt="">
                     </div><!-- .case-details-image END -->
                 </div><!-- .case-details-banner-content END -->
@@ -42,18 +53,18 @@ Web Design & Development
                 <div class="case-details-about">
                     <div class="agency-section-title">
                         <h3 class="sub-title">OVERVIEW</h3>
-                        <h4 class="main-title">About the <em>Client</em></h4>
+                        <h4 class="main-title">About the <em>about_service_title </em></h4>
                     </div>
-                    <p>We work systematically to integrate corporate responsibility in our core business and make the  our expertise available benefit of the societies where we operate the system. A most successful website the obviously needs great design to be one of the top 10 IT companies in India, but the web design is not enough lorem ipsum.</p>
+                    <p>details_about_service</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="about-info">
                     <h2 class="section-title">Info</h2>
                     <ul class="list-group">
-                        <li><strong>Category :</strong>Web Development</li>
+                        <li><strong>Category :</strong>service_category_name</li>
                         <li><strong>Date :</strong>25 June, 2018</li>
-                        <li><strong>Client :</strong>Oniblue</li>
+                        <!-- <li><strong>Client :</strong>Oniblue</li> -->
                         <li>
                             <strong>Share :</strong>
                             <ul class="simple-social-list">
@@ -90,11 +101,11 @@ Web Design & Development
             </div>
             <div class="col-md-5">
                 <div class="project-brief-content">
-                    <p>Web developers are happy to share their knowledge and expert tise about web development. They can advise you on the most important aspects you will need to consider</p>
+                    <p>service_info_details </p>
                     <ol class="order-list">
-                        <li>Adding functionality to an innovative Business</li>
-                        <li>Managing a complex open source </li>
-                        <li>Taking over the project and handing it </li>
+                        <li>service_info_items_1</li>
+                        <li>service_info_items_2 </li>
+                        <li>service_info_items_3 </li>
                     </ol>
                 </div>
             </div>
@@ -233,19 +244,7 @@ Web Design & Development
 </div><!-- End xs modal --><!-- end language switcher strart -->
 
 <!-- search panel strart -->
-<!-- xs modal -->
-<div class="zoom-anim-dialog mfp-hide modal-searchPanel" id="modal-popup-2">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="xs-search-panel">
-                <form action="#" method="POST" class="xs-search-group">
-                    <input type="search" class="form-control" name="search" id="search" placeholder="Search">
-                    <button type="submit" class="search-button"><i class="icon icon-search"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div><!-- End xs modal --><!-- end search panel strart -->
+<!-- end search panel strart -->
 
 <!-- offset cart strart -->
 <!-- sidebar cart item -->
@@ -344,10 +343,11 @@ Web Design & Development
                     <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
                     <li><a href="#" class="vimeo"><i class="fa fa-vimeo"></i></a></li>
                 </ul><!-- .social-list -->
-                
+
             </div>
         </div>
     </div>
 </div>    <!-- END sidebar widget item -->    <!-- END offset cart strart -->
+
 
 @endsection

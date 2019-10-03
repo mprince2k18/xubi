@@ -319,16 +319,8 @@
 								<a class="nav-link" href="{{ route('products_index') }}"><i class="mdi mdi-file"></i><span>Products</span></a>
 								<div class="sub-item">
 									<ul>
-										<li class="sub-with-sub">
-											<a href="#">Profile </a>
-											<ul>
-												<li>
-													<a href="profile.html">Profile</a>
-												</li>
-												<li>
-													<a href="editprofile.html">Edit Profile</a>
-												</li>
-											</ul>
+										<li>
+											<a href="{{ route('add_product_page') }}">Add New Product Page </a>
 										</li>
 										<li class="sub-with-sub">
 											<a href="#">Email </a>
@@ -377,56 +369,6 @@
 										</li>
 										<li>
 											<a href="construction.html">Under Construction</a>
-										</li>
-										<li>
-											<a href="gallery.html">Gallery</a>
-										</li>
-										<li>
-											<a href="about.html">About Company </a>
-										</li>
-										<li>
-											<a href="company-history.html">Company History </a>
-										</li>
-										<li>
-											<a href="services.html">Services </a>
-										</li>
-										<li>
-											<a href="faq.html">FAQS </a>
-										</li>
-										<li>
-											<a href="terms.html">Terms</a>
-										</li>
-										<li>
-											<a href="invoice.html">Invoice</a>
-										</li>
-										<li>
-											<a href="pricing.html">Pricing Tables</a>
-										</li>
-										<li>
-											<a href="blog.html">Blog</a>
-										</li>
-										<li class="sub-with-sub">
-											<a href="#">Error Pages</a>
-											<ul>
-												<li>
-													<a href="400.html">400 Error</a>
-												</li>
-												<li>
-													<a href="401.html">401 Error</a>
-												</li>
-												<li>
-													<a href="403.html">403 Error</a>
-												</li>
-												<li>
-													<a href="404.html">404 Error</a>
-												</li>
-												<li>
-													<a href="500.html">500 Error</a>
-												</li>
-												<li>
-													<a href="503.html">503 Error</a>
-												</li>
-											</ul>
 										</li>
 
 									</ul>

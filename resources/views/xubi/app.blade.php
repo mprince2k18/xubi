@@ -148,7 +148,11 @@ border-radius: 0 0 8px 8px;
   text-align: left;
 }
 
+
+
 </style>
+
+@yield('css')
 
 
 
@@ -204,7 +208,9 @@ border-radius: 0 0 8px 8px;
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
   									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('products') }}">PRODUCTS</a>
   									<div class="dropdown-menu">
-
+                      @foreach (App\Product::all() as $products)
+                        <a class="dropdown-item" href="{{ url('/products') }}/{{ $products->id }}"> {{  $products->product_name }} </a>
+                      @endforeach
   									</div>
   								</li>
 

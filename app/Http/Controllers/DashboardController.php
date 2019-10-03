@@ -12,6 +12,7 @@ use App\CompanyService;
 use App\Product;
 use App\Team;
 use App\Client;
+use App\Services;
 use Carbon\Carbon;
 use Image;
 use Alert;
@@ -85,6 +86,14 @@ class DashboardController extends Controller
     {
       $all_clients = Client::latest()->paginate(5);
       return view('dashboard.clients.index',compact('all_clients'));
+    }
+
+    // Product page
+
+    function add_product_page()
+    {
+      $all_product_categories = Product::all();
+      return view('dashboard.products.add_product_page',compact('all_product_categories'));
     }
 
 

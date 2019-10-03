@@ -1,7 +1,7 @@
 @extends('dashboard.app')
 
 @section('title')
-  Add Service Page
+  Add Product Page
 @endsection
 
 
@@ -12,7 +12,7 @@
 <div class="container">
           <div class="row row-deck">
             <div class="col-lg-12">
-              <form action="{{ route('create') }}" method="post" class="card">
+              <form action="{{ route('create') }}" method="post" class="card" enctype="multipart/form-data">
                 @csrf
                 <div class="card-header">
                   <h3 class="card-title">Add Service Page</h3>

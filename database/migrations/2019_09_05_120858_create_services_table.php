@@ -18,7 +18,7 @@ class CreateServicesTable extends Migration
             // title
             $table->string('title');
             $table->string('sub_title');
-            $table->string('title_watermark_single');
+            $table->string('title_watermark_single')->nullable();
             // service_category
             $table->string('service_category_id');
             // service_category end
@@ -27,13 +27,13 @@ class CreateServicesTable extends Migration
             // title end
 
             // about_service
-            $table->string('about_service_title');
-            $table->string('details_about_service');
+            $table->string('about_service_title')->nullable();
+            $table->string('details_about_service')->nullable();
             // about service end
 
             // // service_info_1
-            $table->string('service_info_banner');
-            $table->string('service_info_details');
+            $table->string('service_info_banner')->nullable();
+            $table->string('service_info_details')->nullable();
             $table->string('service_info_items_1')->nullable();
             $table->string('service_info_items_2')->nullable();
             $table->string('service_info_items_3')->nullable();

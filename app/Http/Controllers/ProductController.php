@@ -15,7 +15,7 @@ class ProductController extends Controller
 {
 
   use Searchable;
-  
+
   public function products()
   {
       $company_products = Product::all();
@@ -62,6 +62,22 @@ class ProductController extends Controller
      $single_product_edit  =  Product::findOrFail($product_id);
      return view('dashboard.products.edit',compact('single_product_edit'));
    }
+
+
+   public function index($products_id)
+   {
+      $products_single_index  =  Product::findOrFail($products_id);
+      return view('products.index',compact('products_single_index'));
+
+   }
+
+
+
+
+
+
+
+
 
 
   // END

@@ -43,70 +43,55 @@ class ServicesController extends Controller
             'title_banner'              => 'required',
           ]);
 
-          Services::insert([
+          $last_inserted_id = Services::insertGetId([
             'title'                         =>$request->title,
             'sub_title'                     =>$request->sub_title,
             'title_watermark_single'        =>$request->title_watermark_single,
             'service_category_id'           =>$request->service_category_id,
             'title_banner'                  =>$request->title_banner,
             'title_watermark_full'          =>$request->title,
-            'about_service_title'           =>$request->about_service_title,
-            'details_about_service'         =>$request->details_about_service,
-            'service_info_banner'           =>$request->service_info_banner,
-            'service_info_details'          =>$request->service_info_details,
-            'service_info_items_1'          =>$request->service_info_items_1,
-            'service_info_items_2'          =>$request->service_info_items_2,
-            'service_info_items_3'          =>$request->service_info_items_3,
-            'service_process_1'             =>$request->service_process_1,
-            'service_process_details_1'     =>$request->service_process_details_1,
-            'service_process_banner_1'      =>$request->service_process_banner_1,
-            'service_process_2'             =>$request->service_process_2,
-            'service_process_details_2'     =>$request->service_process_details_2,
-            'service_process_banner_2'      =>$request->service_process_banner_2,
-            'service_process_3'             =>$request->service_process_3,
-            'service_process_details_3'     =>$request->service_process_details_3,
-            'service_process_banner_3'      =>$request->service_process_banner_3,
-            'service_process_4'             =>$request->service_process_4,
-            'service_process_details_4'     =>$request->service_process_details_4,
-            'service_process_banner_4'      =>$request->service_process_banner_4,
-            'service_process_5'             =>$request->service_process_5,
-            'service_process_details_5'     =>$request->service_process_details_5,
-            'service_process_banner_5'      =>$request->service_process_banner_5,
+            // 'about_service_title'           =>$request->about_service_title,
+            // 'details_about_service'         =>$request->details_about_service,
+            // 'service_info_banner'           =>$request->service_info_banner,
+            // 'service_info_details'          =>$request->service_info_details,
+            // 'service_info_items_1'          =>$request->service_info_items_1,
+            // 'service_info_items_2'          =>$request->service_info_items_2,
+            // 'service_info_items_3'          =>$request->service_info_items_3,
+            // 'service_process_1'             =>$request->service_process_1,
+            // 'service_process_details_1'     =>$request->service_process_details_1,
+            // 'service_process_banner_1'      =>$request->service_process_banner_1,
+            // 'service_process_2'             =>$request->service_process_2,
+            // 'service_process_details_2'     =>$request->service_process_details_2,
+            // 'service_process_banner_2'      =>$request->service_process_banner_2,
+            // 'service_process_3'             =>$request->service_process_3,
+            // 'service_process_details_3'     =>$request->service_process_details_3,
+            // 'service_process_banner_3'      =>$request->service_process_banner_3,
+            // 'service_process_4'             =>$request->service_process_4,
+            // 'service_process_details_4'     =>$request->service_process_details_4,
+            // 'service_process_banner_4'      =>$request->service_process_banner_4,
+            // 'service_process_5'             =>$request->service_process_5,
+            // 'service_process_details_5'     =>$request->service_process_details_5,
+            // 'service_process_banner_5'      =>$request->service_process_banner_5,
             'created_at'                    =>Carbon::now(),
           ]);
 
-//
-// title
-// sub_title
-// title_watermark_single
-// service_category_id
-//
-// title_banner
-// title_watermark_full
-// about_service_title
-// details_about_service
-// service_info_banner
-// service_info_details
-// service_info_items_1
-// service_info_items_2
-// service_info_items_3
-// service_process_1
-// service_process_details_1
-// service_process_banner_1
-// service_process_2
-// service_process_details_2
-// service_process_banner_2
-// service_process_3
-// service_process_details_3
-// service_process_banner_3
-// service_process_4
-// service_process_details_4
-// service_process_banner_4
-// service_process_5
-// service_process_details_5
-// service_process_banner_5
 
-          Alert::toast('Service Added Seccuessfully','success');
+          // photo_upload
+
+          if ($request->hasFile('title_banner')) {
+            $photo_upload     =  $request->title_banner;
+            $photo_extension  =  $photo_upload-> getClientOriginalExtension();
+            $photo_name       =  $last_inserted_id . "." . $photo_extension;
+            Image::make($photo_upload)->resize(725,350)->save(base_path('public/uploads/service_items/'.$photo_name),100);
+            Services::find($last_inserted_id)->update([
+            'title_banner'          => $photo_name,
+          ]);
+          }
+
+
+
+
+          Alert::toast('New Service Page Added Seccuessfully','success');
 
           return back();
 
