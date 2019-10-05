@@ -64,12 +64,7 @@ class ProductController extends Controller
    }
 
 
-   public function index($products_id)
-   {
-      $products_single_index  =  Product::findOrFail($products_id);
-      return view('products.index',compact('products_single_index'));
 
-   }
 
 
 

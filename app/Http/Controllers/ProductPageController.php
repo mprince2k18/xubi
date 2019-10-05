@@ -7,6 +7,7 @@ use App\ProductPage;
 use App\CompanyService;
 use App\Category;
 use App\Services;
+use App\Product;
 use Carbon\Carbon;
 use Image;
 use Alert;
@@ -64,7 +65,7 @@ class ProductPageController extends Controller
       if ($request->hasFile('title_banner')) {
         $photo_upload     =  $request->title_banner;
         $photo_extension  =  $photo_upload-> getClientOriginalExtension();
-        $photo_name       =  $last_inserted_id . "." . $photo_extension;
+        $photo_name       =  "title_banner_" . "." . $last_inserted_id . "." . $photo_extension;
         Image::make($photo_upload)->resize(725,350)->save(base_path('public/uploads/product_items/'.$photo_name),100);
         ProductPage::find($last_inserted_id)->update([
         'title_banner'          => $photo_name,
@@ -77,8 +78,8 @@ class ProductPageController extends Controller
       if ($request->hasFile('product_process_banner')) {
         $photo_upload     =  $request->product_process_banner;
         $photo_extension  =  $photo_upload-> getClientOriginalExtension();
-        $photo_name       =  $last_inserted_id . "." . $photo_extension;
-        Image::make($photo_upload)->resize(725,350)->save(base_path('public/uploads/product_items/product_info'.$photo_name),100);
+        $photo_name       =  "product_info_" . "." . $last_inserted_id . "." . $photo_extension;
+        Image::make($photo_upload)->resize(570,377)->save(base_path('public/uploads/product_items/'.$photo_name),100);
         ProductPage::find($last_inserted_id)->update([
         'product_process_banner'          => $photo_name,
       ]);
@@ -90,8 +91,8 @@ class ProductPageController extends Controller
       if ($request->hasFile('product_process_banner_1')) {
         $photo_upload     =  $request->product_process_banner_1;
         $photo_extension  =  $photo_upload-> getClientOriginalExtension();
-        $photo_name       =  $last_inserted_id . "." . $photo_extension;
-        Image::make($photo_upload)->resize(725,350)->save(base_path('public/uploads/product_items/product_process_1'.$photo_name),100);
+        $photo_name       =  "product_process_banner_1_" . "." . $last_inserted_id . "." . $photo_extension;
+        Image::make($photo_upload)->resize(445,280)->save(base_path('public/uploads/product_items/'.$photo_name),100);
         ProductPage::find($last_inserted_id)->update([
         'product_process_banner_1'          => $photo_name,
       ]);
@@ -103,8 +104,8 @@ class ProductPageController extends Controller
       if ($request->hasFile('product_process_banner_2')) {
         $photo_upload     =  $request->product_process_banner_2;
         $photo_extension  =  $photo_upload-> getClientOriginalExtension();
-        $photo_name       =  $last_inserted_id . "." . $photo_extension;
-        Image::make($photo_upload)->resize(725,350)->save(base_path('public/uploads/product_items/product_process_2'.$photo_name),100);
+        $photo_name       =  "product_process_banner_2_" . "." . $last_inserted_id . "." . $photo_extension;
+        Image::make($photo_upload)->resize(445,280)->save(base_path('public/uploads/product_items/'.$photo_name),100);
         ProductPage::find($last_inserted_id)->update([
         'product_process_banner_2'          => $photo_name,
       ]);
@@ -116,8 +117,8 @@ class ProductPageController extends Controller
       if ($request->hasFile('product_process_banner_3')) {
         $photo_upload     =  $request->product_process_banner_3;
         $photo_extension  =  $photo_upload-> getClientOriginalExtension();
-        $photo_name       =  $last_inserted_id . "." . $photo_extension;
-        Image::make($photo_upload)->resize(725,350)->save(base_path('public/uploads/product_items/product_process_3'.$photo_name),100);
+        $photo_name       =  "product_process_banner_3_" . "." . $last_inserted_id . "." . $photo_extension;
+        Image::make($photo_upload)->resize(445,280)->save(base_path('public/uploads/product_items/'.$photo_name),100);
         ProductPage::find($last_inserted_id)->update([
         'product_process_banner_3'          => $photo_name,
       ]);
@@ -129,8 +130,8 @@ class ProductPageController extends Controller
       if ($request->hasFile('product_process_banner_4')) {
         $photo_upload     =  $request->product_process_banner_4;
         $photo_extension  =  $photo_upload-> getClientOriginalExtension();
-        $photo_name       =  $last_inserted_id . "." . $photo_extension;
-        Image::make($photo_upload)->resize(725,350)->save(base_path('public/uploads/product_items/product_process_4'.$photo_name),100);
+        $photo_name       =  "product_process_banner_4_" . "." . $last_inserted_id . "." . $photo_extension;
+        Image::make($photo_upload)->resize(445,280)->save(base_path('public/uploads/product_items/'.$photo_name),100);
         ProductPage::find($last_inserted_id)->update([
         'product_process_banner_4'          => $photo_name,
       ]);
@@ -141,8 +142,8 @@ class ProductPageController extends Controller
       if ($request->hasFile('product_process_banner_5')) {
         $photo_upload     =  $request->product_process_banner_5;
         $photo_extension  =  $photo_upload-> getClientOriginalExtension();
-        $photo_name       =  $last_inserted_id . "." . $photo_extension;
-        Image::make($photo_upload)->resize(725,350)->save(base_path('public/uploads/product_items/product_process_5'.$photo_name),100);
+        $photo_name       =  "product_process_banner_5_" . "." . $last_inserted_id . "." . $photo_extension;
+        Image::make($photo_upload)->resize(445,280)->save(base_path('public/uploads/product_items/'.$photo_name),100);
         ProductPage::find($last_inserted_id)->update([
         'product_process_banner_5'          => $photo_name,
       ]);
@@ -152,6 +153,16 @@ class ProductPageController extends Controller
       Alert::toast('New Product Page Added Seccuessfully','success');
 
       return back();
+    }
+
+
+    // products_single_index
+
+    public function index($products_id)
+    {
+       $products_single_index  =  ProductPage::findOrFail($products_id);
+       return view('products.index',compact('products_single_index'));
+
     }
 
 // END

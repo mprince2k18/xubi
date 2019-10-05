@@ -3,11 +3,22 @@
 
 @section('css')
   <style media="screen">
+
+  @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+  .banner-title{
+    font-family: 'Satisfy', cursive !important;
+  }
+
+  .watermark-title{
+    font-family: 'Satisfy', cursive !important;
+  }
+
     .case-details-banner{
       background-color: #00A39A;
     }
   </style>
 @endsection
+
 
 @section('title')
  {{ $products_single_index->product_name }}
@@ -24,10 +35,10 @@
                 <div class="case-details-banner-content">
                     <div class="agency-banner-content">
                         <h1 class="banner-title">
-                          {{ $products_single_index->relationBetweenProduct->title }}
+                          {{ $products_single_index->title }}
                         </h1>
-                        <p>Sub Title</p>
-                        <span class="watermark-title">T</span>
+                        <p>{{ $products_single_index->sub_title }}</p>
+                        <span class="watermark-title">{{ $products_single_index->title_watermark_single }}</span>
                     </div><!-- .agency-banner-content END -->
                     <ul class="case-info-list">
                         <li><i class="icon icon-bell"></i><span>Front-End</span></li>
@@ -35,8 +46,8 @@
                         <li><i class="icon icon-money-bag"></i><span>Back-End</span></li>
                     </ul><!-- .case-info-list END -->
                     <div class="case-details-image">
-                        <span class="watermark-title" data-scrollax="properties: { translateY: '-250px' }">Watermark</span>
-                        <img src="{{asset('xubisoft/assets/images/welcome/case-details.jpg')}}" alt="">
+                        <span class="watermark-title" data-scrollax="properties: { translateY: '-250px' }">{{ $products_single_index->title }}</span>
+                        <img src="{{ asset('uploads/product_items') }}/{{ $products_single_index->title_banner }}" alt="{{ $products_single_index->title }}">
                     </div><!-- .case-details-image END -->
                 </div><!-- .case-details-banner-content END -->
             </div>
@@ -53,16 +64,16 @@
                 <div class="case-details-about">
                     <div class="agency-section-title">
                         <h3 class="sub-title">OVERVIEW</h3>
-                        <h4 class="main-title">About the <em>about_service_title </em></h4>
+                        <h4 class="main-title">About the <em> {{ $products_single_index->about_product_title }} </em></h4>
                     </div>
-                    <p>details_about_service</p>
+                    <p>{{ $products_single_index->details_about_product }}</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="about-info">
                     <h2 class="section-title">Info</h2>
                     <ul class="list-group">
-                        <li><strong>Category :</strong>service_category_name</li>
+                        <li><strong>Category :</strong>{{ $products_single_index->relationBetweenProduct->product_name }}</li>
                         <li><strong>Date :</strong>25 June, 2018</li>
                         <!-- <li><strong>Client :</strong>Oniblue</li> -->
                         <li>
@@ -96,16 +107,16 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="project-brief-img">
-                    <img src="{{ asset('xubisoft/assets/images/project_brief.jpg') }}" alt="">
+                    <img src="{{ asset('uploads/product_items') }}/{{ $products_single_index->product_process_banner }}" alt="{{ $products_single_index->title }}">
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="project-brief-content">
-                    <p>service_info_details </p>
+                    <p>{{ $products_single_index->product_process_details }} </p>
                     <ol class="order-list">
-                        <li>service_info_items_1</li>
-                        <li>service_info_items_2 </li>
-                        <li>service_info_items_3 </li>
+                        <li>{{ $products_single_index->product_process_items_1 }}</li>
+                        <li>{{ $products_single_index->product_process_items_2 }} </li>
+                        <li>{{ $products_single_index->product_process_items_3 }} </li>
                     </ol>
                 </div>
             </div>
@@ -131,14 +142,14 @@
                     <div class="col-md-6">
                         <div class="working-progress-content">
                             <span class="count-number wow spin"></span>
-                            <h2 class="section-title">Gather all the informations</h2>
-                            <p>We work systematic integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
+                            <h2 class="section-title">{{ $products_single_index->product_process_1 }}</h2>
+                            <p>{{ $products_single_index->product_process_details_1 }}</p>
                         </div><!-- .working-progress-content END -->
                     </div>
                     <div class="col-md-6">
                         <div class="working-progress-images">
 
-                            <img src="{{ asset('xubisoft/assets/images/progress/progress-1.jpg') }}" alt="">
+                            <img src="{{ asset('uploads/product_items') }}/{{ $products_single_index->product_process_banner_1 }}" alt="{{ $products_single_index->title }}">
                         </div><!-- .working-progress-images END -->
                     </div>
                 </div>
@@ -148,14 +159,14 @@
                     <div class="col-md-6">
                         <div class="working-progress-content">
                             <span class="count-number wow spin"></span>
-                            <h2 class="section-title">Find Solution and Solve it</h2>
-                            <p>We work systematic integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
+                            <h2 class="section-title">{{ $products_single_index->product_process_2 }}</h2>
+                            <p>{{ $products_single_index->product_process_details_2 }}</p>
                         </div><!-- .working-progress-content END -->
                     </div>
                     <div class="col-md-6">
                         <div class="working-progress-images">
 
-                            <img src="{{ asset('xubisoft/assets/images/progress/progress-2.jpg') }}" alt="">
+                            <img src="{{ asset('uploads/product_items') }}/{{ $products_single_index->product_process_banner_2 }}" alt="{{ $products_single_index->title }}">
                         </div><!-- .working-progress-images END -->
                     </div>
                 </div>
@@ -165,14 +176,14 @@
                     <div class="col-md-6">
                         <div class="working-progress-content">
                             <span class="count-number wow spin"></span>
-                            <h2 class="section-title">Finally get the Result</h2>
-                            <p>We work systematic integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
+                            <h2 class="section-title">{{ $products_single_index->product_process_details_3 }}</h2>
+                            <p>{{ $products_single_index->product_process_details_3 }}</p>
                         </div><!-- .working-progress-content END -->
                     </div>
                     <div class="col-md-6">
                         <div class="working-progress-images">
 
-                            <img src="{{ asset('xubisoft/assets/images/progress/progress-3.jpg') }}" alt="">
+                            <img src="{{ asset('uploads/product_items') }}/{{ $products_single_index->product_process_banner_3 }}" alt="{{ $products_single_index->title }}">
                         </div><!-- .working-progress-images END -->
                     </div>
                 </div>

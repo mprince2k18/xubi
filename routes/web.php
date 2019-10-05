@@ -26,7 +26,7 @@ Route::post('/contact/insert','ContactController@contact_insert')->name('contact
 Route::get('/products','ProductController@products')->name('products');
 
 // PRODUCTS Service Page
-Route::get('/products/{products_id}','ProductController@index')->name('products_single_index');
+Route::get('/products/{products_id}','ProductPageController@index')->name('products_single_index');
 
 
 // ABOUT

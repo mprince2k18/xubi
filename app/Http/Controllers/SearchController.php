@@ -11,6 +11,8 @@ use App\Product;
 class SearchController extends Controller
 {
 
+  
+
   public function search(Request $request)
   {
     if($request->has('search')){
@@ -27,5 +29,5 @@ class SearchController extends Controller
 
 
   }
-  
+
 }
