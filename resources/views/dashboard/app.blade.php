@@ -319,20 +319,17 @@
 								<a class="nav-link" href="{{ route('products_index') }}"><i class="mdi mdi-file"></i><span>Products</span></a>
 								<div class="sub-item">
 									<ul>
+
+										<li>
+											<a href="{{ route('products_index') }}">Add New Product </a>
+										</li>
+
 										<li>
 											<a href="{{ route('add_product_page') }}">Add New Product Page </a>
 										</li>
-										<li class="sub-with-sub">
-											<a href="#">Email </a>
-											<ul>
-												<li>
-													<a href="email.html">Email</a>
-												</li>
-												<li>
-													<a href="emailservices.html">Email Inbox</a>
-												</li>
-											</ul>
-										</li>
+
+
+
 										<li class="sub-with-sub">
 											<a href="#">E-commerce </a>
 											<ul>
@@ -347,29 +344,8 @@
 												</li>
 											</ul>
 										</li>
-										<li class="sub-with-sub">
-											<a href="#">User Pages</a>
-											<ul>
-												<li>
-													<a href="login.html">Login</a>
-												</li>
-												<li>
-													<a href="register.html">Register</a>
-												</li>
-												<li>
-													<a href="forgot-password.html">Forgot password</a>
-												</li>
-												<li>
-													<a href="lockscreen.html">Lock screen</a>
-												</li>
-												<li>
-													<a href="empty.html">Empty Page</a>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<a href="construction.html">Under Construction</a>
-										</li>
+
+
 
 									</ul>
 								</div>

@@ -32,13 +32,28 @@ Services
 <section class="xs-section-padding">
     <div class="container">
         <div class="row no-gutters agency-filter-wraper">
-            <div class="col-lg-4">
+            <div class="col-lg-4 offset-md-4">
                 <div class="agency-section-title">
                     <h3 class="main-title">Xubisoft <em>Services</em></h3>
 
                 </div><!-- .agency-section-title END -->
             </div>
-            <div class="col-lg-8">
+            <!-- <div class="col-lg-8">
+                <div class="filter-button-wraper">
+                    <ul id="filters" class="option-set clearfix main-filter" data-option-key="filter">
+                        <li><a href="#" data-option-value="*" class="selected">ALL PROJECTS</a></li>
+												@foreach ($company_all_categories as $company_all_category)
+													<li><a href="#" data-option-value=".item{{ $company_all_category->id }}">{{ $company_all_category->service_category_name }}</a></li>
+												@endforeach
+                    </ul>
+                </div>
+								filter-button-wraper END
+            </div> -->
+        </div>
+
+
+				<div class="row no-gutters agency-filter-wraper">
+            <div class="col-lg-12">
                 <div class="filter-button-wraper">
                     <ul id="filters" class="option-set clearfix main-filter" data-option-key="filter">
                         <li><a href="#" data-option-value="*" class="selected">ALL PROJECTS</a></li>
@@ -49,6 +64,8 @@ Services
                 </div><!-- .filter-button-wraper END -->
             </div>
         </div>
+
+
 				<!-- .row end -->
         <div class="cases-grid">
 					@foreach ($company_all_services as $company_all_service)
@@ -59,7 +76,7 @@ Services
 									</div><!-- .card-image END -->
 									<div class="cases-content">
 											<h3 class="xs-title">
-													<a href="{{ url('') }}/{{ $company_all_service->slug_name }}">{{ $company_all_service->service_name }}</a>
+													<a href="{{ url('') }}/{{ $company_all_service->service_category_id }}">{{ $company_all_service->service_name }}</a>
 											</h3>
 											<span class="tag">{{ $company_all_service->relationBetweenCategory->service_category_name }}</span>
 									</div><!-- .cases-content END -->

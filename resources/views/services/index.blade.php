@@ -1,5 +1,21 @@
 @extends('xubi.app')
 
+@section('css')
+<style media="screen">
+  @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+  .banner-title{
+    font-family: 'Satisfy', cursive !important;
+  }
+
+  .watermark-title{
+    font-family: 'Satisfy', cursive !important;
+  }
+
+
+</style>
+@endsection
+
+
 @section('title')
 
 {{ $single_service_info->service_category_name }}
@@ -31,7 +47,7 @@
                     </ul><!-- .case-info-list END -->
                     <div class="case-details-image">
                         <span class="watermark-title" data-scrollax="properties: { translateY: '-250px' }">{{ $single_service_info->relationBetweenServices->title_watermark_full }}</span>
-                        <img src="{{asset('xubisoft/assets/images/welcome/case-details.jpg')}}" alt="">
+                        <img src="{{ asset('uploads/service_items') }}/{{ $single_service_info->relationBetweenServices->title_banner }}" alt="{{ $single_service_info->relationBetweenServices->title }}">
                     </div><!-- .case-details-image END -->
                 </div><!-- .case-details-banner-content END -->
             </div>
@@ -91,7 +107,7 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="project-brief-img">
-                    <img src="{{ asset('xubisoft/assets/images/project_brief.jpg') }}" alt="">
+                    <img src="{{ asset('uploads/service_items/service_info') }}/{{ $single_service_info->relationBetweenServices->service_info_banner }}" alt="">
                 </div>
             </div>
             <div class="col-md-5">
@@ -133,11 +149,14 @@
                     <div class="col-md-6">
                         <div class="working-progress-images">
 
-                            <img src="{{ asset('xubisoft/assets/images/progress/progress-1.jpg') }}" alt="">
+                            <img src="{{ asset('uploads/service_items/service_process_1') }}/{{ $single_service_info->relationBetweenServices->service_process_banner_1 }}" alt="service_process_banner_1">
                         </div><!-- .working-progress-images END -->
                     </div>
                 </div>
             </div><!-- .single-working-progress END -->
+
+
+
             <div class="col-lg-10 mx-auto single-working-progress">
                 <div class="row">
                     <div class="col-md-6">
@@ -150,11 +169,14 @@
                     <div class="col-md-6">
                         <div class="working-progress-images">
 
-                            <img src="{{ asset('xubisoft/assets/images/progress/progress-2.jpg') }}" alt="">
+                            <img src="{{ asset('uploads/service_items/service_process_2') }}/{{ $single_service_info->relationBetweenServices->service_process_banner_2}}" alt="service_process_banner_2">
                         </div><!-- .working-progress-images END -->
                     </div>
                 </div>
             </div><!-- .single-working-progress END -->
+
+
+
             <div class="col-lg-10 mx-auto single-working-progress">
                 <div class="row">
                     <div class="col-md-6">
@@ -167,7 +189,7 @@
                     <div class="col-md-6">
                         <div class="working-progress-images">
 
-                            <img src="{{ asset('xubisoft/assets/images/progress/progress-3.jpg') }}" alt="">
+                            <img src="{{ asset('uploads/service_items/service_process_3') }}/{{ $single_service_info->relationBetweenServices->service_process_banner_3 }}" alt="service_process_banner_3">
                         </div><!-- .working-progress-images END -->
                     </div>
                 </div>

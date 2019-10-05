@@ -24,7 +24,7 @@
                 <div class="case-details-banner-content">
                     <div class="agency-banner-content">
                         <h1 class="banner-title">
-                          Title
+                          {{ $products_single_index->relationBetweenProduct->title }}
                         </h1>
                         <p>Sub Title</p>
                         <span class="watermark-title">T</span>

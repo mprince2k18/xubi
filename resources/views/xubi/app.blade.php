@@ -68,6 +68,8 @@
 
 <style>
 
+@import url('https://fonts.googleapis.com/css?family=Rancho&display=swap');
+
 .nav-menu li.active>a{
   color: #ecf0f1 !important;
   background-color: #00AEEF;
@@ -148,7 +150,13 @@ border-radius: 0 0 8px 8px;
   text-align: left;
 }
 
+.watermark-title{
+  top: -70px !important;
+}
 
+.inner-banner-title{
+  font-family: 'Rancho', cursive !important;
+}
 
 </style>
 

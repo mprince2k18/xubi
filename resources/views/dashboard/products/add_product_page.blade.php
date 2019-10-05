@@ -69,7 +69,7 @@
 
                   <div class="form-group">
                     <label class="form-label">details_about_product</label>
-                    <input type="text" class="form-control" placeholder="details_about_product" name="details_about_product">
+                    <textarea type="text" class="form-control" placeholder="details_about_product" name="details_about_product"></textarea>
                   </div>
 
 
@@ -85,7 +85,7 @@
 
                   <div class="form-group">
                     <label class="form-label">product_process_details</label>
-                    <input type="text" class="form-control" placeholder="product_process_details" name="product_process_details">
+                    <textarea type="text" class="form-control" placeholder="product_process_details" name="product_process_details"></textarea>
                   </div>
 
                   <h4 class="text-center">Product Info Items</h4>
@@ -121,7 +121,7 @@
 
                   <div class="form-group">
                     <label class="form-label">product_process_details_1</label>
-                    <input type="text" class="form-control" placeholder="product_process_details_1" name="product_process_details_1">
+                    <textarea type="text" class="form-control" placeholder="product_process_details_1" name="product_process_details_1"></textarea>
                   </div>
 
                   <div class="form-group">
@@ -143,7 +143,7 @@
 
                                     <div class="form-group">
                                       <label class="form-label">product_process_details_2</label>
-                                      <input type="text" class="form-control" placeholder="product_process_details_2" name="product_process_details_2">
+                                      <textarea type="text" class="form-control" placeholder="product_process_details_2" name="product_process_details_2"></textarea>
                                     </div>
 
                                     <div class="form-group">
@@ -165,7 +165,7 @@
 
                                                       <div class="form-group">
                                                         <label class="form-label">product_process_details_3</label>
-                                                        <input type="text" class="form-control" placeholder="product_process_details_3" name="product_process_details_3">
+                                                        <textarea type="text" class="form-control" placeholder="product_process_details_3" name="product_process_details_3"></textarea>
                                                       </div>
 
                                                       <div class="form-group">
@@ -187,7 +187,7 @@
 
                                                                         <div class="form-group">
                                                                           <label class="form-label">product_process_details_4</label>
-                                                                          <input type="text" class="form-control" placeholder="product_process_details_4" name="product_process_details_4">
+                                                                          <textarea type="text" class="form-control" placeholder="product_process_details_4" name="product_process_details_4"></textarea>
                                                                         </div>
 
                                                                         <div class="form-group">
@@ -209,7 +209,7 @@
 
                                                                                           <div class="form-group">
                                                                                             <label class="form-label">product_process_details_5</label>
-                                                                                            <input type="text" class="form-control" placeholder="product_process_details_5" name="product_process_details_5">
+                                                                                            <textarea type="text" class="form-control" placeholder="product_process_details_5" name="product_process_details_5"></textarea>
                                                                                           </div>
 
                                                                                           <div class="form-group">

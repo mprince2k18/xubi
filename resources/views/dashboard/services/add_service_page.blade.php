@@ -1,7 +1,7 @@
 @extends('dashboard.app')
 
 @section('title')
-  Add Product Page
+  Add Service Page
 @endsection
 
 
@@ -12,7 +12,7 @@
 <div class="container">
           <div class="row row-deck">
             <div class="col-lg-12">
-              <form action="{{ route('create') }}" method="post" class="card" enctype="multipart/form-data">
+              <form action="{{ route('create_service_page') }}" method="post" class="card" enctype="multipart/form-data">
                 @csrf
                 <div class="card-header">
                   <h3 class="card-title">Add Service Page</h3>
@@ -53,7 +53,7 @@
 
                   <div class="form-group">
                     <label class="form-label">title_banner</label>
-                    <input type="file" class="form-control"  placeholder="title_banner" name="title_banner">
+                    <input type="file" class="form-control" name="title_banner">
                   </div>
 
 
@@ -69,7 +69,7 @@
 
                   <div class="form-group">
                     <label class="form-label">details_about_service</label>
-                    <input type="text" class="form-control" placeholder="details_about_service" name="details_about_service">
+                    <textarea type="text" class="form-control" placeholder="details_about_service" name="details_about_service"></textarea>
                   </div>
 
 
@@ -85,7 +85,7 @@
 
                   <div class="form-group">
                     <label class="form-label">service_info_details</label>
-                    <input type="text" class="form-control" placeholder="service_info_details" name="service_info_details">
+                    <textarea type="text" class="form-control" placeholder="service_info_details" name="service_info_details"></textarea>
                   </div>
 
                   <h4 class="text-center">Service Info Items</h4>
@@ -121,7 +121,7 @@
 
                   <div class="form-group">
                     <label class="form-label">service_process_details_1</label>
-                    <input type="text" class="form-control" placeholder="service_process_details_1" name="service_process_details_1">
+                    <textarea type="text" class="form-control" placeholder="service_process_details_1" name="service_process_details_1"></textarea>
                   </div>
 
                   <div class="form-group">
@@ -143,7 +143,7 @@
 
                                     <div class="form-group">
                                       <label class="form-label">service_process_details_2</label>
-                                      <input type="text" class="form-control" placeholder="service_process_details_2" name="service_process_details_2">
+                                      <textarea type="text" class="form-control" placeholder="service_process_details_2" name="service_process_details_2"></textarea>
                                     </div>
 
                                     <div class="form-group">
@@ -165,7 +165,7 @@
 
                                                       <div class="form-group">
                                                         <label class="form-label">service_process_details_3</label>
-                                                        <input type="text" class="form-control" placeholder="service_process_details_3" name="service_process_details_3">
+                                                        <textarea type="text" class="form-control" placeholder="service_process_details_3" name="service_process_details_3"></textarea>
                                                       </div>
 
                                                       <div class="form-group">
@@ -187,7 +187,7 @@
 
                                                                         <div class="form-group">
                                                                           <label class="form-label">service_process_details_4</label>
-                                                                          <input type="text" class="form-control" placeholder="service_process_details_4" name="service_process_details_4">
+                                                                          <textarea type="text" class="form-control" placeholder="service_process_details_4" name="service_process_details_4"></textarea>
                                                                         </div>
 
                                                                         <div class="form-group">
@@ -209,7 +209,7 @@
 
                                                                                           <div class="form-group">
                                                                                             <label class="form-label">service_process_details_5</label>
-                                                                                            <input type="text" class="form-control" placeholder="service_process_details_5" name="service_process_details_5">
+                                                                                            <textarea type="text" class="form-control" placeholder="service_process_details_5" name="service_process_details_5"></textarea>
                                                                                           </div>
 
                                                                                           <div class="form-group">

@@ -26,12 +26,6 @@ Contact
 </div>
 <!--breadcumb end here--><!-- End welcome section -->
 
-<!-- map -->
-<div class="xs-map">
-    <!-- <div id="xs-map"></div> -->
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.8530525899987!2d90.40053811498342!3d23.85935128453583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c432847eacf7%3A0xd02f082dce6d913!2sXubisoft%20Ltd.!5e0!3m2!1sen!2sbd!4v1568285563570!5m2!1sen!2sbd" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-
-</div><!-- End map -->
 
 <!-- agency contact section -->
 <div class="agency-contactus gray-bg">
@@ -123,5 +117,14 @@ Contact
         </div><!-- .row END -->
     </div><!-- .container END -->
 </div><!-- agency contact section end -->
+
+
+<!-- map -->
+<div class="xs-map">
+    <!-- <div id="xs-map"></div> -->
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.8530525899987!2d90.40053811498342!3d23.85935128453583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c432847eacf7%3A0xd02f082dce6d913!2sXubisoft%20Ltd.!5e0!3m2!1sen!2sbd!4v1568285563570!5m2!1sen!2sbd" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+</div><!-- End map -->
+
 
 @endsection

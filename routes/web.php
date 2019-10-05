@@ -129,7 +129,7 @@ Route::get('/admin/service','DashboardController@service_index')->name('service_
 // add_service_page
 Route::get('/admin/add_service_page','DashboardController@add_service_page')->name('add_service_page');
 // create_service_page
-Route::post('/admin/service_page/create','ServicesController@create')->name('create');
+Route::post('/admin/service_page/create','ServicesController@create')->name('create_service_page');
 
 // add_service_category
 Route::post('/admin/add/service/category','CategoryController@add_service_category')->name('add_service_category');
@@ -156,6 +156,7 @@ Route::get('/admin/edit/product/{product_id}','ProductController@edit_product')-
 Route::post('/admin/update/product','ProductController@update_product')->name('update_product');
 // add_product_page
 Route::get('/admin/add_product_page','DashboardController@add_product_page')->name('add_product_page');
+// create_product_page
 Route::post('/admin/add_product_page/create','ProductPageController@create')->name('create');
 
 

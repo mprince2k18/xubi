@@ -20,7 +20,7 @@ Xubisoft | IT Solution
 
               @foreach ($banners as $banner)
 
-                <div class="single-banner-slider" style="background-image: url({{ asset('uploads/banner')}}/{{ $banner ->header_banner }}">
+                <div class="single-banner-slider" style="background-image: url({{ asset('uploads/banner')}}/{{ $banner->header_banner }}">
 
                     <div class="container">
                         <div class="row">
