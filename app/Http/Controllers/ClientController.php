@@ -36,10 +36,7 @@ class ClientController extends Controller
       ]);
       }
 
-
-
-
-      Alert::success('Success', 'Client Added Succesfully');
-      return back()->with('success','Client Added Succesfully');
+      Alert::toast('New Client Added Seccuessfully','success');
+      return back();
     }
 }

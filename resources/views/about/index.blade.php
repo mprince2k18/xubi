@@ -9,8 +9,8 @@ About
 @section('content')
 
 <!-- welcome section -->
-<!--breadcumb start here-->
-<div class="xs-inner-banner" style="background-image:url('assets/images/banner/1.jpg')">
+<!--breadcumb start here--> {{ asset('xubisoft/') }}
+<div class="xs-inner-banner" style="background-image:url({{ asset('xubisoft/assets/images/banner/1.jpg') }}">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-7 mx-auto">
@@ -68,17 +68,12 @@ About
                         <span class="watermark-title">BEST</span>
                     </div><!-- .agency-section-title END -->
                     <p>We work systematically to integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
-                    <ul class="xs-list list-inline">
-                        <li><img src="assets/images/awards/awards-1.png" alt="awards one"></li>
-                        <li><img src="assets/images/awards/awards-2.png" alt="awards tnwo"></li>
-                        <li><img src="assets/images/awards/awards-3.png" alt="awards three"></li>
-                    </ul>
                     <a href="{{ route('contact') }}" target="_blank" class="btn btn-primary">CONTATC US</a>
                 </div><!-- .agency-intro END -->
             </div>
             <div class="col-lg-6">
                 <div class="agency-intro-video">
-                    <img src="assets/images/video/video-1.jpg" alt="video image">
+                    <img src="{{ asset('xubisoft/assets/images/video/video-1.jpg') }}" alt="video image">
                     <a href="https://www.youtube.com/watch?v=BJq4d1-lHq8" class="xs-video-popup video-content btn-gradient">
                         <i class="icon icon-play2"></i>
                     </a>
@@ -94,7 +89,7 @@ About
         <div class="agency-team-slider owl-carousel">
             <div class="agency-single-team">
                 <div class="image">
-                    <img src="assets/images/team/team-1.jpg" alt="">
+                    <img src="{{ asset('xubisoft/assets/images/team/team-1.jpg') }}" alt="">
                 </div>
                 <div class="hover-area text-center">
                     <h4 class="xs-title"><a href="#">James Cameron</a></h4>
@@ -111,7 +106,7 @@ About
             </div><!-- .agency-single-team END -->
             <div class="agency-single-team">
                 <div class="image">
-                    <img src="assets/images/team/team-2.jpg" alt="">
+                    <img src="{{ asset('xubisoft/assets/images/team/team-2.jpg') }}" alt="">
                 </div>
                 <div class="hover-area text-center">
                     <h4 class="xs-title"><a href="#">Mary W. Florence</a></h4>
@@ -127,7 +122,7 @@ About
             </div><!-- .agency-single-team END -->
             <div class="agency-single-team">
                 <div class="image">
-                    <img src="assets/images/team/team-3.jpg" alt="">
+                    <img src="{{ asset('xubisoft/assets/images/team/team-3.jpg') }}" alt="">
                 </div>
                 <div class="hover-area text-center">
                     <h4 class="xs-title"><a href="#">Edith T. Painter</a></h4>
@@ -144,7 +139,7 @@ About
             </div><!-- .agency-single-team END -->
             <div class="agency-single-team">
                 <div class="image">
-                    <img src="assets/images/team/team-4.jpg" alt="">
+                    <img src="{{ asset('xubisoft/assets/images/team/team-4.jpg') }}" alt="">
                 </div>
                 <div class="hover-area text-center">
                     <h4 class="xs-title"><a href="#">Clarence D. Ryan</a></h4>
@@ -221,7 +216,7 @@ About
      </div><!-- .row .hr-timeline-group END -->
  </div><!-- .container END -->
  <div class="timeline-wave">
-     <img src="assets/images/timeline-wave-shape.png" alt="">
+     <img src="{{ asset('xubisoft/assets/images/timeline-wave-shape.png') }}" alt="">
  </div>
 </div>        <!-- horizontal timeline section end -->
  </div>
@@ -301,22 +296,22 @@ About
     <div class="container-fluid px-0">
         <div class="agency-office-slider owl-carousel">
             <div class="agency-office-single">
-                <img src="assets/images/office/office-1.jpg" alt="">
+                <img src="{{ asset('xubisoft/assets/images/office/office-1.jpg') }}" alt="">
             </div>
             <div class="agency-office-single">
-                <img src="assets/images/office/office-2.jpg" alt="">
+                <img src="{{ asset('xubisoft/assets/images/office/office-2.jpg') }}" alt="">
             </div>
             <div class="agency-office-single">
-                <img src="assets/images/office/office-3.jpg" alt="">
+                <img src="{{ asset('xubisoft/assets/images/office/office-3.jpg') }}" alt="">
             </div>
             <div class="agency-office-single">
-                <img src="assets/images/office/office-2.jpg" alt="">
+                <img src="{{ asset('xubisoft/assets/images/office/office-2.jpg') }}" alt="">
             </div>
             <div class="agency-office-single">
-                <img src="assets/images/office/office-1.jpg" alt="">
+                <img src="{{ asset('xubisoft/assets/images/office/office-1.jpg') }}" alt="">
             </div>
             <div class="agency-office-single">
-                <img src="assets/images/office/office-3.jpg" alt="">
+                <img src="{{ asset('xubisoft/assets/images/office/office-3.jpg') }}" alt="">
             </div>
         </div>
     </div><!-- .container END -->
@@ -341,7 +336,7 @@ About
                         <i class="icon icon-quote watermark-icon"></i>
                         <p><em>I have read your assessment of yourself and I feel that, in many ways, I could have written it</em></p>
                         <div class="review-image">
-                            <img src="assets/images/team/team-1.jpg" alt="">
+                            <img src="{{ asset('xubisoft/assets/images/team/team-1.jpg') }}" alt="">
                         </div>
                         <div class="reviewer-bio">
                             <h5><em>Jenifar Linda</em></h5>
@@ -352,7 +347,7 @@ About
                         <i class="icon icon-quote watermark-icon"></i>
                         <p><em>I have read your assessment of yourself and I feel that, in many ways, I could have written it</em></p>
                         <div class="review-image">
-                            <img src="assets/images/team/team-2.jpg" alt="">
+                            <img src="{{ asset('xubisoft/assets/images/team/team-2.jpg') }}" alt="">
                         </div>
                         <div class="reviewer-bio">
                             <h5><em>Loren Minda</em></h5>
@@ -363,7 +358,7 @@ About
                         <i class="icon icon-quote watermark-icon"></i>
                         <p><em>I have read your assessment of yourself and I feel that, in many ways, I could have written it</em></p>
                         <div class="review-image">
-                            <img src="assets/images/team/team-3.jpg" alt="">
+                            <img src="{{ asset('xubisoft/assets/images/team/team-3.jpg') }}" alt="">
                         </div>
                         <div class="reviewer-bio">
                             <h5><em>Jhon Cris</em></h5>
@@ -380,36 +375,9 @@ About
 <div class="agency_client_slider gray-bg">
     <div class="container">
         <div class="client-slider owl-carousel">
-            <div class="item">
-                <img src="assets/images/client/client-1.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/images/client/client-2.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/images/client/client-3.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/images/client/client-4.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/images/client/client-5.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/images/client/client-1.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/images/client/client-2.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/images/client/client-3.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/images/client/client-4.png" alt="">
-            </div>
-            <div class="item">
-                <img src="assets/images/client/client-5.png" alt="">
-            </div>
+					@foreach ($clients as $client)
+						<div class="item"> <img src="{{ asset('uploads/clients') }}/{{ $client->client_photo }}" alt="{{ $client->client_name }}"> </div>
+					@endforeach
         </div><!-- .client-slider end -->
     </div><!-- .container END -->
 </div><!-- agency client slider area section end -->

@@ -59,6 +59,11 @@
 		<!---Font icons-->
 		<link href="{{ asset('dashboard/assets/css/icons.css') }}" rel="stylesheet" />
 
+
+
+	
+
+
 	</head>
 	<body >
 		<div id="global-loader" ></div>
@@ -328,25 +333,6 @@
 											<a href="{{ route('add_product_page') }}">Add New Product Page </a>
 										</li>
 
-
-
-										<li class="sub-with-sub">
-											<a href="#">E-commerce </a>
-											<ul>
-												<li>
-													<a href="shop.html">Products</a>
-												</li>
-												<li>
-													<a href="shop-description.html">Product Details</a>
-												</li>
-												<li>
-													<a href="cart.html">Shopping Cart</a>
-												</li>
-											</ul>
-										</li>
-
-
-
 									</ul>
 								</div>
 								<!-- dropdown-menu -->
@@ -357,15 +343,8 @@
 								<div class="sub-item">
 									<ul>
 										<li>
-											<a href="#">All Services</a>
+											<a href="{{ route('client_index') }}">Add Client</a>
 										</li>
-										<li>
-											<a href="#">Add Service Category</a>
-										</li>
-										<li>
-											<a href="#">Add Service</a>
-										</li>
-
 									</ul>
 								</div>
 								<!-- dropdown-menu -->

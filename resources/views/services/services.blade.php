@@ -76,7 +76,7 @@ Services
 									</div><!-- .card-image END -->
 									<div class="cases-content">
 											<h3 class="xs-title">
-													<a href="{{ url('') }}/{{ $company_all_service->service_category_id }}">{{ $company_all_service->service_name }}</a>
+													<a href="{{ url('/services') }}/{{ $company_all_service->service_category_id }}">{{ $company_all_service->service_name }}</a>
 											</h3>
 											<span class="tag">{{ $company_all_service->relationBetweenCategory->service_category_name }}</span>
 									</div><!-- .cases-content END -->

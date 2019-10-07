@@ -30,8 +30,11 @@ Route::get('/products/{products_id}','ProductPageController@index')->name('produ
 
 
 // ABOUT
-
 Route::get('/about','AboutController@index')->name('about');
+
+// Training
+Route::get('/training','TrainingController@index')->name('training');
+Route::get('/training/single','TrainingController@training_single')->name('training_single');
 
 
 

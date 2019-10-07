@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/rev-settings.css') }}">
 
+    @yield('css')
 
     <!--For Plugins external css-->
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/plugins.css') }}" />
@@ -35,6 +36,8 @@
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/style.css') }}">
     <!--Theme Responsive css-->
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/responsive.css') }}" />
+
+
 
 
     <!-- Load Facebook SDK for JavaScript -->
@@ -183,6 +186,7 @@ border-radius: 0 0 8px 8px;
      </div>
 -->
     <!-- END prelaoder -->
+
     <!-- header section -->
     <div class="navigation-wrap bg-light start-header start-style">
   		<div class="container">
@@ -202,7 +206,7 @@ border-radius: 0 0 8px 8px;
   									<a class="nav-link" href="{{ route('homepage') }}">HOME</a>
   								</li>
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('services') }}">SERVICES</a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('services') }}">SERVICES</a>
   									<div class="dropdown-menu">
 
                       @foreach (App\Category::all() as $services)
@@ -214,7 +218,7 @@ border-radius: 0 0 8px 8px;
 
 
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('products') }}">PRODUCTS</a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('products') }}">PRODUCTS</a>
   									<div class="dropdown-menu">
                       @foreach (App\Product::all() as $products)
                         <a class="dropdown-item" href="{{ url('/products') }}/{{ $products->id }}"> {{  $products->product_name }} </a>
@@ -224,9 +228,9 @@ border-radius: 0 0 8px 8px;
 
 
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ route('services') }}">TRAINING</a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('training') }}">TRAINING</a>
   									<div class="dropdown-menu">
-
+                      <a class="dropdown-item" href="{{ route('training_single') }}"> TRAINING SINGLE </a>
   									</div>
   								</li>
 
@@ -270,7 +274,7 @@ border-radius: 0 0 8px 8px;
         <a href="{{ route('products') }}" class="r-link menu__link">PRODUCTS</a>
       </li>
       <li class="menu__group">
-        <a href="#" class="r-link menu__link">TRAINING</a>
+        <a href="{{ route('training') }}" class="r-link menu__link">TRAINING</a>
       </li>
       <li class="menu__group">
         <a href="{{ route('contact') }}" class="r-link menu__link">CONTACT CENTER</a>
@@ -469,8 +473,12 @@ border-radius: 0 0 8px 8px;
 <script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.video.min.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/skrollr.min.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/shuffle-letters.js') }}"></script>
+
+@yield('js')
+
 <script src="{{ asset('xubisoft/assets/js/main.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/sweetalert2.all.js') }}"></script>
+
 
 <script>
   @include('sweetalert::alert')
