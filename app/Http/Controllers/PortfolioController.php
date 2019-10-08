@@ -45,9 +45,9 @@ class PortfolioController extends Controller
       }
 
 
-      Alert::success('Successfully', 'Portfolio Added Successfully');
+      Alert::toast('Portfolio Added Successfully','success');
 
-      return back()->with('success', 'Portfolio Added Successfully');
+      return back();
     }
 
     // edit

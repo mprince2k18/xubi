@@ -32,6 +32,8 @@
 
     <!--For Plugins external css-->
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/plugins.css') }}" />
+    <!--font css-->
+    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/icons.css') }}" />
     <!--Theme custom css -->
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/style.css') }}">
     <!--Theme Responsive css-->
@@ -166,11 +168,13 @@ border-radius: 0 0 8px 8px;
 }
 
 .menu__toggle::before{
-  background-color: black !important;
-  opacity: .6;
+  background-color: #2d3436 !important;
+  opacity: .7;
 }
 
-
+.menu__nav{
+  text-align: center;
+}
 
 </style>
 
@@ -217,7 +221,7 @@ border-radius: 0 0 8px 8px;
   									<a class="nav-link" href="{{ route('homepage') }}">HOME</a>
   								</li>
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" href="{{ route('services') }}">SERVICES <i class="lni-arrow-down"></i> </a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('services') }}">SERVICES <i class="pe-7s-angle-down"></i> </a>
   									<div class="dropdown-menu">
 
                       @foreach (App\Category::all() as $services)
@@ -229,7 +233,7 @@ border-radius: 0 0 8px 8px;
 
 
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" href="{{ route('products') }}">PRODUCTS <i class="lni-arrow-down"></i></a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('products') }}">PRODUCTS <i class="pe-7s-angle-down"></i></a>
   									<div class="dropdown-menu">
                       @foreach (App\Product::all() as $products)
                         <a class="dropdown-item" href="{{ url('/products') }}/{{ $products->id }}"> {{  $products->product_name }} </a>
@@ -239,7 +243,7 @@ border-radius: 0 0 8px 8px;
 
 
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" href="{{ route('training') }}">TRAINING <i class="lni-arrow-down"></i></a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('training') }}">TRAINING <i class="pe-7s-angle-down"></i></a>
 
 
                     <div class="dropdown-menu">
@@ -256,7 +260,7 @@ border-radius: 0 0 8px 8px;
 
 
   								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link" href="{{ route('contact') }}">CONTACT CENTER</a>
+  									<a class="nav-link" href="{{ route('contact') }}">CONTACT US</a>
   								</li>
 
   								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
@@ -348,22 +352,8 @@ border-radius: 0 0 8px 8px;
     <div class="footer-top-area">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-lg-2">
-                    <div class="footer-widget">
-                        <div class="footer-logo-wraper">
-                            <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/xubi_logo2.png') }}" alt="footer logo"> </a>
-                        </div>
-                        <p>Address <a href="https://goo.gl/maps/QJyb48gb1RVkqV3Q8" target="_blank">HOUSE-19, ROAD-4, SECTOR-4, UTTARA, DHAKA-1230</a></p>
-                        <p>Contact Info
-                          <a href="+880258955125">+880258955125</a>
-                          <a href="+8801611609372">+8801611609372</a>
-                           <a href="mailto:contact@xubisoft.com">contact@xubisoft.com</a>
-                           <a href="mailto:info@xubisoft.com">info@xubisoft.com</a>
-                         </p>
-                    </div>
-                    <!-- .footer-widget END -->
-                </div>
-                <div class="col-md-6 col-lg-2">
+
+                <div class="col-md-6 col-lg-2 offset-md-1">
                     <div class="footer-widget">
                         <h4 class="widget-title">Useful Links</h4>
                         <ul class="xs-list">
@@ -379,17 +369,7 @@ border-radius: 0 0 8px 8px;
                     </div>
                     <!-- .footer-widget END -->
                 </div>
-                <div class="col-md-6 col-lg-2">
-                    <div class="footer-widget">
-                        <h4 class="widget-title">About Us</h4>
-                        <ul class="xs-list">
-                            <li><a href="about.html">Our Company</a></li>
-                            <li><a href="about.html">Advisory Board</a></li>
-                        </ul>
-                        <!-- .xs-list END -->
-                    </div>
-                    <!-- .footer-widget END -->
-                </div>
+
                 <div class="col-md-6 col-lg-2">
                     <div class="footer-widget">
                         <h4 class="widget-title">Our Services</h4>
@@ -406,14 +386,27 @@ border-radius: 0 0 8px 8px;
                     </div>
                     <!-- .footer-widget END -->
                 </div>
+
                 <div class="col-md-6 col-lg-2">
                     <div class="footer-widget">
-                        <h4 class="widget-title">Useful Links</h4>
-                        <ul class="xs-list">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Legal info</a></li>
-                        </ul>
+                        <div class="footer-logo-wraper">
+                            <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/xubi_logo2.png') }}" alt="footer logo"> </a>
+                        </div>
+                    </div>
+                    <!-- .footer-widget END -->
+                </div>
+
+
+                <div class="col-md-6 col-lg-2 offset-md-1">
+                    <div class="footer-widget">
+                        <h4 class="widget-title">Info</h4>
+                        <p>Address <a href="https://goo.gl/maps/QJyb48gb1RVkqV3Q8" target="_blank">HOUSE-19, ROAD-4, SECTOR-4, UTTARA, DHAKA-1230</a></p>
+                        <p>Contact Info
+                          <a href="+880258955125">+880258955125</a>
+                          <a href="+8801611609372">+8801611609372</a>
+                           <a href="mailto:contact@xubisoft.com">contact@xubisoft.com</a>
+                           <a href="mailto:info@xubisoft.com">info@xubisoft.com</a>
+                         </p>
                         <!-- .xs-list END -->
                     </div>
                     <!-- .footer-widget END -->
@@ -536,10 +529,6 @@ border-radius: 0 0 8px 8px;
 
 <script type="text/javascript">
 
-
-/* Please ❤ this if you like it! */
-
-
 (function($) { "use strict";
 
 $(function() {
@@ -570,19 +559,6 @@ $('body').on('mouseenter mouseleave','.nav-item',function(e){
       _d[_d.is(':hover')?'addClass':'removeClass']('show');
       },1);
     }
-});
-
-//Switch light/dark
-
-$("#switch").on('click', function () {
-  if ($("body").hasClass("dark")) {
-    $("body").removeClass("dark");
-    $("#switch").removeClass("switched");
-  }
-  else {
-    $("body").addClass("dark");
-    $("#switch").addClass("switched");
-  }
 });
 
 })(jQuery);
@@ -623,11 +599,6 @@ $("#switch").on('click', function () {
 
 
 </script>
-
-
-
-
-
 
 </body>
 

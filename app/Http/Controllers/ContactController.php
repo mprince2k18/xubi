@@ -7,6 +7,7 @@ use Laravel\Scout\Searchable;
 use Illuminate\Http\Request;
 use App\Contact;
 use App\Address;
+use App\Training;
 use Carbon\Carbon;
 Use Alert;
 
@@ -21,10 +22,12 @@ class ContactController extends Controller
     {
 
         $addressess = Address::all();
+        $trainings = Training::all();
+
         if (session('success')) {
           Alert::success('Message Sent Successfully', 'We will connect with you ASAP');
         }
-        return view('contact.index',compact('addressess'));
+        return view('contact.index',compact('addressess','trainings'));
     }
 
     function contact_insert(Request $request)

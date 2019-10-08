@@ -14,6 +14,7 @@ use App\Team;
 use App\Client;
 use App\Training;
 use App\Services;
+use App\Portfolio;
 use Carbon\Carbon;
 use Image;
 use Alert;
@@ -30,7 +31,17 @@ class DashboardController extends Controller
 
     function index()
     {
-      return view('dashboard.index');
+      $banners = Banner::paginate(5);
+      $contacts = Contact::paginate(5);
+      $service_categories =Category::paginate(5);
+      $company_services = CompanyService::paginate(5);
+      $all_products = Product::paginate(5);
+      $team_members = Team::paginate(5);
+      $clients = Client::paginate(5);
+      $trainings = Training::paginate(5);
+      $services = Services::paginate(5);
+      $portfolios = Services::paginate(5);
+      return view('dashboard.index',compact('banners','contacts','service_categories','company_services','all_products','portfolios','team_members','clients','trainings','services'));
     }
 
 

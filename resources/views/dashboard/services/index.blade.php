@@ -160,11 +160,10 @@
 
     <!-- Add Services End-->
 
-    <!-- Add Services Category-->
+    <!-- view Services Category-->
 
     <div class="col-lg-6">
       <div class="card">
-
 									<div class="table-responsive">
 										<table class="table card-table table-vcenter text-nowrap">
 											<thead >
@@ -172,7 +171,6 @@
 													<th>ID</th>
 													<th>Service Category</th>
 													<th>Action</th>
-
 												</tr>
 											</thead>
 											<tbody>
@@ -185,17 +183,12 @@
                           </td>
                         </tr>
                         @endforeach
-
-
 											</tbody>
 										</table>
 									</div>
-    </div>
-  </div>
-
-
-
-</div>
+                </div>
+              </div>
+            </div>
 <!-- view services End -->
 
 

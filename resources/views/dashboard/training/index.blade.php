@@ -47,7 +47,7 @@
 
     <div class="col-lg-6 col-sm-12">
 
-      <form method="post" class="card" action="{{ route('create') }}" enctype="multipart/form-data">
+      <form method="post" class="card" action="{{ route('training_create') }}" enctype="multipart/form-data">
         @csrf
 									<div class="card-header">
 										<h3 class="card-title">Add Training Name</h3>

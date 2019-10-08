@@ -64,6 +64,8 @@
 
 
 
+
+
 	</head>
 	<body >
 		<div id="global-loader" ></div>
@@ -239,7 +241,7 @@
 					<div class="container">
 						<ul class="nav">
 							<li class="nav-item with-sub">
-								<a class="nav-link active" href="#">
+								<a class="nav-link active" href="{{ route('dashboard') }}">
 									<i class="fa fa-desktop"></i>
 									<span> Dashboard</span>
 								</a>
@@ -382,7 +384,7 @@
 								<div class="card card-img-holder text-default bg-color">
 									<div class="row">
 										<div class="col-4">
-											<div class="square-icon br-tl-9 bg-primary text-center align-self-center shadow-primary"><i class= "fa fa-cubes fs-30  text-white"></i></div>
+											<div class="square-icon br-tl-9 bg-primary text-center align-self-center shadow-primary"><i class= "fa fa-envelope fs-30 text-white"></i></div>
 										</div>
 										<div class="col-8">
 											<div class="card-body card-padding">
@@ -397,7 +399,7 @@
 								<div class="card card-img-holder text-default bg-color">
 									<div class="row">
 										<div class="col-4">
-											<div class="square-icon bg-secondary text-center align-self-center shadow-secondary"><i class= "fa fa-area-chart fs-30  text-white"></i></div>
+											<div class="square-icon bg-secondary text-center align-self-center shadow-secondary"><i class= "fa fa-user fs-30 text-white"></i></div>
 										</div>
 										<div class="col-8">
 											<div class="card-body card-padding">
@@ -413,7 +415,7 @@
 								<div class="card card-img-holder text-default bg-color">
 									<div class="row">
 										<div class="col-4">
-											<div class="square-icon bg-info text-center align-self-center shadow-info"><i class= "fa fa-eye fs-30  text-white"></i></div>
+											<div class="square-icon bg-info text-center align-self-center shadow-info"><i class= "glyphicon glyphicon-cog fs-30 text-white"></i></div>
 										</div>
 										<div class="col-8">
 											<div class="card-body card-padding">
@@ -428,7 +430,7 @@
 								<div class="card card-img-holder text-default bg-color">
 									<div class="row">
 										<div class="col-4">
-											<div class="square-icon bg-success text-center align-self-center shadow-success"><i class= "fa fa-thumbs-up fs-30 text-white"></i></div>
+											<div class="square-icon bg-success text-center align-self-center shadow-success"><i class= "glyphicon glyphicon-gift fs-30 text-white"></i></div>
 										</div>
 										<div class="col-8">
 											<div class="card-body card-padding">
