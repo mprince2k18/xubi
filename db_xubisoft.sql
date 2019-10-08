@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2019 at 02:06 PM
+-- Generation Time: Oct 08, 2019 at 10:33 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -130,12 +130,13 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `service_category_name`, `created_at`, `updated_at`) VALUES
-(1, 'Web', '2019-09-15 06:09:32', '2019-09-15 07:03:49'),
-(2, 'Apps', '2019-09-15 06:09:40', '2019-09-15 07:04:15'),
-(3, 'Graphics', '2019-09-15 06:09:48', '2019-09-15 07:04:31'),
-(4, 'Domain', '2019-09-15 06:58:26', '2019-09-15 07:04:51'),
-(5, 'Career', '2019-09-15 08:03:09', NULL),
-(6, 'Clipping Path', '2019-09-15 08:04:31', NULL);
+(1, 'Web Design & Development', '2019-09-15 06:09:32', '2019-10-05 06:39:35'),
+(2, 'Apps Development', '2019-09-15 06:09:40', '2019-10-05 06:39:50'),
+(3, 'Graphics Solution', '2019-09-15 06:09:48', '2019-10-05 06:40:05'),
+(4, 'Domain And Hosting', '2019-09-15 06:58:26', '2019-10-05 06:40:36'),
+(5, 'Career Development', '2019-09-15 08:03:09', '2019-10-05 06:40:21'),
+(6, 'Clipping Path Service', '2019-09-15 08:04:31', '2019-10-05 06:40:49'),
+(7, 'Custom Software Development', '2019-10-05 06:40:57', NULL);
 
 -- --------------------------------------------------------
 
@@ -174,6 +175,15 @@ CREATE TABLE `clients` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `clients`
+--
+
+INSERT INTO `clients` (`id`, `client_name`, `client_description`, `client_photo`, `created_at`, `updated_at`) VALUES
+(1, 'BASIS', NULL, '1.jpg', '2019-10-07 06:30:54', '2019-10-07 06:30:54'),
+(2, 'BACCO', NULL, '2.jpg', '2019-10-07 06:31:33', '2019-10-07 06:31:33'),
+(3, 'ACER', NULL, '3.png', '2019-10-07 06:32:49', '2019-10-07 06:32:49');
 
 -- --------------------------------------------------------
 
@@ -320,7 +330,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (68, '2019_09_14_095603_create_portfolios_table', 13),
 (78, '2019_09_23_130800_create_clients_table', 15),
 (79, '2019_09_29_130535_create_abouts_table', 16),
-(86, '2019_09_05_120858_create_services_table', 17);
+(112, '2019_09_05_120858_create_services_table', 17),
+(121, '2019_10_03_163006_create_product_pages_table', 18),
+(124, '2019_10_07_124613_create_trainings_table', 19);
 
 -- --------------------------------------------------------
 
@@ -377,6 +389,52 @@ INSERT INTO `products` (`id`, `product_name`, `product_photo`, `slug_name`, `cre
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `product_pages`
+--
+
+CREATE TABLE `product_pages` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sub_title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title_watermark_single` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_category_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title_banner` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `about_product_title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `details_about_product` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_process_banner` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_details` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_items_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_items_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_items_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_details_1` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_banner_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_details_2` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_banner_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_details_3` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_banner_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_details_4` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_banner_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_details_5` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_process_banner_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `product_pages`
+--
+
+INSERT INTO `product_pages` (`id`, `title`, `sub_title`, `title_watermark_single`, `product_category_id`, `title_banner`, `about_product_title`, `details_about_product`, `product_process_banner`, `product_process_details`, `product_process_items_1`, `product_process_items_2`, `product_process_items_3`, `product_process_1`, `product_process_details_1`, `product_process_banner_1`, `product_process_2`, `product_process_details_2`, `product_process_banner_2`, `product_process_3`, `product_process_details_3`, `product_process_banner_3`, `product_process_4`, `product_process_details_4`, `product_process_banner_4`, `product_process_5`, `product_process_details_5`, `product_process_banner_5`, `created_at`, `updated_at`) VALUES
+(1, 'FundPress', 'A powerful platform for flexible communication', 'F', '1', 'title_banner_.1.jpg', 'FundPress', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', 'product_info_.1.jpg', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', 'product_process_banner_1_.1.jpg', 'A powerful platform for flexible communication', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', 'product_process_banner_2_.1.jpg', 'A powerful platform for flexible communication', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', 'product_process_banner_3_.1.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-06 11:09:35');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `services`
 --
 
@@ -386,29 +444,29 @@ CREATE TABLE `services` (
   `sub_title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `title_watermark_single` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `service_category_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title_banner` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `title_watermark_full` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title_banner` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title_watermark_full` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `about_service_title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `details_about_service` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `service_info_banner` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `service_info_details` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `details_about_service` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `service_info_banner` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_info_details` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_info_items_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_info_items_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_info_items_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_process_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `service_process_details_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_details_1` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_process_banner_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_process_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `service_process_details_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_details_2` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_process_banner_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_process_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `service_process_details_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_details_3` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_process_banner_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_process_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `service_process_details_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_details_4` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_process_banner_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_process_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `service_process_details_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_process_details_5` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_process_banner_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -419,9 +477,8 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `title`, `sub_title`, `title_watermark_single`, `service_category_id`, `title_banner`, `title_watermark_full`, `about_service_title`, `details_about_service`, `service_info_banner`, `service_info_details`, `service_info_items_1`, `service_info_items_2`, `service_info_items_3`, `service_process_1`, `service_process_details_1`, `service_process_banner_1`, `service_process_2`, `service_process_details_2`, `service_process_banner_2`, `service_process_3`, `service_process_details_3`, `service_process_banner_3`, `service_process_4`, `service_process_details_4`, `service_process_banner_4`, `service_process_5`, `service_process_details_5`, `service_process_banner_5`, `created_at`, `updated_at`) VALUES
-(1, 'test', 'test', 'T', '2', '4.png', 'twst', 'erer', 'ere', '4.png', 'fsdfdsf', 'dsfdsfs', 'sdfds', 'fsdfds', 'dsfsd', 'dfdf', '4.png', 'dfdfdfd', 'dfdf', '4.png', 'dffdf', 'dfdfd', '4.png', 'fdfdf', 'dfdfd', '4.png', 'dfdfdf', 'dfdfdfdf', '4.png', '2019-10-02 08:12:16', NULL),
-(2, 'teemo', 'teemooooooooo', 'T', '1', '4.png', 'Teemo', 'Teemo', 'TeemoTeemoTeemoTeemoTeemoTeemo', '4.png', 'Teemo', 'Teemo', 'Teemo', 'TeemoTeemo', 'Teemo', 'Teemo', 'cropped-download-180x180.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-02 11:25:48', NULL),
-(3, 'test', 'test', 'T', '3', '4.png', 'test', 'Teemo', 'ere', '4.png', 'fsdfdsf', 'Teemo', 'sdfds', 'fsdfds', 'dsfsd', 'dfdf', '4.png', 'dfdfdfd', 'dfdf', 'cropped-download-180x180.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-02 12:04:02', NULL);
+(1, 'FundPress', 'A powerful platform for flexible communication', 'F', '1', '1.jpg', 'FundPress', 'Client', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', '1.jpg', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', 'Adding functionality to an innovative Business', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '1.jpg', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '1.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-05 08:32:25', '2019-10-05 08:32:26'),
+(2, 'FundPress', 'A powerful platform for flexible communication', 'F', '2', '2.jpg', 'FundPress', 'Client', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', '2.jpg', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', 'Adding functionality to an innovative Business', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '2.jpg', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '2.jpg', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '2.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-05 08:33:19', '2019-10-05 08:33:20');
 
 -- --------------------------------------------------------
 
@@ -448,6 +505,30 @@ INSERT INTO `teams` (`id`, `name`, `designation`, `team_photo`, `slug`, `deleted
 (1, 'Teemo', 'COO', '1.jpg', 'teemo', '2019-09-17 09:10:37', '2019-09-17 09:10:25', '2019-09-17 09:10:37'),
 (2, 'Fahad Hasan', 'CEO', '2.png', 'mohammad-prince', NULL, '2019-09-18 10:26:40', '2019-09-22 09:30:13'),
 (3, 'Teemo', 'CEO', '3.jpg', 'teemo', NULL, '2019-09-18 11:29:12', '2019-09-18 11:29:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `trainings`
+--
+
+CREATE TABLE `trainings` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `trainings`
+--
+
+INSERT INTO `trainings` (`id`, `name`, `photo`, `created_at`, `updated_at`) VALUES
+(1, 'BPO', '1.jpg', '2019-10-08 04:41:33', '2019-10-08 04:41:33'),
+(2, 'SEIP', '2.jpg', '2019-10-08 04:50:18', '2019-10-08 04:50:18'),
+(3, 'PCS', '3.jpg', '2019-10-08 06:46:32', '2019-10-08 06:46:33'),
+(4, 'WEB', '4.jpg', '2019-10-08 06:46:55', '2019-10-08 06:46:55');
 
 -- --------------------------------------------------------
 
@@ -576,15 +657,29 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `product_pages`
+--
+ALTER TABLE `product_pages`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `product_pages_product_category_id_unique` (`product_category_id`);
+
+--
 -- Indexes for table `services`
 --
 ALTER TABLE `services`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `services_service_category_id_unique` (`service_category_id`);
 
 --
 -- Indexes for table `teams`
 --
 ALTER TABLE `teams`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `trainings`
+--
+ALTER TABLE `trainings`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -620,7 +715,7 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `ceos`
@@ -632,7 +727,7 @@ ALTER TABLE `ceos`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `company_services`
@@ -668,7 +763,7 @@ ALTER TABLE `infos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 
 --
 -- AUTO_INCREMENT for table `portfolios`
@@ -683,16 +778,28 @@ ALTER TABLE `products`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `product_pages`
+--
+ALTER TABLE `product_pages`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `trainings`
+--
+ALTER TABLE `trainings`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
