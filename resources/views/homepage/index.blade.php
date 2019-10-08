@@ -560,7 +560,12 @@ Xubisoft | IT Solution
         <div class="container">
             <div class="client-slider owl-carousel">
               @foreach ($clients as $client)
-                <div class="item"> <img src="{{ asset('uploads/clients') }}/{{ $client->client_photo }}" alt="{{ $client->client_name }}"> </div>
+                <div class="item">
+                  <a href="{{ $client->id }}">
+                    <img src="{{ asset('uploads/clients') }}/{{ $client->client_photo }}" alt="{{ $client->client_name }}">
+                  </a>
+
+                </div>
               @endforeach
 
             </div>

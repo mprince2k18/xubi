@@ -187,6 +187,12 @@ Route::get('/admin/client','DashboardController@client_index')->name('client_ind
 // insert
 Route::post('/admin/client/insert','ClientController@insert')->name('insert');
 
+// Training
+// Training_index
+Route::get('/admin/training','DashboardController@training_index')->name('training_index');
+// create
+Route::post('/admin/training/create','TrainingController@create')->name('create');
+
 
 
 

@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/signatra-font.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('xubisoft/assets/images/xubi/cropped-download-32x32.jpg') }}">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" href="apple-touch-icon.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/GrayGrids/LineIcons/LineIcons.css">
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/animate.css') }}">
@@ -161,6 +161,17 @@ border-radius: 0 0 8px 8px;
   font-family: 'Rancho', cursive !important;
 }
 
+.dropdown-item{
+  padding: 15px 15px !important;
+}
+
+.menu__toggle::before{
+  background-color: black !important;
+  opacity: .6;
+}
+
+
+
 </style>
 
 @yield('css')
@@ -206,7 +217,7 @@ border-radius: 0 0 8px 8px;
   									<a class="nav-link" href="{{ route('homepage') }}">HOME</a>
   								</li>
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" href="{{ route('services') }}">SERVICES</a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('services') }}">SERVICES <i class="lni-arrow-down"></i> </a>
   									<div class="dropdown-menu">
 
                       @foreach (App\Category::all() as $services)
@@ -218,7 +229,7 @@ border-radius: 0 0 8px 8px;
 
 
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" href="{{ route('products') }}">PRODUCTS</a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('products') }}">PRODUCTS <i class="lni-arrow-down"></i></a>
   									<div class="dropdown-menu">
                       @foreach (App\Product::all() as $products)
                         <a class="dropdown-item" href="{{ url('/products') }}/{{ $products->id }}"> {{  $products->product_name }} </a>
@@ -228,10 +239,19 @@ border-radius: 0 0 8px 8px;
 
 
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" href="{{ route('training') }}">TRAINING</a>
-  									<div class="dropdown-menu">
-                      <a class="dropdown-item" href="{{ route('training_single') }}"> TRAINING SINGLE </a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('training') }}">TRAINING <i class="lni-arrow-down"></i></a>
+
+
+                    <div class="dropdown-menu">
+                      @foreach (App\Training::all() as $trainings)
+                        <a class="dropdown-item" href="{{ $trainings->id }}"> {{ $trainings->name }} </a>
+                      @endforeach
   									</div>
+
+
+  									<!-- <div class="dropdown-menu">
+                      <a class="dropdown-item" href="{{ route('training_single') }}"> TRAINING SINGLE </a>
+  									</div> -->
   								</li>
 
 
@@ -331,7 +351,7 @@ border-radius: 0 0 8px 8px;
                 <div class="col-md-6 col-lg-2">
                     <div class="footer-widget">
                         <div class="footer-logo-wraper">
-                            <a href="index.html" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/xubi_logo2.png') }}" alt="footer logo"> </a>
+                            <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/xubi_logo2.png') }}" alt="footer logo"> </a>
                         </div>
                         <p>Address <a href="https://goo.gl/maps/QJyb48gb1RVkqV3Q8" target="_blank">HOUSE-19, ROAD-4, SECTOR-4, UTTARA, DHAKA-1230</a></p>
                         <p>Contact Info
@@ -417,6 +437,10 @@ border-radius: 0 0 8px 8px;
         <!-- .container END -->
     </div>
     <!-- .footer-top-area END -->
+
+
+
+
     <div class="footer-bottom-area">
         <div class="container">
             <div class="row">

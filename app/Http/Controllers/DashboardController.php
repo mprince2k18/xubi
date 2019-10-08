@@ -12,6 +12,7 @@ use App\CompanyService;
 use App\Product;
 use App\Team;
 use App\Client;
+use App\Training;
 use App\Services;
 use Carbon\Carbon;
 use Image;
@@ -94,6 +95,14 @@ class DashboardController extends Controller
     {
       $all_product_categories = Product::all();
       return view('dashboard.products.add_product_page',compact('all_product_categories'));
+    }
+
+    // training page
+
+    function training_index()
+    {
+      $trainings = Training::paginate(5);
+      return view('dashboard.training.index',compact('trainings'));
     }
 
 

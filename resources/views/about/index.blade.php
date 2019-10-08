@@ -66,7 +66,8 @@ About
                         <h3 class="sub-title">XUBISOFT</h3>
                         <h4 class="main-title">World’s best <em>Startup</em></h4>
                         <span class="watermark-title">BEST</span>
-                    </div><!-- .agency-section-title END -->
+                    </div>
+										<!-- .agency-section-title END -->
                     <p>We work systematically to integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
                     <a href="{{ route('contact') }}" target="_blank" class="btn btn-primary">CONTATC US</a>
                 </div><!-- .agency-intro END -->
@@ -83,159 +84,55 @@ About
     </div><!-- .container END -->
 </section><!-- end agency company intro section -->
 
-<!-- agency team area section -->
-<section class="agency-team-area">
-    <div class="container-fluid px-0">
-        <div class="agency-team-slider owl-carousel">
-            <div class="agency-single-team">
-                <div class="image">
-                    <img src="{{ asset('xubisoft/assets/images/team/team-1.jpg') }}" alt="">
-                </div>
-                <div class="hover-area text-center">
-                    <h4 class="xs-title"><a href="#">James Cameron</a></h4>
-                    <span>SOFTWARE ENGINEER</span>
-                    <p>We work systematically integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
-                    <ul class="simple-social-list">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    </ul>
-                </div><!-- .hover-area END -->
-            </div><!-- .agency-single-team END -->
-            <div class="agency-single-team">
-                <div class="image">
-                    <img src="{{ asset('xubisoft/assets/images/team/team-2.jpg') }}" alt="">
-                </div>
-                <div class="hover-area text-center">
-                    <h4 class="xs-title"><a href="#">Mary W. Florence</a></h4>
-                    <span>HARDWARE ENGINEER</span>
-                    <p>We work systematically integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
-                    <ul class="simple-social-list">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                </div><!-- .hover-area END -->
-            </div><!-- .agency-single-team END -->
-            <div class="agency-single-team">
-                <div class="image">
-                    <img src="{{ asset('xubisoft/assets/images/team/team-3.jpg') }}" alt="">
-                </div>
-                <div class="hover-area text-center">
-                    <h4 class="xs-title"><a href="#">Edith T. Painter</a></h4>
-                    <span>C.E.O</span>
-                    <p>We work systematically integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
-                    <ul class="simple-social-list">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    </ul>
-                </div><!-- .hover-area END -->
-            </div><!-- .agency-single-team END -->
-            <div class="agency-single-team">
-                <div class="image">
-                    <img src="{{ asset('xubisoft/assets/images/team/team-4.jpg') }}" alt="">
-                </div>
-                <div class="hover-area text-center">
-                    <h4 class="xs-title"><a href="#">Clarence D. Ryan</a></h4>
-                    <span>SUPPORT ENGINEER</span>
-                    <p>We work systematically integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
-                    <ul class="simple-social-list">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div><!-- .hover-area END -->
-            </div><!-- .agency-single-team END -->
-        </div><!-- .agency-team-slider END -->
-    </div><!-- .container-fluid END -->
-</section><!-- end agency team area section -->
 
 
 
 
-
-<!-- Timeline start -->
- <div class="xs-section-padding-bottom">
-     <div class="demo-title-wraper text-center">
-         <h2 class="demo-title">Timeline <em>version Two</em> </h2>
-     </div>
-     <!-- horizontal timeline section -->
-     <div class="xs-section-padding hr-timeline-section">
- <div class="container">
-     <div class="row hr-timeline-group">
-         <div class="col-md-6 col-lg-3">
-             <div class="hr-single-timeline wow bounceIn">
-                 <span class="number-count"></span>
-                 <div class="hr-timeline-content-wraper">
-                     <div class="hr-timeline-content">
-                         <i class="icon icon-working_process_icons_1"></i>
-                         <p>Estimate</p>
-                     </div>
-                 </div><!-- .hr-timeline-content-wraper END -->
-             </div><!-- .hr-single-timeline END -->
-         </div>
-         <div class="col-md-6 col-lg-3">
-             <div class="hr-single-timeline color-1 wow bounceIn" data-wow-delay=".5s">
-                 <span class="number-count"></span>
-                 <div class="hr-timeline-content-wraper">
-                     <div class="hr-timeline-content">
-                         <i class="icon icon-working_process_icons_2"></i>
-                         <p>Idea Making</p>
-                     </div>
-                 </div><!-- .hr-timeline-content-wraper END -->
-             </div><!-- .hr-single-timeline END -->
-         </div>
-         <div class="col-md-6 col-lg-3">
-             <div class="hr-single-timeline color-2 wow bounceIn" data-wow-delay=".7s">
-                 <span class="number-count"></span>
-                 <div class="hr-timeline-content-wraper">
-                     <div class="hr-timeline-content">
-                         <i class="icon icon-working_process_icons_3"></i>
-                         <p>Working Plan</p>
-                     </div>
-                 </div><!-- .hr-timeline-content-wraper END -->
-             </div><!-- .hr-single-timeline END -->
-         </div>
-         <div class="col-md-6 col-lg-3">
-             <div class="hr-single-timeline color-3 wow bounceIn" data-wow-delay=".9s">
-                 <span class="number-count"></span>
-                 <div class="hr-timeline-content-wraper">
-                     <div class="hr-timeline-content">
-                         <i class="icon icon-working_process_icons_4"></i>
-                         <p>Handover</p>
-                     </div>
-                 </div><!-- .hr-timeline-content-wraper END -->
-             </div><!-- .hr-single-timeline END -->
-         </div>
-     </div><!-- .row .hr-timeline-group END -->
- </div><!-- .container END -->
- <div class="timeline-wave">
-     <img src="{{ asset('xubisoft/assets/images/timeline-wave-shape.png') }}" alt="">
- </div>
-</div>        <!-- horizontal timeline section end -->
- </div>
- <!-- Timeline end -->
+<!-- agency team section -->
+<section class="xs-section-padding gray-bg">
+		<div class="container">
+				<div class="row">
+						<div class="col-lg-10 mx-auto">
+								<div class="agency-section-title text-center section-title-style2">
 
 
+											<h4 class="main-title">Our <em>Team</em></h4>
+											<span class="watermark-title">TEAM</span>
 
+									<!-- .agency-section-title END -->
+								</div>
+						</div>
+				</div>
+				<!-- .row end -->
+				<div class="row xs-mb-5">
+					@foreach ($teams as $team)
+						<div class="col-lg-3 col-md-6">
+								<div class="single-team-style2">
+										<div class="image">
+											<img src="{{ asset('uploads/team')}}/{{ $team->team_photo }}" alt="{{ $team->name }}">
+												<div class="hover-area text-center">
+														<div class="team-content">
+																<h4 class="xs-title">{{ $team->name }}</h4> <span>{{ $team->designation }}</span> </div>
+														<ul class="social-list version-5">
+																<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+																<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+																<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+																<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+														</ul>
+														<!-- .social-list -->
+												</div>
+												<!-- .hover-area END -->
+										</div>
+								</div>
+								<!-- .single-team-style2 END -->
+							</div>
+					@endforeach
 
+				</div>
 
-
-
-
-
-
-
-
-
-
-
+		</div>
+</section>
+<!-- agency team section end -->
 
 <!-- agency office area section -->
 <section class="xs-section-padding agency-office-area" data-scrollax-parent="true">
@@ -255,7 +152,7 @@ About
       <div class="row">
 
         <div class="col-md-8 offset-md-2">
-            <p class="text-dark">
+            <p class="text-dark h4">
                 Xubisoft Ltd. is a multi-layered Bangladesh based Software company that focuses highly
                 qualitative, timely delivered and cost – effective Software development and training. Xubisoft Ltd. Is register as private limited company assigned in Bangladesh with the express
                 purpose of developing a skilled manpower in ICT sector of Bangladesh. We are providing
@@ -287,7 +184,7 @@ About
             <div class="col-lg-10 mx-auto">
                 <div class="agency-section-title text-center">
                     <h3 class="sub-title">OFFICE LIFE</h3>
-                    <h4 class="main-title">Agencify <em>Environmet</em></h4>
+                    <h4 class="main-title"><em>Environmet</em></h4>
                     <span class="watermark-title" data-scrollax="properties: { translateY: '-250px' }">OFFICE</span>
                 </div><!-- .agency-section-title END -->
             </div>
@@ -376,7 +273,11 @@ About
     <div class="container">
         <div class="client-slider owl-carousel">
 					@foreach ($clients as $client)
-						<div class="item"> <img src="{{ asset('uploads/clients') }}/{{ $client->client_photo }}" alt="{{ $client->client_name }}"> </div>
+						<div class="item">
+							<a href="{{ $client->id }}">
+								<img src="{{ asset('uploads/clients') }}/{{ $client->client_photo }}" alt="{{ $client->client_name }}">
+							</a>
+						</div>
 					@endforeach
         </div><!-- .client-slider end -->
     </div><!-- .container END -->

@@ -58,7 +58,7 @@ Services
                     <ul id="filters" class="option-set clearfix main-filter" data-option-key="filter">
                         <li><a href="#" data-option-value="*" class="selected">ALL PROJECTS</a></li>
 												@foreach ($company_all_categories as $company_all_category)
-													<li><a href="#" data-option-value=".item{{ $company_all_category->id }}">{{ $company_all_category->service_category_name }}</a></li>
+													<li><a href="#" data-option-value=".item{{ $company_all_category->id }}">{{ Str::limit($company_all_category->service_category_name ,6 ) }}</a></li>
 												@endforeach
                     </ul>
                 </div><!-- .filter-button-wraper END -->

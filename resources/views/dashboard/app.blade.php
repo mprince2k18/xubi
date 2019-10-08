@@ -61,7 +61,7 @@
 
 
 
-	
+
 
 
 	</head>
@@ -344,6 +344,19 @@
 									<ul>
 										<li>
 											<a href="{{ route('client_index') }}">Add Client</a>
+										</li>
+									</ul>
+								</div>
+								<!-- dropdown-menu -->
+							</li>
+
+
+							<li class="nav-item with-sub">
+								<a class="nav-link" href="{{ route('training_index') }}"><i class="fa fa-tachometer"></i> <span>Training</span></a>
+								<div class="sub-item">
+									<ul>
+										<li>
+											<a href="{{ route('training_index') }}">Add Training</a>
 										</li>
 									</ul>
 								</div>
