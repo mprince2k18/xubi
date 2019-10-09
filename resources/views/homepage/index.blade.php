@@ -1,5 +1,22 @@
 @extends('xubi.app')
 
+@section('css')
+
+<style media="screen">
+
+@import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
+
+  .banner-title{
+    font-family: 'Handlee', cursive;
+    font-size: 53px !important;
+    letter-spacing: 5px;
+  }
+</style>
+
+@endsection
+
+
+
 @section('title')
 
 Xubisoft | IT Solution
@@ -16,6 +33,7 @@ Xubisoft | IT Solution
 
             <div class="banner-slider owl-carousel">
 
+
               {{-- single-banner-slider strats --}}
 
               @foreach ($banners as $banner)
@@ -27,6 +45,8 @@ Xubisoft | IT Solution
                             <div class="col-lg-5 mr-auto">
                                 <div class="agency-banner-content banner-style2">
                                     <h1 class="banner-title text-left">{{ $banner->header_headline  }}</h1>
+
+
                                     <p>{{ $banner->header_message  }}</p>
                                     <div class="btn-wraper">
                                       <a href="#" class="btn btn-primary btn-gradient3">GET STARTED</a>
@@ -58,6 +78,9 @@ Xubisoft | IT Solution
                 <div class="col-lg-10 mx-auto">
                     <div class="agency-section-title text-center section-title-style2">
                         <h2 class="main-title">We are young but not bold</h2>
+
+
+
                         <p>We work systematically to integrate corporate responsibility in our core business We work systematically to integrate corporate responsibility in our core business</p>
                     </div>
                 </div>

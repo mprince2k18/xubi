@@ -10,7 +10,7 @@
 @endsection
 
 @section('title')
-Contact
+Contact us
 @endsection
 
 
@@ -25,7 +25,7 @@ Contact
 					<h2 class="inner-banner-title">Contact Us</h2>
 					<ul class="breadcumbs list-inline">
 						<li><a href="{{ route('homepage') }}">Home</a></li>
-						<li>Contact</li>
+						<li> @yield('title') </li>
 					</ul>
 				</div>
 			</div>
@@ -33,53 +33,6 @@ Contact
 	</div>
 </div>
 <!--breadcumb end here--><!-- End welcome section -->
-
-
-
-
-  <!-- School Category Courses -->
-  	<section id="our-courses" class="our-courses pt90 pt650-992">
-
-  		<div class="container">
-  			<div class="row">
-  				<div class="col-lg-6 offset-lg-3">
-  					<div class="main-title text-center">
-  						<h3 class="mt0">Xubisoft Training & Courses</h3>
-  						<!-- <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p> -->
-  					</div>
-  				</div>
-  			</div>
-  			<div class="row">
-
-          @forelse ($trainings as $training)
-  				    <div class="col-sm-6 col-lg-3">
-      					<div class="img_hvr_box" style="background-image: url({{ asset('uploads/training') }}/{{ $training->photo }}">
-      						<div class="overlay">
-      							<div class="details">
-      								<h5>{{ $training->name }}</h5>
-      							</div>
-      						</div>
-      					</div>
-              </div>
-          @empty
-
-              <div class="col-sm-12 col-lg-12">
-                <div class="img_hvr_box" style="background-image: url({{ asset('custom/images/courses/1.jpg') }}">
-                  <div class="overlay">
-                    <div class="details">
-                      <h5>No Training Available</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-          @endforelse
-
-
-  			</div>
-  		</div>
-  	</section>
-
 
 <!-- agency contact section -->
 <div class="agency-contactus gray-bg">

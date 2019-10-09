@@ -200,34 +200,47 @@
 								</div>
 								<div class="dropdown text-center selector">
 									<a href="#" class="nav-link leading-none" data-toggle="dropdown">
-										<span class="avatar avatar-sm brround cover-image" data-image-src="assets/images/faces/female/25.jpg"></span>
+										<span class="avatar avatar-sm brround cover-image" data-image-src="{{asset('dashboard/assets/images/faces/female/25.jpg')}}"></span>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow ">
 										<div class="text-center">
-											<a href="#" class="dropdown-item text-center font-weight-sembold user" data-toggle="dropdown">Joyce Stewart</a>
+											<a href="#" class="dropdown-item text-center font-weight-sembold user" data-toggle="dropdown">{{ Auth::user()->name }}</a>
 											<span class="text-center user-semi-title text-dark">web designer</span>
 											<div class="dropdown-divider"></div>
 										</div>
 										<a class="dropdown-item" href="#">
 											<i class="dropdown-icon mdi mdi-account-outline"></i> Profile
 										</a>
-										<a class="dropdown-item" href="#">
+										<!-- <a class="dropdown-item" href="#">
 											<i class="dropdown-icon  mdi mdi-settings"></i> Settings
-										</a>
-										<a class="dropdown-item" href="#">
+										</a> -->
+										<!-- <a class="dropdown-item" href="#">
 											<span class="float-right"><span class="badge badge-primary">6</span></span>
 											<i class="dropdown-icon mdi  mdi-message-outline"></i> Inbox
-										</a>
-										<a class="dropdown-item" href="#">
+										</a> -->
+										<!-- <a class="dropdown-item" href="#">
 											<i class="dropdown-icon mdi mdi-comment-check-outline"></i> Message
-										</a>
+										</a> -->
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">
+										<!-- <a class="dropdown-item" href="#">
 											<i class="dropdown-icon mdi mdi-compass-outline"></i> Need help?
-										</a>
-										<a class="dropdown-item" href="login.html">
-											<i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
-										</a>
+										</a> -->
+
+
+												<!-- LOGOUT -->
+												<a class="dropdown-item" href="{{ route('logout') }}"
+													 onclick="event.preventDefault();
+																				 document.getElementById('logout-form').submit();">
+														<i class="dropdown-icon mdi  mdi-logout-variant"></i>
+														{{ __('Sign out') }}
+												</a>
+
+												<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+														@csrf
+												</form>
+												<!-- LOGOUT END -->
+
+
 									</div>
 								</div>
 							</div>
@@ -280,11 +293,11 @@
 							</li>
 
 							<li class="nav-item with-sub">
-								<a class="nav-link" href="{{ route('contact_index') }}"><i class="fa fa-tachometer"></i> <span>Contacts</span></a>
+								<a class="nav-link" href="{{ route('contact_index') }}"><i class="fa fa-tachometer"></i> <span>Messages</span></a>
 								<div class="sub-item">
 									<ul>
 										<li>
-											<a href="{{ route('contact_index') }}">All Contacts</a>
+											<a href="{{ route('contact_index') }}">All Message</a>
 										</li>
 										<li>
 											<a href="{{ route('all_read_messages') }}">Read</a>
@@ -359,6 +372,9 @@
 									<ul>
 										<li>
 											<a href="{{ route('training_index') }}">Add Training</a>
+										</li>
+										<li>
+											<a href="{{ route('training_page') }}">Add Training Page</a>
 										</li>
 									</ul>
 								</div>

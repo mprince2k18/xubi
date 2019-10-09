@@ -13,12 +13,17 @@ Route::get('/services','ServicesController@services')->name('services');
 Route::get('/services/{service_id}','ServicesController@index')->name('services_single_index');
 
 
-// CONTACT PAGE ---------------------------------------------------------------
+// CONTACT US PAGE ---------------------------------------------------------------
 
 // contact
-Route::get('/contact','ContactController@index')->name('contact');
+Route::get('/contactus','ContactController@index')->name('contact');
 // contact_insert
-Route::post('/contact/insert','ContactController@contact_insert')->name('contact_insert');
+Route::post('/contactus/insert','ContactController@contact_insert')->name('contact_insert');
+
+// CONTACT CENTER PAGE ---------------------------------------------------------------
+
+// contact center
+Route::get('/contact-center','ContactCenterController@index')->name('contact_center');
 
 
 // PRODUCTS
@@ -188,10 +193,17 @@ Route::get('/admin/client','DashboardController@client_index')->name('client_ind
 Route::post('/admin/client/insert','ClientController@insert')->name('insert');
 
 // Training
+
+// Training_index
+Route::get('/training/single','TrainingPageController@single')->name('single');
 // Training_index
 Route::get('/admin/training','DashboardController@training_index')->name('training_index');
-// create
+// training_create
 Route::post('/admin/training/create','TrainingController@create')->name('training_create');
+// training_page
+Route::get('/admin/training/page','TrainingPageController@training_page')->name('training_page');
+// training_page
+Route::post('/admin/training/page/create','TrainingPageController@create')->name('training_page_create');
 
 
 

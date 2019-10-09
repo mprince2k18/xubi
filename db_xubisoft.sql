@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2019 at 10:33 AM
+-- Generation Time: Oct 09, 2019 at 03:53 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -239,7 +239,8 @@ INSERT INTO `contacts` (`id`, `name`, `email`, `subject`, `message`, `status`, `
 (6, 'Mohammad Prince', 'mprince2k16@gmail.com', 'rerer', 'fsef', 2, '2019-09-22 11:56:58', NULL),
 (7, 'test', 'test@gmail.com', 'Test Subject', 'test', 2, '2019-09-23 02:57:16', NULL),
 (8, 'Mohammad Prince', 'mprince2k16@gmail.com', 'gdddddfg', 'dfggg', 2, '2019-09-25 11:24:06', NULL),
-(9, 'Mohammad Prince', 'mprince2k16@gmail.com', 'gdddddfg', 'dfggg', 2, '2019-09-25 11:24:06', NULL);
+(9, 'Mohammad Prince', 'mprince2k16@gmail.com', 'gdddddfg', 'dfggg', 2, '2019-09-25 11:24:06', NULL),
+(10, 'Mohammad Prince', 'mprince2k16@gmail.com', 'rerer', 'sdsfds', 2, '2019-10-09 05:59:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -332,7 +333,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (79, '2019_09_29_130535_create_abouts_table', 16),
 (112, '2019_09_05_120858_create_services_table', 17),
 (121, '2019_10_03_163006_create_product_pages_table', 18),
-(124, '2019_10_07_124613_create_trainings_table', 19);
+(124, '2019_10_07_124613_create_trainings_table', 19),
+(128, '2019_10_09_174329_create_training_pages_table', 20);
 
 -- --------------------------------------------------------
 
@@ -504,7 +506,9 @@ CREATE TABLE `teams` (
 INSERT INTO `teams` (`id`, `name`, `designation`, `team_photo`, `slug`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 'Teemo', 'COO', '1.jpg', 'teemo', '2019-09-17 09:10:37', '2019-09-17 09:10:25', '2019-09-17 09:10:37'),
 (2, 'Fahad Hasan', 'CEO', '2.png', 'mohammad-prince', NULL, '2019-09-18 10:26:40', '2019-09-22 09:30:13'),
-(3, 'Teemo', 'CEO', '3.jpg', 'teemo', NULL, '2019-09-18 11:29:12', '2019-09-18 11:29:12');
+(3, 'Mostafa Moinuddin', 'CEO', '3.jpg', 'teemo', NULL, '2019-09-18 11:29:12', '2019-10-09 13:37:26'),
+(4, 'Syed', 'Chairmen', '4.jpg', 'syed', NULL, '2019-10-09 13:38:15', '2019-10-09 13:38:16'),
+(5, 'Obayedul', 'Operations', '5.jpg', 'obayedul', NULL, '2019-10-09 13:38:42', '2019-10-09 13:38:42');
 
 -- --------------------------------------------------------
 
@@ -533,6 +537,65 @@ INSERT INTO `trainings` (`id`, `name`, `photo`, `created_at`, `updated_at`) VALU
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `training_pages`
+--
+
+CREATE TABLE `training_pages` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `thumbnail` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `course_description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `what_u_will_learn_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `what_u_will_learn_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `what_u_will_learn_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `what_u_will_learn_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `what_u_will_learn_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `what_u_will_learn_6` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `what_u_will_learn_7` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `what_u_will_learn_8` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `what_u_will_learn_9` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `what_u_will_learn_10` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `requirements_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `requirements_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `requirements_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `requirements_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `requirements_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `requirements_6` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course_lecture_title_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lecture_title_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lecture_title_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lecture_title_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lecture_title_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lecture_title_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course_lecture_title_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lecture_title_6` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lecture_title_7` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lecture_title_8` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lecture_title_9` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lecture_title_10` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `resources_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `resources_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `resources_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `resources_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `resources_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `resources_6` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course_features_1` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course_features_2` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course_features_3` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course_features_4` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course_features_5` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course_features_1_item` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course_features_2_item` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course_features_3_item` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course_features_4_item` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course_features_5_item` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -552,7 +615,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Mohammad Prince', 'Mprince2k16@gmail.com', NULL, '$2y$10$sgm57479S7Q8rZWJsq6M9u.2yFrR294irEXqT8DPgEhBYbOAQiEnW', 'ig3bvOKNMzafKo5f99comehKWhRLqQLQy0b8ojnEnXYonHL27Q5CicudS4pJ', '2019-09-05 02:22:17', '2019-09-05 02:22:17'),
+(1, 'Mohammad Prince', 'Mprince2k16@gmail.com', NULL, '$2y$10$sgm57479S7Q8rZWJsq6M9u.2yFrR294irEXqT8DPgEhBYbOAQiEnW', '6ExfXA9RODbrsfRhBso0Y3bxcH1xpMgdC3rfz5Y4mgNMntvbTda4Dyo31Ox8', '2019-09-05 02:22:17', '2019-09-05 02:22:17'),
 (2, 'tesets', 'linkinprince@gmail.com', NULL, '$2y$10$i3t8XlXO.TSII/BH1KcYY.OUcLP/RjX.MCM99ompRQbNVCZ.IqTym', NULL, '2019-09-15 08:48:11', '2019-09-15 08:48:11');
 
 --
@@ -683,6 +746,12 @@ ALTER TABLE `trainings`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `training_pages`
+--
+ALTER TABLE `training_pages`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -739,7 +808,7 @@ ALTER TABLE `company_services`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -763,7 +832,7 @@ ALTER TABLE `infos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
 
 --
 -- AUTO_INCREMENT for table `portfolios`
@@ -793,13 +862,19 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `trainings`
 --
 ALTER TABLE `trainings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `training_pages`
+--
+ALTER TABLE `training_pages`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`

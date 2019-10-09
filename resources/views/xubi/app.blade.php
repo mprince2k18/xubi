@@ -253,14 +253,16 @@ border-radius: 0 0 8px 8px;
   									</div>
 
 
-  									<!-- <div class="dropdown-menu">
-                      <a class="dropdown-item" href="{{ route('training_single') }}"> TRAINING SINGLE </a>
-  									</div> -->
   								</li>
 
 
   								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
   									<a class="nav-link" href="{{ route('contact') }}">CONTACT US</a>
+  								</li>
+
+
+  								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+  									<a class="nav-link" href="{{ route('contact_center') }}">CONTACT CENTER</a>
   								</li>
 
   								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
@@ -301,7 +303,10 @@ border-radius: 0 0 8px 8px;
         <a href="{{ route('training') }}" class="r-link menu__link">TRAINING</a>
       </li>
       <li class="menu__group">
-        <a href="{{ route('contact') }}" class="r-link menu__link">CONTACT CENTER</a>
+        <a href="{{ route('contact') }}" class="r-link menu__link">CONTACT US</a>
+      </li>
+      <li class="menu__group">
+        <a href="{{ route('contact_center') }}" class="r-link menu__link">CONTACT CENTER</a>
       </li>
       <li class="menu__group">
         <a href="{{ route('about') }}" class="r-link menu__link">ABOUT</a>
@@ -390,7 +395,18 @@ border-radius: 0 0 8px 8px;
                 <div class="col-md-6 col-lg-2">
                     <div class="footer-widget">
                         <div class="footer-logo-wraper">
-                            <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/xubi_logo2.png') }}" alt="footer logo"> </a>
+                            <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/circle_logo.jpg') }}" alt="footer logo"> </a>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/basis-1.jpg') }}" alt="footer logo"> </a>
+
+                              </div>
+                              <div class="col-md-6">
+                                <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/bacco.jpg') }}" alt="footer logo"> </a>
+
+                              </div>
+                            </div>
+
                         </div>
                     </div>
                     <!-- .footer-widget END -->

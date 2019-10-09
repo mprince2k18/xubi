@@ -1,6 +1,18 @@
 @extends('xubi.app')
 
 
+@section('css')
+<style media="screen">
+	@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
+	.about-xubi{
+		font-family: 'Dosis', sans-serif;
+		font-size: 30px;
+	}
+</style>
+@endsection
+
+
 @section('title')
 About
 @endsection
@@ -152,7 +164,7 @@ About
       <div class="row">
 
         <div class="col-md-8 offset-md-2">
-            <p class="text-dark h4">
+            <p class="text-dark h4 about-xubi text-justify">
                 Xubisoft Ltd. is a multi-layered Bangladesh based Software company that focuses highly
                 qualitative, timely delivered and cost – effective Software development and training. Xubisoft Ltd. Is register as private limited company assigned in Bangladesh with the express
                 purpose of developing a skilled manpower in ICT sector of Bangladesh. We are providing

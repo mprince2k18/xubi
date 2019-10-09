@@ -13,7 +13,7 @@ Dashboard
       <div class="card card-img-holder text-default bg-color">
         <div class="row">
           <div class="col-4">
-            <div class="square-icon br-tl-9 bg-primary text-center align-self-center shadow-primary"><i class= "fa fa-cubes fs-30  text-white"></i></div>
+            <div class="square-icon br-tl-9 bg-gray text-center align-self-center shadow-primary"><i class= "fa fa-cubes fs-30  text-white"></i></div>
           </div>
           <div class="col-8">
             <div class="card-body card-padding">
@@ -28,7 +28,7 @@ Dashboard
       <div class="card card-img-holder text-default bg-color">
         <div class="row">
           <div class="col-4">
-            <div class="square-icon bg-secondary text-center align-self-center shadow-secondary"><i class= "glyphicon glyphicon-knight fs-30  text-white"></i></div>
+            <div class="square-icon bg-lime text-center align-self-center shadow-secondary"><i class= "glyphicon glyphicon-knight fs-30  text-white"></i></div>
           </div>
           <div class="col-8">
             <div class="card-body card-padding">
@@ -44,7 +44,7 @@ Dashboard
       <div class="card card-img-holder text-default bg-color">
         <div class="row">
           <div class="col-4">
-            <div class="square-icon bg-info text-center align-self-center shadow-info"><i class= "glyphicon glyphicon-pawn fs-30  text-white"></i></div>
+            <div class="square-icon bg-teal text-center align-self-center shadow-info"><i class= "glyphicon glyphicon-pawn fs-30  text-white"></i></div>
           </div>
           <div class="col-8">
             <div class="card-body card-padding">
@@ -59,7 +59,7 @@ Dashboard
       <div class="card card-img-holder text-default bg-color">
         <div class="row">
           <div class="col-4">
-            <div class="square-icon bg-success text-center align-self-center shadow-success"><i class= "glyphicon glyphicon-bishop fs-30 text-white"></i></div>
+            <div class="square-icon bg-purple text-center align-self-center shadow-success"><i class= "glyphicon glyphicon-bishop fs-30 text-white"></i></div>
           </div>
           <div class="col-8">
             <div class="card-body card-padding">

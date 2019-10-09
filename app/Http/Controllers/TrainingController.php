@@ -47,10 +47,6 @@ class TrainingController extends Controller
     }
 
 
-
-    public function training_single()
-    {
-      return view('training.single');
-    }
+  
     // END
 }

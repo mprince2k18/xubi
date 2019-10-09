@@ -20,28 +20,17 @@
   					<div class="breadcrumb_content">
   						<div class="cs_row_one csv3">
   							<div class="cs_ins_container">
-  								<div class="cs_instructor">
+  								<!-- <div class="cs_instructor">
   									<ul class="cs_instrct_list float-left mb0">
   										<li class="list-inline-item"><img class="thumb" src="{{ asset('custom/images/team/4.png') }}" alt="4.png"></li>
   										<li class="list-inline-item"><a class="color-white" href="#">Ali TUFAN</a></li>
   										<li class="list-inline-item"><a class="color-white" href="#">Last updated 11/2019</a></li>
   									</ul>
-  								</div>
+  								</div> -->
   								<h3 class="cs_title color-white">Designing a Responsive Mobile Website with Muse</h3>
   								<ul class="cs_review_seller">
-  									<li class="list-inline-item"><a class="color-white" href="#"><span>Best Seller</span></a></li>
-  									<li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-  									<li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-  									<li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-  									<li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-  									<li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-  									<li class="list-inline-item"><a class="color-white" href="#">4.5 (11,382 Ratings)</a></li>
+  									<li class="color-white">Last updated 11/2019</li>
   								</ul>
-  								<ul class="cs_review_enroll">
-  									<li class="list-inline-item"><a class="color-white" href="#"><span class="flaticon-profile"></span> 57,869 students enrolled</a></li>
-  									<li class="list-inline-item"><a class="color-white" href="#"><span class="flaticon-comment"></span> 25 Review</a></li>
-  								</ul>
-  							
   							</div>
   						</div>
   					</div>

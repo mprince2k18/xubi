@@ -10,4 +10,10 @@ class Training extends Model
       'name',
       'photo',
     ];
+
+
+    
+
+
+    // END
 }

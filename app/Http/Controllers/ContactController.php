@@ -86,7 +86,7 @@ class ContactController extends Controller
 
     function i_read_message(Request $request)
     {
-      Contact::find($request->message_id)->update([
+        Contact::find($request->message_id)->update([
         'status'   => $request->status,
       ]);
 
