@@ -4,12 +4,14 @@
 
 <style media="screen">
 
-@import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
-  .banner-title{
-    font-family: 'Handlee', cursive;
-    font-size: 53px !important;
-    letter-spacing: 5px;
+  .agency-banner-content p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 66px !important;
+    line-height: 1.1em;
+    color: #000;
+    text-align: left;
   }
 </style>
 
@@ -44,13 +46,17 @@ Xubisoft | IT Solution
                         <div class="row">
                             <div class="col-lg-5 mr-auto">
                                 <div class="agency-banner-content banner-style2">
-                                    <h1 class="banner-title text-left">{{ $banner->header_headline  }}</h1>
+                                  {!! html_entity_decode($banner->header_headline) !!}
+                                    <!-- <p class="banner-title text-left">
+                                      {!! html_entity_decode($banner->header_headline) !!}
+                                    </p> -->
 
 
                                     <p>{{ $banner->header_message  }}</p>
+
                                     <div class="btn-wraper">
-                                      <a href="#" class="btn btn-primary btn-gradient3">GET STARTED</a>
-                                      <a href="{{ route('contact') }}" class="btn btn-primary btn-gradient3">CONTACT</a>
+                                      <a href="{{ route('training') }}" class="btn btn-primary btn-gradient3">TRAINING</a>
+                                      <a href="{{ route('contact') }}" class="btn btn-primary btn-gradient3">CONTACT US</a>
                                     </div>
                                 </div>
                                 <!-- .agency-banner-content END -->

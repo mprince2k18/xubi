@@ -49,6 +49,7 @@ class DashboardController extends Controller
     {
       $banners = Banner::paginate(7);
       $trashed_banners = Banner::onlyTrashed()->paginate(5);
+      error_reporting(0);
       return view('dashboard.header.index',compact('banners','trashed_banners'));
     }
 
@@ -114,6 +115,13 @@ class DashboardController extends Controller
     {
       $trainings = Training::paginate(5);
       return view('dashboard.training.index',compact('trainings'));
+    }
+
+    // training page
+
+    function career_index()
+    {
+      return view('dashboard.career.index');
     }
 
 

@@ -1,5 +1,13 @@
 @extends('dashboard.app')
 
+@section('css')
+<!-- include summernote css/js -->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+<!-- include summernote css/js -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+
+@endsection
+
 @section('title')
   Header
 @endsection
@@ -7,6 +15,7 @@
 
 
 @section('content')
+
 
   <div class="container">
 
@@ -213,4 +222,18 @@
 
 </div>
 </div>
+@endsection
+
+@section('js')
+
+
+<script>
+      $('#summernote').summernote({
+        tabsize: 1,
+        height: 100
+      });
+</script>
+
+
+
 @endsection

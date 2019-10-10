@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2019 at 03:53 PM
+-- Generation Time: Oct 10, 2019 at 01:55 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -85,7 +85,7 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `header_headline`, `header_message`, `header_banner`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'We Provide Solutions that Brings Joy', NULL, '1.png', NULL, '2019-09-07 03:16:35', '2019-09-22 11:01:48'),
+(1, 'We Provide <b>Solutions</b> that Brings<b> Joy</b>', NULL, '1.png', '2019-10-10 06:21:24', '2019-09-07 03:16:35', '2019-10-10 06:21:24'),
 (3, 'test', 'twat', '3.png', '2019-09-10 22:42:55', '2019-09-10 01:42:48', '2019-09-10 22:42:55'),
 (4, 'test', NULL, '4.png', '2019-09-14 05:58:07', '2019-09-10 02:41:21', '2019-09-14 05:58:07'),
 (5, 'test', 'test', '5.png', '2019-09-10 22:42:43', '2019-09-10 22:18:18', '2019-09-10 22:42:43'),
@@ -98,7 +98,17 @@ INSERT INTO `banners` (`id`, `header_headline`, `header_message`, `header_banner
 (12, 'rtrw4wr', '444545454', '12.png', '2019-09-10 22:42:28', '2019-09-10 22:29:43', '2019-09-10 22:42:28'),
 (13, '<p>sdsds</p>', NULL, '13.png', '2019-09-22 11:01:15', '2019-09-22 10:45:51', '2019-09-22 11:01:15'),
 (14, '<p>test</p>', NULL, '14.png', '2019-09-22 11:01:07', '2019-09-22 10:55:33', '2019-09-22 11:01:07'),
-(15, '<p>tftf</p>', NULL, '15.png', '2019-09-22 11:00:59', '2019-09-22 10:56:14', '2019-09-22 11:00:59');
+(15, '<p>tftf</p>', NULL, '15.png', '2019-09-22 11:00:59', '2019-09-22 10:56:14', '2019-09-22 11:00:59'),
+(16, '<h1>\r\n<b>\r\n hiv\r\n</b>\r\n</h1>', NULL, '16.png', '2019-10-10 05:58:57', '2019-10-10 05:44:41', '2019-10-10 05:58:57'),
+(17, '<p>utyuryj</p>', NULL, '17.png', '2019-10-10 06:10:05', '2019-10-10 06:09:04', '2019-10-10 06:10:05'),
+(18, '<p>xczcs</p>', NULL, '18.png', '2019-10-10 06:13:28', '2019-10-10 06:10:16', '2019-10-10 06:13:28'),
+(19, '<h1>sgfsdfdfdaf</h1>', NULL, '19.png', '2019-10-10 06:13:21', '2019-10-10 06:12:52', '2019-10-10 06:13:21'),
+(20, '<p>We Provide <b>Solutions </b>that Brings <b>Joy</b><br></p>', NULL, '20.png', '2019-10-10 06:17:10', '2019-10-10 06:16:33', '2019-10-10 06:17:10'),
+(21, '<h1>We Provide <b style=\"background-color: rgb(66, 66, 66);\">Solutions </b>that Brings <b style=\"background-color: rgb(66, 66, 66);\">Joy</b></h1>', NULL, '21.png', '2019-10-10 06:21:18', '2019-10-10 06:18:59', '2019-10-10 06:21:18'),
+(22, '<h1>We Provide <b>Solutions</b> And <b>Joy</b></h1>', NULL, '22.png', '2019-10-10 06:29:26', '2019-10-10 06:27:56', '2019-10-10 06:29:26'),
+(23, '<p>we <b>bleh</b></p>', NULL, '23.png', '2019-10-10 06:40:13', '2019-10-10 06:30:33', '2019-10-10 06:40:13'),
+(24, '<p>We Provide <b>Solutions</b> That Brings <b>Joy</b></p>', NULL, '24.png', NULL, '2019-10-10 06:41:37', '2019-10-10 06:43:03'),
+(25, '<p>Hello <b>Laravel</b></p>', NULL, '25.png', '2019-10-10 07:05:15', '2019-10-10 06:52:47', '2019-10-10 07:05:15');
 
 -- --------------------------------------------------------
 
@@ -111,6 +121,29 @@ CREATE TABLE `cache` (
   `value` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `careers`
+--
+
+CREATE TABLE `careers` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `post_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `schedule` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `salary_range` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `educational_background` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `careers`
+--
+
+INSERT INTO `careers` (`id`, `post_name`, `schedule`, `salary_range`, `educational_background`, `created_at`, `updated_at`) VALUES
+(1, 'Data Entry', '9:00 am TO 6:00 pm', '10,000', 'SSC/HSC/Diploma', '2019-10-10 11:52:09', NULL);
 
 -- --------------------------------------------------------
 
@@ -334,7 +367,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (112, '2019_09_05_120858_create_services_table', 17),
 (121, '2019_10_03_163006_create_product_pages_table', 18),
 (124, '2019_10_07_124613_create_trainings_table', 19),
-(128, '2019_10_09_174329_create_training_pages_table', 20);
+(128, '2019_10_09_174329_create_training_pages_table', 20),
+(130, '2019_10_10_131550_create_careers_table', 21);
 
 -- --------------------------------------------------------
 
@@ -647,6 +681,12 @@ ALTER TABLE `cache`
   ADD UNIQUE KEY `cache_key_unique` (`key`);
 
 --
+-- Indexes for table `careers`
+--
+ALTER TABLE `careers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `categories`
 --
 ALTER TABLE `categories`
@@ -778,7 +818,13 @@ ALTER TABLE `addresses`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT for table `careers`
+--
+ALTER TABLE `careers`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -832,7 +878,7 @@ ALTER TABLE `infos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 
 --
 -- AUTO_INCREMENT for table `portfolios`

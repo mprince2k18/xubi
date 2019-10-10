@@ -266,7 +266,11 @@ border-radius: 0 0 8px 8px;
   								</li>
 
   								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link" href="{{ route('about') }}">ABOUT</a>
+  									<a class="nav-link" href="{{ route('about') }}">ABOUT US</a>
+  								</li>
+
+  								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+  									<a class="nav-link" href="{{ route('career_index') }}">CAREER</a>
   								</li>
   								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
   									<!-- <a class="nav-link" href="#">Contact</a> -->

@@ -60,7 +60,7 @@
 		<link href="{{ asset('dashboard/assets/css/icons.css') }}" rel="stylesheet" />
 
 
-
+		@yield('css')
 
 
 
@@ -382,6 +382,22 @@
 							</li>
 
 
+							<li class="nav-item with-sub">
+								<a class="nav-link" href="{{ route('career_dashboard_index') }}"><i class="fa fa-tachometer"></i> <span>Career</span></a>
+								<!-- <div class="sub-item">
+									<ul>
+										<li>
+											<a href="{{ route('training_index') }}">Add Training</a>
+										</li>
+										<li>
+											<a href="{{ route('training_page') }}">Add Training Page</a>
+										</li>
+									</ul>
+								</div> -->
+								<!-- dropdown-menu -->
+							</li>
+
+
 						</ul>
 					</div>
 				</div>
@@ -593,7 +609,7 @@
 
 
 												<!-- Initialize ClassicEditor -->
-
+												@yield('js')
 
 
 							</body>

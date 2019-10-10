@@ -39,7 +39,12 @@ Route::get('/about','AboutController@index')->name('about');
 
 // Training
 Route::get('/training','TrainingController@index')->name('training');
+// training_single
 Route::get('/training/single','TrainingController@training_single')->name('training_single');
+
+
+// career
+Route::get('/career','CareerController@index')->name('career_index');
 
 
 
@@ -204,6 +209,13 @@ Route::post('/admin/training/create','TrainingController@create')->name('trainin
 Route::get('/admin/training/page','TrainingPageController@training_page')->name('training_page');
 // training_page
 Route::post('/admin/training/page/create','TrainingPageController@create')->name('training_page_create');
+
+
+// CAREER
+// index
+Route::get('/admin/career','DashboardController@career_index')->name('career_dashboard_index');
+// index
+Route::post('/admin/career/create','CareerController@career_create')->name('career_create');
 
 
 
