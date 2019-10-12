@@ -83,11 +83,8 @@
 													<li><span>{{ $all_contacts->firstItem() }}-{{ $all_contacts->lastItem() }} of {{ $all_contacts->total() }}</span></li>
 
                           <!-- record data through date wise -->
-                          <li><span>Todays Message {{ $contacts->count() }}</span></li>
+                          <li><span> | Today's Message {{ $contacts->count() }}</span></li>
                           <!-- record data through date wise end -->
-
-
-
 
 													<li>
                             <!-- previous next -->

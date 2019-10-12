@@ -176,6 +176,40 @@ border-radius: 0 0 8px 8px;
   text-align: center;
 }
 
+.widget-title{
+  font-size: 20px !important;
+}
+.xs-list li a{
+  font-size: 16px !important;
+}
+
+.footer-logo-wraper{
+  text-align: center;
+}
+.footer-client{
+  padding: 20px;
+}
+
+.footer-logo img{
+  width: 35%;
+}
+
+.footer-client-1 img{
+  width: 100%;
+}
+
+.footer-client-1{
+  text-align: center;
+}
+
+.footer-client-2 img{
+  width: 100%;
+}
+
+.footer-client-2{
+  text-align: center;
+}
+
 </style>
 
 @yield('css')
@@ -217,10 +251,10 @@ border-radius: 0 0 8px 8px;
 
   						<div class="collapse navbar-collapse" id="navbarSupportedContent">
   							<ul class="navbar-nav ml-auto py-4 py-md-0">
-  								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+  								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 {{ Route::currentRouteNamed('homepage') ? 'active' : '' }}">
   									<a class="nav-link" href="{{ route('homepage') }}">HOME</a>
   								</li>
-                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 {{ Route::currentRouteNamed('services') ? 'active' : '' }}">
   									<a class="nav-link dropdown-toggle" href="{{ route('services') }}">SERVICES <i class="pe-7s-angle-down"></i> </a>
   									<div class="dropdown-menu">
 
@@ -256,9 +290,9 @@ border-radius: 0 0 8px 8px;
   								</li>
 
 
-  								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+  								<!-- <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
   									<a class="nav-link" href="{{ route('contact') }}">CONTACT US</a>
-  								</li>
+  								</li> -->
 
 
   								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
@@ -269,9 +303,10 @@ border-radius: 0 0 8px 8px;
   									<a class="nav-link" href="{{ route('about') }}">ABOUT US</a>
   								</li>
 
-  								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+  								<!-- <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
   									<a class="nav-link" href="{{ route('career_index') }}">CAREER</a>
-  								</li>
+  								</li> -->
+
   								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
   									<!-- <a class="nav-link" href="#">Contact</a> -->
                     <a href="#modal-popup-2" class="navsearch-button xs-modal-popup">
@@ -311,6 +346,9 @@ border-radius: 0 0 8px 8px;
       </li>
       <li class="menu__group">
         <a href="{{ route('contact_center') }}" class="r-link menu__link">CONTACT CENTER</a>
+      </li>
+      <li class="menu__group">
+        <a href="{{ route('career_index') }}" class="r-link menu__link">CAREER</a>
       </li>
       <li class="menu__group">
         <a href="{{ route('about') }}" class="r-link menu__link">ABOUT</a>
@@ -362,54 +400,43 @@ border-radius: 0 0 8px 8px;
         <div class="container">
             <div class="row">
 
-                <div class="col-md-6 col-lg-2 offset-md-1">
+                <div class="col-md-3">
                     <div class="footer-widget">
-                        <h4 class="widget-title">Useful Links</h4>
+                        <h4 class="widget-title">GET IN TOUCH</h4>
                         <ul class="xs-list">
-                            <li><a href="about.html">About us</a></li>
-                            <li><a href="service.html">Service</a></li>
-                            <li><a href="blog-grid-sidebar.html">News & Blog</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="cases.html">Case</a></li>
-                            <li><a href="shop.html">Shop</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="about.html"> <i class="lni-map-marker"></i> House-19, Road-4, Sector-4, Uttara, Dhaka-1230 </a></li>
+                            <li><a href="about.html"> <i class="lni-phone-handset"></i> +88 02 58955125 </a></li>
+                            <li><a href="about.html"> <i class="lni-mobile"></i> +88 01611-609372 </a></li>
+                            <li><a href="about.html"> <i class="lni-envelope"></i> contact@xubisoft.com </a></li>
+                            <li><a href="about.html"> <i class="lni-invention"></i> info@xubisoft.com </a></li>
                         </ul>
                         <!-- .xs-list END -->
                     </div>
                     <!-- .footer-widget END -->
                 </div>
 
-                <div class="col-md-6 col-lg-2">
-                    <div class="footer-widget">
-                        <h4 class="widget-title">Our Services</h4>
-                        <ul class="xs-list">
-                            <li><a href="portfolio.html">Web Design</a></li>
-                            <li><a href="portfolio-masonry.html">Web Application</a></li>
-                            <li><a href="portfolio.html">Android Apps</a></li>
-                            <li><a href="portfolio-masonry.html">iOS Apps</a></li>
-                            <li><a href="portfolio.html">Mobile Application</a></li>
-                            <li><a href="portfolio-masonry.html">Web Development</a></li>
-                            <li><a href="portfolio.html">Corporate Service</a></li>
-                        </ul>
-                        <!-- .xs-list END -->
-                    </div>
-                    <!-- .footer-widget END -->
-                </div>
 
-                <div class="col-md-6 col-lg-2">
+                <div class="col-md-6">
                     <div class="footer-widget">
                         <div class="footer-logo-wraper">
-                            <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/circle_logo.jpg') }}" alt="footer logo"> </a>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/basis-1.jpg') }}" alt="footer logo"> </a>
+                            <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/Xubisoft Logo.png') }}" alt="footer logo"> </a>
 
-                              </div>
-                              <div class="col-md-6">
-                                <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/bacco.jpg') }}" alt="footer logo"> </a>
 
-                              </div>
+                        <div class="footer-client">
+                          <label class="widget-title">MEMBER OF</label>
+                          <div class="row">
+                            <div class="col-md-4 footer-client-1 offset-md-2">
+                              <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/BASSIS.png') }}" alt="footer logo"> </a>
+
                             </div>
+                            <div class="col-md-4 footer-client-2">
+                              <a href="{{ route('homepage') }}" class="footer-logo"> <img src="{{ asset('xubisoft/assets/images/xubi/BACCO.png') }}" alt="footer logo"> </a>
+
+                            </div>
+                          </div>
+                        </div>
+
+
 
                         </div>
                     </div>
@@ -417,28 +444,17 @@ border-radius: 0 0 8px 8px;
                 </div>
 
 
-                <div class="col-md-6 col-lg-2 offset-md-1">
+
+                <div class="col-md-3">
                     <div class="footer-widget">
-                        <h4 class="widget-title">Info</h4>
-                        <p>Address <a href="https://goo.gl/maps/QJyb48gb1RVkqV3Q8" target="_blank">HOUSE-19, ROAD-4, SECTOR-4, UTTARA, DHAKA-1230</a></p>
-                        <p>Contact Info
-                          <a href="+880258955125">+880258955125</a>
-                          <a href="+8801611609372">+8801611609372</a>
-                           <a href="mailto:contact@xubisoft.com">contact@xubisoft.com</a>
-                           <a href="mailto:info@xubisoft.com">info@xubisoft.com</a>
-                         </p>
-                        <!-- .xs-list END -->
-                    </div>
-                    <!-- .footer-widget END -->
-                </div>
-                <div class="col-md-6 col-lg-2">
-                    <div class="footer-widget">
-                        <h4 class="widget-title">Other Links</h4>
+                        <h4 class="widget-title">SUPPORTS</h4>
                         <ul class="xs-list">
-                            <li><a href="#">Career</a></li>
+                            <li><a href="{{ route('about') }}">About Us</a></li>
+                            <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                            <li><a href="{{ route('career_index') }}">Career</a></li>
+                            <li><a href="#">Terms & Policies</a></li>
                             <li><a href="#">Sitemap</a></li>
                             <li><a href="#">Cookies</a></li>
-                            <li><a href="#">Adchoies</a></li>
                         </ul>
                         <!-- .xs-list END -->
                     </div>

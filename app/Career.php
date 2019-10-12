@@ -11,5 +11,10 @@ class Career extends Model
       'schedule',
       'salary_range',
       'educational_background',
+      'job_experience',
+      'deadline',
+      'job_description',
+      'key_requirements',
+      'required_skills',
     ];
 }

@@ -62,7 +62,13 @@
 
 		@yield('css')
 
+<style media="screen">
 
+.popover-content{
+	display: none !important;
+}
+
+</style>
 
 
 
@@ -158,9 +164,9 @@
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 										<ul class="drop-icon-wrap p-1">
 											<li>
-												<a href="email.html" class="drop-icon-item">
+												<a href="{{ route('status_index') }}" class="drop-icon-item">
 													<i class="fe fe-mail text-dark"></i>
-													<span class="block"> E-mail</span>
+													<span class="block"> Status </span>
 												</a>
 											</li>
 											<li>

@@ -45,6 +45,8 @@ Route::get('/training/single','TrainingController@training_single')->name('train
 
 // career
 Route::get('/career','CareerController@index')->name('career_index');
+// career_single_page
+Route::get('/career/{career_id}','CareerController@single_career')->name('single_career');
 
 
 
@@ -218,7 +220,9 @@ Route::get('/admin/career','DashboardController@career_index')->name('career_das
 Route::post('/admin/career/create','CareerController@career_create')->name('career_create');
 
 
-
+// STATUS
+// index
+Route::get('/admin/status','DashboardController@status_index')->name('status_index');
 
 
 

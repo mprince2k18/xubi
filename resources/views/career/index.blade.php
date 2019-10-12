@@ -49,6 +49,10 @@
       .job-board-1x .single-job a:hover {
         background: #02b3e4;
         color: #fff; }
+
+  .page-link{
+    border-radius: 50%;
+  }
 </style>
 @endsection
 
@@ -76,9 +80,14 @@
 </div>
 <!--breadcumb end here--><!-- End welcome section -->
 
+<p> For Job, Please send your updated CV at  <strong>career@xubisoft.com</strong></p>
 
 <div class="job-board-1x">
+
+
+
 		<div class="container">
+
 			<div class="row">
 
         @forelse($careers as $career)
@@ -87,7 +96,7 @@
   						<h2>{{ $career->post_name }} <span>{{ $career->schedule }}</span></h2>
   						<p><i class="lni-dollar"></i> {{ $career->salary_range }}</p>
   						<p><i class="lni-pin-alt"></i> {{ $career->educational_background }}</p>
-  						<a href="career-single.html">View More</a>
+  						<a href="{{ url('/career') }}/{{ $career->id }}">View More</a>
   					</div>
   				</div>
           @empty
@@ -100,6 +109,9 @@
 
 
 			</div>
+
+      {{$careers->links() }}
+
 		</div>
 	</div>
 

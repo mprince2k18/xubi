@@ -19,6 +19,11 @@ class CreateCareersTable extends Migration
             $table->string('schedule');
             $table->string('salary_range');
             $table->string('educational_background');
+            $table->string('job_experience');
+            $table->date('deadline');
+            $table->longText('job_description');
+            $table->longText('key_requirements');
+            $table->string('required_skills');
             $table->timestamps();
         });
     }

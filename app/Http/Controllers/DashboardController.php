@@ -117,11 +117,18 @@ class DashboardController extends Controller
       return view('dashboard.training.index',compact('trainings'));
     }
 
-    // training page
+    // career_index page
 
     function career_index()
     {
       return view('dashboard.career.index');
+    }
+
+    // career_index page
+
+    function status_index()
+    {
+      return view('dashboard.status.index');
     }
 
 

@@ -48,7 +48,9 @@ class ContactController extends Controller
         'created_at' => Carbon::now(),
       ]);
 
-      return back()->with('success','Message Sent Successfully, Thank You.');
+      Alert::toast('Message Sent Successfully','success');
+
+      return back();
     }
 
 

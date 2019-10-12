@@ -48,8 +48,8 @@ Dashboard
           </div>
           <div class="col-8">
             <div class="card-body card-padding">
-              <h1 class="mb-2">{{ App\CompanyService::count() }}</h1>
-              <h5 class="font-weight-normal mb-3">Students</h5>
+              <h1 class="mb-2">{{ App\Career::count() }}</h1>
+              <h5 class="font-weight-normal mb-3">Active Career</h5>
             </div>
             </div>
           </div>

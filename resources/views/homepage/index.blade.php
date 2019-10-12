@@ -47,6 +47,7 @@ Xubisoft | IT Solution
                             <div class="col-lg-5 mr-auto">
                                 <div class="agency-banner-content banner-style2">
                                   {!! html_entity_decode($banner->header_headline) !!}
+
                                     <!-- <p class="banner-title text-left">
                                       {!! html_entity_decode($banner->header_headline) !!}
                                     </p> -->
@@ -443,7 +444,7 @@ Xubisoft | IT Solution
                 </div>
             </div>
             <!-- .row END -->
-            <div class="btn-wraper text-center"> <a href="news-list.html" class="btn btn-primary btn-gradient3 icon-right">VIEW ALL <i class="icon icon-arrow-right"></i></a> </div>
+            <div class="btn-wraper text-center"> <a href="news-list.html" class="btn btn-primary btn-gradient3 icon-right">VIEW ALL</a> </div>
         </div>
         <!-- .container END -->
     </section>
@@ -455,7 +456,7 @@ Xubisoft | IT Solution
                 <div class="col-lg-6 mx-auto">
                     <div class="call-to-action text-center">
                         <h4 class="content-title">Interested! <br> Have any Project to Work With</h4>
-                        <div class="btn-wraper"> <a href="#" class="btn btn-primary style2 icon-right">Hire us <i class="icon icon-arrow-right"></i></a> <a href="#" class="btn btn-outline-secondary">Learn More</a> </div>
+                        <div class="btn-wraper"> <a href="#" class="btn btn-primary style2 icon-right">Hire us</i></a> <a href="#" class="btn btn-outline-secondary">Learn More</a> </div>
                     </div>
                 </div>
             </div>

@@ -50,7 +50,7 @@
   			<div class="row">
 
           @forelse ($trainings as $training)
-  				    <div class="col-sm-6 col-lg-3">
+  				    <div class="col-sm-6 col-lg-3 text-center">
       					<div class="img_hvr_box" style="background-image: url({{ asset('uploads/training') }}/{{ $training->photo }}">
       						<div class="overlay">
       							<div class="details">
@@ -58,6 +58,7 @@
       							</div>
       						</div>
       					</div>
+                <a href="#" class="btn btn-primary btn-gradient2">LEARN MORE</a>
               </div>
           @empty
 
