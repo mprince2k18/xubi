@@ -67,7 +67,7 @@
                     <!-- file uploads -->
                       <div class="dropify-wrapper" style="height: 192px;">
 
-                        <label class="form-label">Team Photo</label>
+                        <label class="form-label">Team Photo (258 * 404)</label>
 
                         <div class="dropify-loader" style="display: none;"></div>
                         <div class="dropify-errors-container"><ul></ul></div>

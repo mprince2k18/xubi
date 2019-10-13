@@ -170,9 +170,9 @@
 												</a>
 											</li>
 											<li>
-												<a href="calendar2.html" class="drop-icon-item">
+												<a href="{{ route('trainee_index') }}" class="drop-icon-item">
 													<i class="fe fe-calendar text-dark"></i>
-													<span class="block">calendar</span>
+													<span class="block"> SEIP </span>
 												</a>
 											</li>
 											<li>
@@ -404,6 +404,7 @@
 							</li>
 
 
+
 						</ul>
 					</div>
 				</div>
@@ -587,12 +588,17 @@
 										<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
 
 
+										<!-- Initialize ClassicEditor -->
+										@yield('js')
+
 
 										<!-- sweetalert2 -->
 										<script src="{{ asset('dashboard/assets/js/sweetalert2.all.js') }}"></script>
 
 										<!-- Custom Js-->
 										<script src="{{ asset('dashboard/assets/js/custom.js') }}"></script>
+
+
 
 
 										<script>
@@ -614,8 +620,7 @@
 								     </script>
 
 
-												<!-- Initialize ClassicEditor -->
-												@yield('js')
+
 
 
 							</body>

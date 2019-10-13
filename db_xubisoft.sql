@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2019 at 01:55 PM
+-- Generation Time: Oct 13, 2019 at 01:57 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -134,6 +134,11 @@ CREATE TABLE `careers` (
   `schedule` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `salary_range` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `educational_background` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `job_experience` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deadline` date NOT NULL,
+  `job_description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key_requirements` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `required_skills` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -142,8 +147,9 @@ CREATE TABLE `careers` (
 -- Dumping data for table `careers`
 --
 
-INSERT INTO `careers` (`id`, `post_name`, `schedule`, `salary_range`, `educational_background`, `created_at`, `updated_at`) VALUES
-(1, 'Data Entry', '9:00 am TO 6:00 pm', '10,000', 'SSC/HSC/Diploma', '2019-10-10 11:52:09', NULL);
+INSERT INTO `careers` (`id`, `post_name`, `schedule`, `salary_range`, `educational_background`, `job_experience`, `deadline`, `job_description`, `key_requirements`, `required_skills`, `created_at`, `updated_at`) VALUES
+(1, 'Data Entry', 'Part time', '10,000', 'SSC/HSC/Diploma', 'Freshers', '2019-10-31', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it t', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it t', 'Adobe', '2019-10-12 08:57:31', NULL),
+(2, 'Data Entry', 'Part time', '10,000', 'SSC/HSC/Diploma', 'Freshers', '2019-10-31', '<p><div style=\"margin: 0px 28.7969px 0px 14.3906px; padding: 0px; width: 436.797px; text-align: left; float: right; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;\"></div></p><div style=\"margin: 0px 14.3906px 0px 28.7969px; padding: 0px; width: 436.797px; text-align: left; float: left; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;\"><p style=\"margin: 0px 0px 15px; padding: 0px; text-align: justify;\"><strong style=\"margin: 0px; padding: 0px;\">Lorem Ipsum</strong><span>&nbsp;</span>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>', '<p><div style=\"margin: 0px 28.7969px 0px 14.3906px; padding: 0px; width: 436.797px; text-align: left; float: right; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;\"></div></p><div style=\"margin: 0px 14.3906px 0px 28.7969px; padding: 0px; width: 436.797px; text-align: left; float: left; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;\"><p style=\"margin: 0px 0px 15px; padding: 0px; text-align: justify;\"><strong style=\"margin: 0px; padding: 0px;\">Lorem Ipsum</strong><span>&nbsp;</span>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><p style=\"margin: 0px 0px 15px; padding: 0px; text-align: justify;\"><br></p><ol><li style=\"margin: 0px 0px 15px; padding: 0px; text-align: justify;\">sdsdsdsdsdsd</li><li style=\"margin: 0px 0px 15px; padding: 0px; text-align: justify;\">sdsdhsjd</li><li style=\"margin: 0px 0px 15px; padding: 0px; text-align: justify;\">sdkjsahdsahda</li></ol></div>', 'Adobe,photoshop', '2019-10-12 09:55:16', NULL);
 
 -- --------------------------------------------------------
 
@@ -240,7 +246,8 @@ CREATE TABLE `company_services` (
 
 INSERT INTO `company_services` (`id`, `service_name`, `service_category_id`, `service_photo`, `slug_name`, `created_at`, `updated_at`) VALUES
 (1, 'Web Design & Development', '1', '1.png', 'web-design-development', '2019-09-16 10:03:24', '2019-09-16 10:03:25'),
-(2, 'Apps Development', '2', '2.png', 'apps-development', '2019-09-16 10:39:35', '2019-09-16 10:39:36');
+(2, 'Apps Development', '2', '2.png', 'apps-development', '2019-09-16 10:39:35', '2019-09-16 10:39:36'),
+(3, 'Career Development', '5', '3.png', 'career-development', '2019-10-12 10:58:44', '2019-10-12 10:58:45');
 
 -- --------------------------------------------------------
 
@@ -264,16 +271,7 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `subject`, `message`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'obayedul', 'obayedul@gmail.com', 'Test Subject', 'bhvg v', 1, '2019-09-14 06:12:55', NULL),
-(2, 'Test Name', 'mprince2k16@gmail.com', 'Test Subject', 'asdfghjkl', 2, '2019-09-16 04:13:12', NULL),
-(3, 'Mohammad Prince', 'mprince2k16@gmail.com', 'Test Subject', 'asdfghjkl', 2, '2019-09-18 11:26:11', NULL),
-(4, 'Teemo', 'test@gmail.com', 'Test Subject', 'qwerty', 2, '2019-09-18 11:26:47', NULL),
-(5, 'Mohammad Prince', 'mprince2k16@gmail.com', 'sadasd', 'wadasdas', 2, '2019-09-22 11:40:45', NULL),
-(6, 'Mohammad Prince', 'mprince2k16@gmail.com', 'rerer', 'fsef', 2, '2019-09-22 11:56:58', NULL),
-(7, 'test', 'test@gmail.com', 'Test Subject', 'test', 2, '2019-09-23 02:57:16', NULL),
-(8, 'Mohammad Prince', 'mprince2k16@gmail.com', 'gdddddfg', 'dfggg', 2, '2019-09-25 11:24:06', NULL),
-(9, 'Mohammad Prince', 'mprince2k16@gmail.com', 'gdddddfg', 'dfggg', 2, '2019-09-25 11:24:06', NULL),
-(10, 'Mohammad Prince', 'mprince2k16@gmail.com', 'rerer', 'sdsfds', 2, '2019-10-09 05:59:05', NULL);
+(1, 'Mohammad Prince', 'mprince2k16@gmail.com', 'Test Subject', 'qwerty', 2, '2019-10-12 12:22:11', NULL);
 
 -- --------------------------------------------------------
 
@@ -355,12 +353,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (31, '2019_09_07_135909_create_infos_table', 3),
 (36, '2019_09_12_071828_create_addresses_table', 5),
 (41, '2019_09_14_081255_create_ceos_table', 6),
-(42, '2019_09_05_164358_create_contacts_table', 7),
 (44, '2019_09_14_111118_create_cache_table', 7),
 (50, '2019_09_15_095951_create_categories_table', 8),
 (54, '2019_09_16_115856_create_products_table', 10),
 (56, '2019_09_15_095344_create_company_services_table', 11),
-(61, '2019_09_17_113930_create_teams_table', 12),
 (68, '2019_09_14_095603_create_portfolios_table', 13),
 (78, '2019_09_23_130800_create_clients_table', 15),
 (79, '2019_09_29_130535_create_abouts_table', 16),
@@ -368,7 +364,11 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (121, '2019_10_03_163006_create_product_pages_table', 18),
 (124, '2019_10_07_124613_create_trainings_table', 19),
 (128, '2019_10_09_174329_create_training_pages_table', 20),
-(130, '2019_10_10_131550_create_careers_table', 21);
+(137, '2019_10_10_131550_create_careers_table', 21),
+(138, '2019_10_12_142009_create_statuses_table', 21),
+(140, '2019_09_05_164358_create_contacts_table', 22),
+(143, '2019_10_13_145826_create_seips_table', 24),
+(144, '2019_09_17_113930_create_teams_table', 25);
 
 -- --------------------------------------------------------
 
@@ -471,6 +471,34 @@ INSERT INTO `product_pages` (`id`, `title`, `sub_title`, `title_watermark_single
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `seips`
+--
+
+CREATE TABLE `seips` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` int(11) NOT NULL,
+  `university` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nid` int(11) NOT NULL,
+  `rocket_number` int(11) NOT NULL,
+  `educational_qualification` int(11) NOT NULL,
+  `working_status` int(11) NOT NULL,
+  `have_seip` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `seips`
+--
+
+INSERT INTO `seips` (`id`, `name`, `email`, `phone`, `university`, `nid`, `rocket_number`, `educational_qualification`, `working_status`, `have_seip`, `created_at`, `updated_at`) VALUES
+(1, 'Mohammad Prince', 'mprince2k16@gmail.com', 1825731327, 'Dhaka University', 1234567890, 1825731327, 1, 1, 1, '2019-10-13 10:45:47', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `services`
 --
 
@@ -514,7 +542,20 @@ CREATE TABLE `services` (
 
 INSERT INTO `services` (`id`, `title`, `sub_title`, `title_watermark_single`, `service_category_id`, `title_banner`, `title_watermark_full`, `about_service_title`, `details_about_service`, `service_info_banner`, `service_info_details`, `service_info_items_1`, `service_info_items_2`, `service_info_items_3`, `service_process_1`, `service_process_details_1`, `service_process_banner_1`, `service_process_2`, `service_process_details_2`, `service_process_banner_2`, `service_process_3`, `service_process_details_3`, `service_process_banner_3`, `service_process_4`, `service_process_details_4`, `service_process_banner_4`, `service_process_5`, `service_process_details_5`, `service_process_banner_5`, `created_at`, `updated_at`) VALUES
 (1, 'FundPress', 'A powerful platform for flexible communication', 'F', '1', '1.jpg', 'FundPress', 'Client', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', '1.jpg', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', 'Adding functionality to an innovative Business', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '1.jpg', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '1.jpg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-05 08:32:25', '2019-10-05 08:32:26'),
-(2, 'FundPress', 'A powerful platform for flexible communication', 'F', '2', '2.jpg', 'FundPress', 'Client', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', '2.jpg', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', 'Adding functionality to an innovative Business', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '2.jpg', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '2.jpg', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '2.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-05 08:33:19', '2019-10-05 08:33:20');
+(2, 'FundPress', 'A powerful platform for flexible communication', 'F', '2', '2.jpg', 'FundPress', 'Client', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', '2.jpg', 'A powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communicationA powerful platform for flexible communication', 'Adding functionality to an innovative Business', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '2.jpg', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '2.jpg', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '2.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-05 08:33:19', '2019-10-05 08:33:20'),
+(3, 'FundPress', 'A powerful platform for flexible communication', 'F', '5', '3.png', 'FundPress', 'Teemo', 'A powerful platform for flexible communication', '3.png', 'A powerful platform for flexible communication', 'A powerful platform for flexible communicationA powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '3.png', 'A powerful platform for flexible communication', 'A powerful platform for flexible communication', '3.png', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-12 10:57:36', '2019-10-12 10:57:39');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `statuses`
+--
+
+CREATE TABLE `statuses` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -538,11 +579,11 @@ CREATE TABLE `teams` (
 --
 
 INSERT INTO `teams` (`id`, `name`, `designation`, `team_photo`, `slug`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'Teemo', 'COO', '1.jpg', 'teemo', '2019-09-17 09:10:37', '2019-09-17 09:10:25', '2019-09-17 09:10:37'),
-(2, 'Fahad Hasan', 'CEO', '2.png', 'mohammad-prince', NULL, '2019-09-18 10:26:40', '2019-09-22 09:30:13'),
-(3, 'Mostafa Moinuddin', 'CEO', '3.jpg', 'teemo', NULL, '2019-09-18 11:29:12', '2019-10-09 13:37:26'),
-(4, 'Syed', 'Chairmen', '4.jpg', 'syed', NULL, '2019-10-09 13:38:15', '2019-10-09 13:38:16'),
-(5, 'Obayedul', 'Operations', '5.jpg', 'obayedul', NULL, '2019-10-09 13:38:42', '2019-10-09 13:38:42');
+(1, 'Fahad Hasan', 'CEO', '1.jpg', 'fahad-hasan', NULL, '2019-10-13 11:53:13', '2019-10-13 11:53:13'),
+(2, 'Millat Hossain', 'Trainer', '2.jpg', 'millat-hossain', NULL, '2019-10-13 11:53:43', '2019-10-13 11:53:43'),
+(3, 'Atika Monsura', 'Trainer', '3.jpg', 'atika-monsura', NULL, '2019-10-13 11:54:05', '2019-10-13 11:54:05'),
+(4, 'Naushin Purba', 'JPO', '4.jpg', 'naushin-purba', NULL, '2019-10-13 11:54:31', '2019-10-13 11:54:31'),
+(5, 'Mostafa Raju', 'Lead Trainer', '5.jpg', 'mostafa-raju', NULL, '2019-10-13 11:56:14', '2019-10-13 11:56:14');
 
 -- --------------------------------------------------------
 
@@ -767,11 +808,23 @@ ALTER TABLE `product_pages`
   ADD UNIQUE KEY `product_pages_product_category_id_unique` (`product_category_id`);
 
 --
+-- Indexes for table `seips`
+--
+ALTER TABLE `seips`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `services`
 --
 ALTER TABLE `services`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `services_service_category_id_unique` (`service_category_id`);
+
+--
+-- Indexes for table `statuses`
+--
+ALTER TABLE `statuses`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `teams`
@@ -824,7 +877,7 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT for table `careers`
 --
 ALTER TABLE `careers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -848,13 +901,13 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT for table `company_services`
 --
 ALTER TABLE `company_services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -878,7 +931,7 @@ ALTER TABLE `infos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
 
 --
 -- AUTO_INCREMENT for table `portfolios`
@@ -899,10 +952,22 @@ ALTER TABLE `product_pages`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `seips`
+--
+ALTER TABLE `seips`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `statuses`
+--
+ALTER TABLE `statuses`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `teams`

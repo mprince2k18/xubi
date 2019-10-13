@@ -226,6 +226,12 @@ Route::get('/admin/status','DashboardController@status_index')->name('status_ind
 
 
 
+// Trainee
+// index
+Route::get('/admin/trainee','DashboardController@trainee_index')->name('trainee_index');
+
+
+
 
 
 
@@ -236,6 +242,14 @@ Route::get('search','SearchController@search')->name('search');
 
 
 
+
+
+
+
+// SEIP
+Route::get('/seip/registration','SeipController@index')->name('seip_registration');
+// seip_registration_create
+Route::post('/seip/registration/create','SeipController@create')->name('seip_registration_create');
 
 
 

@@ -130,6 +130,13 @@ class DashboardController extends Controller
     {
       return view('dashboard.status.index');
     }
+    // trainee_index page
+
+    function trainee_index()
+    {
+
+      return view('dashboard.trainee_registration.index');
+    }
 
 
 

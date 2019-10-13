@@ -56,8 +56,8 @@ Xubisoft | IT Solution
                                     <p>{{ $banner->header_message  }}</p>
 
                                     <div class="btn-wraper">
-                                      <a href="{{ route('training') }}" class="btn btn-primary btn-gradient3">TRAINING</a>
-                                      <a href="{{ route('contact') }}" class="btn btn-primary btn-gradient3">CONTACT US</a>
+                                      <a href="{{ route('about') }}" class="btn btn-primary btn-gradient2">ABOUT US</a>
+                                      <a href="{{ route('contact') }}" class="btn btn-primary btn-gradient2">CONTACT US</a>
                                     </div>
                                 </div>
                                 <!-- .agency-banner-content END -->
@@ -305,7 +305,7 @@ Xubisoft | IT Solution
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-funfact">
-                        <div class="funfact-header"> <img src="{{ asset('xubisoft/assets/images/funfact/funfact-icon-4.png') }}" alt=""> </div> <span class="number-percentage-count number-percentage" data-value="6548" data-animation-duration="3500">0</span>
+                        <div class="funfact-header"> <img src="{{ asset('xubisoft/assets/images/funfact/funfact-icon-4.png') }}" alt=""> </div> <span class="number-percentage-count number-percentage" data-value="65" data-animation-duration="3500">0</span>
                         <p>Expert Stuff</p>
                     </div>
                     <!-- .single-funfact END -->

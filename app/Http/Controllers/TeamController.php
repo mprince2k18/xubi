@@ -44,7 +44,7 @@ class TeamController extends Controller
       Alert::success('Added', 'Team Member Added Succesfully');
 
 
-      return back()->with('success', 'Team Member Added Succesfully');
+      return back();
     }
 
 
@@ -63,7 +63,7 @@ function delete_team($team_id)
 
   Alert::success('Deleted', 'Team Member Deleted Succesfully');
 
-  return redirect(route('team'))->with('success', 'Team Member Deleted Succesfully');
+  return redirect(route('team'));
 }
 
 // update_team
@@ -106,7 +106,7 @@ function update_team(Request $request)
 
   Alert::success('Updated', 'Team Member Updated Succesfully');
 
-  return redirect(route('team'))->with('success', 'Team Member Updated Succesfully');
+  return redirect(route('team'));
 
 
 
