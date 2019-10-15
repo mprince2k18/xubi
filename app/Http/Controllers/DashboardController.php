@@ -15,6 +15,13 @@ use App\Client;
 use App\Training;
 use App\Services;
 use App\Portfolio;
+use App\Seip;
+use App\EducationStatus;
+use App\WorkingStatus;
+use App\GenderStatus;
+use App\InformationSource;
+use App\SeipStatus;
+use App\RemarksStatus;
 use Carbon\Carbon;
 use Image;
 use Alert;
@@ -41,7 +48,8 @@ class DashboardController extends Controller
       $trainings = Training::paginate(5);
       $services = Services::paginate(5);
       $portfolios = Services::paginate(5);
-      return view('dashboard.index',compact('banners','contacts','service_categories','company_services','all_products','portfolios','team_members','clients','trainings','services'));
+      $Seip_registered_trainees = Seip::all();
+      return view('dashboard.index',compact('banners','contacts','service_categories','company_services','all_products','portfolios','team_members','clients','trainings','services','Seip_registered_trainees'));
     }
 
 
@@ -128,15 +136,23 @@ class DashboardController extends Controller
 
     function status_index()
     {
-      return view('dashboard.status.index');
+       $education_qualifications = EducationStatus::paginate(5);
+       $working_statuses = WorkingStatus::paginate(5);
+       $gender_statuses = GenderStatus::paginate(5);
+       $information_sources  = InformationSource::paginate(5);
+       $seip_statuses  = SeipStatus::paginate(5);
+       $remarks_statuses = RemarksStatus::paginate(5);
+      return view('dashboard.status.index',compact('education_qualifications','working_statuses','gender_statuses','information_sources','seip_statuses','remarks_statuses'));
     }
     // trainee_index page
 
     function trainee_index()
     {
-
-      return view('dashboard.trainee_registration.index');
+      $Seip_registered_trainees = Seip::all();
+      return view('dashboard.trainee_registration.index',compact('Seip_registered_trainees'));
     }
+
+  
 
 
 

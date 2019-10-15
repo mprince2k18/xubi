@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2019 at 01:57 PM
+-- Generation Time: Oct 15, 2019 at 01:56 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -276,6 +276,28 @@ INSERT INTO `contacts` (`id`, `name`, `email`, `subject`, `message`, `status`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `education_statuses`
+--
+
+CREATE TABLE `education_statuses` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `education_qualification` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `education_statuses`
+--
+
+INSERT INTO `education_statuses` (`id`, `education_qualification`, `created_at`, `updated_at`) VALUES
+(1, 'Graduation', NULL, NULL),
+(2, 'Diploma', NULL, NULL),
+(3, 'Masters', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `failed_jobs`
 --
 
@@ -299,6 +321,50 @@ CREATE TABLE `frontends` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gender_statuses`
+--
+
+CREATE TABLE `gender_statuses` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `gender` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `gender_statuses`
+--
+
+INSERT INTO `gender_statuses` (`id`, `gender`, `created_at`, `updated_at`) VALUES
+(1, 'Male', NULL, NULL),
+(2, 'Female', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `information_sources`
+--
+
+CREATE TABLE `information_sources` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `information_source` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `information_sources`
+--
+
+INSERT INTO `information_sources` (`id`, `information_source`, `created_at`, `updated_at`) VALUES
+(1, 'Facebook', NULL, NULL),
+(2, 'Google', NULL, NULL),
+(3, 'Website', NULL, NULL),
+(4, 'Friend', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -367,8 +433,14 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (137, '2019_10_10_131550_create_careers_table', 21),
 (138, '2019_10_12_142009_create_statuses_table', 21),
 (140, '2019_09_05_164358_create_contacts_table', 22),
-(143, '2019_10_13_145826_create_seips_table', 24),
-(144, '2019_09_17_113930_create_teams_table', 25);
+(145, '2019_09_17_113930_create_teams_table', 25),
+(154, '2019_10_15_135418_create_education_statuses_table', 27),
+(157, '2019_10_15_143824_create_working_statuses_table', 28),
+(158, '2019_10_15_151328_create_gender_statuses_table', 28),
+(159, '2019_10_15_153246_create_information_sources_table', 29),
+(160, '2019_10_15_160030_create_seip_statuses_table', 30),
+(164, '2019_10_15_161621_create_remarks_statuses_table', 31),
+(167, '2019_10_13_145826_create_seips_table', 32);
 
 -- --------------------------------------------------------
 
@@ -471,20 +543,49 @@ INSERT INTO `product_pages` (`id`, `title`, `sub_title`, `title_watermark_single
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `remarks_statuses`
+--
+
+CREATE TABLE `remarks_statuses` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `remarks_status` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `remarks_statuses`
+--
+
+INSERT INTO `remarks_statuses` (`id`, `remarks_status`, `created_at`, `updated_at`) VALUES
+(1, 'Interested', NULL, NULL),
+(2, 'Selected', NULL, NULL),
+(3, 'Waiting', NULL, NULL),
+(4, 'Viva', NULL, NULL),
+(5, 'Rejected', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `seips`
 --
 
 CREATE TABLE `seips` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `trainee_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `quarter_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` int(11) NOT NULL,
+  `phone` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `university` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nid` int(11) NOT NULL,
-  `rocket_number` int(11) NOT NULL,
+  `nid` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gender` int(11) NOT NULL,
+  `information_source` int(11) NOT NULL,
+  `rocket_number` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `educational_qualification` int(11) NOT NULL,
   `working_status` int(11) NOT NULL,
   `have_seip` int(11) NOT NULL,
+  `remarks` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -493,8 +594,29 @@ CREATE TABLE `seips` (
 -- Dumping data for table `seips`
 --
 
-INSERT INTO `seips` (`id`, `name`, `email`, `phone`, `university`, `nid`, `rocket_number`, `educational_qualification`, `working_status`, `have_seip`, `created_at`, `updated_at`) VALUES
-(1, 'Mohammad Prince', 'mprince2k16@gmail.com', 1825731327, 'Dhaka University', 1234567890, 1825731327, 1, 1, 1, '2019-10-13 10:45:47', NULL);
+INSERT INTO `seips` (`id`, `trainee_id`, `quarter_id`, `name`, `email`, `phone`, `university`, `nid`, `gender`, `information_source`, `rocket_number`, `educational_qualification`, `working_status`, `have_seip`, `remarks`, `created_at`, `updated_at`) VALUES
+(1, 'XLSEIPBQ470', 'Q8', 'Fahad Hasan', 'fahadidb@gmail.com', '01611609372', 'JU', '3377887766', 1, 1, NULL, 3, 1, 2, 1, '2019-10-15 11:22:09', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `seip_statuses`
+--
+
+CREATE TABLE `seip_statuses` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `seip_status` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `seip_statuses`
+--
+
+INSERT INTO `seip_statuses` (`id`, `seip_status`, `created_at`, `updated_at`) VALUES
+(1, 'Yes', NULL, NULL),
+(2, 'No', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -573,17 +695,6 @@ CREATE TABLE `teams` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `teams`
---
-
-INSERT INTO `teams` (`id`, `name`, `designation`, `team_photo`, `slug`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'Fahad Hasan', 'CEO', '1.jpg', 'fahad-hasan', NULL, '2019-10-13 11:53:13', '2019-10-13 11:53:13'),
-(2, 'Millat Hossain', 'Trainer', '2.jpg', 'millat-hossain', NULL, '2019-10-13 11:53:43', '2019-10-13 11:53:43'),
-(3, 'Atika Monsura', 'Trainer', '3.jpg', 'atika-monsura', NULL, '2019-10-13 11:54:05', '2019-10-13 11:54:05'),
-(4, 'Naushin Purba', 'JPO', '4.jpg', 'naushin-purba', NULL, '2019-10-13 11:54:31', '2019-10-13 11:54:31'),
-(5, 'Mostafa Raju', 'Lead Trainer', '5.jpg', 'mostafa-raju', NULL, '2019-10-13 11:56:14', '2019-10-13 11:56:14');
 
 -- --------------------------------------------------------
 
@@ -693,6 +804,28 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 (1, 'Mohammad Prince', 'Mprince2k16@gmail.com', NULL, '$2y$10$sgm57479S7Q8rZWJsq6M9u.2yFrR294irEXqT8DPgEhBYbOAQiEnW', '6ExfXA9RODbrsfRhBso0Y3bxcH1xpMgdC3rfz5Y4mgNMntvbTda4Dyo31Ox8', '2019-09-05 02:22:17', '2019-09-05 02:22:17'),
 (2, 'tesets', 'linkinprince@gmail.com', NULL, '$2y$10$i3t8XlXO.TSII/BH1KcYY.OUcLP/RjX.MCM99ompRQbNVCZ.IqTym', NULL, '2019-09-15 08:48:11', '2019-09-15 08:48:11');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `working_statuses`
+--
+
+CREATE TABLE `working_statuses` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `working_status` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `working_statuses`
+--
+
+INSERT INTO `working_statuses` (`id`, `working_status`, `created_at`, `updated_at`) VALUES
+(1, 'Job Holder', NULL, NULL),
+(2, 'Student', NULL, NULL),
+(3, 'None', NULL, NULL);
+
 --
 -- Indexes for dumped tables
 --
@@ -759,6 +892,12 @@ ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `education_statuses`
+--
+ALTER TABLE `education_statuses`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -768,6 +907,18 @@ ALTER TABLE `failed_jobs`
 -- Indexes for table `frontends`
 --
 ALTER TABLE `frontends`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `gender_statuses`
+--
+ALTER TABLE `gender_statuses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `information_sources`
+--
+ALTER TABLE `information_sources`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -808,9 +959,25 @@ ALTER TABLE `product_pages`
   ADD UNIQUE KEY `product_pages_product_category_id_unique` (`product_category_id`);
 
 --
+-- Indexes for table `remarks_statuses`
+--
+ALTER TABLE `remarks_statuses`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `seips`
 --
 ALTER TABLE `seips`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `seips_trainee_id_unique` (`trainee_id`),
+  ADD UNIQUE KEY `seips_email_unique` (`email`),
+  ADD UNIQUE KEY `seips_phone_unique` (`phone`),
+  ADD UNIQUE KEY `seips_nid_unique` (`nid`);
+
+--
+-- Indexes for table `seip_statuses`
+--
+ALTER TABLE `seip_statuses`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -850,6 +1017,12 @@ ALTER TABLE `training_pages`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
+
+--
+-- Indexes for table `working_statuses`
+--
+ALTER TABLE `working_statuses`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -910,6 +1083,12 @@ ALTER TABLE `contacts`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `education_statuses`
+--
+ALTER TABLE `education_statuses`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -922,6 +1101,18 @@ ALTER TABLE `frontends`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `gender_statuses`
+--
+ALTER TABLE `gender_statuses`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `information_sources`
+--
+ALTER TABLE `information_sources`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `infos`
 --
 ALTER TABLE `infos`
@@ -931,7 +1122,7 @@ ALTER TABLE `infos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
 
 --
 -- AUTO_INCREMENT for table `portfolios`
@@ -952,10 +1143,22 @@ ALTER TABLE `product_pages`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `remarks_statuses`
+--
+ALTER TABLE `remarks_statuses`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `seips`
 --
 ALTER TABLE `seips`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `seip_statuses`
+--
+ALTER TABLE `seip_statuses`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -973,7 +1176,7 @@ ALTER TABLE `statuses`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `trainings`
@@ -992,6 +1195,12 @@ ALTER TABLE `training_pages`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `working_statuses`
+--
+ALTER TABLE `working_statuses`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

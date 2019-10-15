@@ -15,15 +15,20 @@ class CreateSeipsTable extends Migration
     {
         Schema::create('seips', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('trainee_id')->unique();
+            $table->string('quarter_id');
             $table->string('name');
-            $table->string('email');
-            $table->integer('phone');
+            $table->string('email')->unique();
+            $table->string('phone')->unique();
             $table->string('university');
-            $table->integer('nid');
-            $table->integer('rocket_number');
+            $table->string('nid')->unique();
+            $table->integer('gender');
+            $table->integer('information_source');
+            $table->string('rocket_number')->nullable();
             $table->integer('educational_qualification');
             $table->integer('working_status');
             $table->integer('have_seip');
+            $table->integer('remarks')->default(1);
             $table->timestamps();
         });
     }

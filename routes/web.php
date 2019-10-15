@@ -20,7 +20,7 @@ Route::get('/contactus','ContactController@index')->name('contact');
 // contact_insert
 Route::post('/contactus/insert','ContactController@contact_insert')->name('contact_insert');
 
-// CONTACT CENTER PAGE ---------------------------------------------------------------
+// CONTACT CENTER PAGE
 
 // contact center
 Route::get('/contact-center','ContactCenterController@index')->name('contact_center');
@@ -223,12 +223,26 @@ Route::post('/admin/career/create','CareerController@career_create')->name('care
 // STATUS
 // index
 Route::get('/admin/status','DashboardController@status_index')->name('status_index');
+// add_education_qualification
+Route::post('/admin/status/education_qualification/insert','EducationStatusController@add_education_qualification')->name('add_education_qualification');
+// add_education_qualification
+Route::post('/admin/status/working_status/insert','StatusController@add_working_status')->name('add_working_status');
+// add_education_qualification
+Route::post('/admin/status/gender_status/insert','StatusController@add_gender_status')->name('add_gender_status');
+// add_information_source
+Route::post('/admin/status/information_source/insert','StatusController@add_information_source')->name('add_information_source');
+// add_seip_status
+Route::post('/admin/status/seip_status/insert','StatusController@add_seip_status')->name('add_seip_status');
+// add_remarks_status
+Route::post('/admin/status/add_remarks_status/insert','StatusController@add_remarks_status')->name('add_remarks_status');
 
 
 
 // Trainee
 // index
 Route::get('/admin/trainee','DashboardController@trainee_index')->name('trainee_index');
+// interested_trainee
+Route::get('/admin/interested/trainee','SeipController@interested_trainee_index')->name('interested_trainee_index');
 
 
 

@@ -18,4 +18,28 @@ class Seip extends Model
           'working_status',
           'have_seip',
     ];
+
+// relationBetweenEducation
+    function relationBetweenEducation()
+    {
+      return $this->hasOne('App\EducationStatus','id','educational_qualification');
+    }
+
+// relationBetweenEducation
+    function relationBetweenWork()
+    {
+      return $this->hasOne('App\WorkingStatus','id','working_status');
+    }
+// relationBetweenSeip
+    function relationBetweenSeip()
+    {
+      return $this->hasOne('App\SeipStatus','id','have_seip');
+    }
+// relationBetweenRemarks
+    function relationBetweenRemarks()
+    {
+      return $this->hasOne('App\RemarksStatus','id','remarks');
+    }
+
+
 }

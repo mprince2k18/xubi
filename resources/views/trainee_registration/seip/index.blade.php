@@ -29,9 +29,9 @@
 
 <style media="screen">
   .container-contact100{
-    background: url('{{ asset('custom/seip_reg/images/1.png') }}');
+    /* background: url('{{ asset('custom/seip_reg/images/1.png') }}');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
   }
 .select2-container .select2-results__option[aria-selected="true"]{
   background: -webkit-linear-gradient(right, #636e72, #353b48);
@@ -40,6 +40,7 @@
 .select2-container .select2-results__option--highlighted[aria-selected]{
   background: -webkit-linear-gradient(right, #636e72, #353b48);
 }
+
 </style>
 <body>
 
@@ -47,6 +48,17 @@
 	<div class="container-contact100">
 		<div class="wrap-contact100">
 
+			@if (session('success'))
+		 <div class="alert alert-success">
+		     {{ session('success') }}
+		 </div>
+		 @endif
+
+		 @if (session('update'))
+		<div class="alert alert-success">
+		    {{ session('update') }}
+		</div>
+		@endif
 
 
 			<form action="{{ route('seip_registration_create') }}" method="post" class="contact100-form">
@@ -59,44 +71,81 @@
         <!-- name -->
 				<div class="wrap-input100" data-validate="Name is required">
 					<span class="label-input100">Full Name</span>
-					<input class="input100" type="text" name="name" placeholder="Enter Your Full Name">
+					<input class="input100" type="text" name="name">
 					<span class="focus-input100"></span>
 				</div>
 
         <!-- email -->
 				<div class="wrap-input100">
 					<span class="label-input100">Email</span>
-					<input class="input100" type="text" name="email" placeholder="Enter your email addess">
+					<input class="input100" type="email" name="email">
 					<span class="focus-input100"></span>
 				</div>
 
         <!-- phone -->
 				<div class="wrap-input100">
-					<span class="label-input100">Phone Number</span>
-					<input class="input100" type="number" name="phone" placeholder="Phone Number">
+					<span class="label-input100">Contact No</span>
+					<input class="input100" type="number" name="phone">
 					<span class="focus-input100"></span>
 				</div>
 
         <!-- university -->
 				<div class="wrap-input100">
 					<span class="label-input100">University Name</span>
-					<input class="input100" type="text" name="university" placeholder="University Name">
+					<input class="input100" type="text" name="university">
 					<span class="focus-input100"></span>
 				</div>
 
         <!-- nid -->
 				<div class="wrap-input100">
-					<span class="label-input100">Trainee NID</span>
-					<input class="input100" type="number" name="nid" placeholder="Trainee NID">
+					<span class="label-input100">NID</span>
+					<input class="input100" type="number" name="nid">
 					<span class="focus-input100"></span>
 				</div>
 
+					<!-- gender -->
+								<div class="wrap-input100 input100-select">
+									<span class="label-input100">Gender</span>
+									<div>
+										<select class="selection-2" name="gender">
+											<option value="">Choose Gender</option>
+
+
+											@foreach ($gender_statuses as $gender_status)
+											<option value="{{ $gender_status->id }}">{{ $gender_status->gender }}</option>
+											@endforeach
+
+										</select>
+									</div>
+									<span class="focus-input100"></span>
+								</div>
+
+
+								<!-- information_source -->
+											<div class="wrap-input100 input100-select">
+												<span class="label-input100">Information Source</span>
+												<div>
+													<select class="selection-2" name="information_source">
+														<option value="">Choose Source</option>
+
+														@foreach ($information_sources as $information_source)
+														<option value="{{ $information_source->id }}">{{ $information_source->information_source }}</option>
+
+														@endforeach
+
+													</select>
+												</div>
+												<span class="focus-input100"></span>
+											</div>
+
         <!-- rocket_number -->
-				<div class="wrap-input100">
-					<span class="label-input100">Trainee Rocket Number</span>
-					<input class="input100" type="number" name="rocket_number" placeholder="Trainee Rocket Number">
+				<!-- <div class="wrap-input100">
+					<span class="label-input100">Trainee Personal Rocket Number</span>
+					<small class="form-text text-muted">trainee NID verified Rocket Number</small>
+
+					<input class="input100" type="number" name="rocket_number" placeholder="Trainee Personal Rocket Number">
 					<span class="focus-input100"></span>
-				</div>
+				</div> -->
 
 <!-- educational_qualification -->
 				<div class="wrap-input100 input100-select">
@@ -104,9 +153,15 @@
 					<div>
 						<select class="selection-2" name="educational_qualification">
 							<option value="">Choose Qualification</option>
-							<option value="1">Graduation</option>
-              <option value="2">Diploma</option>
-							<option value="3">Masters</option>
+
+
+							@foreach ($education_qualifications as $education_qualification)
+							<option value="{{ $education_qualification->id }}">{{ $education_qualification->education_qualification }}</option>
+
+							@endforeach
+
+
+
 						</select>
 					</div>
 					<span class="focus-input100"></span>
@@ -118,9 +173,10 @@
         					<div>
         						<select class="selection-2" name="working_status">
         							<option value="">Choose Working Status</option>
-                      <option value="1">Job Holder</option>
-                      <option value="2">Student</option>
-                      <option value="3">None</option>
+											@foreach ($working_statuses as $working_status)
+                      	<option value="{{ $working_status->id }}">{{ $working_status->working_status }}</option>
+											@endforeach
+
         						</select>
         					</div>
         					<span class="focus-input100"></span>
@@ -133,8 +189,12 @@
                           <div>
                             <select class="selection-2" name="have_seip">
                               <option value="">Choose SEIP training before</option>
-                              <option value="1">Yes</option>
-                              <option value="2">No</option>
+
+
+															@foreach($seip_statuses as $seip_status)
+																<option value="{{ $seip_status->id }}">{{ $seip_status->seip_status }}</option>
+															@endforeach
+
                             </select>
                           </div>
                           <span class="focus-input100"></span>
@@ -171,6 +231,14 @@
 	<script src="{{ asset('custom/seip_reg/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 <!--===============================================================================================-->
 	<script src="{{ asset('custom/seip_reg/vendor/select2/select2.min.js') }}"></script>
+
+	<script src="{{ asset('xubisoft/assets/js/sweetalert2.all.js') }}"></script>
+
+	<script>
+	  @include('sweetalert::alert')
+	</script>
+
+
 	<script>
 		$(".selection-2").select2({
 			minimumResultsForSearch: 20,
