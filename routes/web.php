@@ -245,6 +245,8 @@ Route::get('/admin/trainee','DashboardController@trainee_index')->name('trainee_
 Route::get('/admin/interested/trainee','SeipController@interested_trainee_index')->name('interested_trainee_index');
 // single
 Route::get('/admin/trainee/{single}','SeipController@single_trainee_index')->name('single_trainee_index');
+// update
+Route::post('/admin/trainee/update','SeipController@single_trainee_update')->name('single_trainee_update');
 
 
 

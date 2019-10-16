@@ -15,6 +15,8 @@ use Alert;
 
 class SeipController extends Controller
 {
+
+  // index
     function index()
     {
       $education_qualifications = EducationStatus::all();
@@ -26,12 +28,9 @@ class SeipController extends Controller
       return view('trainee_registration.seip.index',compact('education_qualifications','working_statuses','gender_statuses','information_sources','seip_statuses','remarks_statuses'));
     }
 
-
+// create
     function create(Request $request)
     {
-
-
-
 
       $request->validate([
         'trainee_id'=>'unique:seips',
@@ -87,12 +86,15 @@ class SeipController extends Controller
 
     }
 
+// interested_trainee_index
 
     function interested_trainee_index()
     {
       $Seip_registered_trainees = Seip::all();
       return view('dashboard.trainee_registration.interested_trainee.index',compact('Seip_registered_trainees'));
     }
+
+// single_trainee_index
 
     function single_trainee_index($single)
     {
@@ -102,7 +104,32 @@ class SeipController extends Controller
 
 
 
+// Update
 
+function single_trainee_update(Request $request)
+{
+  // Seip::find($request->id)->update([
+  //   'name'=>$request->name,
+  //   'email'=>$request->email,
+  //   'phone'=>$request->phone,
+  //   'university'=>$request->university,
+  //   'nid'=>$request->nid,
+  //   'gender'=>$request->gender,
+  //   'information_source'=>$request->information_source,
+  //   'rocket_number'=>$request->rocket_number,
+  //   'educational_qualification'=>$request->educational_qualification,
+  //   'working_status'=>$request->working_status,
+  //   'have_seip'=>$request->have_seip,
+  //   'remarks'=>$request->remarks,
+  // ]);
+  //
+  // Alert::success('Profile updated','Success');
+  //
+  // return back();
+
+  echo "string";
+
+}
 
     // END
 }
