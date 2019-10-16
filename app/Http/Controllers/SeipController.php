@@ -63,5 +63,15 @@ class SeipController extends Controller
       return view('dashboard.trainee_registration.interested_trainee.index',compact('Seip_registered_trainees'));
     }
 
+    function single_trainee_index($single)
+    {
+      $single_trainee = Seip::findOrFail($single);
+      return view('dashboard.trainee_registration.single_view',compact('single_trainee'));
+    }
+
+
+
+
+
     // END
 }

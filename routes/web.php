@@ -243,6 +243,11 @@ Route::post('/admin/status/add_remarks_status/insert','StatusController@add_rema
 Route::get('/admin/trainee','DashboardController@trainee_index')->name('trainee_index');
 // interested_trainee
 Route::get('/admin/interested/trainee','SeipController@interested_trainee_index')->name('interested_trainee_index');
+// single
+Route::get('/admin/trainee/{single}','SeipController@single_trainee_index')->name('single_trainee_index');
+
+
+
 
 
 

@@ -65,29 +65,7 @@
                             {{ $Seip_registered_trainee->relationBetweenRemarks->remarks_status }}
                           </td>
                           <td>
-                            <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">OPEN</a>
-
-                              <!-- Modal -->
-                              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                      </button>
-                                    </div>
-                                    <div class="modal-body">
-                                      ...
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
+                              <a href="{{ '/admin/trainee' }}/{{ $Seip_registered_trainee->id }}" class="btn btn-primary">open</a>
                           </td>
                         </tr>
                       @endforeach
@@ -119,5 +97,7 @@
 <script src="{{ asset('custom/seip_reg/assets/js/lib/data-table/buttons.html5.min.js') }}"></script>
 <script src="{{ asset('custom/seip_reg/assets/js/lib/data-table/buttons.print.min.js') }}"></script>
 <script src="{{ asset('custom/seip_reg/assets/js/lib/data-table/datatables-init.js') }}"></script>
+
+
 
 @endsection

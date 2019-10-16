@@ -152,7 +152,7 @@ class DashboardController extends Controller
       return view('dashboard.trainee_registration.index',compact('Seip_registered_trainees'));
     }
 
-  
+    
 
 
 

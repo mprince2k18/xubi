@@ -40,6 +40,26 @@ class Seip extends Model
     {
       return $this->hasOne('App\RemarksStatus','id','remarks');
     }
+// relationBetweenGender
+    function relationBetweenGender()
+    {
+      return $this->hasOne('App\GenderStatus','id','gender');
+    }
+// relationBetweenInformationSource
+    function relationBetweenInformationSource()
+    {
+      return $this->hasOne('App\InformationSource','id','information_source');
+    }
+// relationBetweenEducationStatus
+    function relationBetweenEducationStatus()
+    {
+      return $this->hasOne('App\EducationStatus','id','educational_qualification');
+    }
+// relationBetweenSeipStatus
+    function relationBetweenSeipStatus()
+    {
+      return $this->hasOne('App\SeipStatus','id','have_seip');
+    }
 
 
 }

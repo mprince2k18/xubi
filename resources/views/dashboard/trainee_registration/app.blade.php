@@ -157,16 +157,16 @@
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
-          <div class="row">
+          <div class="row counter_nav">
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
                 <div class="card-header card-header-warning card-header-icon">
                   <div class="card-icon">
                     <i class="material-icons">content_copy</i>
                   </div>
-                  <p class="card-category">Total Inrested</p>
+                  <p class="card-category">Interested</p>
                   <h3 class="card-title"> {{ App\Seip::where('remarks',1)->count() }}
-                  
+
                   </h3>
                 </div>
                 <div class="card-footer">
@@ -183,8 +183,8 @@
                   <div class="card-icon">
                     <i class="material-icons">store</i>
                   </div>
-                  <p class="card-category">Revenue</p>
-                  <h3 class="card-title">$34,245</h3>
+                  <p class="card-category">Waiting</p>
+                  <h3 class="card-title">{{ App\Seip::where('remarks',2)->count() }}</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -199,8 +199,8 @@
                   <div class="card-icon">
                     <i class="material-icons">info_outline</i>
                   </div>
-                  <p class="card-category">Fixed Issues</p>
-                  <h3 class="card-title">75</h3>
+                  <p class="card-category">Selected</p>
+                  <h3 class="card-title">{{ App\Seip::where('remarks',3)->count() }}</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -215,8 +215,8 @@
                   <div class="card-icon">
                     <i class="fa fa-twitter"></i>
                   </div>
-                  <p class="card-category">Followers</p>
-                  <h3 class="card-title">+245</h3>
+                  <p class="card-category">Rejected</p>
+                  <h3 class="card-title">{{ App\Seip::where('remarks',5)->count() }}</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
