@@ -8,15 +8,20 @@ class Seip extends Model
 {
     protected $fillable=[
 
-          'name',
-          'email',
-          'phone',
-          'university',
-          'nid',
-          'rocket_number',
-          'educational_qualification',
-          'working_status',
-          'have_seip',
+      'trainee_id',
+      'quarter_id',
+      'name',
+      'email',
+      'phone',
+      'university',
+      'nid',
+      'gender',
+      'information_source',
+      'rocket_number',
+      'educational_qualification',
+      'working_status',
+      'have_seip',
+      'remarks',
     ];
 
 // relationBetweenEducation

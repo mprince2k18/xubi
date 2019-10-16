@@ -30,10 +30,41 @@ class SeipController extends Controller
     function create(Request $request)
     {
 
+
+
+
+      $request->validate([
+        'trainee_id'=>'unique:seips',
+        'name'=>'required|string|max:60',
+        'email'=>'required|unique:seips|email|max:80',
+        'phone'=>'required|numeric|unique:seips|min:11',
+        'university'=>'required|string',
+        'nid'=>'required|numeric|unique:seips|min:10',
+        'gender'=>'required',
+        'information_source'=>'required',
+        'rocket_number'=>'nullable|numeric|min:13',
+        'educational_qualification'=>'required',
+        'working_status'=>'required',
+        'have_seip'=>'required',
+
+      ],[
+        'name.required'  =>  'Applicant Full Name Is Required.',
+        'email.email'    => 'You must enter your valid email address.',
+        'email.required' => 'Applicant Email Is Required.',
+        'phone.required' => 'Contact No Is Required.',
+        'university.required' => 'Academic Institution Is Required.',
+        'nid.required' => 'Applicant NID Is Required.',
+        'gender.required' => 'Gender Is Required.',
+        'information_source.required' => 'Please Fill Information Source.',
+        'educational_qualification.required' => 'Please Fill Academic Qualification.',
+        'working_status.required' => 'Please Fill Current Working Status.',
+        'have_seip.required' => 'Please Fill SEIP Training Before',
+      ]);
+
       $quarter = 8;
 
       $last_inserted_id = Seip::insertGetId([
-        'trainee_id'=>'XLSEIPBQ' . rand(100,1000),
+        'trainee_id'=>'XLSEIPBQ'. $quarter . rand(100,1000),
         'quarter_id'=>'Q8',
         'name'=>$request->name,
         'email'=>$request->email,

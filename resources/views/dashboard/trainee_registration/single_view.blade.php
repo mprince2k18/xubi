@@ -8,6 +8,10 @@
 
 <style media="screen">
 
+.user_modal{
+  max-width: 80% !important;
+}
+
 .counter_nav{
   display: none;
 }
@@ -133,136 +137,182 @@
                                         {{ $single_trainee->relationBetweenRemarks->remarks_status }} Trainee
                                     </h6>
                                     <h3>Quarter : <span>{{ $single_trainee->quarter_id }}</span></h3>
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
-                                </li>
-                            </ul>
+
+                                    <div class="text-left">
+                                        <p>Register Time & Date</p>
+                                        <p>{{ $single_trainee->created_at->format('d-M-Y') }}</p>
+                                        <p>{{ $single_trainee->created_at->format('h:i:s a') }}</p>
+
+                                    </div>
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                        <!-- Extra large modal -->
+                        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">EDIT PROFILE</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog user_modal" role="document">
+  <div class="modal-content">
+      <div class="trainee_name text-center">
+        <h4>{{ $single_trainee->name }}</h4>
+        <hr>
+      </div>
+    <div class="modal-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-4">
+
+            {{-- ------------------------------------- --}}
+            <div class="container">
+
+              	<div class="row">
+                  <!-- edit form column -->
+                    <div class="col-md-10 personal-info">
+
+
+
+                      <form class="form-horizontal" role="form" action="">
+
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">Applicant's ID</label>
+                          <div class="col-lg-8">
+                            <input class="form-control" type="hidden" value="{{ $single_trainee->id }}">
+                            <p>{{ $single_trainee->trainee_id }}</p>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">Phone</label>
+                          <div class="col-lg-8">
+                            <input class="form-control" type="text" value="{{ $single_trainee->phone }}">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">Applicants nid</label>
+                          <div class="col-lg-8">
+                            <input class="form-control" type="text" value="{{ $single_trainee->nid }}">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">rocket_number</label>
+                          <div class="col-lg-8">
+                            <input class="form-control" type="text" value="{{ $single_trainee->rocket_number }}">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label"></label>
+                          <div class="col-md-8">
+                            <input type="button" class="btn btn-primary" value="Save Changes">
+                            <span></span>
+                            <input type="button" class="btn btn-dark" data-dismiss="modal" value="Cancel">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+              </div>
+              <hr>
+            {{-- ------------------------------------- --}}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    {{-- <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div> --}}
+  </div>
+</div>
+</div>
+
+  {{-- -------------------------- --}}
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-work">
-                            <p>Application Info</p>
-                            <a href="">{{ $single_trainee->created_at->format('d-M-Y') }}</a><br/>
-                            <a href="">{{ $single_trainee->created_at->format('h-s') }}</a><br/>
-                            <a href="">WordPress</a><br/>
-                            <a href="">WooCommerce</a><br/>
-                            <a href="">PHP, .Net</a><br/>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="tab-content profile-tab" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Applicants Id</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ $single_trainee->trainee_id }}</p>
-                                            </div>
-                                        </div>
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Name</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ $single_trainee->name }}</p>
-                                            </div>
-                                        </div>
+                    <div class="col-md-8 offset-md-4">
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Phone</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ $single_trainee->phone }}</p>
-                                            </div>
-                                        </div>
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Field</th>
+                                <th scope="col">Info</th>
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Applicants Profession</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ $single_trainee->relationBetweenWork->working_status }}</p>
-                                            </div>
-                                        </div>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">Applicant ID</th>
+                                <td>{{ $single_trainee->trainee_id }}</td>
+                              </tr>
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Applicants Institution</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ $single_trainee->university }}</p>
-                                            </div>
-                                        </div>
+                              <tr>
+                                <th scope="row">Applicant Name</th>
+                                <td>{{ $single_trainee->name }}</td>
+                              </tr>
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Applicants NID</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ $single_trainee->nid }}</p>
-                                            </div>
-                                        </div>
+                              <tr>
+                                <th scope="row">Applicant Email</th>
+                                <td>{{ $single_trainee->email }}</td>
+                              </tr>
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Gender</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ $single_trainee->relationBetweenGender->gender }}</p>
-                                            </div>
-                                        </div>
+                              <tr>
+                                <th scope="row">Contact No</th>
+                                <td>{{ $single_trainee->phone }}</td>
+                              </tr>
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Information Source</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ $single_trainee->relationBetweenInformationSource->information_source }}</p>
-                                            </div>
-                                        </div>
+                              <tr>
+                                <th scope="row">Current Working Status</th>
+                                <td>{{ $single_trainee->relationBetweenWork->working_status }}</td>
+                              </tr>
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Rocket Number</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ $single_trainee->rocket_number }}</p>
-                                            </div>
-                                        </div>
+                              <tr>
+                                <th scope="row">Academic Institution</th>
+                                <td>{{ $single_trainee->university }}</td>
+                              </tr>
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Educational Qualification</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ $single_trainee->relationBetweenEducationStatus->education_qualification }}</p>
-                                            </div>
-                                        </div>
+                              <tr>
+                                <th scope="row">Applicant NID</th>
+                                <td>{{ $single_trainee->nid }}</td>
+                              </tr>
 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Have Seip?</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{ $single_trainee->relationBetweenSeipStatus->seip_status }}</p>
-                                            </div>
-                                        </div>
+                              <tr>
+                                <th scope="row">Gender</th>
+                                <td>{{ $single_trainee->relationBetweenGender->gender }}</td>
+                              </tr>
 
-                            </div>
+                              <tr>
+                                <th scope="row">Information Method</th>
+                                <td>{{ $single_trainee->relationBetweenInformationSource->information_source }}</td>
+                              </tr>
 
-                        </div>
+                              <tr>
+                                <th scope="row">Rocket Number</th>
+                                <td>{{ $single_trainee->rocket }}</td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Academic Qualification</th>
+                                <td>{{ $single_trainee->relationBetweenEducationStatus->education_qualification }}</td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Have you done any SEIP training before?</th>
+                                <td>{{ $single_trainee->relationBetweenSeipStatus->seip_status }}</td>
+                              </tr>
+
+
+                            </tbody>
+                          </table>
+
+
                     </div>
                 </div>
             </form>
