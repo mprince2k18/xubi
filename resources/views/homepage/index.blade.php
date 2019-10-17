@@ -13,6 +13,16 @@
     color: #000;
     text-align: left;
   }
+
+
+  @media (max-width:375px){
+    .agency-banner-content p{
+
+      font-size: 40px !important;
+
+    }
+  }
+
 </style>
 
 @endsection
