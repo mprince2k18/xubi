@@ -99,35 +99,47 @@ class SeipController extends Controller
     function single_trainee_index($single)
     {
       $single_trainee = Seip::findOrFail($single);
-      return view('dashboard.trainee_registration.single_view',compact('single_trainee'));
+
+      $education_qualifications = EducationStatus::all();
+      $working_statuses = WorkingStatus::all();
+      $gender_statuses  = GenderStatus::all();
+      $information_sources  = InformationSource::all();
+      $seip_statuses  = SeipStatus::all();
+      $remarks_statuses  = RemarksStatus::all();
+
+      return view('dashboard.trainee_registration.single_view',compact('single_trainee','education_qualifications','working_statuses','gender_statuses','information_sources','seip_statuses','remarks_statuses'));
     }
+
+// single_trainee_edit
+
+
 
 
 
 // Update
 
-function single_trainee_update(Request $request)
+function update(Request $request)
 {
-  // Seip::find($request->id)->update([
-  //   'name'=>$request->name,
-  //   'email'=>$request->email,
-  //   'phone'=>$request->phone,
-  //   'university'=>$request->university,
-  //   'nid'=>$request->nid,
-  //   'gender'=>$request->gender,
-  //   'information_source'=>$request->information_source,
-  //   'rocket_number'=>$request->rocket_number,
-  //   'educational_qualification'=>$request->educational_qualification,
-  //   'working_status'=>$request->working_status,
-  //   'have_seip'=>$request->have_seip,
-  //   'remarks'=>$request->remarks,
-  // ]);
-  //
-  // Alert::success('Profile updated','Success');
-  //
-  // return back();
+  Seip::find($request->id)->update([
+    'name'=>$request->name,
+    'email'=>$request->email,
+    'phone'=>$request->phone,
+    'university'=>$request->university,
+    'nid'=>$request->nid,
+    'gender'=>$request->gender,
+    'information_source'=>$request->information_source,
+    'rocket_number'=>$request->rocket_number,
+    'educational_qualification'=>$request->educational_qualification,
+    'working_status'=>$request->working_status,
+    'have_seip'=>$request->have_seip,
+    'remarks'=>$request->remarks,
+  ]);
 
-  echo "string";
+  Alert::success('Profile updated','Success');
+
+  return back();
+
+
 
 }
 

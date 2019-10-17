@@ -4,7 +4,7 @@
 // FRONTEND -------------------------------------------------------------------------------------------------------------
 
 // homepage
-Route::get('/index','FrontendController@index')->name('homepage');
+Route::get('/','FrontendController@index')->name('homepage');
 
 // SERVICE PAGES --------------------------------------------------------------
 Route::get('/services','ServicesController@services')->name('services');
@@ -246,7 +246,7 @@ Route::get('/admin/interested/trainee','SeipController@interested_trainee_index'
 // single
 Route::get('/admin/trainee/{single}','SeipController@single_trainee_index')->name('single_trainee_index');
 // update
-Route::post('/admin/trainee/update','SeipController@single_trainee_update')->name('single_trainee_update');
+Route::post('/admin/trainee/update','SeipController@update')->name('single_trainee_update');
 
 
 
@@ -282,9 +282,9 @@ Route::post('/seip/registration/create','SeipController@create')->name('seip_reg
 
 // ---------------------------------------------------------
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 

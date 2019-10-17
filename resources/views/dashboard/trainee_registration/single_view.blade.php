@@ -121,7 +121,7 @@
 @section('content')
 
   <div class="container emp-profile">
-            <form method="post">
+
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
@@ -149,7 +149,7 @@
                     <div class="col-md-2">
                         <!-- Extra large modal -->
                         <!-- Button trigger modal -->
-                          <a href="#" class="btn btn-primary">Edit Profile</a>
+                          <a href="#" class="btn btn-primary">{{ $single_trainee->relationBetweenRemarks->remarks_status }}</a>
 
 
 
@@ -216,7 +216,7 @@
 
                               <tr>
                                 <th scope="row">Rocket Number</th>
-                                <td>{{ $single_trainee->rocket }}</td>
+                                <td>{{ $single_trainee->rocket_number }}</td>
                               </tr>
 
                               <tr>
@@ -236,8 +236,191 @@
 
                     </div>
                 </div>
-            </form>
-        </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="container emp-profile">
+
+
+<h3 class="text-center bg-secondary text-light">
+  <hr> UPDATE TRAINEE INFO <hr>
+</h3>
+
+                <div class="row">
+
+
+
+
+
+                    <div class="col-md-8 offset-md-2">
+
+
+
+                      <form action="{{ route('single_trainee_update') }}" method="post">
+                        @csrf
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Field</th>
+                                <th scope="col">Info</th>
+
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+
+                                <td><input type="hidden" name="id" class="form-control" value="{{ $single_trainee->id }}"></td>
+
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Applicant Name</th>
+                                <td><input type="text" class="form-control" name="name" value="{{ $single_trainee->name }}"></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Applicant Email</th>
+                                <td><input type="text" class="form-control" name="email" value="{{ $single_trainee->email }}"></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Contact No</th>
+                                <td><input type="text" class="form-control" name="phone" value="{{ $single_trainee->phone }}"></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Current Working Status</th>
+                                <td>
+                                  <select  class="form-control" name="working_status">
+                                    <option value="{{ $single_trainee->working_status }}">{{ $single_trainee->relationBetweenWork->working_status }}</option>
+                                    @foreach ($working_statuses as $working_status)
+                                      <option value="{{ $working_status->id }}">{{ $working_status->working_status }}</option>
+                                    @endforeach
+
+                                  </select>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Academic Institution</th>
+                                <td><input type="text" class="form-control" name="university" value="{{ $single_trainee->university }}"></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Applicant NID</th>
+                                <td><input type="text" class="form-control" name="nid" value="{{ $single_trainee->nid }}"></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Gender</th>
+                                <td>
+                                  <select  class="form-control" name="gender">
+              											<option value="{{ $single_trainee->gender }}">{{ $single_trainee->relationBetweenGender->gender }}</option>
+
+              											@foreach ($gender_statuses as $gender_status)
+              											<option value="{{ $gender_status->id }}">{{ $gender_status->gender }}</option>
+              											@endforeach
+
+              										</select>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Information Method</th>
+                                <td>
+
+                                  <select  class="form-control" name="information_source">
+        														<option value="{{ $single_trainee->information_source }}">{{ $single_trainee->relationBetweenInformationSource->information_source }}</option>
+
+        														@foreach ($information_sources as $information_source)
+        															<option value="{{ $information_source->id }}">{{ $information_source->information_source }}</option>
+        														@endforeach
+
+        													</select>
+
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Rocket Number</th>
+                                <td><input type="text" class="form-control" name="rocket_number" value="{{ $single_trainee->rocket_number }}"></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Academic Qualification</th>
+                                <td>
+
+                                  <select class="form-control" name="educational_qualification">
+                                    <option value="{{ $single_trainee->educational_qualification }}">{{ $single_trainee->relationBetweenEducationStatus->education_qualification }}</option>
+
+
+                                    @foreach ($education_qualifications as $education_qualification)
+                                    <option value="{{ $education_qualification->id }}">{{ $education_qualification->education_qualification }}</option>
+
+                                    @endforeach
+
+
+
+                                  </select>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Have you done any SEIP training before?</th>
+                                <td>
+
+                                  <select  class="form-control" name="have_seip">
+                                    <option value="{{ $single_trainee->have_seip }}" class="bg-dark text-white">{{ $single_trainee->relationBetweenSeipStatus->seip_status }}</option>
+
+
+                                    @foreach($seip_statuses as $seip_status)
+                                      <option value="{{ $seip_status->id }}">{{ $seip_status->seip_status }}</option>
+                                    @endforeach
+
+                                  </select>
+
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Remarks</th>
+                                <td>
+
+                                  <select  class="form-control" name="remarks">
+                                    <option value="{{ $single_trainee->remarks }}" class="bg-dark text-white">{{ $single_trainee->relationBetweenRemarks->remarks_status }}</option>
+
+
+                                    @foreach($remarks_statuses as $remarks_status)
+                                      <option value="{{ $remarks_status->id }}">{{ $remarks_status->remarks_status }}</option>
+                                    @endforeach
+
+                                  </select>
+
+                                </td>
+                              </tr>
+
+
+                            </tbody>
+                          </table>
+
+                          <button type="submit" class="btn btn-primary">Send Data</button>
+
+                      </form>
+
+
+
+                    </div>
+                </div>
+
+  </div>
+
+
+
 
 
 

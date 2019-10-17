@@ -146,8 +146,7 @@
 														{{-- <option value="">Choose Source</option> --}}
 
 														@foreach ($information_sources as $information_source)
-														<option value="{{ $information_source->id }}">{{ $information_source->information_source }}</option>
-
+															<option value="{{ $information_source->id }}">{{ $information_source->information_source }}</option>
 														@endforeach
 
 													</select>

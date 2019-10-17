@@ -184,7 +184,7 @@
                     <i class="material-icons">store</i>
                   </div>
                   <p class="card-category">Waiting</p>
-                  <h3 class="card-title">{{ App\Seip::where('remarks',2)->count() }}</h3>
+                  <h3 class="card-title">{{ App\Seip::where('remarks',3)->count() }}</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -200,7 +200,7 @@
                     <i class="material-icons">info_outline</i>
                   </div>
                   <p class="card-category">Selected</p>
-                  <h3 class="card-title">{{ App\Seip::where('remarks',3)->count() }}</h3>
+                  <h3 class="card-title">{{ App\Seip::where('remarks',2)->count() }}</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
