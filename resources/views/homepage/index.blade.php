@@ -15,7 +15,7 @@
   }
 
 
-  @media (max-width:375px){
+  @media (max-width:420px){
     .agency-banner-content p{
 
       font-size: 40px !important;
