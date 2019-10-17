@@ -51,20 +51,20 @@
               <p>Interested Trainee</p>
             </a>
           </li>
-          <li class="nav-item {{ Route::currentRouteNamed('') }}">
-            <a class="nav-link" href="./tables.html">
+          <li class="nav-item {{ Route::currentRouteNamed('selected_trainee_index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('selected_trainee_index') }}">
               <i class="material-icons">content_paste</i>
               <p>Selected Trainee</p>
             </a>
           </li>
-          <li class="nav-item {{ Route::currentRouteNamed('') }}">
-            <a class="nav-link" href="./typography.html">
+          <li class="nav-item {{ Route::currentRouteNamed('waiting_trainee_index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('waiting_trainee_index') }}">
               <i class="material-icons">library_books</i>
               <p>Waiting Trainee</p>
             </a>
           </li>
-          <li class="nav-item {{ Route::currentRouteNamed('') }}">
-            <a class="nav-link" href="./icons.html">
+          <li class="nav-item {{ Route::currentRouteNamed('rejected_trainee_index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('rejected_trainee_index') }}">
               <i class="material-icons">bubble_chart</i>
               <p>Rejected Trainee</p>
             </a>

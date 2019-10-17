@@ -90,8 +90,33 @@ class SeipController extends Controller
 
     function interested_trainee_index()
     {
-      $Seip_registered_trainees = Seip::all();
-      return view('dashboard.trainee_registration.interested_trainee.index',compact('Seip_registered_trainees'));
+      $interested_registered_trainees = Seip::where('remarks',1)->get();
+      return view('dashboard.trainee_registration.interested_trainee.index',compact('interested_registered_trainees'));
+    }
+
+// selected_trainee_index
+
+    function selected_trainee_index()
+    {
+      $slected_trainees = Seip::where('remarks',2)->get();
+      return view('dashboard.trainee_registration.selected_trainee.index',compact('slected_trainees'));
+
+    }
+// waited_trainee_index
+
+    function waiting_trainee_index()
+    {
+      $waiting_trainees = Seip::where('remarks',3)->get();
+      return view('dashboard.trainee_registration.waiting_trainee.index',compact('waiting_trainees'));
+
+    }
+// waited_trainee_index
+
+    function rejected_trainee_index()
+    {
+      $rejected_trainees = Seip::where('remarks',5)->get();
+      return view('dashboard.trainee_registration.rejected_trainee.index',compact('rejected_trainees'));
+
     }
 
 // single_trainee_index

@@ -241,12 +241,19 @@ Route::post('/admin/status/add_remarks_status/insert','StatusController@add_rema
 // Trainee
 // index
 Route::get('/admin/trainee','DashboardController@trainee_index')->name('trainee_index');
-// interested_trainee
-Route::get('/admin/interested/trainee','SeipController@interested_trainee_index')->name('interested_trainee_index');
 // single
 Route::get('/admin/trainee/{single}','SeipController@single_trainee_index')->name('single_trainee_index');
 // update
 Route::post('/admin/trainee/update','SeipController@update')->name('single_trainee_update');
+
+// interested_trainee
+Route::get('/admin/interested/trainee','SeipController@interested_trainee_index')->name('interested_trainee_index');
+// selected_trainee
+Route::get('/admin/selected/trainee','SeipController@selected_trainee_index')->name('selected_trainee_index');
+// waiting_trainee
+Route::get('/admin/waiting/trainee','SeipController@waiting_trainee_index')->name('waiting_trainee_index');
+// waiting_trainee
+Route::get('/admin/rejected/trainee','SeipController@rejected_trainee_index')->name('rejected_trainee_index');
 
 
 

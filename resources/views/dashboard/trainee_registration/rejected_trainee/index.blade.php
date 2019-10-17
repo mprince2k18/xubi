@@ -1,7 +1,7 @@
 @extends('dashboard.trainee_registration.app')
 
 @section('title')
-  Interested Trainee List
+  Rejected Trainee List
 @endsection
 
 @section('css')
@@ -40,32 +40,32 @@
 										</thead>
 										<tbody>
 
-                      @foreach ($interested_registered_trainees as $interested_registered_trainee)
+                      @foreach ($rejected_trainees as $rejected_trainee)
                         <tr>
-                          <td>{{ $interested_registered_trainee->trainee_id }}</td>
-                          <td>{{ $interested_registered_trainee->name }}</td>
-                          <td>{{ $interested_registered_trainee->quarter_id }}</td>
-                          <td>{{ $interested_registered_trainee->email }}</td>
-                          <td>{{ $interested_registered_trainee->phone }}</td>
-                          <td>{{ $interested_registered_trainee->university }}</td>
-                          <td>{{ $interested_registered_trainee->nid }}</td>
-                          <td>{{ $interested_registered_trainee->rocket_number === ' ' ? $interested_registered_trainee->rocket_number : 'Null'  }}</td>
+                          <td>{{ $rejected_trainee->trainee_id }}</td>
+                          <td>{{ $rejected_trainee->name }}</td>
+                          <td>{{ $rejected_trainee->quarter_id }}</td>
+                          <td>{{ $rejected_trainee->email }}</td>
+                          <td>{{ $rejected_trainee->phone }}</td>
+                          <td>{{ $rejected_trainee->university }}</td>
+                          <td>{{ $rejected_trainee->nid }}</td>
+                          <td>{{ $rejected_trainee->rocket_number === ' ' ? $rejected_trainee->rocket_number : 'Null'  }}</td>
                           <td>
 
-                            {{ $interested_registered_trainee->relationBetweenEducation->education_qualification }}
+                            {{ $rejected_trainee->relationBetweenEducation->education_qualification }}
 
                           </td>
                           <td>
-                            {{ $interested_registered_trainee->relationBetweenWork->working_status }}
+                            {{ $rejected_trainee->relationBetweenWork->working_status }}
                           </td>
                           <td>
-                            {{ $interested_registered_trainee->relationBetweenSeip->seip_status }}
+                            {{ $rejected_trainee->relationBetweenSeip->seip_status }}
                           </td>
                           <td>
-                            {{ $interested_registered_trainee->relationBetweenRemarks->remarks_status }}
+                            {{ $rejected_trainee->relationBetweenRemarks->remarks_status }}
                           </td>
                           <td>
-                              <a href="{{ '/admin/trainee' }}/{{ $interested_registered_trainee->id }}" class="btn btn-primary">open</a>
+                              <a href="{{ '/admin/trainee' }}/{{ $rejected_trainee->id }}" class="btn btn-primary">open</a>
                           </td>
                         </tr>
                       @endforeach
