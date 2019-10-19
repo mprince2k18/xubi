@@ -497,7 +497,7 @@ border-radius: 0 0 8px 8px;
 <!-- footer section end -->
 
 <!-- js file start -->
-<script src="{{ asset('xubisoft/assets/js/jquery-3.2.1.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="{{ asset('xubisoft/assets/js/plugins.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/Popper.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/bootstrap.min.js') }}"></script>
