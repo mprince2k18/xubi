@@ -141,7 +141,9 @@ Xubisoft | IT Solution
                     <div class="about-summary-content"> <i class="icon icon-agenda gradient-icon"></i>
                         <h2 class="section-title" style="font-family: 'Raleway', sans-serif;">Rather than hiding,<span class="gradient-title"><em>We stand in front of challenges</em></span></h2>
                         <p class="text-left" style="font-size:18px;font-family: 'Raleway', sans-serif;">In the world of information technology, the concept of ‘today’ is abstract. its all about what is coming tomorrow. Anyone who is prepared for today only, will be obsolete tomorrow. we must be prepared for tomorrow to keep up today. We, Xubisoft, are a group of professionals banded together to take on the IT challenges of tomorrow. we have weathered storms and learnt to stand tall when it is rough and navigate our way through it. to us, no challenge is too big and no job is too small. We welcome you all to our world; together we will build a better, brighter and sustainable future for us all.</p>
-                        <div class="btn-wraper"> <a href="#" class="btn btn-primary btn-gradient3">Get Started</a> </div>
+                        <div class="btn-wraper">
+                          {{-- <a href="#" class="btn btn-primary btn-gradient3">Get Started</a> --}}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -365,7 +367,7 @@ Xubisoft | IT Solution
 
             </div>
             <div class="team-bottom-info text-center">
-                <h4 class="content-title">Interested to Working With?</h4> <a href="contact.html" class="btn btn-primary btn-gradient3">Join Our Team</a> </div>
+                <h4 class="content-title">Interested to Working With?</h4> <a href="{{ route('career_index') }}" class="btn btn-primary btn-gradient3">Join Our Team</a> </div>
         </div>
     </section>
     <!-- agency team section end -->
@@ -466,7 +468,7 @@ Xubisoft | IT Solution
                 <div class="col-lg-6 mx-auto">
                     <div class="call-to-action text-center">
                         <h4 class="content-title">Interested! <br> Have any Project to Work With</h4>
-                        <div class="btn-wraper"> <a href="#" class="btn btn-primary style2 icon-right">Hire us</i></a> <a href="#" class="btn btn-outline-secondary">Learn More</a> </div>
+                        <div class="btn-wraper"> <a href="{{ route('contact') }}" class="btn btn-primary style2 icon-right">Hire us</i></a> <a href="{{ route('about') }}" class="btn btn-outline-secondary">Learn More</a> </div>
                     </div>
                 </div>
             </div>
