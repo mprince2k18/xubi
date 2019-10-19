@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2019 at 09:44 AM
+-- Generation Time: Oct 19, 2019 at 07:46 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -293,7 +293,9 @@ CREATE TABLE `education_statuses` (
 INSERT INTO `education_statuses` (`id`, `education_qualification`, `created_at`, `updated_at`) VALUES
 (1, 'Graduation', NULL, NULL),
 (2, 'Diploma', NULL, NULL),
-(3, 'Masters', NULL, NULL);
+(3, 'Masters', NULL, NULL),
+(4, 'BBA', NULL, NULL),
+(5, 'MBA', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -440,7 +442,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (159, '2019_10_15_153246_create_information_sources_table', 29),
 (160, '2019_10_15_160030_create_seip_statuses_table', 30),
 (164, '2019_10_15_161621_create_remarks_statuses_table', 31),
-(167, '2019_10_13_145826_create_seips_table', 32);
+(179, '2019_10_13_145826_create_seips_table', 32),
+(180, '2019_10_19_092729_create_quarters_table', 32);
 
 -- --------------------------------------------------------
 
@@ -543,6 +546,28 @@ INSERT INTO `product_pages` (`id`, `title`, `sub_title`, `title_watermark_single
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `quarters`
+--
+
+CREATE TABLE `quarters` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `quarter` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 2,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `quarters`
+--
+
+INSERT INTO `quarters` (`id`, `quarter`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Q8', 1, NULL, NULL),
+(2, 'Q7', 2, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `remarks_statuses`
 --
 
@@ -595,8 +620,8 @@ CREATE TABLE `seips` (
 --
 
 INSERT INTO `seips` (`id`, `trainee_id`, `quarter_id`, `name`, `email`, `phone`, `university`, `nid`, `gender`, `information_source`, `rocket_number`, `educational_qualification`, `working_status`, `have_seip`, `remarks`, `created_at`, `updated_at`) VALUES
-(1, 'XLSEIPBQ470', 'Q8', 'Fahad Hasan', 'fahadidb@gmail.com', '01611609372', 'JU', '3377887766', 1, 1, NULL, 3, 1, 2, 1, '2019-10-15 11:22:09', NULL),
-(2, 'XLSEIPBQ117', 'Q8', 'Mohammad Prince', 'mprince2k16@gmail.com', '3153424350', 'DU', '12343565756', 1, 1, NULL, 1, 1, 2, 1, '2019-10-16 04:35:05', NULL);
+(1, 'XLSEIPBQ8674', 'Q8', 'Mohammad Prince', 'mprince2k16@gmail.com', '3153424350', 'DU', '213232321312312312', 1, 1, NULL, 1, 1, 1, 1, '2019-10-19 05:02:19', NULL),
+(2, 'XLSEIPBQ82', 'Q8', 'Test Name', 'waxentawfiq@GMAIL.COM', '31534243501212121', 'DU', '121212312323443453', 1, 1, NULL, 1, 1, 1, 2, '2019-10-19 05:05:37', '2019-10-19 05:17:45');
 
 -- --------------------------------------------------------
 
@@ -960,6 +985,13 @@ ALTER TABLE `product_pages`
   ADD UNIQUE KEY `product_pages_product_category_id_unique` (`product_category_id`);
 
 --
+-- Indexes for table `quarters`
+--
+ALTER TABLE `quarters`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `quarters_quarter_unique` (`quarter`);
+
+--
 -- Indexes for table `remarks_statuses`
 --
 ALTER TABLE `remarks_statuses`
@@ -1087,7 +1119,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `education_statuses`
 --
 ALTER TABLE `education_statuses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1123,7 +1155,7 @@ ALTER TABLE `infos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
 
 --
 -- AUTO_INCREMENT for table `portfolios`
@@ -1144,6 +1176,12 @@ ALTER TABLE `product_pages`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `quarters`
+--
+ALTER TABLE `quarters`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `remarks_statuses`
 --
 ALTER TABLE `remarks_statuses`
@@ -1153,7 +1191,7 @@ ALTER TABLE `remarks_statuses`
 -- AUTO_INCREMENT for table `seips`
 --
 ALTER TABLE `seips`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `seip_statuses`
