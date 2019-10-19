@@ -468,7 +468,7 @@ Xubisoft | IT Solution
                 <div class="col-lg-6 mx-auto">
                     <div class="call-to-action text-center">
                         <h4 class="content-title">Interested! <br> Have any Project to Work With</h4>
-                        <div class="btn-wraper"> <a href="{{ route('contact') }}" class="btn btn-primary style2 icon-right">Hire us</i></a> <a href="{{ route('about') }}" class="btn btn-outline-secondary">Learn More</a> </div>
+                        <div class="btn-wraper"> <a href="{{ route('career_index') }}" class="btn btn-primary style2 icon-right">Hire us</i></a> <a href="{{ route('about') }}" class="btn btn-outline-secondary">Learn More</a> </div>
                     </div>
                 </div>
             </div>
