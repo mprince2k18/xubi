@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473565/css/style_oefpc8.css">
     <!--Theme Responsive css-->
     <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473565/css/responsive_qjrbqn.css" />
+    <link rel="stylesheet" href="{{ asset('xubisoft/assets/custom/css/custom.css') }}" />
 
 
   </head>
@@ -46,22 +47,6 @@
 <style>
 
 @import url('https://fonts.googleapis.com/css?family=Rancho&display=swap');
-
-.nav-menu li.active>a{
-  color: #ecf0f1 !important;
-  background-color: #00AEEF;
-}
-.nav-menu li a:hover{
-  background-color: #00AEEF;
-  color: #ecf0f1 !important;
-
-}
-
-
-.xs-header.header-style4 .xs-menus .nav-menu>li>a{
-  padding: 15px 15px !important;
-  border-radius: 10px;
-  }
 
     /*PRELOADING------------ */
 
@@ -76,112 +61,12 @@
         margin:0 auto
     }
 
-.header-transparent{
-  position: fixed;
-}
-
-.case-details-banner{
-  margin-top: 83px;
-}
-
-/* scroll bar */
-
-body::-webkit-scrollbar {
-    width: 0.7em;
-}
-
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-body::-webkit-scrollbar-thumb {
-background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
-  outline: 1px solid slategrey;
-  border-radius: 15px;
-}
-
-/* scroll bar end */
-.main-menu{
-/* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
-background-color: white;
-border-radius: 0 0 8px 8px;
-}
-
-
 .xs-footer-section{
   background-image: url({{ asset('xubisoft/assets/images/footer-bg.jpg') }});
   background-repeat:no-repeat;
   background-size: cover;
 
 }
-
-.xs-footer-section .footer-top-area{
-  background-color: rgba(0,0,0,0.8);
-}
-
-.xs-footer-section.footer-style3 .footer-bottom-area{
-  background-color: #2d3436;
-}
-
-.footer-widget p{
-  text-align: left;
-}
-
-.watermark-title{
-  top: -70px !important;
-}
-
-.inner-banner-title{
-  font-family: 'Rancho', cursive !important;
-}
-
-.dropdown-item{
-  padding: 15px 15px !important;
-}
-
-.menu__toggle::before{
-  background-color: #2d3436 !important;
-  opacity: .7;
-}
-
-.menu__nav{
-  text-align: center;
-}
-
-.widget-title{
-  font-size: 20px !important;
-}
-.xs-list li a{
-  font-size: 16px !important;
-}
-
-.footer-logo-wraper{
-  text-align: center;
-}
-.footer-client{
-  padding: 20px;
-}
-
-.footer-logo img{
-  width: 35%;
-}
-
-.footer-client-1 img{
-  width: 100%;
-}
-
-.footer-client-1{
-  text-align: center;
-}
-
-.footer-client-2 img{
-  width: 100%;
-}
-
-.footer-client-2{
-  text-align: center;
-}
-
 
 </style>
 
@@ -506,26 +391,26 @@ border-radius: 0 0 8px 8px;
 {{-- <script src="{{ asset('xubisoft/assets/js/owl.carousel.min.js') }}"></script> --}}
 <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
 <script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473785/js/scrollax_dtmyu7.js"></script>
-<script src="{{ asset('xubisoft/assets/js/jquery.ajaxchimp.min.js') }}"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473784/js/jquery.ajaxchimp.min_qshmoz.js"></script>
 <script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473784/js/jquery.waypoints.min_qr4mky.js"></script>
-<script src="{{ asset('xubisoft/assets/js/isotope.pkgd.min.js') }}"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473783/js/isotope.pkgd.min_xf5nme.js"></script>
 <script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473786/js/swiper.min_pkhxhu.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyDeZubzJTQgtjreqsdaGMGXxaxP-pv6pSk"></script>
-<script src="{{ asset('xubisoft/assets/js/jquery.easypiechart.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/delighters.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/typed.js') }}"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473784/js/jquery.easypiechart.min_zjucw2.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473783/js/delighters_aoz9jm.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473783/js/typed_ynowna.js"></script>
 <script src="{{ asset('xubisoft/assets/js/jquery.parallax.js') }}"></script>
 <script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473784/js/jquery.themepunch.tools.min_ellld7.js"></script>
-<script src="{{ asset('xubisoft/assets/js/jquery.themepunch.revolution.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.actions.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.carousel.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.migration.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.navigation.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.parallax.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.video.min.js') }}"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473784/js/jquery.themepunch.revolution.min_twcmne.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571474546/js/extensions/revolution.extension.actions.min_xnvqdm.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571474546/js/extensions/revolution.extension.carousel.min_ryz4vy.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571474546/js/extensions/revolution.extension.kenburn.min_in2eeu.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571474546/js/extensions/revolution.extension.layeranimation.min_hsgzsw.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571474546/js/extensions/revolution.extension.migration.min_s2eagq.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571474546/js/extensions/revolution.extension.navigation.min_rzc4vv.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571474546/js/extensions/revolution.extension.parallax.min_jdbnwl.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571474547/js/extensions/revolution.extension.slideanims.min_yidwxh.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571474547/js/extensions/revolution.extension.video.min_mkiaib.js"></script>
 <script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473785/js/skrollr.min_tomraf.js"></script>
 <script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473785/js/shuffle-letters_yctott.js"></script>
 
