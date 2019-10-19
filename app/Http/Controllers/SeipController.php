@@ -60,10 +60,14 @@ class SeipController extends Controller
         'have_seip.required' => 'Please Fill SEIP Training Before',
       ]);
 
+      $last_id = Seip::latest()->first();
+
+      $trainee_id_generate = $last_id + 1;
+
       $quarter = 8;
 
       $last_inserted_id = Seip::insertGetId([
-        'trainee_id'=>'XLSEIPBQ'. $quarter . rand(100,1000),
+        'trainee_id'=>'XLSEIPBQ'. $quarter . $trainee_id_generate,
         'quarter_id'=>'Q8',
         'name'=>$request->name,
         'email'=>$request->email,
