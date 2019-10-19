@@ -531,110 +531,13 @@ border-radius: 0 0 8px 8px;
 
 <script src="{{ asset('xubisoft/assets/js/main.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/sweetalert2.all.js') }}"></script>
+<script src="{{ asset('xubisoft/assets/custom/js/custom.js') }}"></script>
 
 
 <script>
   @include('sweetalert::alert')
 </script>
 
-<script type="text/javascript">
-// ______________ PAGE LOADING
-	$(window).on("load", function(e) {
-		$("#global-loader").fadeOut("fast");
-	})
-</script>
-
-
-
-<!-- End js file -->
-<script>
-    var swiper = new Swiper('.blog-slider', {
-        spaceBetween: 30
-        , effect: 'fade'
-        , loop: false
-        , mousewheel: {
-            invert: false
-        , }
-        , // autoHeight: true,
-        pagination: {
-            el: '.blog-slider__pagination'
-            , clickable: true
-        , }
-    });
-</script>
-
-<script type="text/javascript">
-
-(function($) { "use strict";
-
-$(function() {
-  var header = $(".start-style");
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 10) {
-      header.removeClass('start-style').addClass("scroll-on");
-    } else {
-      header.removeClass("scroll-on").addClass('start-style');
-    }
-  });
-});
-
-//Animation
-
-$(document).ready(function() {
-  $('body.hero-anime').removeClass('hero-anime');
-});
-
-//Menu On Hover
-
-$('body').on('mouseenter mouseleave','.nav-item',function(e){
-    if ($(window).width() > 750) {
-      var _d=$(e.target).closest('.nav-item');_d.addClass('show');
-      setTimeout(function(){
-      _d[_d.is(':hover')?'addClass':'removeClass']('show');
-      },1);
-    }
-});
-
-})(jQuery);
-</script>
-
-
-
-<script type="text/javascript">
-
-(function(){
-  'use strict';
-
-  class Menu {
-    constructor(settings) {
-      this.menuNode = settings.menuNode;
-    }
-
-    toggleMenuState(className) {
-      if (typeof className !== 'string' || className.length === 0) {
-        return console.log('you did not give the class for toggleState function');
-      }
-      return  this.menuNode.classList.toggle(className);
-    }
-  }
-
-  const jsMenuNode = document.querySelector('.mobile-menu');
-  const demoMenu = new Menu ({
-    menuNode: jsMenuNode
-  });
-
-  function callMenuToggle(event) {
-    demoMenu.toggleMenuState('menu_activated');
-  }
-
-  jsMenuNode.querySelector('.menu__hamburger').addEventListener('click', callMenuToggle);
-})();
-
-
-
-</script>
 
 </body>
 
