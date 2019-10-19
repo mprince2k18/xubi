@@ -65,7 +65,7 @@
                             {{ $Seip_registered_trainee->relationBetweenRemarks->remarks_status }}
                           </td>
                           <td>
-                              <a href="{{ '/admin/trainee' }}/{{ $Seip_registered_trainee->id }}" class="btn btn-primary">open</a>
+                              <a href="{{ '/admin/trainee' }}/{{ $Seip_registered_trainee->id }}" class="btn btn-sm btn-primary">open</a>
                           </td>
                         </tr>
                       @endforeach
