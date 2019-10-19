@@ -14,31 +14,31 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CRoboto:400,500,700,900%7CPlayfair+Display:400,700,700i,900,900i%7CWork+Sans:400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <!-- signatra-font -->
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/signatra-font.css') }}">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473564/css/signatra-font_yhlzuf.css">
     <link rel="icon" type="image/png" href="{{ asset('xubisoft/assets/images/xubi/cropped-download-32x32.jpg') }}">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/GrayGrids/LineIcons/LineIcons.css">
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473564/css/font-awesome.min_vht8ud.css">
     {{-- <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/bootstrap.min.css') }}"> --}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/iconfont.css') }}">
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/owl.theme.default.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/swiper.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/rev-settings.css') }}">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473563/css/animate_dmpuz6.css">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473563/css/icons_rczxjz.css">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473564/css/magnific-popup_tttv7p.css">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473564/css/owl.carousel.min_qd0csf.css">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473564/css/owl.theme.default.min_b3cizb.css">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473565/css/swiper.min_weyvny.css">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473564/css/rev-settings_ul7oao.css">
 
     @yield('css')
 
     <!--For Plugins external css-->
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/plugins.css') }}" />
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473564/css/plugins_bvimsp.css" />
     <!--font css-->
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/icons.css') }}" />
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473563/css/icons_rczxjz.css" />
     <!--Theme custom css -->
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/style.css') }}">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473565/css/style_oefpc8.css">
     <!--Theme Responsive css-->
-    <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/responsive.css') }}" />
+    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473565/css/responsive_qjrbqn.css" />
 
 
   </head>
