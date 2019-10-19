@@ -498,22 +498,24 @@ border-radius: 0 0 8px 8px;
 
 <!-- js file start -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="{{ asset('xubisoft/assets/js/plugins.js') }}"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473785/js/plugins_fnsqdy.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="{{ asset('xubisoft/assets/js/jquery.magnific-popup.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/scrollax.js') }}"></script>
+{{-- <script src="{{ asset('xubisoft/assets/js/jquery.magnific-popup.min.js') }}"></script> --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+{{-- <script src="{{ asset('xubisoft/assets/js/owl.carousel.min.js') }}"></script> --}}
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473785/js/scrollax_dtmyu7.js"></script>
 <script src="{{ asset('xubisoft/assets/js/jquery.ajaxchimp.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/jquery.waypoints.min.js') }}"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473784/js/jquery.waypoints.min_qr4mky.js"></script>
 <script src="{{ asset('xubisoft/assets/js/isotope.pkgd.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/swiper.min.js') }}"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473786/js/swiper.min_pkhxhu.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyDeZubzJTQgtjreqsdaGMGXxaxP-pv6pSk"></script>
 <script src="{{ asset('xubisoft/assets/js/jquery.easypiechart.min.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/delighters.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/typed.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/jquery.parallax.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/jquery.themepunch.tools.min.js') }}"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473784/js/jquery.themepunch.tools.min_ellld7.js"></script>
 <script src="{{ asset('xubisoft/assets/js/jquery.themepunch.revolution.min.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.actions.min.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.carousel.min.js') }}"></script>
@@ -524,13 +526,13 @@ border-radius: 0 0 8px 8px;
 <script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.parallax.min.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
 <script src="{{ asset('xubisoft/assets/js/extensions/revolution.extension.video.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/skrollr.min.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/shuffle-letters.js') }}"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473785/js/skrollr.min_tomraf.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473785/js/shuffle-letters_yctott.js"></script>
 
 @yield('js')
 
-<script src="{{ asset('xubisoft/assets/js/main.js') }}"></script>
-<script src="{{ asset('xubisoft/assets/js/sweetalert2.all.js') }}"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473785/js/main_udaxbe.js"></script>
+<script src="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473785/js/sweetalert2.all_g3qaus.js"></script>
 <script src="{{ asset('xubisoft/assets/custom/js/custom.js') }}"></script>
 
 
