@@ -256,6 +256,14 @@ Route::get('/admin/waiting/trainee','SeipController@waiting_trainee_index')->nam
 Route::get('/admin/rejected/trainee','SeipController@rejected_trainee_index')->name('rejected_trainee_index');
 
 
+// quarter
+Route::get('/admin/quarter','SeipController@quarter_index')->name('quarter_index');
+// quarter_insert
+Route::post('/admin/quarter_insert','SeipController@quarter_insert')->name('quarter_insert');
+// quarter_status
+Route::get('/admin/quarter/status/edit/{quarter}','SeipController@quarter_status_edit')->name('quarter_status_edit');
+
+
 
 
 

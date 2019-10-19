@@ -617,6 +617,7 @@ class ComposerStaticInit82fe1038ffdc273678cc57e00edf9792
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Quarter' => __DIR__ . '/../..' . '/app/Quarter.php',
         'App\\RemarksStatus' => __DIR__ . '/../..' . '/app/RemarksStatus.php',
         'App\\Seip' => __DIR__ . '/../..' . '/app/Seip.php',
         'App\\SeipStatus' => __DIR__ . '/../..' . '/app/SeipStatus.php',

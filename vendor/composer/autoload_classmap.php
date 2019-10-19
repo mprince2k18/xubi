@@ -171,6 +171,7 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
+    'App\\Quarter' => $baseDir . '/app/Quarter.php',
     'App\\RemarksStatus' => $baseDir . '/app/RemarksStatus.php',
     'App\\Seip' => $baseDir . '/app/Seip.php',
     'App\\SeipStatus' => $baseDir . '/app/SeipStatus.php',
