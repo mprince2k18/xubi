@@ -94,11 +94,11 @@ Xubisoft | IT Solution
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <div class="agency-section-title text-center section-title-style2">
-                        <h2 class="main-title">We are young but not bold</h2>
+                        <h2 class="main-title text-uppercase" style="font-family: 'Raleway', sans-serif; fonr-weight:bold;">We are young but bold</h2>
 
 
 
-                        <p>We work systematically to integrate corporate responsibility in our core business We work systematically to integrate corporate responsibility in our core business</p>
+                        <p style="font-size:20px;">We work systematically to integrate corporate responsibility in our core business.</p>
                     </div>
                 </div>
             </div>
@@ -139,8 +139,8 @@ Xubisoft | IT Solution
                 </div>
                 <div class="col-md-6 align-self-center">
                     <div class="about-summary-content"> <i class="icon icon-agenda gradient-icon"></i>
-                        <h2 class="section-title">We don’t hide,  <span class="gradient-title"><em>we stand tall in front of challenge</em></span></h2>
-                        <p>In the world of information technology, the concept of ‘today’ is abstract. its all about what is coming tomorrow. Anyone who is prepared for today only, will be obsolete tomorrow. we must be prepared for tomorrow to keep up today. We, Xubisoft, are a group of professionals banded together to take on the IT challenges of tomorrow. we have weathered storms and learnt to stand tall when it is rough and navigate our way through it. to us, no challenge is too big and no job is too small. We welcome you all to our world; together we will build a better, brighter and sustainable future for us all.</p>
+                        <h2 class="section-title" style="font-family: 'Raleway', sans-serif;">Rather than hiding,<span class="gradient-title"><em>We stand in front of challenges</em></span></h2>
+                        <p class="text-left" style="font-size:18px;font-family: 'Raleway', sans-serif;">In the world of information technology, the concept of ‘today’ is abstract. its all about what is coming tomorrow. Anyone who is prepared for today only, will be obsolete tomorrow. we must be prepared for tomorrow to keep up today. We, Xubisoft, are a group of professionals banded together to take on the IT challenges of tomorrow. we have weathered storms and learnt to stand tall when it is rough and navigate our way through it. to us, no challenge is too big and no job is too small. We welcome you all to our world; together we will build a better, brighter and sustainable future for us all.</p>
                         <div class="btn-wraper"> <a href="#" class="btn btn-primary btn-gradient3">Get Started</a> </div>
                     </div>
                 </div>
@@ -174,19 +174,19 @@ Xubisoft | IT Solution
     <div class="swiper-slide">
         <div class="client-comments">
             <div class="client-massage">
-                <p> {{ $ceo->ceo_message }} </p>
+                <p class="text-left"> {{ $ceo->ceo_message }} </p>
             </div>
             <div class="client-info clearfix">
                 <div class="client-avatar">
 
                     <img src="{{ asset('uploads/ceo')}}/{{ $ceo ->ceo_photo }}" alt="{{ $ceo->ceo_name}}">
                     <!-- <div class="client-sign">
-                        <img src="{{ asset('xubisoft/assets/images/client-sign.png') }}" alt="">
+
                     </div> -->
                 </div>
                 <div class="client-bio">
-                    <h3 class="client-name">{{ $ceo->ceo_name}}</h3>
-                    <p class="designation">{{ $ceo->ceo_position }}</p>
+                    <h3 class="client-name text-left">{{ $ceo->ceo_name}}</h3>
+                    <p class="designation text-left">{{ $ceo->ceo_position }}</p>
                 </div>
             </div>
         </div>
@@ -215,8 +215,8 @@ Xubisoft | IT Solution
                 <div class="col-lg-6">
                     <div class="success-summary">
                         <div class="success-summary-content"> <i class="icon icon-coins-2 gradient-icon"></i>
-                            <h3 class="content-title">A Satisfied Customer is best for business</h3>
-                            <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <h3 class="content-title font-weight-bold" style="font-family: 'Raleway', sans-serif;">Satisfied customers are our only customers</h3>
+                            <p class="text-left">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                         </div>
                         <div class="piechats-wraper clearfix">
                             <div class="single-piechart">
@@ -283,7 +283,7 @@ Xubisoft | IT Solution
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="agency-section-title text-center section-title-style2">
-                        <h4 class="content-title"> The True measure of the value of any business leader and manager is performance</h4>
+                        <h4 class="content-title font-weight-bold" style="font-family: 'Raleway', sans-serif;"> The True measure of the value of any business leader and manager is performance</h4>
                         <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                     </div>
                     <!-- .agency-section-title .section-title-style2 END -->

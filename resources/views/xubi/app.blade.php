@@ -17,12 +17,12 @@
     <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473564/css/signatra-font_yhlzuf.css">
     <link rel="icon" type="image/png" href="{{ asset('xubisoft/assets/images/xubi/cropped-download-32x32.jpg') }}">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/GrayGrids/LineIcons/LineIcons.css">
-    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473564/css/font-awesome.min_vht8ud.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     {{-- <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/bootstrap.min.css') }}"> --}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473563/css/animate_dmpuz6.css">
-    <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473563/css/icons_rczxjz.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/GrayGrids/LineIcons/LineIcons.css">
     <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473564/css/magnific-popup_tttv7p.css">
     <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473564/css/owl.carousel.min_qd0csf.css">
     <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473564/css/owl.theme.default.min_b3cizb.css">
@@ -195,7 +195,7 @@
   								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
   									<!-- <a class="nav-link" href="#">Contact</a> -->
                     <a href="#modal-popup-2" class="navsearch-button xs-modal-popup">
-                          <i class="icon icon-search"></i>
+                          <i class="fa fa-search"></i>
                         </a>
   									<!-- <a class="nav-link" href="#">Contact</a> -->
   								</li>
