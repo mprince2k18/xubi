@@ -341,7 +341,10 @@ Xubisoft | IT Solution
                 </div>
             </div>
             <!-- .row end -->
-            <div class="row xs-mb-5">
+
+
+
+            {{-- <div class="row xs-mb-5">
               @foreach ($teams as $team)
                 <div class="col-lg-3 col-md-6">
                     <div class="single-team-style2">
@@ -365,7 +368,27 @@ Xubisoft | IT Solution
                   </div>
               @endforeach
 
-            </div>
+            </div> --}}
+
+            <div class="py-5 text-center text-dark">
+                <div class="container" >
+                  <div class="row">
+
+                    @foreach ($teams as $team)
+
+                      <div class="col-lg-3 col-6 p-4">
+                        <img class="img-fluid d-block rounded-circle" src="https://static.pingendo.com/img-placeholder-3.svg" alt="{{ $team->name }}">
+                        <p class="h5"> {{ $team->name }} </p>
+                        <p>{{ $team->designation }}</p>
+                      </div>
+
+                  @endforeach
+
+                  </div>
+                </div>
+              </div>
+
+
             <div class="team-bottom-info text-center">
                 <h4 class="content-title">Interested to Working With?</h4> <a href="{{ route('career_index') }}" class="btn btn-primary btn-gradient3">Join Our Team</a> </div>
         </div>
