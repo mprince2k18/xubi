@@ -35,7 +35,7 @@ class TeamController extends Controller
         $photo_upload     =  $request ->team_photo;
         $photo_extension  =  $photo_upload -> getClientOriginalExtension();
         $photo_name       =  $last_inserted_id . "." . $photo_extension;
-        Image::make($photo_upload)->resize(258,404)->save(base_path('public/uploads/team/'.$photo_name),100);
+        Image::make($photo_upload)->resize(229,229)->save(base_path('public/uploads/team/'.$photo_name),100);
         Team::find($last_inserted_id)->update([
         'team_photo'          => $photo_name,
       ]);

@@ -377,7 +377,7 @@ Xubisoft | IT Solution
                     @foreach ($teams as $team)
 
                       <div class="col-lg-3 col-6 p-4">
-                        <img class="img-fluid d-block rounded-circle" src="https://static.pingendo.com/img-placeholder-3.svg" alt="{{ $team->name }}">
+                        <img class="img-fluid d-block rounded-circle" src="{{ asset('uploads/team')}}/{{ $team->team_photo }}" alt="{{ $team->name }}">
                         <p class="h5"> {{ $team->name }} </p>
                         <p>{{ $team->designation }}</p>
                       </div>
