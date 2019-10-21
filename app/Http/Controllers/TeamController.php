@@ -75,7 +75,7 @@ function update_team(Request $request)
       $photo_upload     = $request->team_photo;
       $photo_extension  =  $photo_upload->getClientOriginalExtension();
       $photo_name       =  $request->team_photo . "." . $photo_extension;
-      Image::make($photo_upload)->resize(258,404)->save(base_path('public/uploads/team/'.$photo_name),100);
+      Image::make($photo_upload)->resize(229,229)->save(base_path('public/uploads/team/'.$photo_name),100);
       Team::find($request->team_id)->update([
       'team_photo'          => $photo_name,
     ]);
@@ -90,7 +90,7 @@ function update_team(Request $request)
       $photo_upload     = $request->team_photo;
       $photo_extension  =  $photo_upload->getClientOriginalExtension();
       $photo_name       =  $request->team_id . "." . $photo_extension;
-      Image::make($photo_upload)->resize(258,404)->save(base_path('public/uploads/team/'.$photo_name),100);
+      Image::make($photo_upload)->resize(229,229)->save(base_path('public/uploads/team/'.$photo_name),100);
       Team::find($request->team_id)->update([
       'team_photo'          => $photo_name,
     ]);
