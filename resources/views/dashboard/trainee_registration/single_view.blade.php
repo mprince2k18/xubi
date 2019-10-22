@@ -152,6 +152,7 @@
                         <!-- Button trigger modal -->
                           <a href="" class="btn btn-primary">{{ $single_trainee->relationBetweenRemarks->remarks_status }}</a>
                           <a href="{{ url('/admin/trainee/pdf_view') }}/{{ $single_trainee->id }}" class="btn btn-success">PDF View</a>
+                          <a href="{{ url('/admin/trainee/pdf_view') }}/{{ $single_trainee->id }}" class="btn btn-success">Send Mail</a>
 
 
 
