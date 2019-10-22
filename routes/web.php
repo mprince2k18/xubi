@@ -288,9 +288,9 @@ Route::get('/seip/registration','SeipController@index')->name('seip_registration
 Route::post('/seip/registration/create','SeipController@create')->name('seip_registration_create');
 
 
-
-
-
+// pdf_download
+// Route::get('pdf_download', 'PdfController@pdfDownload');
+Route::get('/admin/trainee/pdf_view/{single}', 'PdfController@pdfView');
 
 
 

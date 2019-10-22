@@ -169,6 +169,7 @@ function update(Request $request)
     'working_status'=>$request->working_status,
     'have_seip'=>$request->have_seip,
     'remarks'=>$request->remarks,
+    'updated_at'=>Carbon::now(),
   ]);
 
   Alert::success('Profile updated','Success');

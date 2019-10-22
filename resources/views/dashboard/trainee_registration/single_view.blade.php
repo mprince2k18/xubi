@@ -139,9 +139,10 @@
                                     <h3>Quarter : <span>{{ $single_trainee->quarter_id }}</span></h3>
 
                                     <div class="text-left">
-                                        <p>Register Time & Date</p>
-                                        <p>{{ $single_trainee->created_at->format('d-M-Y') }}</p>
-                                        <p>{{ $single_trainee->created_at->format('h:i:s a') }}</p>
+                                        {{-- <p>Register Time & Date</p> --}}
+                                        <p>Register Time : {{ $single_trainee->created_at->format('d-M-Y') }}</p>
+                                        <p>Created At : {{ $single_trainee->created_at->format('h:i:s a') }}</p>
+                                        <p>Touched : {{ $single_trainee->updated_at->format('h:i:s a') }}</p>
 
                                     </div>
                         </div>
@@ -149,7 +150,8 @@
                     <div class="col-md-2">
                         <!-- Extra large modal -->
                         <!-- Button trigger modal -->
-                          <a href="#" class="btn btn-primary">{{ $single_trainee->relationBetweenRemarks->remarks_status }}</a>
+                          <a href="" class="btn btn-primary">{{ $single_trainee->relationBetweenRemarks->remarks_status }}</a>
+                          <a href="{{ url('/admin/trainee/pdf_view') }}/{{ $single_trainee->id }}" class="btn btn-success">PDF View</a>
 
 
 
