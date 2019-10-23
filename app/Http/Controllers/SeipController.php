@@ -98,7 +98,8 @@ class SeipController extends Controller
       $name = $request->name;
       $email = $request->email;
 
-      Mail::to($email)->send(new SendingMail($name));
+      Mail::to($email,$name)->cc('fahadidb@gmail.com')
+                            ->send(new SendingMail($name));
 
       return back();
 

@@ -32,6 +32,8 @@ class SendingMail extends Mailable
     public function build()
     {
         $name ="";
-        return $this->view('dashboard.trainee_registration.mail.index',compact('name'));
+        return $this->from('mprince2k16@gmail.com','Moohammad Prince')
+                    ->subject('Congratulations, Your registration has been successfully processed. We contact with you within a short time.')
+                    ->view('dashboard.trainee_registration.mail.index',compact('name'));
     }
 }
