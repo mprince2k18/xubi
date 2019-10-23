@@ -143,7 +143,7 @@
                                         <p>Register Time : {{ $single_trainee->created_at->format('d-M-Y') }}</p>
                                         <p>Created At : {{ $single_trainee->created_at->format('h:i:s a') }}</p>
                                         {{-- <p>Touched : {{ $single_trainee->updated_at->format('h:i:s a') }}</p> --}}
-                                        <p>Touched : {{ Schema::hasTable($single_trainee->updated_at) ? $single_trainee->updated_at->format('h:i:s a') : "Not Yet Touched" }} </p>
+                                        <p>Touched : {{ isset($single_trainee->updated_at) ? $single_trainee->updated_at->format('h:i:s a') : "Not Yet Touched" }} </p>
 
 
                                     </div>

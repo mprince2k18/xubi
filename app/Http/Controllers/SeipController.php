@@ -13,6 +13,8 @@ use App\SeipStatus;
 use App\RemarksStatus;
 use App\Quarter;
 use Alert;
+use Mail;
+use App\Mail\SendingMail;
 
 class SeipController extends Controller
 {
@@ -92,6 +94,10 @@ class SeipController extends Controller
       ]);
 
       Alert::success('Successfully', 'Done');
+
+      $name = $request->name;
+
+      Mail::to('mprince2k16@gmail.com')->send(new SendingMail($name));
 
       return back();
 
