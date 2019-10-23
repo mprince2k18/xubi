@@ -96,8 +96,9 @@ class SeipController extends Controller
       Alert::success('Successfully', 'Done');
 
       $name = $request->name;
+      $email = $request->email;
 
-      Mail::to('mprince2k16@gmail.com')->send(new SendingMail($name));
+      Mail::to($email)->send(new SendingMail($name));
 
       return back();
 
