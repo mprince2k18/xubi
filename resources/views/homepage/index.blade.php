@@ -328,8 +328,14 @@ Xubisoft | IT Solution
         <!-- .container END -->
     </section>
     <!-- funfact area section end -->
+
+
+    {{------------------------- TEAM -------------------------------}}
+
+
+
     <!-- agency team section -->
-    <section class="xs-section-padding gray-bg">
+    {{-- <section class="xs-section-padding gray-bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
@@ -339,7 +345,7 @@ Xubisoft | IT Solution
                         <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- .row end -->
 
 
@@ -370,7 +376,7 @@ Xubisoft | IT Solution
 
             </div> --}}
 
-            <div class="py-5 text-center text-dark">
+            {{-- <div class="py-5 text-center text-dark">
                 <div class="container" >
                   <div class="row">
 
@@ -386,14 +392,18 @@ Xubisoft | IT Solution
 
                   </div>
                 </div>
-              </div>
+              </div> --}}
 
 
-            <div class="team-bottom-info text-center">
+            {{-- <div class="team-bottom-info text-center">
                 <h4 class="content-title">Interested to Working With?</h4> <a href="{{ route('career_index') }}" class="btn btn-primary btn-gradient3">Join Our Team</a> </div>
         </div>
-    </section>
+    </section> --}}
     <!-- agency team section end -->
+
+    {{------------------------- TEAM END -------------------------------}}
+
+
     <!-- agency media area section -->
     <section class="xs-section-padding agency_media_section" data-scrollax-parent="true">
         <div class="container">

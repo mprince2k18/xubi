@@ -367,10 +367,10 @@
                 <div class="col-md-6">
                     <div class="copyright-content">
                         <ul class="social-list version-2">
-                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/Xubisoft/" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                            {{-- <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li> --}}
+                            <li><a href="https://www.linkedin.com/company/xubisoft/" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/xubisoft/" class="instagram"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>

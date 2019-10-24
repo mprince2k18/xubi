@@ -2,6 +2,7 @@
 .nav-menu li.active>a{
   color: #ecf0f1 !important;
   background-color: #00AEEF;
+
 }
 .nav-menu li a:hover{
   background-color: #00AEEF;
@@ -68,6 +69,8 @@
 
   .dropdown-item{
     padding: 15px 15px !important;
+    text-transform:
+    
   }
 
   .menu__toggle::before{
