@@ -311,7 +311,7 @@
 			</form>
 
 			<div class="text-center m-3">
-				<a href="https://apps.xubisoft.com/seip/registration">Having problem? try this</a>
+				<a href="https://apps.xubisoft.com/seip/registration" class="text-danger">Having problem? try this</a>
 			</div>
 
 
