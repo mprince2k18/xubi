@@ -164,16 +164,19 @@
 												<td class="p30-15" style="padding: 45px 40px;">
 													<table width="100%" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td class="img-center pb10" style="font-size:0pt; line-height:0pt; text-align:center; padding-bottom:10px;"><img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571827396/img/mail/t2_free_ico_pin_i8ralf.png" width="20" height="30" border="0" alt="" /></td>
+															<td class="img-center pb10" style="font-size:0pt; line-height:0pt; text-align:center; padding-bottom:10px;">
+																<img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571827396/img/mail/t2_free_ico_pin_i8ralf.png" width="20" height="30" border="0" alt="" />
+															</td>
 														</tr>
 														<tr>
 															<td class="h2 pb15" style="color:#ffffff; font-family:'Playfair Display', Georgia, serif; font-size:35px; line-height:46px; text-align:center; font-style:italic; padding-bottom:15px;"><multiline>Where to find us</multiline></td>
 														</tr>
 
 														<tr>
-															<td class="fluid-img pb40" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom:40px;">
-															    	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.8530525899987!2d90.40053811498342!3d23.85935128453583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c432847eacf7%3A0xd02f082dce6d913!2sXubisoft%20Ltd.!5e0!3m2!1sen!2sbd!4v1568285563570!5m2!1sen!2sbd" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                                    <p class="text-center">House-19, Road-4, Sector-4, Uttara, Dhaka-1230</p>
+															<td class="img-center pb10" style="font-size:0pt; line-height:0pt; text-align:center; padding-bottom:10px; border-radius:5px;">
+																<a href="https://goo.gl/maps/iCcN1dMYLypJXXCLA">
+																	<img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571902579/img/Screenshot_1_rgtth3.png" width="570" height="321" border="0" alt="" />
+																</a>
 															</td>
 														</tr>
 														<tr>
