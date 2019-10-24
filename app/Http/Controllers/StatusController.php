@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\WorkingStatus;
+use App\FatherWorkingStatus;
+use App\MotherWorkingStatus;
 use App\GenderStatus;
 use App\InformationSource;
 use App\SeipStatus;
@@ -23,6 +25,28 @@ class StatusController extends Controller
         return back();
   }
   // add_gender_status
+
+  // add_father_working_status
+  function add_father_working_status (Request $request)
+  {
+    $add_father_working_statuses = FatherWorkingStatus::insert($request->except('_token'));
+
+        Alert::toast('Father Working Status Added','success');
+
+        return back();
+  }
+  // add_father_working_status end
+
+  // add_mother_working_status
+  function add_mother_working_status (Request $request)
+  {
+    $add_mother_working_statuses = MotherWorkingStatus::insert($request->except('_token'));
+
+        Alert::toast('Mother Working Status Added','success');
+
+        return back();
+  }
+  // add_mother_working_status end
 
 
   function add_gender_status (Request $request)

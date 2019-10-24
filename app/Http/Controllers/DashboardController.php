@@ -18,6 +18,8 @@ use App\Portfolio;
 use App\Seip;
 use App\EducationStatus;
 use App\WorkingStatus;
+use App\FatherWorkingStatus;
+use App\MotherWorkingStatus;
 use App\GenderStatus;
 use App\InformationSource;
 use App\SeipStatus;
@@ -138,11 +140,13 @@ class DashboardController extends Controller
     {
        $education_qualifications = EducationStatus::paginate(5);
        $working_statuses = WorkingStatus::paginate(5);
+       $father_working_statuses = FatherWorkingStatus::paginate(5);
+       $mother_working_statuses = MotherWorkingStatus::paginate(5);
        $gender_statuses = GenderStatus::paginate(5);
        $information_sources  = InformationSource::paginate(5);
        $seip_statuses  = SeipStatus::paginate(5);
        $remarks_statuses = RemarksStatus::paginate(5);
-      return view('dashboard.status.index',compact('education_qualifications','working_statuses','gender_statuses','information_sources','seip_statuses','remarks_statuses'));
+      return view('dashboard.status.index',compact('education_qualifications','working_statuses','father_working_statuses','mother_working_statuses','gender_statuses','information_sources','seip_statuses','remarks_statuses'));
     }
     // trainee_index page
 
@@ -152,7 +156,7 @@ class DashboardController extends Controller
       return view('dashboard.trainee_registration.index',compact('Seip_registered_trainees'));
     }
 
-    
+
 
 
 

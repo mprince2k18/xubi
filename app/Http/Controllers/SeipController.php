@@ -7,6 +7,8 @@ use App\Seip;
 use Carbon\Carbon;
 use App\EducationStatus;
 use App\WorkingStatus;
+use App\FatherWorkingStatus;
+use App\MotherWorkingStatus;
 use App\GenderStatus;
 use App\InformationSource;
 use App\SeipStatus;
@@ -20,25 +22,18 @@ class SeipController extends Controller
 {
 
 
-
-
-
-
-
-
-
-
-
   // index
     function index()
     {
       $education_qualifications = EducationStatus::all();
       $working_statuses = WorkingStatus::all();
+      $father_working_statuses = FatherWorkingStatus::all();
+      $mother_working_statuses = MotherWorkingStatus::all();
       $gender_statuses  = GenderStatus::all();
       $information_sources  = InformationSource::all();
       $seip_statuses  = SeipStatus::all();
       $remarks_statuses  = RemarksStatus::all();
-      return view('trainee_registration.seip.index',compact('education_qualifications','working_statuses','gender_statuses','information_sources','seip_statuses','remarks_statuses'));
+      return view('trainee_registration.seip.index',compact('education_qualifications','working_statuses','father_working_statuses','mother_working_statuses','gender_statuses','information_sources','seip_statuses','remarks_statuses'));
     }
 
 // create

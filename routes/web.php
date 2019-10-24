@@ -227,6 +227,10 @@ Route::get('/admin/status','DashboardController@status_index')->name('status_ind
 Route::post('/admin/status/education_qualification/insert','EducationStatusController@add_education_qualification')->name('add_education_qualification');
 // add_education_qualification
 Route::post('/admin/status/working_status/insert','StatusController@add_working_status')->name('add_working_status');
+// add_father_working_status
+Route::post('/admin/status/add_father_working_status/insert','StatusController@add_father_working_status')->name('add_father_working_status');
+// add_mother_working_status
+Route::post('/admin/status/add_mother_working_status/insert','StatusController@add_mother_working_status')->name('add_mother_working_status');
 // add_education_qualification
 Route::post('/admin/status/gender_status/insert','StatusController@add_gender_status')->name('add_gender_status');
 // add_information_source

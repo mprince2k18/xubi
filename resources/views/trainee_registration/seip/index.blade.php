@@ -222,16 +222,11 @@
 				        					<span class="label-input100">Father's Occupations</span>
 				        					<div>
 				        						<select class="selection-2" name="father_occupation">
-				        							{{-- <option value="">Choose Working Status</option> --}}
-															{{-- @foreach ($working_statuses as $working_status)
-				                      	<option value="{{ $working_status->id }}">{{ $working_status->working_status }}</option>
-															@endforeach --}}
-															<option value=""></option>
-															<option value="1">Business</option>
-															<option value="2">Job Holder</option>
-															<option value="3">Farmer</option>
-															<option value="4">No More</option>
-															<option value="5">Others</option>
+				        							<option value=""></option>
+															@foreach ($father_working_statuses as $father_working_status)
+				                      	<option value="{{ $father_working_status->id }}">{{ $father_working_status->father_working_status }}</option>
+															@endforeach
+
 
 
 				        						</select>
@@ -256,13 +251,10 @@
 																	<div>
 																		<select class="selection-2" name="mother_occupation">
 																			<option value=""></option>
-																			{{-- @foreach ($working_statuses as $working_status)
-																				<option value="{{ $working_status->id }}">{{ $working_status->working_status }}</option>
-																			@endforeach --}}
-																			<option value="1">House Wife</option>
-																			<option value="2">Job Holder</option>
-																			<option value="3">No More</option>
-																			<option value="4">Others</option>
+																			@foreach ($mother_working_statuses as $mother_working_status)
+																				<option value="{{ $mother_working_status->id }}">{{ $mother_working_status->mother_working_status }}</option>
+																			@endforeach
+
 																		</select>
 																	</div>
 																	<span class="focus-input100"></span>

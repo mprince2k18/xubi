@@ -173,9 +173,9 @@
 														</tr>
 
 														<tr>
-															<td class="img-center pb10" style="font-size:0pt; line-height:0pt; text-align:center; padding-bottom:10px; border-radius:5px;">
-																<a href="https://goo.gl/maps/iCcN1dMYLypJXXCLA">
-																	<img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571902579/img/Screenshot_1_rgtth3.png" width="570" height="321" border="0" alt="" />
+															<td class="img-center pb10" style="font-size:0pt; line-height:0pt; text-align:center; padding-bottom:10px;">
+																<a href="https://goo.gl/maps/iCcN1dMYLypJXXCLA" target="_blank">
+																	<img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571902579/img/Screenshot_1_rgtth3.png" width="570" height="321" border="0" alt="" style="border-radius:10px;" />
 																</a>
 															</td>
 														</tr>
@@ -183,10 +183,9 @@
 															<td align="center" class="pb30" style="padding-bottom:30px;">
 																<table border="0" cellspacing="0" cellpadding="0">
 																	<tr>
-																		<td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="#" target="_blank"><img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571827396/img/mail/t2_free_ico_facebook_nc4wdv.png" width="34" height="34" border="0" alt="" /></a></td>
-																		<td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="#" target="_blank"><img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571827396/img/mail/t2_free_ico_twitter_vc3td9.png" width="34" height="34" border="0" alt="" /></a></td>
-																		<td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="#" target="_blank"><img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571827396/img/mail/t2_free_ico_instagram_nz8cew.png" width="34" height="34" border="0" alt="" /></a></td>
-																		<td class="img" width="34" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="#" target="_blank"><img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571827396/img/mail/t2_free_ico_linkedin_rwnecb.png" width="34" height="34" border="0" alt="" /></a></td>
+																		<td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="https://www.facebook.com/Xubisoft" target="_blank"><img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571827396/img/mail/t2_free_ico_facebook_nc4wdv.png" width="34" height="34" border="0" alt="" /></a></td>
+																		<td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="https://www.instagram.com/xubisoft" target="_blank"><img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571827396/img/mail/t2_free_ico_instagram_nz8cew.png" width="34" height="34" border="0" alt="" /></a></td>
+																		<td class="img" width="34" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="https://www.linkedin.com/company/xubisoft" target="_blank"><img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571827396/img/mail/t2_free_ico_linkedin_rwnecb.png" width="34" height="34" border="0" alt="" /></a></td>
 																	</tr>
 																</table>
 															</td>
