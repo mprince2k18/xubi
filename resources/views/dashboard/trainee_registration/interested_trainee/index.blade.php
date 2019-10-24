@@ -30,7 +30,7 @@
 												<th>Phone</th>
 												<th>University</th>
 												<th>NID</th>
-												<th>Rocket</th>
+												{{-- <th>Rocket</th> --}}
 												<th>Education</th>
 												<th>Working</th>
 												<th>SEIP Status</th>
@@ -49,7 +49,7 @@
                           <td>{{ $interested_registered_trainee->phone }}</td>
                           <td>{{ $interested_registered_trainee->university }}</td>
                           <td>{{ $interested_registered_trainee->nid }}</td>
-                          <td>{{ $interested_registered_trainee->rocket_number === ' ' ? $interested_registered_trainee->rocket_number : 'Null'  }}</td>
+                          {{-- <td>{{ $interested_registered_trainee->rocket_number === ' ' ? $interested_registered_trainee->rocket_number : 'Null'  }}</td> --}}
                           <td>
 
                             {{ $interested_registered_trainee->relationBetweenEducation->education_qualification }}
