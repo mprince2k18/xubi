@@ -32,6 +32,8 @@
     /* background: url('{{ asset('custom/seip_reg/images/1.png') }}');
     background-repeat: no-repeat;
     background-size: cover; */
+		background: #636e72;
+		/* background: linear-gradient(45deg, #00dbde, #b2bec3); */
   }
 .select2-container .select2-results__option[aria-selected="true"]{
   background: -webkit-linear-gradient(right, #636e72, #353b48);
