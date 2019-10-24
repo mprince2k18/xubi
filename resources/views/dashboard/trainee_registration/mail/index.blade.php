@@ -142,10 +142,10 @@
 															<td class="h5 pb30" style="color:#ffd5ab; font-family:'Playfair Display', Georgia, serif; font-size:25px; line-height:24px; text-align:center; padding-bottom:30px;"><multiline>{{ $name }}</multiline></td>
 														</tr>
 														<tr>
-															<td class="text" style="color:#a3a3a3; font-family:'Playfair Display', Georgia, serif; font-size:16px; line-height:30px; text-align:center;"><multiline> Your registration has been successfully processed. We contact with you within a short time. </multiline></td>
+															<td class="text" style="color:#a3a3a3; font-family:'Playfair Display', Georgia, serif; font-size:16px; line-height:30px; text-align:center;"><multiline> Your registration has been successfully processed. We will contact you within a short time. </multiline></td>
 														</tr>
 														<tr>
-															<td class="text" style="color:#a3a3a3; font-family:'Playfair Display', Georgia, serif; font-size:16px; line-height:30px; text-align:center;"><multiline> Thanks in advance, </multiline></td>
+															<td class="text" style="color:#a3a3a3; font-family:'Playfair Display', Georgia, serif; font-size:16px; line-height:30px; text-align:center;"><multiline> Thanks for being with us, </multiline></td>
 														</tr>
 														<tr>
 															<td class="text" style="color:#a3a3a3; font-family:'Playfair Display', Georgia, serif; font-size:16px; line-height:30px; text-align:center;"><multiline> Xubisoft Ltd </multiline></td>
