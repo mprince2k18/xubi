@@ -17,7 +17,7 @@
 
 				<div class="main-content">
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="col-md-12">
 							<div class="card alert">
 								<div class="bootstrap-data-table-panel">
 									<table id="bootstrap-data-table-export" class="table table-striped table-bordered">
@@ -30,9 +30,9 @@
 												<th>Phone</th>
 												<th>University</th>
 												<th>NID</th>
-												<th>Rocket</th>
+												{{-- <th>Rocket</th> --}}
 												<th>Education</th>
-												<th>Working</th>
+												<th>Cureent Status</th>
 												<th>SEIP Status</th>
 												<th>Remarks</th>
 												<th>Action</th>
@@ -46,10 +46,10 @@
                           <td>{{ $Seip_registered_trainee->name }}</td>
                           <td>{{ $Seip_registered_trainee->quarter_id }}</td>
                           <td>{{ $Seip_registered_trainee->email }}</td>
-                          <td>0{{ $Seip_registered_trainee->phone }}</td>
+                          <td>{{ $Seip_registered_trainee->phone }}</td>
                           <td>{{ $Seip_registered_trainee->university }}</td>
                           <td>{{ $Seip_registered_trainee->nid }}</td>
-                          <td>0{{ $Seip_registered_trainee->rocket_number }}</td>
+                          {{-- <td>{{ $Seip_registered_trainee->rocket_number }}</td> --}}
                           <td>
 
                             {{ $Seip_registered_trainee->relationBetweenEducation->education_qualification }}
