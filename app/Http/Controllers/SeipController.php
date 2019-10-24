@@ -19,6 +19,16 @@ use App\Mail\SendingMail;
 class SeipController extends Controller
 {
 
+
+
+
+
+
+
+
+
+
+
   // index
     function index()
     {
@@ -66,6 +76,15 @@ class SeipController extends Controller
 
 // ------------------------------
 
+  // last_id generate
+
+  // $last_id = Seip::latest()->first();
+  // $trainee_unq_id = $last_id + 1;
+
+  $last = 800; // This is fetched from database
+  $last++;
+  $trainee_id_number = sprintf($last);
+
   // Quarter_number generate
 
    $quarters = Quarter::where('status',1)->first();
@@ -75,7 +94,7 @@ class SeipController extends Controller
 
 
       $last_inserted_id = Seip::insertGetId([
-        'trainee_id'=>'XLSEIPB'. $quarter_name . rand(10,1000),
+        'trainee_id'=>'XLSEIPB'. $quarter_name . $trainee_id_number,
         // 'trainee_id'=>'XLSEIPB'. $quarter_name . $x++,
         'quarter_id'=>$quarter_name,
         'name'=>$request->name,
@@ -215,6 +234,12 @@ function update(Request $request)
 
 
  }
+
+
+
+
+
+
 
     // END
 }

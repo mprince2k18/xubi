@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2019 at 07:46 AM
+-- Generation Time: Oct 24, 2019 at 07:57 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -435,15 +435,15 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (137, '2019_10_10_131550_create_careers_table', 21),
 (138, '2019_10_12_142009_create_statuses_table', 21),
 (140, '2019_09_05_164358_create_contacts_table', 22),
-(145, '2019_09_17_113930_create_teams_table', 25),
 (154, '2019_10_15_135418_create_education_statuses_table', 27),
 (157, '2019_10_15_143824_create_working_statuses_table', 28),
 (158, '2019_10_15_151328_create_gender_statuses_table', 28),
 (159, '2019_10_15_153246_create_information_sources_table', 29),
 (160, '2019_10_15_160030_create_seip_statuses_table', 30),
 (164, '2019_10_15_161621_create_remarks_statuses_table', 31),
-(179, '2019_10_13_145826_create_seips_table', 32),
-(180, '2019_10_19_092729_create_quarters_table', 32);
+(180, '2019_10_19_092729_create_quarters_table', 32),
+(181, '2019_09_17_113930_create_teams_table', 33),
+(189, '2019_10_13_145826_create_seips_table', 34);
 
 -- --------------------------------------------------------
 
@@ -456,6 +456,13 @@ CREATE TABLE `password_resets` (
   `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `password_resets`
+--
+
+INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('Mprince2k16@gmail.com', '$2y$10$25lOiinn.TCv6gwB0FI.x.Vx6gc4iD54KsBavEn2EeMrR1LlaHe8i', '2019-10-22 08:12:35');
 
 -- --------------------------------------------------------
 
@@ -615,14 +622,6 @@ CREATE TABLE `seips` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `seips`
---
-
-INSERT INTO `seips` (`id`, `trainee_id`, `quarter_id`, `name`, `email`, `phone`, `university`, `nid`, `gender`, `information_source`, `rocket_number`, `educational_qualification`, `working_status`, `have_seip`, `remarks`, `created_at`, `updated_at`) VALUES
-(1, 'XLSEIPBQ8674', 'Q8', 'Mohammad Prince', 'mprince2k16@gmail.com', '3153424350', 'DU', '213232321312312312', 1, 1, NULL, 1, 1, 1, 1, '2019-10-19 05:02:19', NULL),
-(2, 'XLSEIPBQ82', 'Q8', 'Test Name', 'waxentawfiq@GMAIL.COM', '31534243501212121', 'DU', '121212312323443453', 1, 1, NULL, 1, 1, 1, 2, '2019-10-19 05:05:37', '2019-10-19 05:17:45');
-
 -- --------------------------------------------------------
 
 --
@@ -721,6 +720,22 @@ CREATE TABLE `teams` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `teams`
+--
+
+INSERT INTO `teams` (`id`, `name`, `designation`, `team_photo`, `slug`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'Fahad Hasan', 'CEO', '1.jpg', 'fahad-hasan', NULL, '2019-10-21 03:28:27', '2019-10-21 03:28:28'),
+(2, 'Mahbubul Alam', 'Manager(HRD)', '2.jpg', 'mahbubul-alam', NULL, '2019-10-21 06:29:53', '2019-10-21 06:29:53'),
+(3, 'Mostafa Moinuddin', 'Head Of Operations', '3.jpg', 'mostafa-moinuddin', NULL, '2019-10-21 06:30:11', '2019-10-21 06:30:12'),
+(4, 'Fajle Alahe Shikder', 'Executive', '4.jpg', 'fajle-alahe-shikder', NULL, '2019-10-21 06:30:30', '2019-10-21 06:30:30'),
+(5, 'Md Obaydul', 'Trainer', '5.jpg', 'md-obaydul', NULL, '2019-10-21 06:31:38', '2019-10-21 06:31:39'),
+(6, 'Atika Monsur Nirzona', 'Trainer', '6.jpg', 'atika-monsur-nirzona', NULL, '2019-10-21 06:31:58', '2019-10-21 06:31:58'),
+(7, 'Naushin Tabassum Purba', 'Job Placement Officer', '7.jpg', 'naushin-tabassum-purba', NULL, '2019-10-21 06:34:44', '2019-10-21 06:34:44'),
+(8, 'Mohammad Prince', 'Web Application Developer', '8.jpg', 'mohammad-prince', NULL, '2019-10-21 06:35:37', '2019-10-21 06:35:38'),
+(9, 'Saeed Abdullah Millat', 'Trainer', '9.jpg', 'saeed-abdullah-millat', NULL, '2019-10-21 06:36:04', '2019-10-21 06:36:04'),
+(10, 'Shahedul Alam Amit', 'Jr. HR & Admin', '10.jpg', 'shahedul-alam-amit', NULL, '2019-10-21 06:36:41', '2019-10-21 06:36:41');
 
 -- --------------------------------------------------------
 
@@ -827,7 +842,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Mohammad Prince', 'Mprince2k16@gmail.com', NULL, '$2y$10$sgm57479S7Q8rZWJsq6M9u.2yFrR294irEXqT8DPgEhBYbOAQiEnW', '6ExfXA9RODbrsfRhBso0Y3bxcH1xpMgdC3rfz5Y4mgNMntvbTda4Dyo31Ox8', '2019-09-05 02:22:17', '2019-09-05 02:22:17'),
+(1, 'Mohammad Prince', 'Mprince2k16@gmail.com', NULL, '$2y$10$7T452ViqK9d5cL5sF910s.58gEdPOaJS4Me4IjqQszvNPRI4E.L16', 'nZO5FAthccN0lOPwFatyWRR32TNdYDfAYVIakwemggrrsQWcRZaSUwdyGbS7', '2019-09-05 02:22:17', '2019-10-22 07:15:59'),
 (2, 'tesets', 'linkinprince@gmail.com', NULL, '$2y$10$i3t8XlXO.TSII/BH1KcYY.OUcLP/RjX.MCM99ompRQbNVCZ.IqTym', NULL, '2019-09-15 08:48:11', '2019-09-15 08:48:11');
 
 -- --------------------------------------------------------
@@ -1155,7 +1170,7 @@ ALTER TABLE `infos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=190;
 
 --
 -- AUTO_INCREMENT for table `portfolios`
@@ -1191,7 +1206,7 @@ ALTER TABLE `remarks_statuses`
 -- AUTO_INCREMENT for table `seips`
 --
 ALTER TABLE `seips`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `seip_statuses`
@@ -1215,7 +1230,7 @@ ALTER TABLE `statuses`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `trainings`
