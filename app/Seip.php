@@ -20,6 +20,12 @@ class Seip extends Model
       'rocket_number',
       'educational_qualification',
       'working_status',
+      'father_name',
+      'father_occupation',
+      'mother_name',
+      'mother_occupation',
+      'alt_phone',
+      'siblings',
       'have_seip',
       'remarks',
     ];

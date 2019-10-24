@@ -27,12 +27,18 @@ class CreateSeipsTable extends Migration
             $table->string('rocket_number')->nullable();
             $table->integer('educational_qualification');
             $table->integer('working_status');
+            $table->string('father_name');
+            $table->integer('father_occupation');
+            $table->string('mother_name');
+            $table->integer('mother_occupation');
+            $table->string('alt_phone');
+            $table->string('siblings');
             $table->integer('have_seip');
             $table->integer('remarks')->default(1);
             $table->timestamps();
         });
     }
-
+  
 
     /**
      * Reverse the migrations.

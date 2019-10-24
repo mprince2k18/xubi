@@ -57,6 +57,12 @@ class SeipController extends Controller
         'rocket_number'=>'nullable|numeric|min:13',
         'educational_qualification'=>'required',
         'working_status'=>'required',
+        'father_name'=>'required',
+        'father_occupation'=>'required',
+        'mother_name'=>'required',
+        'mother_occupation'=>'required',
+        'alt_phone'=>'required|numeric|min:11',
+        'siblings'=>'required|numeric',
         'have_seip'=>'required',
 
       ],[
@@ -69,6 +75,12 @@ class SeipController extends Controller
         'gender.required' => 'Gender Is Required.',
         'information_source.required' => 'Please Fill Information Source.',
         'educational_qualification.required' => 'Please Fill Academic Qualification.',
+        'father_name'=>'Please Fill Father Name.',
+        'father_occupation'=>'Please Fill Father Occupation.',
+        'mother_name'=>'Please Fill Mother Name.',
+        'mother_occupation'=>'Please Fill Mother Occupation.',
+        'alt_phone'=>'Please Fill Alternative Phone No.',
+        'siblings'=>'Please Fill How Many Siblings?.',
         'working_status.required' => 'Please Fill Current Working Status.',
         'have_seip.required' => 'Please Fill SEIP Training Before',
       ]);
@@ -107,6 +119,12 @@ class SeipController extends Controller
         // 'rocket_number'=>$request->rocket_number,
         'educational_qualification'=>$request->educational_qualification,
         'working_status'=>$request->working_status,
+        'father_name'=>$request->father_name,
+        'father_occupation'=>$request->father_occupation,
+        'mother_name'=>$request->mother_name,
+        'mother_occupation'=>$request->mother_occupation,
+        'alt_phone'=>$request->alt_phone,
+        'siblings'=>$request->siblings,
         'have_seip'=>$request->have_seip,
         'remarks'=>1,
         'created_at'=>Carbon::now(),
@@ -194,10 +212,24 @@ function update(Request $request)
     'rocket_number'=>$request->rocket_number,
     'educational_qualification'=>$request->educational_qualification,
     'working_status'=>$request->working_status,
+    'father_name'=>$request->father_name,
+    'father_occupation'=>$request->father_occupation,
+    'mother_name'=>$request->mother_name,
+    'mother_occupation'=>$request->mother_occupation,
+    'alt_phone'=>$request->alt_phone,
+    'siblings'=>$request->siblings,
     'have_seip'=>$request->have_seip,
     'remarks'=>$request->remarks,
     'updated_at'=>Carbon::now(),
   ]);
+
+
+// father_name
+// father_occupation
+// mother_name
+// mother_occupation
+// alt_phone
+// siblings
 
   Alert::success('Profile updated','Success');
 
