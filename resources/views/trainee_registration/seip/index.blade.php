@@ -32,8 +32,10 @@
     /* background: url('{{ asset('custom/seip_reg/images/1.png') }}');
     background-repeat: no-repeat;
     background-size: cover; */
-		background: #636e72;
+		/* background: #636e72; */
 		/* background: linear-gradient(45deg, #00dbde, #b2bec3); */
+		background: linear-gradient(45deg, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
 .select2-container .select2-results__option[aria-selected="true"]{
   background: -webkit-linear-gradient(right, #636e72, #353b48);
@@ -307,6 +309,11 @@
 					</div>
 				</div>
 			</form>
+
+			<div class="text-center m-3">
+				<a href="https://apps.xubisoft.com/seip/registration">Having problem? try this</a>
+			</div>
+
 
 
 
