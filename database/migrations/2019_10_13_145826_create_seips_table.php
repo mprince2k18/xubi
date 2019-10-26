@@ -15,7 +15,7 @@ class CreateSeipsTable extends Migration
     {
         Schema::create('seips', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('trainee_id')->unique();
+            $table->string('trainee_id')->nullable();
             $table->string('quarter_id');
             $table->string('name');
             $table->string('email')->unique();
@@ -35,10 +35,11 @@ class CreateSeipsTable extends Migration
             $table->string('siblings');
             $table->integer('have_seip');
             $table->integer('remarks')->default(1);
+            $table->string('commented_by')->nullable();
             $table->timestamps();
         });
     }
-  
+
 
     /**
      * Reverse the migrations.

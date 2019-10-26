@@ -28,6 +28,7 @@ class Seip extends Model
       'siblings',
       'have_seip',
       'remarks',
+      'commented',
     ];
 
 // relationBetweenEducation
@@ -70,6 +71,16 @@ class Seip extends Model
     function relationBetweenSeipStatus()
     {
       return $this->hasOne('App\SeipStatus','id','have_seip');
+    }
+// relationBetweenFatherWorkingStatus
+    function relationBetweenFatherWorkingStatus()
+    {
+      return $this->hasOne('App\FatherWorkingStatus','id','father_occupation');
+    }
+// relationBetweenMotherWorkingStatus
+    function relationBetweenMotherWorkingStatus()
+    {
+      return $this->hasOne('App\MotherWorkingStatus','id','mother_occupation');
     }
 
 

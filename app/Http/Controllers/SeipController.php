@@ -15,6 +15,7 @@ use App\SeipStatus;
 use App\RemarksStatus;
 use App\Quarter;
 use Alert;
+use Auth;
 use Mail;
 use App\Mail\SendingMail;
 
@@ -83,26 +84,15 @@ class SeipController extends Controller
 
 // ------------------------------
 
-  // last_id generate
+  // Quarter_number
 
-  // $last_id = Seip::latest()->first();
-  // $trainee_unq_id = $last_id + 1;
-
-  $last = 800; // This is fetched from database
-  $last++;
-  $trainee_id_number = sprintf($last);
-
-  // Quarter_number generate
-
-   $quarters = Quarter::where('status',1)->first();
-   $quarter_name = $quarters->quarter;
+      $quarters = Quarter::where('status',1)->first();
+      $quarter_name = $quarters->quarter;
 
 // ------------------------------
 
 
       $last_inserted_id = Seip::insertGetId([
-        'trainee_id'=>'XLSEIPB'. $quarter_name . rand(100,1000),
-        // 'trainee_id'=>'XLSEIPB'. $quarter_name . $x++,
         'quarter_id'=>$quarter_name,
         'name'=>$request->name,
         'email'=>$request->email,
@@ -142,7 +132,7 @@ class SeipController extends Controller
 
     function trainee_index()
     {
-      $Seip_registered_trainees = Seip::all();
+      $Seip_registered_trainees = Seip::latest()->get();
       return view('dashboard.trainee_registration.index',compact('Seip_registered_trainees'));
     }
 
@@ -191,8 +181,10 @@ class SeipController extends Controller
       $information_sources  = InformationSource::all();
       $seip_statuses  = SeipStatus::all();
       $remarks_statuses  = RemarksStatus::all();
+      $father_working_statuses  = FatherWorkingStatus::all();
+      $mother_working_statuses  = MotherWorkingStatus::all();
 
-      return view('dashboard.trainee_registration.single_view',compact('single_trainee','education_qualifications','working_statuses','gender_statuses','information_sources','seip_statuses','remarks_statuses'));
+      return view('dashboard.trainee_registration.single_view',compact('single_trainee','education_qualifications','father_working_statuses','mother_working_statuses','working_statuses','gender_statuses','information_sources','seip_statuses','remarks_statuses'));
     }
 
 // single_trainee_edit
@@ -205,13 +197,26 @@ class SeipController extends Controller
 
 function update(Request $request)
 {
+
+  //quarter_name
+
+  $quarters = Quarter::where('status',1)->first();
+  $quarter_name = $quarters->quarter;
+
+// update
+
   Seip::find($request->id)->update([
+    'trainee_id'=>"XLSEIP".$quarter_name.$request->id,
     'name'=>$request->name,
     'email'=>$request->email,
     'phone'=>$request->phone,
     'university'=>$request->university,
     'nid'=>$request->nid,
     'gender'=>$request->gender,
+    'father_name'=>$request->father_name,
+    'father_occupation'=>$request->father_occupation,
+    'mother_name'=>$request->mother_name,
+    'mother_occupation'=>$request->mother_occupation,
     'information_source'=>$request->information_source,
     'rocket_number'=>$request->rocket_number,
     'educational_qualification'=>$request->educational_qualification,

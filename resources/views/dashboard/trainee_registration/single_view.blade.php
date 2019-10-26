@@ -143,7 +143,8 @@
                                         <p>Register Time : {{ $single_trainee->created_at->format('d-M-Y') }}</p>
                                         <p>Created At : {{ $single_trainee->created_at->format('h:i:s a') }}</p>
                                         {{-- <p>Touched : {{ $single_trainee->updated_at->format('h:i:s a') }}</p> --}}
-                                        <p>Touched : {{ isset($single_trainee->updated_at) ? $single_trainee->updated_at->format('h:i:s a') : "Not Yet Touched" }} </p>
+                                        <p>Touched At: {{ isset($single_trainee->updated_at) ? $single_trainee->updated_at->format('h:i:s a') : "Not Yet Touched" }}</p>
+                                        
 
 
                                     </div>
@@ -215,6 +216,28 @@
                               </tr>
 
                               <tr>
+                                <th scope="row">Fater Name</th>
+                                <td>{{ $single_trainee->father_name }}</td>
+                              </tr>
+
+
+                              <tr>
+                                <th scope="row">Father Occupation</th>
+                                <td>{{ $single_trainee->relationBetweenFatherWorkingStatus->father_working_status }}</td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Mother Name</th>
+                                <td>{{ $single_trainee->mother_name }}</td>
+                              </tr>
+
+
+                              <tr>
+                                <th scope="row">Mother Occupation</th>
+                                <td>{{ $single_trainee->relationBetweenMotherWorkingStatus->mother_working_status }}</td>
+                              </tr>
+
+                              <tr>
                                 <th scope="row">Information Method</th>
                                 <td>{{ $single_trainee->relationBetweenInformationSource->information_source }}</td>
                               </tr>
@@ -281,6 +304,8 @@
 
                                 <td><input type="hidden" name="id" class="form-control" value="{{ $single_trainee->id }}"></td>
 
+
+
                               </tr>
 
                               <tr>
@@ -334,6 +359,74 @@
               										</select>
                                 </td>
                               </tr>
+
+
+
+
+                              <tr>
+                                <th scope="row">Father Name</th>
+                                <td><input type="text" class="form-control" name="father_name" value="{{ $single_trainee->father_name }}"></td>
+                              </tr>
+
+
+
+                              <tr>
+                                <th scope="row">Father Occupation</th>
+                                <td>
+                                  <select  class="form-control" name="father_occupation">
+                                    <option value="{{ $single_trainee->father_occupation }}" class="bg-dark text-white">{{ $single_trainee->relationBetweenFatherWorkingStatus->father_working_status }}</option>
+
+                                    @foreach ($father_working_statuses as $father_working_status)
+                                    <option value="{{ $father_working_status->id }}">{{ $father_working_status->father_working_status }}</option>
+                                    @endforeach
+
+                                  </select>
+                                </td>
+                              </tr>
+
+
+
+
+                              <tr>
+                                <th scope="row">Mother Name</th>
+                                <td><input type="text" class="form-control" name="mother_name" value="{{ $single_trainee->mother_name }}"></td>
+                              </tr>
+
+
+
+                              <tr>
+                                <th scope="row">Mother Occupation</th>
+                                <td>
+                                  <select  class="form-control" name="mother_occupation">
+                                    <option value="{{ $single_trainee->mother_occupation }}" class="bg-dark text-white">{{ $single_trainee->relationBetweenMotherWorkingStatus->mother_working_status }}</option>
+
+                                    @foreach ($mother_working_statuses as $mother_working_status)
+                                    <option value="{{ $mother_working_status->id }}">{{ $mother_working_status->mother_working_status }}</option>
+                                    @endforeach
+
+                                  </select>
+                                </td>
+                              </tr>
+
+
+
+
+                              <tr>
+                                <th scope="row">Alternative Phone No.</th>
+                                <td><input type="text" class="form-control" name="alt_phone" value="{{ $single_trainee->alt_phone }}"></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">Siblings</th>
+                                <td><input type="text" class="form-control" name="siblings" value="{{ $single_trainee->siblings }}"></td>
+                              </tr>
+
+
+
+
+
+
+
 
                               <tr>
                                 <th scope="row">Information Method</th>
