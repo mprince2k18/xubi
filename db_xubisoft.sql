@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 24, 2019 at 01:23 PM
+-- Generation Time: Oct 26, 2019 at 08:06 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -465,8 +465,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (193, '2019_10_15_143824_create_working_statuses_table', 35),
 (195, '2019_10_15_135418_create_education_statuses_table', 36),
 (196, '2019_10_24_143725_create_father_working_statuses_table', 37),
-(199, '2019_10_24_150224_create_mother_working_statuses_table', 38),
-(200, '2019_10_13_145826_create_seips_table', 39);
+(205, '2019_10_13_145826_create_seips_table', 39),
+(206, '2019_10_24_150224_create_mother_working_statuses_table', 38);
 
 -- --------------------------------------------------------
 
@@ -649,7 +649,7 @@ INSERT INTO `remarks_statuses` (`id`, `remarks_status`, `created_at`, `updated_a
 
 CREATE TABLE `seips` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `trainee_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `trainee_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `quarter_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -669,6 +669,7 @@ CREATE TABLE `seips` (
   `siblings` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `have_seip` int(11) NOT NULL,
   `remarks` int(11) NOT NULL DEFAULT 1,
+  `commented_by` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1082,7 +1083,6 @@ ALTER TABLE `remarks_statuses`
 --
 ALTER TABLE `seips`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `seips_trainee_id_unique` (`trainee_id`),
   ADD UNIQUE KEY `seips_email_unique` (`email`),
   ADD UNIQUE KEY `seips_phone_unique` (`phone`),
   ADD UNIQUE KEY `seips_nid_unique` (`nid`);
@@ -1241,7 +1241,7 @@ ALTER TABLE `infos`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=207;
 
 --
 -- AUTO_INCREMENT for table `mother_working_statuses`
