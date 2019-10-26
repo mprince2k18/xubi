@@ -88,9 +88,9 @@ class SeipController extends Controller
   // $last_id = Seip::latest()->first();
   // $trainee_unq_id = $last_id + 1;
 
-  $last = 800; // This is fetched from database
-  $last++;
-  $trainee_id_number = sprintf($last);
+  // $last = 800; // This is fetched from database
+  // $last++;
+  // $trainee_id_number = sprintf($last);
 
   // Quarter_number generate
 

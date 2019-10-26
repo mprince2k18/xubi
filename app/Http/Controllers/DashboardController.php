@@ -50,7 +50,7 @@ class DashboardController extends Controller
       $trainings = Training::paginate(5);
       $services = Services::paginate(5);
       $portfolios = Services::paginate(5);
-      $Seip_registered_trainees = Seip::latest()->all();
+      $Seip_registered_trainees = Seip::all();
       return view('dashboard.index',compact('banners','contacts','service_categories','company_services','all_products','portfolios','team_members','clients','trainings','services','Seip_registered_trainees'));
     }
 
