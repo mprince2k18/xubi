@@ -244,7 +244,7 @@ Route::post('/admin/status/add_remarks_status/insert','StatusController@add_rema
 
 // Trainee
 // index
-Route::get('/admin/trainee','DashboardController@trainee_index')->name('trainee_index');
+Route::get('/admin/trainee','SeipController@trainee_index')->name('trainee_index');
 // single
 Route::get('/admin/trainee/{single}','SeipController@single_trainee_index')->name('single_trainee_index');
 // update

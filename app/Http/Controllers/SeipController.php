@@ -88,9 +88,9 @@ class SeipController extends Controller
   // $last_id = Seip::latest()->first();
   // $trainee_unq_id = $last_id + 1;
 
-  // $last = 800; // This is fetched from database
-  // $last++;
-  // $trainee_id_number = sprintf($last);
+  $last = 800; // This is fetched from database
+  $last++;
+  $trainee_id_number = sprintf($last);
 
   // Quarter_number generate
 
@@ -101,7 +101,7 @@ class SeipController extends Controller
 
 
       $last_inserted_id = Seip::insertGetId([
-        'trainee_id'=>'XLSEIPB'. $quarter_name . $trainee_id_number,
+        'trainee_id'=>'XLSEIPB'. $quarter_name . rand(100,1000),
         // 'trainee_id'=>'XLSEIPB'. $quarter_name . $x++,
         'quarter_id'=>$quarter_name,
         'name'=>$request->name,
@@ -135,6 +135,15 @@ class SeipController extends Controller
 
       return back();
 
+    }
+
+
+    // trainee_index page
+
+    function trainee_index()
+    {
+      $Seip_registered_trainees = Seip::all();
+      return view('dashboard.trainee_registration.index',compact('Seip_registered_trainees'));
     }
 
 // interested_trainee_index
