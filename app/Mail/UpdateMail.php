@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SendingMail extends Mailable
+class UpdateMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -17,11 +17,12 @@ class SendingMail extends Mailable
      * @return void
      */
 
-
     public $name ="";
+
     public function __construct($name)
     {
-      $this->name=$name;
+        $this->name=$name;
+
     }
 
     /**
@@ -31,9 +32,10 @@ class SendingMail extends Mailable
      */
     public function build()
     {
-        $name ="";
-        return $this->from('mprince2k16@gmail.com','Moohammad Prince')
-                    ->subject('Congratulations, Your registration has been successfully processed. We will contact with you within a short time.')
-                    ->view('dashboard.trainee_registration.mail.after_registration',compact('name'));
+      $name ="";
+
+      return $this->from('mprince2k16@gmail.com','Mohammad Prince')
+                  ->subject('Congratulations, Your have been selected for our shortlist. We will contact with you within a short time.')
+                  ->view('dashboard.trainee_registration.mail.selected',compact('name'));
     }
 }

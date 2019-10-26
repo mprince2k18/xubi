@@ -7,6 +7,7 @@
 @section('css')
 <!-- Styles -->
     <link href="{{ asset('custom/seip_reg/assets/css/lib/data-table/buttons.bootstrap.min.css') }}" rel="stylesheet" />
+
 @endsection
 
 @section('content')
@@ -43,8 +44,8 @@
                       @foreach ($Seip_registered_trainees as $Seip_registered_trainee)
                         <tr>
                           <td>{{ $Seip_registered_trainee->trainee_id }}</td>
-                          <td>{{ $Seip_registered_trainee->name }}</td>
                           <td>{{ $Seip_registered_trainee->quarter_id }}</td>
+                          <td>{{ $Seip_registered_trainee->name }}</td>
                           <td>{{ $Seip_registered_trainee->email }}</td>
                           <td>{{ $Seip_registered_trainee->phone }}</td>
                           <td>{{ $Seip_registered_trainee->university }}</td>
@@ -85,7 +86,7 @@
 @endsection
 
 @section('js')
-<!-- {{ asset('custom/seip_reg/') }} -->
+
 
 <script src="{{ asset('custom/seip_reg/assets/js/lib/data-table/datatables.min.js') }}"></script>
 <script src="{{ asset('custom/seip_reg/assets/js/lib/data-table/buttons.dataTables.min.html') }}"></script>
@@ -97,7 +98,6 @@
 <script src="{{ asset('custom/seip_reg/assets/js/lib/data-table/buttons.html5.min.js') }}"></script>
 <script src="{{ asset('custom/seip_reg/assets/js/lib/data-table/buttons.print.min.js') }}"></script>
 <script src="{{ asset('custom/seip_reg/assets/js/lib/data-table/datatables-init.js') }}"></script>
-
 
 
 @endsection

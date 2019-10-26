@@ -18,6 +18,7 @@ use Alert;
 use Auth;
 use Mail;
 use App\Mail\SendingMail;
+use App\Mail\UpdateMail;
 
 class SeipController extends Controller
 {
@@ -119,6 +120,7 @@ class SeipController extends Controller
 
       $name = $request->name;
       $email = $request->email;
+
 
       Mail::to($email,$name)->cc('fahadidb@gmail.com')
                             ->send(new SendingMail($name));
@@ -233,14 +235,24 @@ function update(Request $request)
   ]);
 
 
-// father_name
-// father_occupation
-// mother_name
-// mother_occupation
-// alt_phone
-// siblings
+
 
   Alert::success('Profile updated','Success');
+
+
+  $name = $request->name;
+  $email = $request->email;
+  $remarks = $request->remarks;
+
+
+
+if ($request->remarks == 2) {
+  Mail::to($email,$name)->cc('fahadidb@gmail.com')
+                        ->send(new UpdateMail($name,$remarks));
+}
+
+
+
 
   return back();
 }
