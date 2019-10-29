@@ -113,6 +113,7 @@ class SeipController extends Controller
         'siblings'=>$request->siblings,
         'have_seip'=>$request->have_seip,
         'remarks'=>1,
+
         'created_at'=>Carbon::now(),
       ]);
 

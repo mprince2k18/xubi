@@ -144,7 +144,8 @@
                                         <p>Created At : {{ $single_trainee->created_at->format('h:i:s a') }}</p>
                                         {{-- <p>Touched : {{ $single_trainee->updated_at->format('h:i:s a') }}</p> --}}
                                         <p>Touched At: {{ isset($single_trainee->updated_at) ? $single_trainee->updated_at->format('h:i:s a') : "Not Yet Touched" }}</p>
-                                        
+                                        <p>Commented By: {{ ($single_trainee->commented_by) }}</p>
+
 
 
                                     </div>
@@ -310,6 +311,7 @@
 
                               <tr>
                                 <th scope="row">Applicant Name</th>
+                                
                                 <td><input type="text" class="form-control" name="name" value="{{ $single_trainee->name }}"></td>
                               </tr>
 

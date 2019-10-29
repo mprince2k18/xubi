@@ -172,8 +172,8 @@
                 </div>
                 <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons text-danger">warning</i>
-                    <a href="#pablo">Get More Space...</a>
+                    <i class="material-icons text-danger">date_range</i>
+                    <a href="#pablo">Today's Submission - - {{ App\Seip::whereDate('created_at',Carbon\Carbon::today())->count() }}</a>
                   </div>
                 </div>
               </div>

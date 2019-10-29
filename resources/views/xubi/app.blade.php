@@ -79,7 +79,9 @@
 
 
   <!-- Load Facebook SDK for JavaScript -->
+
         <div id="fb-root"></div>
+
         <script>
           window.fbAsyncInit = function() {
             FB.init({
@@ -94,7 +96,8 @@
           js = d.createElement(s); js.id = id;
           js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
           fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
 
         <!-- Your customer chat code -->
         <div class="fb-customerchat"
@@ -254,8 +257,8 @@
 
 
 
-        <!-- search panel strart -->
-        <!-- xs modal -->
+        /* <!-- search panel strart --> */
+        /* <!-- xs modal --> */
         <div class="zoom-anim-dialog mfp-hide modal-searchPanel" id="modal-popup-2">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -268,12 +271,18 @@
                 </div>
             </div>
         </div>
-        <!-- End xs modal -->
-        <!-- end search panel strart -->
+        /* <!-- End xs modal --> */
+        /* <!-- end search panel strart --> */
 
-<!-- header end -->
+/* <!-- header end --> */
 
 @yield('content')
+
+
+
+
+
+
 
 
 

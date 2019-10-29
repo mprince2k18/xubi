@@ -88,42 +88,63 @@ Xubisoft | IT Solution
         <div class="banner-overlay-bg"> <img src="{{ asset('xubisoft/assets/images/welcome/home2-banner-icon1.png') }}" alt="" class="banner-image1"> <img src="{{ asset('xubisoft/assets/images/welcome/home2-banner-icon2.png') }}" alt="" class="banner-image2"> <img src="{{ asset('xubisoft/assets/images/welcome/banner-dots.png') }}" alt="" class="banner-dots banner-dots1"> <img src="{{ asset('xubisoft/assets/images/welcome/banner-dots.png') }}" alt="" class="banner-dots banner-dots2"> </div>
     </section>
     <!-- end agency banner section -->
-    <!-- business info section -->
-    <section class="xs-section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="agency-section-title text-center section-title-style2">
-                        <h2 class="main-title text-uppercase" style="font-family: 'Raleway', sans-serif; fonr-weight:bold;">We are young but bold</h2>
+
+
+    <!-- Service block start -->
+
+
+           <!-- growth grid section -->
+           <section class="growth-card-section xs-section-padding">
+       <div class="container">
+           <div class="row">
+               <div class="col-md-8 mx-auto">
+                   <div class="agency-section-title text-center style5">
+                     <h2 class="main-title text-uppercase" style="font-family: 'Raleway', sans-serif; fonr-weight:bold;">We are young but bold</h2>
+                       <p style="font-size:20px;">We work systematically to integrate corporate responsibility in our core business.</p>
+                   </div><!-- .agency-section-title .style3 END -->
+               </div>
+           </div><!-- .row END -->
+
+           <div class="row xs-mb-6">
+             @foreach ($infos as $info)
+               <div class="col-md-6 col-lg-4">
+                   <div class="info-card text-center" style="margin: 15px 0 !important;">
+                       <div class="info-card-header Info_headline">
+                           <img src="{{ asset('uploads/info')}}/{{ $info->Info_banner }}" alt="{{ $info->Info_headline }}">
+                       </div>
+                       <div class="info-card-body">
+                           <h3 class="card-title">{{ $info->Info_headline }}</h3>
+                           <p>{{ $info->Info_message }}</p>
+                       </div>
+                   </div><!-- .info-card END -->
+               </div>
+                 @endforeach
+
+
+           </div><!-- .row END -->
+           <!-- <div class="btn-wraper text-center">
+               <a href="#" class="simple-btn icon-right style2">View All Services <i class="icon icon-arrow-right"></i></a>
+           </div> -->
+       </div><!-- .container END -->
+       <div class="growth-card-bg">
+           <img src="{{ asset('xubisoft/assets/images/growth-bg.png') }}" alt="">
+       </div>
+   </section>        <!-- end growth grid section -->
+
+       <!-- Service block end -->
 
 
 
-                        <p style="font-size:20px;">We work systematically to integrate corporate responsibility in our core business.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- .row end -->
-            <div class="row">
-              @foreach ($infos as $info)
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="single-info-block text-center">
 
-                        <div class="info-header"> <img src="{{ asset('uploads/info')}}/{{ $info ->Info_banner }}" alt=""> </div>
-                        <h3 class="small">{{ $info->Info_headline }}</h3>
-                        <p>{{ $info->Info_message }}</p>
-                    </div>
-                    <!-- .single-info-block END -->
-                  </div>
 
-              @endforeach
 
-            </div>
-            <!-- .row END -->
-        </div>
-        <!-- .container END -->
-    </section>
-    <!-- end business info section -->
+
+
+
+
+
+
     <!-- about section -->
     <section class="xs-section-padding gray-bg">
         <div class="container">
