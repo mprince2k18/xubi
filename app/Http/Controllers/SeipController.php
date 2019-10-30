@@ -18,7 +18,10 @@ use Alert;
 use Auth;
 use Mail;
 use App\Mail\SendingMail;
-use App\Mail\UpdateMail;
+use App\Mail\SelectedMail;
+use App\Mail\WaitingMail;
+use App\Mail\RejectedMail;
+use App\Mail\VivaMail;
 
 class SeipController extends Controller
 {
@@ -243,15 +246,39 @@ function update(Request $request)
 
   $name = $request->name;
   $email = $request->email;
-  $remarks = $request->remarks;
+
+// SelectedMail
+
+  if ($request->remarks == 2)
+      {
+        Mail::to($email,$name)->cc('fahadidb@gmail.com')
+                              ->send(new SelectedMail($name));
+      }
 
 
+// WaitingMail
 
-if ($request->remarks == 2) {
-  Mail::to($email,$name)->cc('fahadidb@gmail.com')
-                        ->send(new UpdateMail($name,$remarks));
-}
+  if ($request->remarks == 3)
+      {
+        Mail::to($email,$name)->cc('fahadidb@gmail.com')
+                              ->send(new WaitingMail($name));
+      }
 
+// VivaMail
+
+  if ($request->remarks == 4)
+      {
+        Mail::to($email,$name)->cc('fahadidb@gmail.com')
+                              ->send(new VivaMail($name));
+      }
+
+// RejectedMail
+
+  if ($request->remarks == 5)
+      {
+        Mail::to($email,$name)->cc('fahadidb@gmail.com')
+                              ->send(new RejectedMail($name));
+      }
 
 
 

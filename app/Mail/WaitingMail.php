@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class UpdateMail extends Mailable
+class WaitingMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -35,7 +35,7 @@ class UpdateMail extends Mailable
       $name ="";
 
       return $this->from('mprince2k16@gmail.com','Mohammad Prince')
-                  ->subject('Congratulations, Your have been selected for our shortlist. We will contact with you within a short time.')
-                  ->view('dashboard.trainee_registration.mail.selected',compact('name'));
+                  ->subject('Congratulations, Your are in waiting in this program. We will contact with you within a short time.')
+                  ->view('dashboard.trainee_registration.mail.waiting',compact('name'));
     }
 }
