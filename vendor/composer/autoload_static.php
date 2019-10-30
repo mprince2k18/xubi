@@ -18,9 +18,9 @@ class ComposerStaticInit82fe1038ffdc273678cc57e00edf9792
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '979dffec6fa5205cabd2c2cd1e9e6b3a' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/Psr7/functions.php',
         '6783aef8c489bbc166eee2536fe605d5' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/functions.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
@@ -160,6 +160,7 @@ class ComposerStaticInit82fe1038ffdc273678cc57e00edf9792
         'A' => 
         array (
             'App\\' => 4,
+            'Anhskohbo\\NoCaptcha\\' => 20,
             'Algolia\\ScoutExtended\\' => 22,
             'Algolia\\AlgoliaSearch\\' => 22,
         ),
@@ -444,6 +445,10 @@ class ComposerStaticInit82fe1038ffdc273678cc57e00edf9792
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'Anhskohbo\\NoCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/anhskohbo/no-captcha/src',
+        ),
         'Algolia\\ScoutExtended\\' => 
         array (
             0 => __DIR__ . '/..' . '/algolia/scout-extended/src',
@@ -595,6 +600,9 @@ class ComposerStaticInit82fe1038ffdc273678cc57e00edf9792
         'Algolia\\ScoutExtended\\Splitters\\HtmlSplitter' => __DIR__ . '/..' . '/algolia/scout-extended/src/Splitters/HtmlSplitter.php',
         'Algolia\\ScoutExtended\\Transformers\\ConvertDatesToTimestamps' => __DIR__ . '/..' . '/algolia/scout-extended/src/Transformers/ConvertDatesToTimestamps.php',
         'Algolia\\ScoutExtended\\Transformers\\ConvertNumericStringsToNumbers' => __DIR__ . '/..' . '/algolia/scout-extended/src/Transformers/ConvertNumericStringsToNumbers.php',
+        'Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha' => __DIR__ . '/..' . '/anhskohbo/no-captcha/src/Facades/NoCaptcha.php',
+        'Anhskohbo\\NoCaptcha\\NoCaptcha' => __DIR__ . '/..' . '/anhskohbo/no-captcha/src/NoCaptcha.php',
+        'Anhskohbo\\NoCaptcha\\NoCaptchaServiceProvider' => __DIR__ . '/..' . '/anhskohbo/no-captcha/src/NoCaptchaServiceProvider.php',
         'App\\About' => __DIR__ . '/../..' . '/app/About.php',
         'App\\Address' => __DIR__ . '/../..' . '/app/Address.php',
         'App\\Banner' => __DIR__ . '/../..' . '/app/Banner.php',
@@ -654,6 +662,7 @@ class ComposerStaticInit82fe1038ffdc273678cc57e00edf9792
         'App\\Info' => __DIR__ . '/../..' . '/app/Info.php',
         'App\\InformationSource' => __DIR__ . '/../..' . '/app/InformationSource.php',
         'App\\Mail\\SendingMail' => __DIR__ . '/../..' . '/app/Mail/SendingMail.php',
+        'App\\Mail\\UpdateMail' => __DIR__ . '/../..' . '/app/Mail/UpdateMail.php',
         'App\\MotherWorkingStatus' => __DIR__ . '/../..' . '/app/MotherWorkingStatus.php',
         'App\\Portfolio' => __DIR__ . '/../..' . '/app/Portfolio.php',
         'App\\Product' => __DIR__ . '/../..' . '/app/Product.php',

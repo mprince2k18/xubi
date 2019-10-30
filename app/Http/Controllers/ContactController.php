@@ -38,6 +38,7 @@ class ContactController extends Controller
         'email'      => 'required',
         'subject'      => 'required',
         'message'      => 'required',
+        'g-recaptcha-response' => 'required|captcha',
       ]);
 
       $contacts = Contact::insert([

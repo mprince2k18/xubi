@@ -298,6 +298,10 @@ Route::get('/admin/trainee/pdf_view/{single}', 'PdfController@pdfView');
 
 
 
+Route::get('captcha-form', 'CaptchaController@captchForm');
+Route::post('store-captcha-form', 'CaptchaController@storeCaptchaForm');
+
+
 
 // ---------------------------------------------------------
 

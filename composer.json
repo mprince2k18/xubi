@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2",
         "algolia/scout-extended": "^1.7",
+        "anhskohbo/no-captcha": "^3.1",
         "barryvdh/laravel-dompdf": "^0.8.5",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^6.3",

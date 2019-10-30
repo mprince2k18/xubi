@@ -116,6 +116,11 @@ Contact us
 
                         <textarea name="message" id="x_contact_massage" placeholder="Your Message... *" class="form-control" cols="30" rows="10"></textarea>
 
+
+                        {{-- <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span> --}}
+                          {!! NoCaptcha::renderJs() !!}
+                          {!! NoCaptcha::display() !!}
+
                         <button type="submit" class="btn btn-primary ml-auto">Send Message</button>
                     </form>
 										<!-- contact form ends-->
