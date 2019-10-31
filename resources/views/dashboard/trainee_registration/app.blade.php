@@ -158,6 +158,67 @@
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
+
+
+
+                    <div class="row counter_nav">
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                          <div class="card-header card-header-primary card-header-icon">
+                            <div class="card-icon">
+                              <i class="material-icons">nature_people</i>
+                            </div>
+                            <p class="card-category">Total</p>
+                            <h3 class="card-title"> {{ App\Seip::all()->count() }}
+
+                            </h3>
+                          </div>
+                          <div class="card-footer">
+                            <div class="stats">
+                              <i class="material-icons text-danger">date_range</i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                          <div class="card-header card-header-success card-header-icon">
+                            <div class="card-icon">
+                              <i class="material-icons">add_circle</i>
+                            </div>
+                            <p class="card-category">Male</p>
+                            <h3 class="card-title">{{ App\Seip::where('gender',1)->count() }}</h3>
+                          </div>
+                          <div class="card-footer">
+                            <div class="stats">
+                              <i class="material-icons">date_range</i> Last 24 Hours
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                          <div class="card-header card-header-danger card-header-icon">
+                            <div class="card-icon">
+                              <i class="material-icons">remove_circle</i>
+                            </div>
+                            <p class="card-category">Female</p>
+                            <h3 class="card-title">{{ App\Seip::where('gender',2)->count() }}</h3>
+                          </div>
+                          <div class="card-footer">
+                            <div class="stats">
+                              <i class="material-icons">local_offer</i> Tracked from Github
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+
+
+
           <div class="row counter_nav">
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
