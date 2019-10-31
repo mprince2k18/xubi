@@ -125,7 +125,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="https://gmpfinancial.com.au/wp-content/uploads/2014/12/pp-size-crop-3287.jpg" alt="" class="img-fluid">
+                            <img src="https://xubisoft.com/xubisoft/assets/images/xubi/Xubisoft Logo.png" alt="{{ $single_trainee->name }}" class="img-fluid">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -311,7 +311,7 @@
 
                               <tr>
                                 <th scope="row">Applicant Name</th>
-                                
+
                                 <td><input type="text" class="form-control" name="name" value="{{ $single_trainee->name }}"></td>
                               </tr>
 
