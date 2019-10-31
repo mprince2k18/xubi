@@ -591,11 +591,8 @@
                         </td>
                       </tr>
                       @empty
-                      <td>No Education Qualification Here</td>
+                      <td>No Seip Status</td>
                       @endforelse
-
-
-
                     </tbody>
                   </table>
 
@@ -685,7 +682,7 @@
                   </table>
 
 
-                    {{ $seip_statuses->links() }}
+                    {{ $remarks_statuses->links() }}
 
                 </div>
                 <!-- table-responsive -->

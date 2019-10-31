@@ -148,7 +148,7 @@ class DashboardController extends Controller
        $remarks_statuses = RemarksStatus::paginate(5);
       return view('dashboard.status.index',compact('education_qualifications','working_statuses','father_working_statuses','mother_working_statuses','gender_statuses','information_sources','seip_statuses','remarks_statuses'));
     }
-  
+
 
 
 
