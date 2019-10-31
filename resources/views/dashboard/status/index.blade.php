@@ -668,12 +668,14 @@
                         <td>{{ $remarks_status->remarks_status }}</td>
 
                         <td>
-                          <a href="#" class="btn-sm btn-primary">Edit</a>
+
+
+                          <a href="#" id="btn-edit" class="btn-sm btn-primary">Edit</a>
                           <a href="#" class="btn-sm btn-danger">Delete</a>
                         </td>
                       </tr>
                       @empty
-                      <td>No Education Qualification Here</td>
+                      <td>No Remarks</td>
                       @endforelse
 
 
@@ -696,4 +698,7 @@
 </div>
 
 
+@endsection
+@section('js')
+  
 @endsection

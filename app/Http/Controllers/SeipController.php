@@ -212,7 +212,11 @@ function update(Request $request)
 // update
 
   Seip::find($request->id)->update([
-    'trainee_id'=>"XLSEIP".$quarter_name.$request->id,
+
+
+
+
+    // 'trainee_id'=>"XLSEIP".$quarter_name.$request->id,
     'name'=>$request->name,
     'email'=>$request->email,
     'phone'=>$request->phone,
@@ -238,6 +242,12 @@ function update(Request $request)
     'updated_at'=>Carbon::now(),
   ]);
 
+
+  if ($request->remarks == 2) {
+    Seip::find($request->id)->update([
+      'trainee_id'=>"XLSEIP".$quarter_name.$request->id,
+    ]);
+  }
 
 
 
