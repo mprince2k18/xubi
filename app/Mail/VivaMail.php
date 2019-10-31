@@ -35,7 +35,7 @@ class VivaMail extends Mailable
       $name ="";
 
       return $this->from('mprince2k16@gmail.com','Mohammad Prince')
-                  ->subject('Sorry, Your are selected for viva in this program. We will contact with you within a short time.')
+                  ->subject('Your are enlisted for viva in this program. We will contact with you within a short time.')
                   ->view('dashboard.trainee_registration.mail.viva',compact('name'));
     }
 }

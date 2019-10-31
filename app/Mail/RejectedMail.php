@@ -35,7 +35,7 @@ class RejectedMail extends Mailable
       $name ="";
 
       return $this->from('mprince2k16@gmail.com','Mohammad Prince')
-                  ->subject('Sorry, Your are rejected in this program. We will contact with you within a short time.')
+                  ->subject('Sorry, Your are rejected in this program.Try next time.')
                   ->view('dashboard.trainee_registration.mail.rejected',compact('name'));
     }
 }

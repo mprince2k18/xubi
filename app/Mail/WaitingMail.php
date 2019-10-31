@@ -35,7 +35,7 @@ class WaitingMail extends Mailable
       $name ="";
 
       return $this->from('mprince2k16@gmail.com','Mohammad Prince')
-                  ->subject('Congratulations, Your are in waiting in this program. We will contact with you within a short time.')
+                  ->subject('Your are enlisted at waiting list in this program.')
                   ->view('dashboard.trainee_registration.mail.waiting',compact('name'));
     }
 }
