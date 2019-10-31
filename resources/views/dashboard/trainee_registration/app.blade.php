@@ -163,7 +163,7 @@
               <div class="card card-stats">
                 <div class="card-header card-header-warning card-header-icon">
                   <div class="card-icon">
-                    <i class="material-icons">content_copy</i>
+                    <i class="material-icons">emoji_people</i>
                   </div>
                   <p class="card-category">Interested</p>
                   <h3 class="card-title"> {{ App\Seip::where('remarks',1)->count() }}
@@ -173,7 +173,7 @@
                 <div class="card-footer">
                   <div class="stats">
                     <i class="material-icons text-danger">date_range</i>
-                    <a href="#pablo">Today's Submission - - {{ App\Seip::whereDate('created_at',Carbon\Carbon::today())->count() }}</a>
+                    <a href="#pablo">Today's Interested - - {{ App\Seip::whereDate('created_at',Carbon\Carbon::today())->count() }}</a>
                   </div>
                 </div>
               </div>
@@ -182,14 +182,15 @@
               <div class="card card-stats">
                 <div class="card-header card-header-success card-header-icon">
                   <div class="card-icon">
-                    <i class="material-icons">store</i>
+                    <i class="material-icons">query_builder</i>
                   </div>
                   <p class="card-category">Waiting</p>
                   <h3 class="card-title">{{ App\Seip::where('remarks',3)->count() }}</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons">date_range</i> Last 24 Hours
+                    <i class="material-icons">date_range</i>
+                      Last 24 Hours
                   </div>
                 </div>
               </div>
@@ -198,7 +199,7 @@
               <div class="card card-stats">
                 <div class="card-header card-header-danger card-header-icon">
                   <div class="card-icon">
-                    <i class="material-icons">info_outline</i>
+                    <i class="material-icons">done_outline</i>
                   </div>
                   <p class="card-category">Selected</p>
                   <h3 class="card-title">{{ App\Seip::where('remarks',2)->count() }}</h3>
@@ -214,10 +215,81 @@
               <div class="card card-stats">
                 <div class="card-header card-header-info card-header-icon">
                   <div class="card-icon">
-                    <i class="fa fa-twitter"></i>
+                    <i class="material-icons">person_add_disabled</i>
                   </div>
                   <p class="card-category">Rejected</p>
                   <h3 class="card-title">{{ App\Seip::where('remarks',5)->count() }}</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">update</i> Just Updated
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row counter_nav">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">face</i>
+                  </div>
+                  <p class="card-category">Viva</p>
+                  <h3 class="card-title"> {{ App\Seip::where('remarks',4)->count() }}
+
+                  </h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons text-danger">date_range</i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-success card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">settings_phone</i>
+                  </div>
+                  <p class="card-category">Did Not Pick Up The Call</p>
+                  <h3 class="card-title">{{ App\Seip::where('remarks',6)->count() }}</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">date_range</i> Last 24 Hours
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-danger card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">perm_phone_msg</i>
+                  </div>
+                  <p class="card-category">Call Recieved</p>
+                  <h3 class="card-title">{{ App\Seip::where('remarks',7)->count() }}</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">local_offer</i> Tracked from Github
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-info card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">sentiment_dissatisfied</i>
+                  </div>
+                  <p class="card-category">Not Interested</p>
+                  <h3 class="card-title">{{ App\Seip::where('remarks',8)->count() }}</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
