@@ -18,6 +18,7 @@
     <link rel="icon" type="image/png" href="{{ asset('xubisoft/assets/images/xubi/cropped-download-32x32.jpg') }}">
     <!-- Place favicon.ico in the root directory -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    {{-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('xubisoft/assets/css/bootstrap.min.css') }}"> --}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473563/css/animate_dmpuz6.css">
@@ -41,7 +42,7 @@
     <link rel="stylesheet" href="https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571473565/css/responsive_qjrbqn.css" />
     <link rel="stylesheet" href="{{ asset('xubisoft/assets/custom/css/custom.css') }}" />
 
-
+    <script src="https://kit.fontawesome.com/84b3029d9e.js" crossorigin="anonymous"></script>
   </head>
 
 <style>
@@ -131,7 +132,7 @@
   				<div class="col-12">
   					<nav class="navbar navbar-expand-md navbar-light">
 
-  						<a class="navbar-brand" href="{{ route('homepage') }}" target="_blank"><img src="{{ asset('xubisoft/assets/images/xubi/xubi_logo2.png') }}" alt=""></a>
+  						<a class="navbar-brand" href="{{ route('homepage') }}" target="_blank"><img src="{{ asset('xubisoft/assets/images/xubi/xubi_logo2.png') }}" alt="Xubisoft Ltd"></a>
 
   						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   							<span class="navbar-toggler-icon"></span>
@@ -143,7 +144,7 @@
   									<a class="nav-link" href="{{ route('homepage') }}">HOME</a>
   								</li>
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 {{ Route::currentRouteNamed('services') ? 'active' : '' }}">
-  									<a class="nav-link dropdown-toggle" href="{{ route('services') }}">SERVICES <i class="pe-7s-angle-down"></i> </a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('services') }}">SERVICES <i class="fas fa-angle-down"></i> </a>
   									<div class="dropdown-menu">
 
                       @foreach (App\Category::all() as $services)
@@ -155,7 +156,7 @@
 
 
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" href="{{ route('products') }}">PRODUCTS <i class="pe-7s-angle-down"></i></a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('products') }}">PRODUCTS <i class="fas fa-angle-down"></i></i></a>
   									<div class="dropdown-menu">
                       @foreach (App\Product::all() as $products)
                         <a class="dropdown-item" href="{{ url('/products') }}/{{ $products->id }}"> {{  $products->product_name }} </a>
@@ -165,7 +166,7 @@
 
 
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" href="{{ route('training') }}">TRAINING <i class="pe-7s-angle-down"></i></a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('training') }}">TRAINING <i class="fas fa-angle-down"></i></i></a>
 
 
                     <div class="dropdown-menu">
@@ -257,8 +258,8 @@
 
 
 
-        /* <!-- search panel strart --> */
-        /* <!-- xs modal --> */
+        {{-- /* <!-- search panel strart --> */ --}}
+        {{-- /* <!-- xs modal --> */ --}}
         <div class="zoom-anim-dialog mfp-hide modal-searchPanel" id="modal-popup-2">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -271,10 +272,10 @@
                 </div>
             </div>
         </div>
-        /* <!-- End xs modal --> */
-        /* <!-- end search panel strart --> */
+        {{-- /* <!-- End xs modal --> */ --}}
+        {{-- /* <!-- end search panel strart --> */ --}}
 
-/* <!-- header end --> */
+{{-- /* <!-- header end --> */ --}}
 
 @yield('content')
 
