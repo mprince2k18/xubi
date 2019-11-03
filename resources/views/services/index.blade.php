@@ -11,6 +11,11 @@
     font-family: 'Satisfy', cursive !important;
   }
 
+  p{
+    text-align: left;
+    color: #2d3436;
+  }
+
 
 </style>
 @endsection
@@ -37,7 +42,7 @@
 
 
                         </h1>
-                        <p>{{ $single_service_info->relationBetweenServices->sub_title }}</p>
+                        <p class="text-center">{{ $single_service_info->relationBetweenServices->sub_title }}</p>
                         <span class="watermark-title">{{ $single_service_info->relationBetweenServices->title_watermark_single }}</span>
                     </div><!-- .agency-banner-content END -->
                     <ul class="case-info-list">
@@ -76,7 +81,7 @@
                         <li><strong>Category :</strong>{{ $single_service_info->service_category_name }}</li>
                         <li><strong>Date :</strong>25 June, 2018</li>
                         <!-- <li><strong>Client :</strong>Oniblue</li> -->
-                        <li>
+                        {{-- <li>
                             <strong>Share :</strong>
                             <ul class="simple-social-list">
                                 <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
@@ -84,7 +89,7 @@
                                 <li><a href="#" class="googlePlus"><i class="fa fa-google-plus"></i></a></li>
                                 <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
                             </ul>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -108,6 +113,7 @@
             <div class="col-md-7">
                 <div class="project-brief-img">
                     <img src="{{ asset('uploads/service_items/service_info') }}/{{ $single_service_info->relationBetweenServices->service_info_banner }}" alt="">
+                    {{-- <img src="{{ asset('uploads/service_items/service_info') }}/{{ $single_service_info->relationBetweenServices->service_info_banner }}" alt=""> --}}
                 </div>
             </div>
             <div class="col-md-5">
@@ -142,8 +148,8 @@
                     <div class="col-md-6">
                         <div class="working-progress-content">
                             <span class="count-number wow spin"></span>
-                            <h2 class="section-title">Gather all the informations</h2>
-                            <p>We work systematic integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
+                            <h2 class="section-title">{{ $single_service_info->relationBetweenServices->service_process_1 }}</h2>
+                            <p>{{ $single_service_info->relationBetweenServices->service_process_details_1 }}</p>
                         </div><!-- .working-progress-content END -->
                     </div>
                     <div class="col-md-6">
@@ -162,8 +168,8 @@
                     <div class="col-md-6">
                         <div class="working-progress-content">
                             <span class="count-number wow spin"></span>
-                            <h2 class="section-title">Find Solution and Solve it</h2>
-                            <p>We work systematic integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
+                            <h2 class="section-title">{{ $single_service_info->relationBetweenServices->service_process_2 }}</h2>
+                            <p>{{ $single_service_info->relationBetweenServices->service_process_details_2 }}</p>
                         </div><!-- .working-progress-content END -->
                     </div>
                     <div class="col-md-6">
@@ -182,8 +188,8 @@
                     <div class="col-md-6">
                         <div class="working-progress-content">
                             <span class="count-number wow spin"></span>
-                            <h2 class="section-title">Finally get the Result</h2>
-                            <p>We work systematic integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
+                            <h2 class="section-title">{{ $single_service_info->relationBetweenServices->service_process_3 }}</h2>
+                            <p>{{ $single_service_info->relationBetweenServices->service_process_details_3 }}</p>
                         </div><!-- .working-progress-content END -->
                     </div>
                     <div class="col-md-6">

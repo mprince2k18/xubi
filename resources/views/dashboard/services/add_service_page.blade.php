@@ -24,17 +24,17 @@
 
                   <div class="form-group">
                     <label class="form-label">Service Title</label>
-                    <input type="text" class="form-control" placeholder="Service Title" name="title">
+                    <input type="text" class="form-control" placeholder="Service Title" name="title" value="{{ old('title') }}">
                   </div>
 
                   <div class="form-group">
                     <label class="form-label">Service Sub Title</label>
-                    <input type="text" class="form-control" placeholder="Service Sub Title" name="sub_title">
+                    <input type="text" class="form-control" placeholder="Service Sub Title" name="sub_title" value="{{ old('sub_title') }}">
                   </div>
 
                   <div class="form-group">
                     <label class="form-label">Title Watermark Single</label>
-                    <input type="text" class="form-control" max-maxlength="1" placeholder="Max Length 1 Letter" name="title_watermark_single">
+                    <input type="text" class="form-control" max-maxlength="1" placeholder="Max Length 1 Letter" name="title_watermark_single" value="{{ old('title_watermark_single') }}">
                   </div>
 
                   <!-- // service_category -->
@@ -42,7 +42,7 @@
 
                   <div class="form-group">
                     <label class="form-label">Service Category</label>
-                    <select class="form-control" name="service_category_id">
+                    <select class="form-control" name="service_category_id" value="{{ old('service_category_id') }}">
                       @foreach ($all_service_categories as $all_service_category)
                         <option value="{{ $all_service_category->id }}">{{ $all_service_category->service_category_name }}</option>
                       @endforeach
@@ -53,7 +53,7 @@
 
                   <div class="form-group">
                     <label class="form-label">title_banner</label>
-                    <input type="file" class="form-control" name="title_banner">
+                    <input type="file" class="form-control" name="title_banner" value="{{ old('title_banner') }}">
                   </div>
 
 
@@ -63,13 +63,13 @@
 
                   <div class="form-group">
                     <label class="form-label">about_service_title</label>
-                    <input type="text" class="form-control" placeholder="about_service_title" name="about_service_title">
+                    <input type="text" class="form-control" placeholder="about_service_title" name="about_service_title" value="{{ old('about_service_title') }}">
                   </div>
 
 
                   <div class="form-group">
                     <label class="form-label">details_about_service</label>
-                    <textarea type="text" class="form-control" placeholder="details_about_service" name="details_about_service"></textarea>
+                    <textarea type="text" class="form-control" placeholder="details_about_service" name="details_about_service">{{ old('details_about_service') }}</textarea>
                   </div>
 
 
@@ -80,29 +80,29 @@
 
                   <div class="form-group">
                     <label class="form-label">service_info_banner</label>
-                    <input type="file" class="form-control" placeholder="service_info_banner" name="service_info_banner">
+                    <input type="file" class="form-control" placeholder="service_info_banner" name="service_info_banner" value="{{ old('service_info_banner') }}">
                   </div>
 
                   <div class="form-group">
                     <label class="form-label">service_info_details</label>
-                    <textarea type="text" class="form-control" placeholder="service_info_details" name="service_info_details"></textarea>
+                    <textarea type="text" class="form-control" placeholder="service_info_details" name="service_info_details">{{ old('service_info_details') }}</textarea>
                   </div>
 
                   <h4 class="text-center">Service Info Items</h4>
 
                   <div class="form-group">
                     <label class="form-label">service_info_items_1</label>
-                    <input type="text" class="form-control" placeholder="service_info_items_1" name="service_info_items_1">
+                    <input type="text" class="form-control" placeholder="service_info_items_1" name="service_info_items_1" value="{{ old('service_info_items_1') }}">
                   </div>
 
                   <div class="form-group">
                     <label class="form-label">service_info_items_2</label>
-                    <input type="text" class="form-control" placeholder="service_info_items_2" name="service_info_items_2">
+                    <input type="text" class="form-control" placeholder="service_info_items_2" name="service_info_items_2" value="{{ old('service_info_items_2') }}">
                   </div>
 
                   <div class="form-group">
                     <label class="form-label">service_info_items_3</label>
-                    <input type="text" class="form-control" placeholder="service_info_items_3" name="service_info_items_3">
+                    <input type="text" class="form-control" placeholder="service_info_items_3" name="service_info_items_3" value="{{ old('service_info_items_3') }}">
                   </div>
 
                   <!-- service_info_1 end-->
@@ -116,17 +116,17 @@
 
                   <div class="form-group">
                     <label class="form-label">service_process_1</label>
-                    <input type="text" class="form-control" placeholder="service_process_1" name="service_process_1">
+                    <input type="text" class="form-control" placeholder="service_process_1" name="service_process_1" value="{{ old('service_process_1') }}">
                   </div>
 
                   <div class="form-group">
                     <label class="form-label">service_process_details_1</label>
-                    <textarea type="text" class="form-control" placeholder="service_process_details_1" name="service_process_details_1"></textarea>
+                    <textarea type="text" class="form-control" placeholder="service_process_details_1" name="service_process_details_1">{{ old('service_process_details_1') }}</textarea>
                   </div>
 
                   <div class="form-group">
                     <label class="form-label">service_process_banner_1</label>
-                    <input type="file" class="form-control" placeholder="service_process_banner_1" name="service_process_banner_1">
+                    <input type="file" class="form-control" placeholder="service_process_banner_1" name="service_process_banner_1" value="{{ old('service_process_banner_1') }}">
                   </div>
 
                   <!-- service_process_1 end-->
@@ -138,17 +138,17 @@
 
                                     <div class="form-group">
                                       <label class="form-label">service_process_2</label>
-                                      <input type="text" class="form-control" placeholder="service_process_2" name="service_process_2">
+                                      <input type="text" class="form-control" placeholder="service_process_2" name="service_process_2" value="{{ old('service_process_2') }}">
                                     </div>
 
                                     <div class="form-group">
                                       <label class="form-label">service_process_details_2</label>
-                                      <textarea type="text" class="form-control" placeholder="service_process_details_2" name="service_process_details_2"></textarea>
+                                      <textarea type="text" class="form-control" placeholder="service_process_details_2" name="service_process_details_2">{{ old('service_process_details_2') }}</textarea>
                                     </div>
 
                                     <div class="form-group">
                                       <label class="form-label">service_process_banner_2</label>
-                                      <input type="file" class="form-control" placeholder="service_process_banner_2" name="service_process_banner_2">
+                                      <input type="file" class="form-control" placeholder="service_process_banner_2" name="service_process_banner_2" value="{{ old('service_process_banner_2') }}">
                                     </div>
 
                                     <!-- service_process_2 end-->
