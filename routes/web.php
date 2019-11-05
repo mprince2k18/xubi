@@ -308,6 +308,6 @@ Route::get('/admin/trainee/pdf_view/{single}', 'PdfController@pdfView');
 //     return view('welcome');
 // });
 
-Auth::routes();
+Auth::routes(['verify'=>true]);
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -32,6 +32,7 @@ class ServicesController extends Controller
             $single_service_deatils = Services::findOrFail($service_id);
             return view('services.index',compact('single_service_info','single_service_deatils'));
 
+            // 404 Error
 
           if (Route::has('/services/{service_id}')) {
             $single_service_info = Category::findOrFail($service_id);
