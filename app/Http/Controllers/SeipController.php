@@ -23,8 +23,15 @@ use App\Mail\WaitingMail;
 use App\Mail\RejectedMail;
 use App\Mail\VivaMail;
 
-class SeipController extends Controller
+class SeipController extends Controller 
 {
+
+
+  public function __construct()
+  {
+      $this->middleware('auth');
+      $this->middleware('verified');
+  }
 
 
   // index

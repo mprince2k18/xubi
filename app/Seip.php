@@ -3,8 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-class Seip extends Model
+class Seip extends Model 
 {
     protected $fillable=[
 
