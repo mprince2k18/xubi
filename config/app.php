@@ -179,6 +179,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+        Sentry\Laravel\ServiceProvider::class,
+
 
     ],
 
@@ -234,6 +236,8 @@ return [
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
+        'Sentry' => Sentry\Laravel\Facade::class,
+
 
 
     ],

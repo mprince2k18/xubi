@@ -296,9 +296,10 @@ Route::post('/seip/registration/create','SeipController@create')->name('seip_reg
 // Route::get('pdf_download', 'PdfController@pdfDownload');
 Route::get('/admin/trainee/pdf_view/{single}', 'PdfController@pdfView');
 
-
-
-
+// sentry
+Route::get('/debug-sentry', function () {
+    throw new Exception('My first Sentry error!');
+});
 
 
 

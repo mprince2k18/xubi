@@ -42,6 +42,11 @@ class Handler extends ExceptionHandler
       if ($this->shouldReport($exception)) {
             $this->sendEmail($exception); // sends an email
         }
+
+        if (app()->bound('sentry') && $this->shouldReport($exception)){
+        app('sentry')->captureException($exception);
+    }
+    
         parent::report($exception);
     }
 
