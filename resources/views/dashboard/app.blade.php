@@ -163,42 +163,77 @@
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 										<ul class="drop-icon-wrap p-1">
-											<li>
-												<a href="{{ route('status_index') }}" class="drop-icon-item">
-													<i class="fe fe-mail text-dark"></i>
-													<span class="block"> Status </span>
-												</a>
-											</li>
-											<li>
-												<a href="{{ route('trainee_index') }}" class="drop-icon-item">
-													<i class="fe fe-calendar text-dark"></i>
-													<span class="block"> SEIP </span>
-												</a>
-											</li>
-											<li>
-												<a href="maps.html" class="drop-icon-item">
-													<i class="fe fe-map-pin text-dark"></i>
-													<span class="block">map</span>
-												</a>
-											</li>
-											<li>
-												<a href="cart.html" class="drop-icon-item">
-													<i class="fe fe-shopping-cart text-dark"></i>
-													<span class="block">Cart</span>
-												</a>
-											</li>
-											<li>
-												<a href="chat.html" class="drop-icon-item">
-													<i class="fe fe-message-square text-dark"></i>
-													<span class="block">chat</span>
-												</a>
-											</li>
-											<li>
-												<a href="profile.html" class="drop-icon-item">
-													<i class="fe fe-phone-outgoing text-dark"></i>
-													<span class="block">contact</span>
-												</a>
-											</li>
+
+								@if (Auth::user()->role_id == 1)
+
+									<li>
+										<a href="{{ route('status_index') }}" class="drop-icon-item">
+											<i class="fe fe-mail text-dark"></i>
+											<span class="block"> Status </span>
+										</a>
+									</li>
+									<li>
+										<a href="{{ route('trainee_index') }}" class="drop-icon-item">
+											<i class="fe fe-calendar text-dark"></i>
+											<span class="block"> SEIP </span>
+										</a>
+									</li>
+									<li>
+										<a href="{{ route('all_users.index') }}" class="drop-icon-item">
+											<i class="fe fe-map-pin text-dark"></i>
+											<span class="block">Users</span>
+										</a>
+									</li>
+									<li>
+										<a href="cart.html" class="drop-icon-item">
+											<i class="fe fe-shopping-cart text-dark"></i>
+											<span class="block">Request</span>
+										</a>
+									</li>
+									<li>
+										<a href="chat.html" class="drop-icon-item">
+											<i class="fe fe-message-square text-dark"></i>
+											<span class="block">chat</span>
+										</a>
+									</li>
+									<li>
+										<a href="profile.html" class="drop-icon-item">
+											<i class="fe fe-phone-outgoing text-dark"></i>
+											<span class="block">contact</span>
+										</a>
+									</li>
+
+								@elseif (Auth::user()->role_id == 2)
+
+									<li>
+										<a href="{{ route('status_index') }}" class="drop-icon-item">
+											<i class="fe fe-mail text-dark"></i>
+											<span class="block"> Status </span>
+										</a>
+									</li>
+									<li>
+										<a href="{{ route('trainee_index') }}" class="drop-icon-item">
+											<i class="fe fe-calendar text-dark"></i>
+											<span class="block"> SEIP </span>
+										</a>
+									</li>
+
+								@elseif (Auth::user()->role_id == 3)
+
+									<li>
+										<a href="{{ route('trainee_index') }}" class="drop-icon-item">
+											<i class="fe fe-calendar text-dark"></i>
+											<span class="block"> SEIP </span>
+										</a>
+									</li>
+
+								@else
+
+								@endif
+
+
+
+
 										</ul>
 										<div class="dropdown-divider"></div>
 										<a href="#" class="dropdown-item text-center">View all</a>
@@ -211,7 +246,7 @@
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow ">
 										<div class="text-center">
 											<a href="#" class="dropdown-item text-center font-weight-sembold user" data-toggle="dropdown">{{ Auth::user()->name }}</a>
-											<span class="text-center user-semi-title text-dark">web designer</span>
+											<span class="text-center user-semi-title text-dark">{{ Auth::user()->role_id }}</span>
 											<div class="dropdown-divider"></div>
 										</div>
 										<a class="dropdown-item" href="#">
@@ -259,149 +294,368 @@
 				<div class="admin-navbar" id="headerMenuCollapse">
 					<div class="container">
 						<ul class="nav">
-							<li class="nav-item with-sub">
-								<a class="nav-link active" href="{{ route('dashboard') }}">
-									<i class="fa fa-desktop"></i>
-									<span> Dashboard</span>
-								</a>
-							</li>
-							<li class="nav-item with-sub">
-								<a class="nav-link" href="#"><i class="fa fa-area-chart"></i> <span>Frontend</span></a>
-								<div class="sub-item">
-									<ul>
-										<li>
-											<a href="{{ route('header_slider') }}">Header</a>
-										</li>
 
-										<li>
-											<a href="{{ route('info') }}">Info</a>
-										</li>
 
-										<li>
-											<a href="{{ route('ceo') }}">Ceo</a>
-										</li>
+							@if (Auth::user()->role_id == 1)
 
-										<li>
-											<a href="{{ route('footer') }}">Footer</a>
-										</li>
 
-										<li>
-											<a href="{{ route('portfolio') }}">Portfolio</a>
-										</li>
+								{{-- superadmin --}}
 
-										<li>
-											<a href="{{ route('team') }}">Team</a>
-										</li>
 
-									</ul>
-								</div>
-								<!-- dropdown-menu -->
-							</li>
-
-							<li class="nav-item with-sub">
-								<a class="nav-link" href="{{ route('contact_index') }}"><i class="fa fa-tachometer"></i> <span>Messages</span></a>
-								<div class="sub-item">
-									<ul>
-										<li>
-											<a href="{{ route('contact_index') }}">All Message</a>
-										</li>
-										<li>
-											<a href="{{ route('all_read_messages') }}">Read</a>
-										</li>
-										<li>
-											<a href="{{ route('all_unread_messages') }}">Unread</a>
-										</li>
+								<li class="nav-item with-sub">
+									<a class="nav-link active" href="{{ route('dashboard') }}">
+										<i class="fa fa-desktop"></i>
+										<span> Dashboard</span>
+									</a>
+								</li>
 
 
 
 
-									</ul>
-								</div>
-								<!-- dropdown-menu -->
-							</li>
+								<li class="nav-item with-sub">
+									<a class="nav-link" href="#"><i class="fa fa-area-chart"></i> <span>Frontend</span></a>
+									<div class="sub-item">
+										<ul>
+											<li>
+												<a href="{{ route('header_slider') }}">Header</a>
+											</li>
+
+											<li>
+												<a href="{{ route('info') }}">Info</a>
+											</li>
+
+											<li>
+												<a href="{{ route('ceo') }}">Ceo</a>
+											</li>
+
+											<li>
+												<a href="{{ route('footer') }}">Footer</a>
+											</li>
+
+											<li>
+												<a href="{{ route('portfolio') }}">Portfolio</a>
+											</li>
+
+											<li>
+												<a href="{{ route('team') }}">Team</a>
+											</li>
+
+										</ul>
+									</div>
+									<!-- dropdown-menu -->
+								</li>
 
 
+
+
+								<li class="nav-item with-sub">
+									<a class="nav-link" href="{{ route('contact_index') }}"><i class="fa fa-tachometer"></i> <span>Messages</span></a>
+									<div class="sub-item">
+										<ul>
+											<li>
+												<a href="{{ route('contact_index') }}">All Message</a>
+											</li>
+											<li>
+												<a href="{{ route('all_read_messages') }}">Read</a>
+											</li>
+											<li>
+												<a href="{{ route('all_unread_messages') }}">Unread</a>
+											</li>
+
+
+
+
+										</ul>
+									</div>
+									<!-- dropdown-menu -->
+								</li>
+
+
+
+
+
+															<li class="nav-item with-sub">
+																<a class="nav-link" href="{{ route('service_index') }}"><i class="fa fa-tachometer"></i> <span>Services</span></a>
+																<div class="sub-item">
+																	<ul>
+																		<li>
+																			<a href="{{ route('service_index') }}">All Services</a>
+																		</li>
+																		<li>
+																			<a href="{{ route('add_service_page') }}">Add Service Page</a>
+																		</li>
+
+																	</ul>
+																</div>
+																<!-- dropdown-menu -->
+															</li>
+
+
+
+
+								<li class="nav-item with-sub">
+									<a class="nav-link" href="{{ route('products_index') }}"><i class="mdi mdi-file"></i><span>Products</span></a>
+									<div class="sub-item">
+										<ul>
+
+											<li>
+												<a href="{{ route('products_index') }}">Add New Product </a>
+											</li>
+
+											<li>
+												<a href="{{ route('add_product_page') }}">Add New Product Page </a>
+											</li>
+
+										</ul>
+									</div>
+									<!-- dropdown-menu -->
+								</li>
+
+								<li class="nav-item with-sub">
+									<a class="nav-link" href="{{ route('client_index') }}"><i class="fa fa-tachometer"></i> <span>Clients</span></a>
+									<div class="sub-item">
+										<ul>
+											<li>
+												<a href="{{ route('client_index') }}">Add Client</a>
+											</li>
+										</ul>
+									</div>
+									<!-- dropdown-menu -->
+								</li>
+
+
+								<li class="nav-item with-sub">
+									<a class="nav-link" href="{{ route('training_index') }}"><i class="fa fa-tachometer"></i> <span>Training</span></a>
+									<div class="sub-item">
+										<ul>
+											<li>
+												<a href="{{ route('training_index') }}">Add Training</a>
+											</li>
+											<li>
+												<a href="{{ route('training_page') }}">Add Training Page</a>
+											</li>
+										</ul>
+									</div>
+									<!-- dropdown-menu -->
+								</li>
+
+
+								<li class="nav-item with-sub">
+									<a class="nav-link" href="{{ route('career_dashboard_index') }}"><i class="fa fa-tachometer"></i> <span>Career</span></a>
+									<!-- <div class="sub-item">
+										<ul>
+											<li>
+												<a href="{{ route('training_index') }}">Add Training</a>
+											</li>
+											<li>
+												<a href="{{ route('training_page') }}">Add Training Page</a>
+											</li>
+										</ul>
+									</div> -->
+									<!-- dropdown-menu -->
+								</li>
+
+
+							@elseif (Auth::user()->role_id == 2)
 
 														<li class="nav-item with-sub">
-															<a class="nav-link" href="{{ route('service_index') }}"><i class="fa fa-tachometer"></i> <span>Services</span></a>
-															<div class="sub-item">
-																<ul>
-																	<li>
-																		<a href="{{ route('service_index') }}">All Services</a>
-																	</li>
-																	<li>
-																		<a href="{{ route('add_service_page') }}">Add Service Page</a>
-																	</li>
-
-																</ul>
-															</div>
-															<!-- dropdown-menu -->
+															<a class="nav-link active" href="{{ route('dashboard') }}">
+																<i class="fa fa-desktop"></i>
+																<span> Dashboard</span>
+															</a>
 														</li>
 
 
+																<li class="nav-item with-sub">
+																	<a class="nav-link" href="#"><i class="fa fa-area-chart"></i> <span>Frontend</span></a>
+																	<div class="sub-item">
+																		<ul>
+																			<li>
+																				<a href="{{ route('header_slider') }}">Header</a>
+																			</li>
+
+																			<li>
+																				<a href="{{ route('info') }}">Info</a>
+																			</li>
+
+																			<li>
+																				<a href="{{ route('ceo') }}">Ceo</a>
+																			</li>
+
+																			<li>
+																				<a href="{{ route('footer') }}">Footer</a>
+																			</li>
+
+																			<li>
+																				<a href="{{ route('portfolio') }}">Portfolio</a>
+																			</li>
+
+																			<li>
+																				<a href="{{ route('team') }}">Team</a>
+																			</li>
+
+																		</ul>
+																	</div>
+																	<!-- dropdown-menu -->
+																</li>
 
 
-							<li class="nav-item with-sub">
-								<a class="nav-link" href="{{ route('products_index') }}"><i class="mdi mdi-file"></i><span>Products</span></a>
-								<div class="sub-item">
-									<ul>
-
-										<li>
-											<a href="{{ route('products_index') }}">Add New Product </a>
-										</li>
-
-										<li>
-											<a href="{{ route('add_product_page') }}">Add New Product Page </a>
-										</li>
-
-									</ul>
-								</div>
-								<!-- dropdown-menu -->
-							</li>
-
-							<li class="nav-item with-sub">
-								<a class="nav-link" href="{{ route('client_index') }}"><i class="fa fa-tachometer"></i> <span>Clients</span></a>
-								<div class="sub-item">
-									<ul>
-										<li>
-											<a href="{{ route('client_index') }}">Add Client</a>
-										</li>
-									</ul>
-								</div>
-								<!-- dropdown-menu -->
-							</li>
 
 
-							<li class="nav-item with-sub">
-								<a class="nav-link" href="{{ route('training_index') }}"><i class="fa fa-tachometer"></i> <span>Training</span></a>
-								<div class="sub-item">
-									<ul>
-										<li>
-											<a href="{{ route('training_index') }}">Add Training</a>
-										</li>
-										<li>
-											<a href="{{ route('training_page') }}">Add Training Page</a>
-										</li>
-									</ul>
-								</div>
-								<!-- dropdown-menu -->
-							</li>
+																<li class="nav-item with-sub">
+																	<a class="nav-link" href="{{ route('contact_index') }}"><i class="fa fa-tachometer"></i> <span>Messages</span></a>
+																	<div class="sub-item">
+																		<ul>
+																			<li>
+																				<a href="{{ route('contact_index') }}">All Message</a>
+																			</li>
+																			<li>
+																				<a href="{{ route('all_read_messages') }}">Read</a>
+																			</li>
+																			<li>
+																				<a href="{{ route('all_unread_messages') }}">Unread</a>
+																			</li>
 
 
-							<li class="nav-item with-sub">
-								<a class="nav-link" href="{{ route('career_dashboard_index') }}"><i class="fa fa-tachometer"></i> <span>Career</span></a>
-								<!-- <div class="sub-item">
-									<ul>
-										<li>
-											<a href="{{ route('training_index') }}">Add Training</a>
-										</li>
-										<li>
-											<a href="{{ route('training_page') }}">Add Training Page</a>
-										</li>
-									</ul>
-								</div> -->
-								<!-- dropdown-menu -->
-							</li>
+
+
+																		</ul>
+																	</div>
+																	<!-- dropdown-menu -->
+																</li>
+
+
+
+
+
+																							<li class="nav-item with-sub">
+																								<a class="nav-link" href="{{ route('service_index') }}"><i class="fa fa-tachometer"></i> <span>Services</span></a>
+																								<div class="sub-item">
+																									<ul>
+																										<li>
+																											<a href="{{ route('service_index') }}">All Services</a>
+																										</li>
+																										<li>
+																											<a href="{{ route('add_service_page') }}">Add Service Page</a>
+																										</li>
+
+																									</ul>
+																								</div>
+																								<!-- dropdown-menu -->
+																							</li>
+
+
+
+
+																<li class="nav-item with-sub">
+																	<a class="nav-link" href="{{ route('products_index') }}"><i class="mdi mdi-file"></i><span>Products</span></a>
+																	<div class="sub-item">
+																		<ul>
+
+																			<li>
+																				<a href="{{ route('products_index') }}">Add New Product </a>
+																			</li>
+
+																			<li>
+																				<a href="{{ route('add_product_page') }}">Add New Product Page </a>
+																			</li>
+
+																		</ul>
+																	</div>
+																	<!-- dropdown-menu -->
+																</li>
+
+																<li class="nav-item with-sub">
+																	<a class="nav-link" href="{{ route('client_index') }}"><i class="fa fa-tachometer"></i> <span>Clients</span></a>
+																	<div class="sub-item">
+																		<ul>
+																			<li>
+																				<a href="{{ route('client_index') }}">Add Client</a>
+																			</li>
+																		</ul>
+																	</div>
+																	<!-- dropdown-menu -->
+																</li>
+
+
+																<li class="nav-item with-sub">
+																	<a class="nav-link" href="{{ route('training_index') }}"><i class="fa fa-tachometer"></i> <span>Training</span></a>
+																	<div class="sub-item">
+																		<ul>
+																			<li>
+																				<a href="{{ route('training_index') }}">Add Training</a>
+																			</li>
+																			<li>
+																				<a href="{{ route('training_page') }}">Add Training Page</a>
+																			</li>
+																		</ul>
+																	</div>
+																	<!-- dropdown-menu -->
+																</li>
+
+
+																<li class="nav-item with-sub">
+																	<a class="nav-link" href="{{ route('career_dashboard_index') }}"><i class="fa fa-tachometer"></i> <span>Career</span></a>
+																	<!-- <div class="sub-item">
+																		<ul>
+																			<li>
+																				<a href="{{ route('training_index') }}">Add Training</a>
+																			</li>
+																			<li>
+																				<a href="{{ route('training_page') }}">Add Training Page</a>
+																			</li>
+																		</ul>
+																	</div> -->
+																	<!-- dropdown-menu -->
+																</li>
+
+
+
+								@else
+
+									{{-- Agent --}}
+
+									<li class="nav-item with-sub">
+										<a class="nav-link" href="{{ route('contact_index') }}"><i class="fa fa-tachometer"></i> <span>Messages</span></a>
+										<div class="sub-item">
+											<ul>
+												<li>
+													<a href="{{ route('contact_index') }}">All Message</a>
+												</li>
+												<li>
+													<a href="{{ route('all_read_messages') }}">Read</a>
+												</li>
+												<li>
+													<a href="{{ route('all_unread_messages') }}">Unread</a>
+												</li>
+
+
+
+
+											</ul>
+										</div>
+										<!-- dropdown-menu -->
+									</li>
+								<li class="nav-item with-sub">
+										<a class="nav-link" href="{{ route('career_dashboard_index') }}"><i class="fa fa-tachometer"></i> <span>Career</span></a>
+										<!-- <div class="sub-item">
+											<ul>
+												<li>
+													<a href="{{ route('training_index') }}">Add Training</a>
+												</li>
+												<li>
+													<a href="{{ route('training_page') }}">Add Training Page</a>
+												</li>
+											</ul>
+										</div> -->
+										<!-- dropdown-menu -->
+									</li>
+
+
+
+
+							@endif
+
 
 
 

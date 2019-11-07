@@ -1,26 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
-{{-- <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-</div>
-@endif
-
-You are logged in!
-</div>
-</div>
-</div>
-</div>
-</div> --}}
-
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -109,7 +86,16 @@ You are logged in!
         <div class="content">
 
 
-            <div class="auth_title m-b-md">
+
+
+            <div class="role_title m-b-md">
+                Hello,<strong>{{ Auth::user()->name }}</strong> <br>
+                You Are
+            </div>
+
+
+
+            <div class="title m-b-md">
                 @if (Auth::user()->role_id == 1)
                 Super Admin
                 @endif
@@ -124,51 +110,16 @@ You are logged in!
                 @endif
             </div>
 
-            <div class="role_title m-b-md">
-                {{ Auth::user()->name }}
-            </div>
-
-
-            <div class="title m-b-md">
-                XUBISOFT
-            </div>
-
-
-
-            <div class="links">
-
-
-                @if (Auth::user()->role_id == 1)
-
-                    <a href="{{ route('dashboard') }}">Dashboard</a>
-                    <a href="{{ route('trainee_index') }}">SEIP</a>
-                    <a href="{{ route('contact_index') }}">Message</a>
-                    <a href="{{ route('super_admin.index') }}">Add New</a>
-                    
-                  @elseif (Auth::user()->role_id == 2)
-
-                    <a href="{{ route('dashboard') }}">Dashboard</a>
-                    <a href="{{ route('trainee_index') }}">SEIP</a>
-                    <a href="{{ route('contact_index') }}">Message</a>
-
-                  @else
-
-                    <a href="{{ route('trainee_index') }}">SEIP</a>
-                    <a href="{{ route('contact_index') }}">Message</a>
-
-                @endif
 
 
 
 
-            </div>
+
+
+
+
         </div>
     </div>
 </body>
 
 </html>
-
-
-
-
-@endsection

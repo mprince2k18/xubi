@@ -29,4 +29,6 @@ class FrontendController extends Controller
       // Alert::success('Success Title', 'Success Message');
       return view('homepage.index',compact('banners','infos','ceos','teams','portfolios','clients'));
     }
+
+// END
 }

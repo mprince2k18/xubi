@@ -81,18 +81,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Xubisoft
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ route('dashboard') }}">Dashboard</a>
+                    <a href="{{ route('trainee_index') }}">SEIP</a>
+                    <a href="{{ route('contact_index') }}">Message</a>
+                    <a href="{{ route('super_admin.index') }}">Add New</a>
+
                 </div>
             </div>
         </div>

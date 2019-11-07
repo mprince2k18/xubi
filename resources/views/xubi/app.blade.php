@@ -74,6 +74,11 @@
     background-color: rgba(0,0,0,0.8);
 }
 
+
+.footer-logo{
+  width: 20% !important;
+}
+
 @media only screen and (max-width: 600px) {
        .footer-logo{
            width: 50% !important;
@@ -393,9 +398,9 @@
                   <div class="footer-widget">
                       <h4 class="widget-title">SERVICES</h4>
                       <ul class="xs-list">
-                        @foreach(App\Services::all() as  $value)
+                        @foreach(App\Services::all() as  $service)
 
-                          <li><a href="{{ $value->id }}"> <i class="lni-phone-handset"></i> {{ $value->title }} </a></li>
+                          <li><a href="{{ $service->id }}"> <i class="lni-phone-handset"></i> {{ $service->title }} </a></li>
                         @endforeach
                         <li><a href="about.html"> <i class="lni-map-marker"></i> Site Map</a></li>
                         <li><a href="about.html"> <i class="lni-map-marker"></i> Site Map</a></li>

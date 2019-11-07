@@ -268,7 +268,14 @@ Route::post('/admin/quarter_insert','SeipController@quarter_insert')->name('quar
 Route::get('/admin/quarter/status/edit/{quarter}','SeipController@quarter_status_edit')->name('quarter_status_edit');
 
 
+// SuperAdminController
+Route::get('/add/new/user.html','SuperAdminController@index')->name('super_admin.index');
+// create
+Route::post('/add/new/user.html/create','SuperAdminController@create')->name('super_admin.create');
 
+
+// Users
+Route::get('/all/uesrs','SuperAdminController@all_users')->name('all_users.index');
 
 
 
@@ -312,3 +319,7 @@ Route::get('/debug-sentry', function () {
 Auth::routes(['verify'=>true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/non-verified-user', 'NonUserController@index')->name('non_verified_user');
+Route::get('/non-verified-unknown-user', 'NonUserController@unknown')->name('non_verified_unknown_user');
