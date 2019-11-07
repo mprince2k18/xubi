@@ -86,7 +86,7 @@
         <div class="content">
 
             <div class="role_title text-center">
-                You Are account is not
+                Your account is not
             </div>
 
             <div class="title text-center">
