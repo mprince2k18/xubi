@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Hash;
+use Alert;
 
 class SuperAdminController extends Controller
 {
@@ -50,6 +51,40 @@ class SuperAdminController extends Controller
     {
       $users = User::all();
       return view('superadmin.users.index',compact('users'));
+    }
+
+    // single_user
+
+    function single_user($user_id)
+    {
+      $single_user = User::findOrFail($user_id);
+      return view('superadmin.users.single',compact('single_user'));
+    }
+
+    // single_user_update
+
+    function single_update(Request $request)
+    {
+
+      // Validation
+      $request->validate([
+        'password' =>'required|confirmed|string|min:8',
+        'password_confirmation' =>'required|same:password',
+      ]);
+
+      // update
+      User::find($request->user_id)->update([
+        'name' =>$request->name,
+        'email' =>$request->email,
+        'password' =>bcrypt($request->password),
+        'role_id' =>$request->role_id,
+        'active' =>$request->active,
+      ]);
+
+
+
+      Alert::toast('Updated Successfully','success');
+      return back();
     }
 
 
