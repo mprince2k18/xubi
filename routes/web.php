@@ -243,29 +243,57 @@ Route::post('/admin/status/add_remarks_status/insert','StatusController@add_rema
 
 
 // Trainee
-// index
-Route::get('/admin/trainee','SeipController@trainee_index')->name('trainee_index');
-// single
-Route::get('/admin/trainee/{single}','SeipController@single_trainee_index')->name('single_trainee_index');
-// update
-Route::post('/admin/trainee/update','SeipController@update')->name('single_trainee_update');
-
-// interested_trainee
-Route::get('/admin/interested/trainee','SeipController@interested_trainee_index')->name('interested_trainee_index');
-// selected_trainee
-Route::get('/admin/selected/trainee','SeipController@selected_trainee_index')->name('selected_trainee_index');
-// waiting_trainee
-Route::get('/admin/waiting/trainee','SeipController@waiting_trainee_index')->name('waiting_trainee_index');
-// waiting_trainee
-Route::get('/admin/rejected/trainee','SeipController@rejected_trainee_index')->name('rejected_trainee_index');
 
 
-// quarter
-Route::get('/admin/quarter','SeipController@quarter_index')->name('quarter_index');
-// quarter_insert
-Route::post('/admin/quarter_insert','SeipController@quarter_insert')->name('quarter_insert');
-// quarter_status
-Route::get('/admin/quarter/status/edit/{quarter}','SeipController@quarter_status_edit')->name('quarter_status_edit');
+Route::middleware('common')->group(function(){
+  // index
+  Route::get('/admin/trainee','SeipController@trainee_index')->name('trainee_index');
+  // single
+  Route::get('/admin/trainee/{single}','SeipController@single_trainee_index')->name('single_trainee_index');
+  // update
+  Route::post('/admin/trainee/update','SeipController@update')->name('single_trainee_update');
+
+  // interested_trainee
+  Route::get('/admin/interested/trainee','SeipController@interested_trainee_index')->name('interested_trainee_index');
+  // selected_trainee
+  Route::get('/admin/selected/trainee','SeipController@selected_trainee_index')->name('selected_trainee_index');
+  // waiting_trainee
+  Route::get('/admin/waiting/trainee','SeipController@waiting_trainee_index')->name('waiting_trainee_index');
+  // waiting_trainee
+  Route::get('/admin/rejected/trainee','SeipController@rejected_trainee_index')->name('rejected_trainee_index');
+
+  // quarter
+  Route::get('/admin/quarter','SeipController@quarter_index')->name('quarter_index');
+  // quarter_insert
+  Route::post('/admin/quarter_insert','SeipController@quarter_insert')->name('quarter_insert');
+  // quarter_status
+  Route::get('/admin/quarter/status/edit/{quarter}','SeipController@quarter_status_edit')->name('quarter_status_edit');
+});
+
+//
+// // index
+// Route::get('/admin/trainee','SeipController@trainee_index')->name('trainee_index');
+// // single
+// Route::get('/admin/trainee/{single}','SeipController@single_trainee_index')->name('single_trainee_index');
+// // update
+// Route::post('/admin/trainee/update','SeipController@update')->name('single_trainee_update');
+//
+// // interested_trainee
+// Route::get('/admin/interested/trainee','SeipController@interested_trainee_index')->name('interested_trainee_index');
+// // selected_trainee
+// Route::get('/admin/selected/trainee','SeipController@selected_trainee_index')->name('selected_trainee_index');
+// // waiting_trainee
+// Route::get('/admin/waiting/trainee','SeipController@waiting_trainee_index')->name('waiting_trainee_index');
+// // waiting_trainee
+// Route::get('/admin/rejected/trainee','SeipController@rejected_trainee_index')->name('rejected_trainee_index');
+//
+//
+// // quarter
+// Route::get('/admin/quarter','SeipController@quarter_index')->name('quarter_index');
+// // quarter_insert
+// Route::post('/admin/quarter_insert','SeipController@quarter_insert')->name('quarter_insert');
+// // quarter_status
+// Route::get('/admin/quarter/status/edit/{quarter}','SeipController@quarter_status_edit')->name('quarter_status_edit');
 
 
 // SuperAdminController

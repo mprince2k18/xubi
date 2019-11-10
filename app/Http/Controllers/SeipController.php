@@ -26,13 +26,6 @@ use App\Mail\VivaMail;
 class SeipController extends Controller
 {
 
-
-  public function __construct()
-  {
-      $this->middleware('common');
-  }
-
-
   // index
     function index()
     {
