@@ -48,7 +48,7 @@ class SuperAdminController extends Controller
 
     function all_users()
     {
-      $users = User::paginate(5);
+      $users = User::all();
       return view('superadmin.users.index',compact('users'));
     }
 

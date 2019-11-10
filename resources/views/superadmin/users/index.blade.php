@@ -27,7 +27,7 @@ Dashboard
             </thead>
             <tbody>
 
-              @forelse ($users as $user)
+              @foreach ($users as $user)
                 <tr>
                   <th scope="row">{{ $user->id }}</th>
                   <td>{{ $user->name }}</td>
@@ -39,9 +39,8 @@ Dashboard
                     <a href="#" class="btn-sm btn-danger">DELETE</a>
                   </td>
                 </tr>
-              @empty
-                <td>No User Available</td>
-              @endforelse
+            
+              @endforeach
 
 
 
