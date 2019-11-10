@@ -42,7 +42,8 @@ class SuperAdminController extends Controller
         'active' =>1,
       ]);
 
-      return back();
+      Alert::toast('User Added Successfully','success');
+      return redirect(route('all_users.index'));
     }
 
 
@@ -75,7 +76,7 @@ class SuperAdminController extends Controller
       ]);
 
       Alert::toast('Updated Successfully','success');
-      return back();
+      return redirect(route('all_users.index'));
     }
 
     // delete_user
