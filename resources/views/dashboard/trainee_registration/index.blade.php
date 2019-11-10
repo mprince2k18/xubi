@@ -7,7 +7,6 @@
 @section('css')
 <!-- Styles -->
     <link href="{{ asset('custom/seip_reg/assets/css/lib/data-table/buttons.bootstrap.min.css') }}" rel="stylesheet" />
-
 @endsection
 
 @section('content')
@@ -52,9 +51,7 @@
                           <td>{{ $Seip_registered_trainee->nid }}</td>
                           {{-- <td>{{ $Seip_registered_trainee->rocket_number }}</td> --}}
                           <td>
-
                             {{ $Seip_registered_trainee->relationBetweenEducation->education_qualification }}
-
                           </td>
                           <td>
                             {{ $Seip_registered_trainee->relationBetweenWork->working_status }}

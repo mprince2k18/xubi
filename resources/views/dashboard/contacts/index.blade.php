@@ -108,7 +108,7 @@
 															</td>
 															<td class="inbox-small-cells"><i class="fa fa-star"></i></td>
 															<td class="view-message  dont-show">{{ $all_contact->name }}</td>
-															<td class="view-message ">{{ $all_contact->message }}</td>
+															<td class="view-message ">{{ Str::limit($all_contact->message,10) }}</td>
 															<!-- <td class="view-message  inbox-small-cells"><i class="fa fa-paperclip"></i></td> -->
 															<td class="view-message  text-right">{{ $all_contact->created_at->diffForHumans() }}</td>
 															<td class="view-message  text-right">

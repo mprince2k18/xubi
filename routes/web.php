@@ -267,7 +267,7 @@ Route::middleware('common')->group(function(){
   // quarter_insert
   Route::post('/admin/quarter_insert','SeipController@quarter_insert')->name('quarter_insert');
   // quarter_status
-  Route::get('/admin/quarter/status/edit/{quarter}','SeipController@quarter_status_edit')->name('quarter_status_edit');
+  Route::get('/admin/quarter/{quarter_id}/{quarter_status}','SeipController@quarter_update')->name('quarter_update');
 });
 
 // SuperAdminController
@@ -282,6 +282,8 @@ Route::get('/all/uesrs','SuperAdminController@all_users')->name('all_users.index
 Route::get('/single_user/{user_id}','SuperAdminController@single_user')->name('single_user');
 // single_user_update
 Route::post('/single_user/update','SuperAdminController@single_update')->name('single_user.update');
+// single_user_update
+Route::get('/delete_user/{user_id}','SuperAdminController@delete_user')->name('single_user.delete');
 
 
 

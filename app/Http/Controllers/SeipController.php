@@ -133,6 +133,10 @@ class SeipController extends Controller
     }
 
 
+
+
+
+
     // trainee_index page
 
     function trainee_index()
@@ -317,13 +321,31 @@ function update(Request $request)
 
    return back();
  }
-// quarter_status_update
-
- function quarter_status_edit($quarter)
- {
 
 
- }
+// quarter_update
+function quarter_update($quarter_id,$quarter_status)
+{
+  if ($quarter_status == 1) {
+    Quarter::findOrFail($quarter_id)->update([
+      'status' => 2,
+    ]);
+  }
+
+  elseif($quarter_status == 2){
+    Quarter::findOrFail($quarter_id)->update([
+      'status' => 1,
+    ]);
+  }
+
+  Alert::toast('Quarter Updated','success');
+  return back();
+
+  // ----
+  }
+
+
+
 
 
 

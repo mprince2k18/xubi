@@ -39,6 +39,7 @@ class SuperAdminController extends Controller
         'email' =>$request->email,
         'password' =>bcrypt($request->password),
         'role_id' =>$request->role_id,
+        'active' =>1,
       ]);
 
       return back();
@@ -65,25 +66,25 @@ class SuperAdminController extends Controller
 
     function single_update(Request $request)
     {
-
-      // Validation
-      $request->validate([
-        'password' =>'required|confirmed|string|min:8',
-        'password_confirmation' =>'required|same:password',
-      ]);
-
       // update
       User::find($request->user_id)->update([
         'name' =>$request->name,
         'email' =>$request->email,
-        'password' =>bcrypt($request->password),
         'role_id' =>$request->role_id,
         'active' =>$request->active,
       ]);
 
-
-
       Alert::toast('Updated Successfully','success');
+      return back();
+    }
+
+    // delete_user
+
+
+    function delete_user($user_id){
+      User::find($user_id)->delete();
+
+      Alert::toast('Deleted Successfully','warning');
       return back();
     }
 
