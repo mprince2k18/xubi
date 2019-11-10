@@ -43,8 +43,8 @@
                       @foreach ($slected_trainees as $slected_trainee)
                         <tr>
                           <td>{{ $slected_trainee->trainee_id }}</td>
-                          <td>{{ $slected_trainee->name }}</td>
                           <td>{{ $slected_trainee->quarter_id }}</td>
+                          <td>{{ $slected_trainee->name }}</td>
                           <td>{{ $slected_trainee->email }}</td>
                           <td>{{ $slected_trainee->phone }}</td>
                           <td>{{ $slected_trainee->university }}</td>

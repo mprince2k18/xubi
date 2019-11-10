@@ -103,32 +103,22 @@
 										<span class="nav-unread bg-warning"></span>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-										<a href="#" class="dropdown-item d-flex pb-3">
-											<div class="notifyimg">
-												<i class="fa fa-thumbs-o-up"></i>
-											</div>
-											<div>
-												<strong>Someone likes our posts.</strong>
-												<div class="small text-muted">3 hours ago</div>
-											</div>
-										</a>
-										<a href="#" class="dropdown-item d-flex pb-3">
-											<div class="notifyimg">
-												<i class="fa fa-commenting-o"></i>
-											</div>
-											<div>
-												<strong> 3 New Comments</strong>
-												<div class="small text-muted">5  hour ago</div>
-											</div>
-										</a>
-										<a href="#" class="dropdown-item d-flex pb-3">
-											<div class="notifyimg">
-												<i class="fa fa-cogs"></i>
-											</div>
-											<div>
-												<strong> Server Rebooted.</strong>
-												<div class="small text-muted">45 mintues ago</div>
-											</div>
+
+										@foreach ( App\Contact::latest()->paginate(3) as $notificaton)
+
+											<a href="#" class="dropdown-item d-flex pb-3">
+												<div class="notifyimg">
+													<i class="fa fa-envelope-open"></i>
+												</div>
+												<div>
+													<strong>{{ $notificaton->name }} sent new message</strong>
+													<div class="small text-muted">{{ $notificaton->created_at->diffForHumans() }}</div>
+												</div>
+											</a>
+
+										@endforeach
+
+
 										</a>
 										<div class="dropdown-divider"></div>
 										<a href="#" class="dropdown-item text-center">View all Notification</a>

@@ -412,6 +412,11 @@
                  SEIP
                </a>
              </li>
+             <li>
+               <a href="{{ route('dashboard') }}">
+                 Dashboard
+               </a>
+             </li>
 
 
            </ul>
