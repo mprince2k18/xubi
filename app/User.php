@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Laravel\Scout\Searchable;
+use Illuminate\Support\Str;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 
@@ -20,7 +21,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','role_id','active'
+        'name', 'email', 'password','role_id','active','slug',
     ];
 
     /**
@@ -41,4 +42,19 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
+
+// public function path()
+// {
+//   return url("/single_user/{$this->id}-" . Str::slug($this->name));
+// }
+
+
+
+
+
+
+    // END
 }

@@ -35,7 +35,8 @@ Dashboard
                   <td>{{ $user->active }}</td>
                   <td>{{ $user->role_id }}</td>
                   <td>
-                    <a href="{{ url('/single_user') }}/{{ $user->id }}" class="btn-sm btn-primary">OPEN</a>
+                    <a href="{{ url('/single_user') }}/{{ $user->id }}-{{ $user->slug }}" class="btn-sm btn-primary">OPEN</a>
+                    {{-- <a href="{{ url('/single_user') }}/{{ $user->id }}" class="btn-sm btn-primary">OPEN</a> --}}
                     <a href="{{ url('/delete_user') }}/{{ $user->id }}" class="btn-sm btn-danger">DELETE</a>
                   </td>
                 </tr>

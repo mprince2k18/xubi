@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\User;
 use Hash;
 use Alert;
@@ -40,6 +41,7 @@ class SuperAdminController extends Controller
         'password' =>bcrypt($request->password),
         'role_id' =>$request->role_id,
         'active' =>1,
+        'slug' =>Str::slug($request->name),
       ]);
 
       Alert::toast('User Added Successfully','success');
@@ -73,6 +75,7 @@ class SuperAdminController extends Controller
         'email' =>$request->email,
         'role_id' =>$request->role_id,
         'active' =>$request->active,
+        'slug' =>$request->name,
       ]);
 
       Alert::toast('Updated Successfully','success');

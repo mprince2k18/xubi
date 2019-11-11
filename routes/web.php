@@ -279,7 +279,7 @@ Route::post('/add/new/user.html/create','SuperAdminController@create')->name('su
 // Users
 Route::get('/all/uesrs','SuperAdminController@all_users')->name('all_users.index');
 // single_user
-Route::get('/single_user/{user_id}','SuperAdminController@single_user')->name('single_user');
+Route::get('/single_user/{user_id}-{slug}','SuperAdminController@single_user')->name('single_user');
 // single_user_update
 Route::post('/single_user/update','SuperAdminController@single_update')->name('single_user.update');
 // single_user_update
