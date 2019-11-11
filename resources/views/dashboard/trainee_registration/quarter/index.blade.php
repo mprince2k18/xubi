@@ -106,9 +106,9 @@
                       <tr>
                         <th scope="row">{{ $quarter->id }}</th>
                         <td>{{ $quarter->quarter }}</td>
-                        <td>{{ $quarter->status === 1 ? 'Active' : 'Deactive' }}</td>
+                        <td>{{ $quarter->status == 1 ? 'Active' : 'Deactive' }}</td>
                         <td>
-                            <a href="{{ url('/admin/quarter') }}/{{ $quarter->id }}/{{ $quarter->status }}" class="btn btn-primary">{{ $quarter->status === 1 ? 'Make Deactive' : 'Make Active' }}</a>
+                            <a href="{{ url('/admin/quarter') }}/{{ $quarter->id }}/{{ $quarter->status }}" class="btn btn-primary">{{ $quarter->status == 1 ? 'Make Deactive' : 'Make Active' }}</a>
 
 
                             {{-- <form action="quarter_status_update" method="post">
