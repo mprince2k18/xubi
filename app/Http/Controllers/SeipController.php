@@ -326,6 +326,16 @@ function update(Request $request)
 // quarter_update
 function quarter_update($quarter_id,$quarter_status)
 {
+
+  $quarters = Quarter::all();
+
+  foreach ($quarters as $quarter) {
+    Quarter::findOrFail($quarter->id)->update([
+      'status' => 2,
+    ]);
+  }
+
+
   if ($quarter_status == 1) {
     Quarter::findOrFail($quarter_id)->update([
       'status' => 2,
