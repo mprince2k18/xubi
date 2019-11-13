@@ -31,9 +31,7 @@
         <div class="card-body">
 
           <div class="form-group">
-            <label class="form-label">Headline
-
-             </label>
+            <label class="form-label">Headline</label>
             <textarea class="form-control" id="summernote" name="header_headline" rows="7" placeholder="text here.."></textarea>
 
                   @error('header_headline')
@@ -42,9 +40,7 @@
                   </span>
                   @enderror
 
-            <label class="form-label">Message
-
-             </label>
+            <label class="form-label">Message</label>
             <textarea class="form-control" name="header_message" rows="7" placeholder="text here.."></textarea>
 
             @error('header_message')
@@ -52,6 +48,8 @@
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+
+
 
 
 
@@ -69,6 +67,33 @@
 
 							</div>
 						</div>
+
+
+
+                        <div class="form-group">
+                          <label class="form-label">link1</label>
+                          <input class="form-control" name="link1_button" placeholder="Link Name">
+                          <input class="form-control" name="link1" placeholder="link1">
+
+                                @error('link1')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                          </div>
+
+
+                        <div class="form-group">
+                          <label class="form-label">link2</label>
+                          <input class="form-control" name="link2_button" placeholder="Link Name">
+                          <input class="form-control" name="link2" placeholder="link2">
+
+                                @error('link2')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                          </div>
 
           </div>
         </div>

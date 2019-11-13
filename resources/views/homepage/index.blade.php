@@ -66,8 +66,12 @@ Xubisoft | IT Solution
                                     <p>{{ $banner->header_message  }}</p>
 
                                     <div class="btn-wraper">
-                                      <a href="{{ route('about') }}" class="btn btn-primary btn-gradient2">ABOUT US</a>
-                                      <a href="{{ route('contact') }}" class="btn btn-primary btn-gradient2">CONTACT US</a>
+                                      @if (isset($banner->link1))
+                                        <a href="{{ $banner->link1 }}" class="btn btn-primary btn-gradient2">{{ $banner->link1_button }}</a>
+                                      @endif
+                                      @if (isset($banner->link2))
+                                        <a href="{{ $banner->link2 }}" class="btn btn-primary btn-gradient2">{{ $banner->link2_button }}</a>
+                                      @endif
                                     </div>
                                 </div>
                                 <!-- .agency-banner-content END -->

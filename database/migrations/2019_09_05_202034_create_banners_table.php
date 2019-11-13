@@ -18,6 +18,10 @@ class CreateBannersTable extends Migration
             $table->longText('header_headline');
             $table->longText('header_message')->nullable();
             $table->string('header_banner')->default('default.png');
+            $table->longText('link1_button')->nullable();
+            $table->longText('link1')->nullable();
+            $table->longText('link2_button')->nullable();
+            $table->longText('link2')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

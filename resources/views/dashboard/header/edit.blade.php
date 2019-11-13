@@ -1,5 +1,13 @@
 @extends('dashboard.app')
 
+@section('css')
+<!-- include summernote css/js -->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+<!-- include summernote css/js -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+
+@endsection
+
 @section('title')
   Edit Header Banner - "{{ Str::limit($single_banner_edit->header_headline,15) }}"
 @endsection
@@ -48,12 +56,54 @@
             <label class="form-label">Headline
                {{-- <span class="form-label-small ml-3">56/100</span> --}}
              </label>
-            <textarea class="form-control" name="header_headline" rows="7" placeholder="text here..">{{ $single_banner_edit->header_headline }}</textarea>
+            <textarea class="form-control" id="summernote" name="header_headline" rows="7" placeholder="text here..">{{ $single_banner_edit->header_headline }}</textarea>
 
             <label class="form-label">Message
                {{-- <span class="form-label-small ml-3">56/100</span> --}}
              </label>
-            <textarea class="form-control" name="header_message" rows="7" placeholder="text here..">{{ $single_banner_edit->header_message }}</textarea>
+            <textarea class="form-control" id="summernote2" name="header_message" rows="7" placeholder="text here..">{{ $single_banner_edit->header_message }}</textarea>
+
+
+
+
+            <div class="form-group">
+              <label class="form-label">link1</label>
+              <input class="form-control" type="text" name="link1_button" placeholder="Link1 Name" value="{{ $single_banner_edit->link1_button }}">
+              <input class="form-control" type="text" name="link1" placeholder="link1" value="{{ $single_banner_edit->link1 }}">
+
+                    @error('link1_buttton')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                    @error('link1')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+              </div>
+
+
+            <div class="form-group">
+              <label class="form-label">link2</label>
+              <input class="form-control" type="text" name="link2_button" placeholder="Link2 Name" value="{{ $single_banner_edit->link2_button }}">
+              <input class="form-control" type="text" name="link2" placeholder="link2" value="{{ $single_banner_edit->link2 }}">
+
+                    @error('link2_buttton')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                    @error('link2')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+              </div>
+
+
+
+
 
             <div class="form-group">
 							<div class="custom-file">
@@ -81,4 +131,19 @@
 
 </div>
 </div>
+@endsection
+
+@section('js')
+  <script>
+        $('#summernote').summernote({
+          tabsize: 1,
+          height: 100
+        });
+  </script>
+  <script>
+        $('#summernote2').summernote({
+          tabsize: 1,
+          height: 100
+        });
+  </script>
 @endsection

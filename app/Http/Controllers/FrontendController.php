@@ -20,7 +20,7 @@ class FrontendController extends Controller
 
     public function index()
     {
-      $banners = Banner::all();
+      $banners = Banner::latest()->paginate(5);
       $infos   = Info::all();
       $ceos    = Ceo::all();
       $teams    = Team::all();

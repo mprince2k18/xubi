@@ -34,6 +34,10 @@ class BannerController extends Controller
         'header_headline' => $request->header_headline,
         'header_message' => $request->header_message,
         'header_banner' => $request->header_banner,
+        'link1_button' => $request->link1_button,
+        'link1' => $request->link1,
+        'link2_button' => $request->link2_button,
+        'link2' => $request->link2,
         'created_at' =>Carbon::now()
       ]);
 
@@ -106,7 +110,10 @@ class BannerController extends Controller
       Banner::find($request->banner_id)->update([
         'header_headline' => $request->header_headline,
         'header_message' => $request->header_message,
-        // 'header_banner' => $request->header_banner,
+        'link1_button' => $request->link1_button,
+        'link1' => $request->link1,
+        'link2_button' => $request->link2_button,
+        'link2' => $request->link2,
 
     ]);
 
