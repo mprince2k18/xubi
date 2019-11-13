@@ -303,6 +303,7 @@
                             <tbody>
                               <tr>
 
+                                <td><input type="text" name="commented_by" class="form-control" value="{{ Auth::user()->name }}"></td>
                                 <td><input type="hidden" name="id" class="form-control" value="{{ $single_trainee->id }}"></td>
 
 

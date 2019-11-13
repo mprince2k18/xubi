@@ -242,6 +242,7 @@ function update(Request $request)
     'siblings'=>$request->siblings,
     'have_seip'=>$request->have_seip,
     'remarks'=>$request->remarks,
+    'commented_by'=>$request->commented_by,
     'updated_at'=>Carbon::now(),
   ]);
 

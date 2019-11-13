@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-class Seip extends Model 
+class Seip extends Model
 {
     protected $fillable=[
 
@@ -29,7 +29,7 @@ class Seip extends Model
       'siblings',
       'have_seip',
       'remarks',
-      'commented',
+      'commented_by',
     ];
 
 // relationBetweenEducation
