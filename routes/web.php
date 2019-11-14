@@ -261,16 +261,16 @@ Route::middleware('common')->group(function(){
   Route::get('/admin/waiting/trainee','SeipController@waiting_trainee_index')->name('waiting_trainee_index');
   // waiting_trainee
   Route::get('/admin/rejected/trainee','SeipController@rejected_trainee_index')->name('rejected_trainee_index');
-  // viva_trainee
-  Route::get('/admin/viva/trainee','SeipController@viva_trainee_index')->name('viva_trainee_index');
-  // did_not_picked_trainee
-  Route::get('/admin/did_not_picked/trainee','SeipController@did_not_picked_trainee_index')->name('did_not_picked_trainee_index');
-  // call_recieved_trainee
-  Route::get('/admin/call_recieved/trainee','SeipController@call_recieved_trainee_index')->name('call_recieved_trainee_index');
-  // not_interested_trainee
-  Route::get('/admin/not_interested/trainee','SeipController@not_interested_trainee_index')->name('not_interested_trainee_index');
-  // pre_selected_trainee
-  Route::get('/admin/pre_selected/trainee','SeipController@pre_selected_trainee_index')->name('pre_selected_trainee_index');
+  // // viva_trainee
+  // Route::get('/admin/viva/trainee','SeipController@viva_trainee_index')->name('viva_trainee_index');
+  // // did_not_picked_trainee
+  // Route::get('/admin/did_not_picked/trainee','SeipController@did_not_picked_trainee_index')->name('did_not_picked_trainee_index');
+  // // call_recieved_trainee
+  // Route::get('/admin/call_recieved/trainee','SeipController@call_recieved_trainee_index')->name('call_recieved_trainee_index');
+  // // not_interested_trainee
+  // Route::get('/admin/not_interested/trainee','SeipController@not_interested_trainee_index')->name('not_interested_trainee_index');
+  // // pre_selected_trainee
+  // Route::get('/admin/pre_selected/trainee','SeipController@pre_selected_trainee_index')->name('pre_selected_trainee_index');
 
   // quarter
   Route::get('/admin/quarter','SeipController@quarter_index')->name('quarter_index');

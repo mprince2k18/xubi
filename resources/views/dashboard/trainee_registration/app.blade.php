@@ -70,7 +70,7 @@
               <p>Rejected Trainee</p>
             </a>
           </li>
-          <li class="nav-item {{ Route::currentRouteNamed('viva_trainee_index') ? 'active' : '' }}">
+          {{-- <li class="nav-item {{ Route::currentRouteNamed('viva_trainee_index') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('viva_trainee_index') }}">
               <i class="material-icons">bubble_chart</i>
               <p>Viva Trainee</p>
@@ -99,7 +99,7 @@
               <i class="material-icons">bubble_chart</i>
               <p>Pre Selected Trainee</p>
             </a>
-          </li>
+          </li> --}}
 
 
           <li class="nav-item {{ Route::currentRouteNamed('quarter_index') ? 'active' : '' }}">
@@ -110,7 +110,7 @@
           </li>
 
 
-          
+
         </ul>
       </div>
     </div>
