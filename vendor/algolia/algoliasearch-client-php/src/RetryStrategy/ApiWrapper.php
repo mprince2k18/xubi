@@ -18,6 +18,7 @@ use Algolia\AlgoliaSearch\Support\Helpers;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;
+use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 
 final class ApiWrapper implements ApiWrapperInterface
@@ -42,16 +43,23 @@ final class ApiWrapper implements ApiWrapperInterface
      */
     private $requestOptionsFactory;
 
+    /**
+     * @var LoggerInterface
+     */
+    private $logger;
+
     public function __construct(
         HttpClientInterface $http,
         AbstractConfig $config,
         ClusterHosts $clusterHosts,
-        RequestOptionsFactory $RqstOptsFactory = null
+        RequestOptionsFactory $RqstOptsFactory = null,
+        LoggerInterface $logger = null
     ) {
         $this->http = $http;
         $this->config = $config;
         $this->clusterHosts = $clusterHosts;
         $this->requestOptionsFactory = $RqstOptsFactory ?: new RequestOptionsFactory($config);
+        $this->logger = $logger ?: Algolia::getLogger();
     }
 
     public function read($method, $path, $requestOptions = array(), $defaultRequestOptions = array())
@@ -191,10 +199,7 @@ final class ApiWrapper implements ApiWrapperInterface
                 $reason = $statusCode >= 500 ? 'Internal Server Error' : 'Unreachable Host';
             }
 
-            throw new RetriableException(
-                'Retriable failure on '.$request->getUri()->getHost().': '.$reason,
-                $statusCode
-            );
+            throw new RetriableException('Retriable failure on '.$request->getUri()->getHost().': '.$reason, $statusCode);
         }
 
         $responseArray = Helpers::json_decode($body, true);
@@ -236,8 +241,7 @@ final class ApiWrapper implements ApiWrapperInterface
             } else {
                 $body = \json_encode($body);
                 if (JSON_ERROR_NONE !== json_last_error()) {
-                    throw new \InvalidArgumentException(
-                        'json_encode error: '.json_last_error_msg());
+                    throw new \InvalidArgumentException('json_encode error: '.json_last_error_msg());
                 }
             }
         }
@@ -248,10 +252,9 @@ final class ApiWrapper implements ApiWrapperInterface
     /**
      * @param string $level
      * @param string $message
-     * @param array  $context
      */
     private function log($level, $message, array $context = array())
     {
-        Algolia::getLogger()->log($level, 'Algolia API client: '.$message, $context);
+        $this->logger->log($level, 'Algolia API client: '.$message, $context);
     }
 }

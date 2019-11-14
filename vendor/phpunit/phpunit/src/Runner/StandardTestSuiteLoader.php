@@ -26,6 +26,7 @@ final class StandardTestSuiteLoader implements TestSuiteLoader
     public function load(string $suiteClassName, string $suiteClassFile = ''): ReflectionClass
     {
         $suiteClassName = \str_replace('.php', '', $suiteClassName);
+        $filename       = null;
 
         if (empty($suiteClassFile)) {
             $suiteClassFile = Filesystem::classNameToFilename(

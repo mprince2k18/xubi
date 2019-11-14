@@ -10,7 +10,7 @@ use Psr\SimpleCache\CacheInterface;
 
 final class Algolia
 {
-    const VERSION = '2.4.0';
+    const VERSION = '2.5.0';
 
     /**
      * Holds an instance of the simple cache repository (PSR-16).
@@ -56,8 +56,6 @@ final class Algolia
 
     /**
      * Sets the cache instance.
-     *
-     * @param \Psr\SimpleCache\CacheInterface $cache
      */
     public static function setCache(CacheInterface $cache)
     {
@@ -80,8 +78,6 @@ final class Algolia
 
     /**
      * Sets the logger instance.
-     *
-     * @param \Psr\Log\LoggerInterface $logger
      */
     public static function setLogger(LoggerInterface $logger)
     {

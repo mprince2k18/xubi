@@ -2,10 +2,10 @@
 
 namespace Illuminate\Redis\Connections;
 
-use Redis;
 use Closure;
-use RedisCluster;
 use Illuminate\Contracts\Redis\Connection as ConnectionContract;
+use Redis;
+use RedisCluster;
 
 /**
  * @mixin \Redis
@@ -190,9 +190,9 @@ class PhpRedisConnection extends Connection implements ConnectionContract
      * @param  int|null  $count
      * @return mixed|false
      */
-    public function spop($key, $count = null)
+    public function spop($key, $count = 1)
     {
-        return $this->command('spop', [$key]);
+        return $this->command('spop', [$key, $count]);
     }
 
     /**

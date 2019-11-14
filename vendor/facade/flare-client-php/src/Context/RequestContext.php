@@ -2,8 +2,11 @@
 
 namespace Facade\FlareClient\Context;
 
-use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Mime\Exception\InvalidArgumentException;
+use Throwable;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class RequestContext implements ContextInterface
 {
@@ -31,21 +34,60 @@ class RequestContext implements ContextInterface
             return [];
         }
 
-        return array_map(function(UploadedFile $file) {
+        return $this->mapFiles($this->request->files->all());
+    }
+
+    protected function mapFiles(array $files)
+    {
+        return array_map(function ($file) {
+            if (is_array($file)) {
+                return $this->mapFiles($file);
+            }
+
+            if (! $file instanceof UploadedFile) {
+                return;
+            }
+
+            try {
+                $fileSize = $file->getSize();
+            } catch (\RuntimeException $e) {
+                $fileSize = 0;
+            }
+
+            try {
+                $mimeType = $file->getMimeType();
+            } catch (InvalidArgumentException $e) {
+                $mimeType = 'undefined';
+            }
 
             return [
                 'pathname' => $file->getPathname(),
-                'size' => $file->getSize(),
-                'mimeType' => $file->getMimeType()
+                'size' => $fileSize,
+                'mimeType' => $mimeType,
             ];
-        }, $this->request->files->all());
+        }, $files);
     }
 
     public function getSession(): array
     {
         $session = $this->request->getSession();
 
-        return $session ? $session->all() : [];
+        return $session ? $this->getValidSessionData($session) : [];
+    }
+
+    /**
+     * @param SessionInterface $session
+     * @return array
+     */
+    protected function getValidSessionData($session): array
+    {
+        try {
+            json_encode($session->all());
+        } catch (Throwable $e) {
+            return [];
+        }
+
+        return $session->all();
     }
 
     public function getCookies(): array
