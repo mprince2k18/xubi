@@ -141,9 +141,9 @@
                                     <div class="text-left">
                                         {{-- <p>Register Time & Date</p> --}}
                                         <p>Register Time : {{ $single_trainee->created_at->format('d-M-Y') }}</p>
-                                        <p>Created At : {{ $single_trainee->created_at->format('h:i:s a') }}</p>
+                                        <p>Created At : {{ $single_trainee->created_at->format('h:i:s a') }} ( {{ $single_trainee->created_at->diffForHumans() }} )</p>
                                         {{-- <p>Touched : {{ $single_trainee->updated_at->format('h:i:s a') }}</p> --}}
-                                        <p>Touched At: {{ isset($single_trainee->updated_at) ? $single_trainee->updated_at->format('h:i:s a') : "Not Yet Touched" }}</p>
+                                        <p>Touched At: {{ isset($single_trainee->updated_at) ? $single_trainee->updated_at->format('h:i:s a') : "Not Yet Touched" }} ( {{ $single_trainee->updated_at->diffForHumans() }} )</p>
                                         <p>Commented By: {{ ($single_trainee->commented_by) }}</p>
 
 

@@ -169,7 +169,7 @@ class SeipController extends Controller
       return view('dashboard.trainee_registration.waiting_trainee.index',compact('waiting_trainees'));
 
     }
-// waited_trainee_index
+// rejected_trainee_index
 
     function rejected_trainee_index()
     {
@@ -177,6 +177,52 @@ class SeipController extends Controller
       return view('dashboard.trainee_registration.rejected_trainee.index',compact('rejected_trainees'));
 
     }
+
+    // viva_trainee_index
+
+    function viva_trainee_index()
+    {
+      $viva_trainees = Seip::where('remarks',4)->get();
+      return view('dashboard.trainee_registration.viva_trainee.index',compact('viva_trainees'));
+
+    }
+
+    // did_not_picked_trainee_index
+
+    function did_not_picked_trainee_index()
+    {
+      $did_not_picked_trainees = Seip::where('remarks',6)->get();
+      return view('dashboard.trainee_registration.did_not_picked_trainee.index',compact('did_not_picked_trainees'));
+
+    }
+
+    // call_recieved_trainee_index
+
+    function call_recieved_trainee_index()
+    {
+      $call_recieved_trainees = Seip::where('remarks',7)->get();
+      return view('dashboard.trainee_registration.call_recieved_trainee.index',compact('call_recieved_trainees'));
+
+    }
+
+    // not_interested_trainee_index
+
+    function not_interested_trainee_index()
+    {
+      $not_interested_trainees = Seip::where('remarks',8)->get();
+      return view('dashboard.trainee_registration.not_interested_trainee.index',compact('not_interested_trainees'));
+
+    }
+
+    // pre_selected_trainee_index
+
+    function pre_selected_trainee_index()
+    {
+      $pre_selected_trainees = Seip::where('remarks',9)->get();
+      return view('dashboard.trainee_registration.pre_selected_trainee.index',compact('pre_selected_trainees'));
+
+    }
+
 
 // single_trainee_index
 
@@ -196,11 +242,10 @@ class SeipController extends Controller
       return view('dashboard.trainee_registration.single_view',compact('single_trainee','education_qualifications','father_working_statuses','mother_working_statuses','working_statuses','gender_statuses','information_sources','seip_statuses','remarks_statuses'));
     }
 
+
+
+
 // single_trainee_edit
-
-
-
-
 
 // Update
 

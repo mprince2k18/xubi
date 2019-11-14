@@ -70,6 +70,36 @@
               <p>Rejected Trainee</p>
             </a>
           </li>
+          <li class="nav-item {{ Route::currentRouteNamed('viva_trainee_index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('viva_trainee_index') }}">
+              <i class="material-icons">bubble_chart</i>
+              <p>Viva Trainee</p>
+            </a>
+          </li>
+          <li class="nav-item {{ Route::currentRouteNamed('did_not_picked_trainee_index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('did_not_picked_trainee_index') }}">
+              <i class="material-icons">bubble_chart</i>
+              <p>Did Not Picked Trainee</p>
+            </a>
+          </li>
+          <li class="nav-item {{ Route::currentRouteNamed('call_recieved_trainee_index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('call_recieved_trainee_index') }}">
+              <i class="material-icons">bubble_chart</i>
+              <p>Call Recieved Trainee</p>
+            </a>
+          </li>
+          <li class="nav-item {{ Route::currentRouteNamed('not_interested_trainee_index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('not_interested_trainee_index') }}">
+              <i class="material-icons">bubble_chart</i>
+              <p>Not Interested Trainee</p>
+            </a>
+          </li>
+          <li class="nav-item {{ Route::currentRouteNamed('pre_selected_trainee_index') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('pre_selected_trainee_index') }}">
+              <i class="material-icons">bubble_chart</i>
+              <p>Pre Selected Trainee</p>
+            </a>
+          </li>
 
 
           <li class="nav-item {{ Route::currentRouteNamed('quarter_index') ? 'active' : '' }}">
@@ -80,12 +110,7 @@
           </li>
 
 
-          <li class="nav-item active-pro">
-            <a class="nav-link" href="./upgrade.html">
-              <i class="material-icons">unarchive</i>
-              <p>Log Out</p>
-            </a>
-          </li>
+          
         </ul>
       </div>
     </div>
