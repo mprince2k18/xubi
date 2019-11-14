@@ -22,6 +22,7 @@ use App\Mail\SelectedMail;
 use App\Mail\WaitingMail;
 use App\Mail\RejectedMail;
 use App\Mail\VivaMail;
+use App\Mail\DoNotPicked;
 
 class SeipController extends Controller
 {
@@ -337,6 +338,14 @@ function update(Request $request)
       {
         Mail::to($email,$name)->cc('fahadidb@gmail.com')
                               ->send(new RejectedMail($name));
+      }
+
+// RejectedMail
+
+  if ($request->remarks == 6)
+      {
+        Mail::to($email,$name)->cc('fahadidb@gmail.com')
+                              ->send(new DoNotPicked($name));
       }
 
 
