@@ -153,7 +153,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 
-                  @forelse (App\Seip::latest()->paginate(5) as $value)
+                  @forelse (App\Seip::whereDate('created_at',Carbon\Carbon::today())->paginate(5) as $value)
                     <a class="dropdown-item" href="#">{{ $value->name }} just now registered <br> {{ $value->created_at->diffForhumans() }} </a>
 
                   @empty
