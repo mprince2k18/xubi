@@ -37,18 +37,7 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return void
      */
-    public function report(Exception $exception)
-    {
-      if ($this->shouldReport($exception)) {
-            $this->sendEmail($exception); // sends an email
-        }
-
-        if (app()->bound('sentry') && $this->shouldReport($exception)){
-        app('sentry')->captureException($exception);
-    }
-    
-        parent::report($exception);
-    }
+  
 
     /**
      * Render an exception into an HTTP response.
@@ -64,20 +53,7 @@ class Handler extends ExceptionHandler
 
 
 
-    public function sendEmail(Exception $exception)
-    {
-        try {
-            $e = FlattenException::create($exception);
 
-            $handler = new SymfonyExceptionHandler();
-
-            $html = $handler->getHtml($e);
-
-            Mail::to('mprince2k16@gmail.com')->send(new ExceptionMail($html));
-        } catch (Exception $ex) {
-            dd($ex);
-        }
-    }
 
     // END
 }
