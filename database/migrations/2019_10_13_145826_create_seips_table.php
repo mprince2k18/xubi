@@ -36,6 +36,7 @@ class CreateSeipsTable extends Migration
             $table->integer('have_seip');
             $table->integer('remarks')->default(1);
             $table->string('commented_by')->nullable();
+            $table->ipAddress('ip_address')->nullable();
             $table->timestamps();
         });
     }

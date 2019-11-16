@@ -158,6 +158,10 @@
 
                   @empty
 
+                    <div class="alert alert-primary" role="alert">
+                      No Data
+                    </div>
+
                   @endforelse
 
 

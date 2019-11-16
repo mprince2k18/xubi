@@ -115,7 +115,7 @@ class SeipController extends Controller
         'alt_phone'=>$request->alt_phone,
         'siblings'=>$request->siblings,
         'have_seip'=>$request->have_seip,
-        'remarks'=>1,
+        'ip_address'=>$_SERVER['REMOTE_ADDR'],
 
         'created_at'=>Carbon::now(),
       ]);
@@ -375,6 +375,7 @@ function update(Request $request)
    Alert::toast('Quarter Added','success');
 
    return back();
+   // echo  \Request::ip();
  }
 
 
