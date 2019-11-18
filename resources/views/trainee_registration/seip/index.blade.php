@@ -113,7 +113,7 @@
         <!-- phone -->
 				<div class="wrap-input100">
 					<label class="label-input100" for="phone">Phone No</label>
-					<input class="input100" type="number" id="phone" name="phone" value="{{ old('phone') }}">
+					<input class="input100" type="text" id="phone" name="phone" value="{{ old('phone') }}">
 					<span class="focus-input100"></span>
 				</div>
 
