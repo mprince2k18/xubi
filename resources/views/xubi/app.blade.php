@@ -205,7 +205,7 @@
 
 
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" href="{{ route('products') }}">PRODUCTS <i class="fas fa-angle-down"></i></i></a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('products') }}">PRODUCTS <i class="fas fa-angle-down"></i></a>
   									<div class="dropdown-menu">
                       @foreach (App\Product::all() as $products)
                         <a class="dropdown-item" href="{{ url('/products') }}/{{ $products->id }}"> {{  $products->product_name }} </a>
@@ -215,14 +215,16 @@
 
 
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-  									<a class="nav-link dropdown-toggle" href="{{ route('training') }}">TRAINING <i class="fas fa-angle-down"></i></i></a>
+  									<a class="nav-link dropdown-toggle" href="{{ route('training') }}">TRAINING
+                       {{-- <i class="fas fa-angle-down"></i> --}}
+                     </a>
 
 
-                    <div class="dropdown-menu">
+                    {{-- <div class="dropdown-menu">
                       @foreach (App\Training::all() as $trainings)
                         <a class="dropdown-item" href="{{ $trainings->id }}"> {{ $trainings->name }} </a>
                       @endforeach
-  									</div>
+  									</div> --}}
 
 
   								</li>
@@ -431,18 +433,9 @@
                   <div class="footer-widget">
                       <h4 class="widget-title">SERVICES</h4>
                       <ul class="xs-list">
-                        @foreach(App\Services::all() as  $service)
-
-                          <li><a href="{{ $service->id }}"> <i class="lni-phone-handset"></i> {{ $service->title }} </a></li>
+                        @foreach(App\Info::all() as  $service)
+                          <li><a href="{{ $service->id }}"> <i class="lni-phone-handset"></i> {{ $service->Info_headline }} </a></li>
                         @endforeach
-                        <li><a href="about.html"> <i class="lni-map-marker"></i> Site Map</a></li>
-                        <li><a href="about.html"> <i class="lni-map-marker"></i> Site Map</a></li>
-                        <li><a href="about.html"> <i class="lni-map-marker"></i> Site Map</a></li>
-
-
-                          {{-- <li><a href="about.html"> <i class="lni-mobile"></i> +88 01611-609372 </a></li>
-                          <li><a href="about.html"> <i class="lni-envelope"></i> contact@xubisoft.com </a></li>
-                          <li><a href="about.html"> <i class="lni-invention"></i> info@xubisoft.com </a></li> --}}
                       </ul>
                       <!-- .xs-list END -->
                   </div>

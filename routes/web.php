@@ -40,7 +40,7 @@ Route::get('/about','AboutController@index')->name('about');
 // Training
 Route::get('/training','TrainingController@index')->name('training');
 // training_single
-Route::get('/training/single','TrainingController@training_single')->name('training_single');
+Route::get('/training/single/{training_id}','TrainingController@training_single')->name('training_single');
 
 
 // career

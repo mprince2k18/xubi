@@ -70,7 +70,7 @@ class TrainingPage extends Model
 
   function relationshipBetweenTraining()
   {
-    return $this->hasOne('App\Training','id','training_id');
+    return $this->hasOne('App\Training','id','title');
   }
 
   // END

@@ -7,6 +7,7 @@ use Alert;
 use Image;
 use Carbon\Carbon;
 use App\Training;
+use App\TrainingPage;
 use App\Client;
 
 class TrainingController extends Controller
@@ -47,6 +48,13 @@ class TrainingController extends Controller
     }
 
 
-  
+    public function training_single($training_id)
+    {
+      $single_training_details = TrainingPage::find($training_id);
+      return view('training.single',compact('single_training_details'));
+    }
+
+
+
     // END
 }

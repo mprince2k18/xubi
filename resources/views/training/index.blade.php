@@ -13,6 +13,11 @@
         color: #fff;
         font-size: 16px;
       }
+
+      .list-group{
+        padding-top: 55px;
+      }
+
     </style>
 
 @endsection
@@ -29,10 +34,10 @@
   		<div class="row">
   			<div class="col-md-7 mx-auto">
   				<div class="inner-banner">
-  					<h2 class="inner-banner-title">Training & Courses</h2>
+  					<h2 class="inner-banner-title">Training & Skill Development</h2>
   					<ul class="breadcumbs list-inline">
   						<li><a href="{{ route('homepage') }}">Home</a></li>
-  						<li>Training & Courses</li>
+  						<li>Training & Skill Development</li>
   					</ul>
   				</div>
   			</div>
@@ -50,15 +55,47 @@
   			<div class="row">
   				<div class="col-lg-6 offset-lg-3">
   					<div class="main-title text-center">
-  						<h3 class="mt0">Xubisoft Training & Courses</h3>
+  						<h3 class="mt0">Xubisoft Training & Skill Development</h3>
   						<!-- <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p> -->
   					</div>
   				</div>
   			</div>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-8">
+      <ol class="list-group">
+        <li class="list-group-item">Customized training package as per self/ organizational need.</li>
+        <li class="list-group-item">Learning for career readiness and corporate grooming</li>
+        <li class="list-group-item">Cost effective process reengineering for your bunch recruitment process.</li>
+      </ol>
+    </div>
+
+    <div class="col-md-4">
+      <img src="https://www.intactsoftware.com/wp-content/uploads/2019/04/End-User-Training_YELLOWNAVY.png" alt="">
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
   			<div class="row">
 
           @forelse ($trainings as $training)
-  				    <div class="col-sm-6 col-lg-3 text-center training_div">
+  				    <div class="col-sm-6 col-lg-4 text-center training_div">
       					<div class="img_hvr_box" style="background-image: url({{ asset('uploads/training') }}/{{ $training->photo }}">
       						<div class="overlay">
       							<div class="details">
@@ -66,7 +103,7 @@
       							</div>
       						</div>
       					</div>
-                <a href="#" class="btn btn-primary btn-gradient2">LEARN MORE</a>
+                <a href="{{ url('/training/single') }}/{{ $training->id }}" class="btn btn-primary btn-gradient2">LEARN MORE</a>
               </div>
           @empty
 

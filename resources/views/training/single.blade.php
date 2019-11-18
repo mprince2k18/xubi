@@ -4,9 +4,17 @@
 
 
     <!-- Main CSS -->
-    <link href="{{ asset('custom/css/training_style.css') }}" rel="stylesheet">
+    <link href="{{ asset('https://res.cloudinary.com/dvd2tat8q/raw/upload/v1571470961/css/training_style_uby2kb.css') }}" rel="stylesheet">
 
-    <!-- {{ asset('custom/') }} -->
+
+    <style media="screen">
+      .inner_page_breadcrumb{
+        background-image: url(https://res.cloudinary.com/dvd2tat8q/image/upload/v1574057868/img/images_xyhups.jpg);
+        background-size: cover;
+      }
+    </style>
+
+
 @endsection
 
 
@@ -27,9 +35,9 @@
   										<li class="list-inline-item"><a class="color-white" href="#">Last updated 11/2019</a></li>
   									</ul>
   								</div> -->
-  								<h3 class="cs_title color-white">Designing a Responsive Mobile Website with Muse</h3>
+  								<h3 class="cs_title color-white">{{ $single_training_details->relationshipBetweenTraining->name }}</h3>
   								<ul class="cs_review_seller">
-  									<li class="color-white">Last updated 11/2019</li>
+  									<li class="color-white">Last updated {{ $single_training_details->updated_at->diffForHumans() }}</li>
   								</ul>
   							</div>
   						</div>
@@ -51,7 +59,7 @@
   									<div class="cs_ins_container">
   										<div class="courses_big_thumb">
   											<div class="thumb">
-                          <img src="http://www.missled.co.uk/wp-content/uploads/2019/01/MissLedninaillustrationforfashion-1.jpg" alt="">
+                          <img src="{{ asset('uploads/training_page') }}/{{ $single_training_details->thumbnail }}" alt="">
   											</div>
   										</div>
   									</div>
@@ -60,28 +68,27 @@
   									<div class="cs_overview b0p0">
   										<h4 class="title">Overview</h4>
   										<h4 class="subtitle">Course Description</h4>
-  										<p class="mb30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-  										<p class="mb20">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  										<p class="mb30">{{ $single_training_details->course_description }}</p>
   										<h4 class="subtitle">What you'll learn</h4>
   										<ul class="cs_course_syslebus">
-  											<li><i class="fa fa-check"></i><p>Become a UX designer.</p></li>
-  											<li><i class="fa fa-check"></i><p>You will be able to add UX designer to your CV</p></li>
-  											<li><i class="fa fa-check"></i><p>Become a UI designer.</p></li>
-  											<li><i class="fa fa-check"></i><p>Build & test a full website design.</p></li>
-  											<li><i class="fa fa-check"></i><p>Build & test a full mobile app.</p></li>
+  											<li><i class="fa fa-check"></i><p>{{ $single_training_details->what_u_will_learn_1 }}</p></li>
+  											<li><i class="fa fa-check"></i><p>{{ $single_training_details->what_u_will_learn_2 }}</p></li>
+  											<li><i class="fa fa-check"></i><p>{{ $single_training_details->what_u_will_learn_3 }}</p></li>
+  											<li><i class="fa fa-check"></i><p>{{ $single_training_details->what_u_will_learn_4 }}</p></li>
+  											<li><i class="fa fa-check"></i><p>{{ $single_training_details->what_u_will_learn_5 }}</p></li>
   										</ul>
   										<ul class="cs_course_syslebus2">
-  											<li><i class="fa fa-check"></i><p>Learn to design websites & mobile phone apps.</p></li>
-  											<li><i class="fa fa-check"></i><p>You'll learn how to choose colors.</p></li>
-  											<li><i class="fa fa-check"></i><p>Prototype your designs with interactions.</p></li>
-  											<li><i class="fa fa-check"></i><p>Export production ready assets.</p></li>
-  											<li><i class="fa fa-check"></i><p>All the techniques used by UX professionals</p></li>
+  											<li><i class="fa fa-check"></i><p>{{ $single_training_details->what_u_will_learn_6 }}</p></li>
+  											<li><i class="fa fa-check"></i><p>{{ $single_training_details->what_u_will_learn_7 }}</p></li>
+  											<li><i class="fa fa-check"></i><p>{{ $single_training_details->what_u_will_learn_8 }}</p></li>
+  											<li><i class="fa fa-check"></i><p>{{ $single_training_details->what_u_will_learn_9 }}</p></li>
+  											<li><i class="fa fa-check"></i><p>{{ $single_training_details->what_u_will_learn_10 }}</p></li>
   										</ul>
   										<h4 class="subtitle">Requirements</h4>
   										<ul class="list_requiremetn">
-  											<li><i class="fa fa-circle"></i><p>You will need a copy of Adobe XD 2019 or above. A free trial can be downloaded from Adobe.</p></li>
-  											<li><i class="fa fa-circle"></i><p>No previous design experience is needed.</p></li>
-  											<li><i class="fa fa-circle"></i><p>No previous Adobe XD skills are needed.</p></li>
+  											<li><i class="fa fa-circle"></i><p>{{ $single_training_details->requirements_1 }}</p></li>
+  											<li><i class="fa fa-circle"></i><p>{{ $single_training_details->requirements_2 }}</p></li>
+  											<li><i class="fa fa-circle"></i><p>{{ $single_training_details->requirements_3 }}</p></li>
   										</ul>
   									</div>
   								</div>
@@ -90,8 +97,8 @@
   										<div class="cc_headers">
   											<h4 class="title">Course Content</h4>
   											<ul class="course_schdule float-right">
-  												<li class="list-inline-item"><a href="#">92 Lectures</a></li>
-  												<li class="list-inline-item"><a href="#">10:56:11</a></li>
+  												{{-- <li class="list-inline-item"><a href="#">92 Lectures</a></li>
+  												<li class="list-inline-item"><a href="#">10:56:11</a></li> --}}
   											</ul>
   										</div>
   										<br>
@@ -100,17 +107,18 @@
   											    <div class="panel">
   											      	<div class="panel-heading">
   												      	<h4 class="panel-title">
-  												        	<a href="#panelBodyCourseStart" class="accordion-toggle link" data-toggle="collapse" data-parent="#accordion">Getting Started</a>
+  												        	<a href="#panelBodyCourseStart" class="accordion-toggle link" data-toggle="collapse" data-parent="#accordion">{{ $single_training_details->course_lecture_title_1 }}</a>
   												        </h4>
   											      	</div>
   												    <div id="panelBodyCourseStart" class="panel-collapse collapse show">
   												        <div class="panel-body">
   												        	<ul class="cs_list mb0">
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.1 Introduction to the User Experience Course <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.2 Exercise: Your first design challenge <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.3 How to solve the previous exercise <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.4 Find out why smart objects are amazing <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.5 How to use text layers effectively <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+  												        		{{-- <li><a href="#"><span class="flaticon-play-button-1 icon"></span> {{ $single_training_details->lecture_title_1 }} <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li> --}}
+  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> {{ $single_training_details->lecture_title_1 }} </a></li>
+  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> {{ $single_training_details->lecture_title_2 }} </a></li>
+  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> {{ $single_training_details->lecture_title_3 }} </a></li>
+  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> {{ $single_training_details->lecture_title_4 }} </a></li>
+  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> {{ $single_training_details->lecture_title_5 }} </a></li>
   												        	</ul>
   												        </div>
   												    </div>
@@ -122,70 +130,27 @@
   											    <div class="panel">
   											      	<div class="panel-heading">
   												      	<h4 class="panel-title">
-  												        	<a href="#panelBodyCourseBrief" class="accordion-toggle link" data-toggle="collapse" data-parent="#accordion">The Brief</a>
+  												        	<a href="#panelBodyCourseBrief" class="accordion-toggle link" data-toggle="collapse" data-parent="#accordion">{{ $single_training_details->course_lecture_title_2 }}</a>
   												        </h4>
   											      	</div>
   												    <div id="panelBodyCourseBrief" class="panel-collapse collapse">
   												        <div class="panel-body">
   												        	<ul class="cs_list mb0">
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.1 Introduction to the User Experience Course <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.2 Exercise: Your first design challenge <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.3 How to solve the previous exercise <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.4 Find out why smart objects are amazing <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.5 How to use text layers effectively <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> {{ $single_training_details->lecture_title_6 }} </a></li>
+  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> {{ $single_training_details->lecture_title_7 }} </a></li>
+  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> {{ $single_training_details->lecture_title_8 }} </a></li>
+  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> {{ $single_training_details->lecture_title_9 }} </a></li>
+  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> {{ $single_training_details->lecture_title_10 }} </a></li>
   												        	</ul>
   												        </div>
   												    </div>
   											    </div>
   											</div>
   										</div>
-  										<div class="details">
-  										  	<div id="accordion" class="panel-group cc_tab">
-  											    <div class="panel">
-  											      	<div class="panel-heading">
-  												      	<h4 class="panel-title">
-  												        	<a href="#panelBodyCourseLow" class="accordion-toggle link" data-toggle="collapse" data-parent="#accordion">Wireframing Low Fidelity</a>
-  												        </h4>
-  											      	</div>
-  												    <div id="panelBodyCourseLow" class="panel-collapse collapse">
-  												        <div class="panel-body">
-  												        	<ul class="cs_list mb0">
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.1 Introduction to the User Experience Course <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.2 Exercise: Your first design challenge <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.3 How to solve the previous exercise <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.4 Find out why smart objects are amazing <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.5 How to use text layers effectively <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        	</ul>
-  												        </div>
-  												    </div>
-  											    </div>
-  											</div>
-  										</div>
-  										<div class="details">
-  										  	<div id="accordion" class="panel-group cc_tab">
-  											    <div class="panel">
-  											      	<div class="panel-heading">
-  												      	<h4 class="panel-title">
-  												        	<a href="#panelBodyCourseType" class="accordion-toggle link" data-toggle="collapse" data-parent="#accordion">Type, Color & Icon Introduction</a>
-  												        </h4>
-  											      	</div>
-  												    <div id="panelBodyCourseType" class="panel-collapse collapse">
-  												        <div class="panel-body">
-  												        	<ul class="cs_list mb0">
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.1 Introduction to the User Experience Course <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.2 Exercise: Your first design challenge <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.3 How to solve the previous exercise <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.4 Find out why smart objects are amazing <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        		<li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.5 How to use text layers effectively <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
-  												        	</ul>
-  												        </div>
-  												    </div>
-  											    </div>
-  											</div>
-  										</div>
+
   									</div>
   								</div>
-  								<div class="cs_row_four">
+  								{{-- <div class="cs_row_four">
   									<div class="about_ins_container b0p0">
   										<h4 class="aii_title">About the instructor</h4>
   										<div class="about_ins_info">
@@ -219,7 +184,7 @@
   											</ul>
   										</div>
   									</div>
-  								</div>
+  								</div> --}}
 
 
   								<!-- <div class="cs_row_five">
@@ -496,10 +461,11 @@
   				</div>
   				<div class="col-lg-4 col-xl-3">
   					<div class="instructor_pricing_widget">
-  						<div class="price"><span>Price</span> $49.00 <small>$69.00</small></div>
-  						<a href="#" class="cart_btnss">Join</a>
+  						<div class="price"><span>Price</span> Free </div>
+  						{{-- <div class="price"><span>Price</span> $49.00 <small>$69.00</small></div> --}}
+  						<a href="{{ route('seip_registration') }}" class="cart_btnss">Join</a>
 
-  						<h5 class="subtitle text-left">Includes</h5>
+  						{{-- <h5 class="subtitle text-left">Includes</h5>
   						<ul class="price_quere_list text-left">
   							<li><a href="#"><span class="flaticon-play-button-1"></span> 11 hours on-demand video</a></li>
   							<li><a href="#"><span class="flaticon-download"></span> 69 downloadable resources</a></li>
@@ -507,9 +473,9 @@
   							<li><a href="#"><span class="flaticon-responsive"></span> Access on mobile and TV</a></li>
   							<li><a href="#"><span class="flaticon-flash"></span> Assignments</a></li>
   							<li><a href="#"><span class="flaticon-award"></span> Certificate of Completion</a></li>
-  						</ul>
+  						</ul> --}}
   					</div>
-  					<div class="feature_course_widget">
+  					{{-- <div class="feature_course_widget">
   						<ul class="list-group">
   							<h4 class="title">Course Features</h4>
   							<li class="d-flex justify-content-between align-items-center">
@@ -531,20 +497,20 @@
   						    	Assessments <span class="float-right">Yes</span>
   							</li>
   						</ul>
-  					</div>
-  					<div class="blog_tag_widget">
+  					</div> --}}
+  					{{-- <div class="blog_tag_widget">
   						<h4 class="title">Tags</h4>
   						<ul class="tag_list">
   							<li class="list-inline-item"><a href="#">Photoshop</a></li>
   							<li class="list-inline-item"><a href="#">Sketch</a></li>
   							<li class="list-inline-item"><a href="#">Beginner</a></li>
   						</ul>
-  					</div>
+  					</div> --}}
   					<div class="selected_filter_widget style2">
-  						<span class="float-left"><img class="mr20" src="{{ asset('custom/images/resource/2.png') }}" alt="2.png"></span>
-  						<h4 class="mt15 fz20 fw500">Not sure?</h4>
+  						{{-- <span class="float-left"><img class="mr20" src="{{ asset('custom/images/resource/2.png') }}" alt="2.png"></span>
+  						<h4 class="mt15 fz20 fw500">Not sure?</h4> --}}
   						<br>
-  						<p>Every course comes with a 30-day money-back guarantee</p>
+  						<p>We will provide job placement after successfull course complete</p>
   					</div>
   				</div>
   			</div>
