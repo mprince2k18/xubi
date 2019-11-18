@@ -59,7 +59,7 @@
   			<div class="row">
   				<div class="col-lg-6 offset-lg-3">
   					<div class="main-title text-center">
-  						<h3 class="mt0">Xubisoft Training & Skill Development</h3>
+  						<h4 class="mt0 text-uppercase">Xubisoft Training & Skill Development</h4>
   						<!-- <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p> -->
   					</div>
   				</div>
@@ -130,7 +130,7 @@
                  <!-- growth grid section -->
                  <section class="growth-card-section xs-section-padding">
              <div class="container">
-                 
+
 
                  <div class="row xs-mb-6">
                    @foreach ($trainings as $training)
