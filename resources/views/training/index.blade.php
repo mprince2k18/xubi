@@ -2,11 +2,19 @@
 
 @section('css')
 
-
     <!-- Main CSS -->
     <link href="{{ asset('custom/css/training_style.css') }}" rel="stylesheet">
 
-    <!-- {{ asset('custom/') }} -->
+    <style media="screen">
+      .training_div{
+        padding-bottom: 30px;
+      }
+      .details span{
+        color: #fff;
+        font-size: 16px;
+      }
+    </style>
+
 @endsection
 
 
@@ -16,7 +24,7 @@
 
   <!-- welcome section -->
   <!--breadcumb start here-->
-  <div class="xs-inner-banner inner-banner2" style="background-image:url('assets/images/banner/2.jpg')">
+  <div class="xs-inner-banner inner-banner2" style="background-image:url('https://res.cloudinary.com/dvd2tat8q/image/upload/v1574057868/img/images_xyhups.jpg')">
   	<div class="container">
   		<div class="row">
   			<div class="col-md-7 mx-auto">
@@ -50,11 +58,11 @@
   			<div class="row">
 
           @forelse ($trainings as $training)
-  				    <div class="col-sm-6 col-lg-3 text-center">
+  				    <div class="col-sm-6 col-lg-3 text-center training_div">
       					<div class="img_hvr_box" style="background-image: url({{ asset('uploads/training') }}/{{ $training->photo }}">
       						<div class="overlay">
       							<div class="details">
-      								<h5>{{ $training->name }}</h5>
+      								<span>{{ $training->name }}</span>
       							</div>
       						</div>
       					</div>

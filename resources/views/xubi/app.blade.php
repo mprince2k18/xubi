@@ -88,6 +88,15 @@
        }
    }
 
+   .construction_mood{
+     margin-bottom: 0px !important;
+     text-align: center;1
+   }
+
+   .modal-content{
+
+   }
+
 </style>
 
 @yield('css')
@@ -140,6 +149,30 @@
      </div>
 -->
     <!-- END prelaoder -->
+
+
+{{-- onmyway --}}
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+
+      <img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1574059247/img/undraw_under_construction_46pa_tijvsl.png" alt="">
+
+      <div class="alert alert-success construction_mood" role="alert">
+        We are constructing something amazing
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+{{-- onmyway end --}}
+
+
 
     <!-- header section -->
     <div class="navigation-wrap bg-light start-header start-style">
@@ -554,6 +587,13 @@
   @include('sweetalert::alert')
 </script>
 
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $('#myModal').modal('show');
+   });
+
+</script>
 
 </body>
 
