@@ -123,9 +123,8 @@ Xubisoft | IT Solution
                    </div><!-- .info-card END -->
                </div>
                  @endforeach
-
-
-           </div><!-- .row END -->
+           </div>
+           <!-- .row END -->
            <!-- <div class="btn-wraper text-center">
                <a href="#" class="simple-btn icon-right style2">View All Services <i class="icon icon-arrow-right"></i></a>
            </div> -->

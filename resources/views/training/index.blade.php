@@ -18,6 +18,10 @@
         padding-top: 55px;
       }
 
+      .training_quo{
+
+      }
+
     </style>
 
 @endsection
@@ -93,7 +97,7 @@
 
 
   			<div class="row">
-
+{{--
           @forelse ($trainings as $training)
   				    <div class="col-sm-6 col-lg-4 text-center training_div">
       					<div class="img_hvr_box" style="background-image: url({{ asset('uploads/training') }}/{{ $training->photo }}">
@@ -117,10 +121,53 @@
                 </div>
               </div>
 
-          @endforelse
+          @endforelse --}}
+
+
+          <!-- Service block start -->
+
+
+                 <!-- growth grid section -->
+                 <section class="growth-card-section xs-section-padding">
+             <div class="container">
+                 
+
+                 <div class="row xs-mb-6">
+                   @foreach ($trainings as $training)
+                     <div class="col-md-6 col-lg-4">
+                         <div class="info-card text-center" style="margin: 15px 0 !important;">
+                             <div class="info-card-header Info_headline">
+                                 <img src="{{ asset('uploads/training')}}/{{ $training->photo }}" alt="{{ $training->name }}">
+                             </div>
+                             <div class="info-card-body">
+                                 <h3 class="card-title">{{ $training->name }}</h3>
+                             </div>
+                         </div><!-- .info-card END -->
+                     </div>
+                       @endforeach
+                 </div>
+                 <!-- .row END -->
+                 <!-- <div class="btn-wraper text-center">
+                     <a href="#" class="simple-btn icon-right style2">View All Services <i class="icon icon-arrow-right"></i></a>
+                 </div> -->
+             </div><!-- .container END -->
+             <div class="growth-card-bg">
+                 <img src="{{ asset('xubisoft/assets/images/growth-bg.png') }}" alt="">
+             </div>
+         </section>        <!-- end growth grid section -->
+
+             <!-- Service block end -->
+
+
+
+
 
 
   			</div>
+
+
+
+
   		</div>
   	</section>
 
