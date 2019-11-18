@@ -98,37 +98,37 @@
 
         <!-- name -->
 				<div class="wrap-input100" data-validate="Name is required">
-					<span class="label-input100">Full Name</span>
-					<input class="input100" type="text" name="name" value="{{ old('name') }}">
+					<label class="label-input100" for="name">Full Name</label>
+					<input class="input100" id="name" type="text" name="name" value="{{ old('name') }}">
 					<span class="focus-input100"></span>
 				</div>
 
         <!-- email -->
 				<div class="wrap-input100">
-					<span class="label-input100">Email</span>
-					<input class="input100" type="email" name="email" value="{{ old('email') }}">
+					<label class="label-input100" for="email">Email</label>
+					<input class="input100" id="email" type="email" name="email" value="{{ old('email') }}">
 					<span class="focus-input100"></span>
 				</div>
 
         <!-- phone -->
 				<div class="wrap-input100">
-					<span class="label-input100">Phone No</span>
-					<input class="input100" type="number" name="phone" value="{{ old('phone') }}">
+					<label class="label-input100" for="phone">Phone No</label>
+					<input class="input100" type="number" id="phone" name="phone" value="{{ old('phone') }}">
 					<span class="focus-input100"></span>
 				</div>
 
         <!-- nid -->
 				<div class="wrap-input100">
-					<span class="label-input100">NID Number ( As Per NID Card)</span>
-					<input class="input100" type="number" name="nid" value="{{ old('nid') }}">
+					<label class="label-input100" for="nid">NID Number ( As Per NID Card)</label>
+					<input class="input100" id="nid" type="text" name="nid" value="{{ old('nid') }}">
 					<span class="focus-input100"></span>
 				</div>
 
 					<!-- gender -->
 								<div class="wrap-input100 input100-select">
-									<span class="label-input100">Gender</span>
+									<label class="label-input100" for="gender">Gender</label>
 									<div>
-										<select class="selection-2" name="gender">
+										<select class="selection-2" id="gender" name="gender">
 											<option value=""></option>
 
 
@@ -144,9 +144,9 @@
 
 								<!-- information_source -->
 											<div class="wrap-input100 input100-select">
-												<span class="label-input100">Information Source</span>
+												<label class="label-input100" for="information_source">Information Source</label>
 												<div>
-													<select class="selection-2" name="information_source">
+													<select class="selection-2" id="information_source" name="information_source">
 														<option value=""></option>
 
 														@foreach ($information_sources as $information_source)
@@ -170,8 +170,8 @@
 
 				<!-- university -->
 				<div class="wrap-input100">
-					<span class="label-input100">Last Academic Institution</span>
-					<input class="input100" type="text" name="university" value="{{ old('university') }}">
+					<label class="label-input100" for="university">Last Academic Institution</label>
+					<input class="input100" type="text" id="university" name="university" value="{{ old('university') }}">
 					<span class="focus-input100"></span>
 				</div>
 
@@ -179,9 +179,9 @@
 
 <!-- educational_qualification -->
 				<div class="wrap-input100 input100-select">
-					<span class="label-input100">Academic Qualification</span>
+					<label class="label-input100" for="educational_qualification">Academic Qualification</label>
 					<div>
-						<select class="selection-2" name="educational_qualification">
+						<select class="selection-2" id="educational_qualification" name="educational_qualification">
 							<option value=""></option>
 
 
@@ -199,9 +199,9 @@
 
         <!-- working_status -->
         				<div class="wrap-input100 input100-select">
-        					<span class="label-input100">Current Working Status</span>
+        					<label class="label-input100" for="working_status">Current Working Status</label>
         					<div>
-        						<select class="selection-2" name="working_status">
+        						<select class="selection-2" id="working_status" name="working_status">
         							<option value=""></option>
 											@foreach ($working_statuses as $working_status)
                       	<option value="{{ $working_status->id }}">{{ $working_status->working_status }}</option>
@@ -215,17 +215,17 @@
 
 								<!-- Father's Name -->
 								<div class="wrap-input100" data-validate="Name is required">
-									<span class="label-input100">Father's Name</span>
-									<input class="input100" type="text" name="father_name" value="{{ old('father_name') }}">
+									<label class="label-input100" for="father_name">Father's Name</label>
+									<input class="input100" type="text" id="father_name" name="father_name" value="{{ old('father_name') }}">
 									<span class="focus-input100"></span>
 								</div>
 
 
 								<!-- Father's Occupations -->
 				        				<div class="wrap-input100 input100-select">
-				        					<span class="label-input100">Father's Occupations</span>
+				        					<label class="label-input100" for="father_occupation">Father's Occupations</label>
 				        					<div>
-				        						<select class="selection-2" name="father_occupation">
+				        						<select class="selection-2" name="father_occupation" id="father_occupation">
 				        							<option value=""></option>
 															@foreach ($father_working_statuses as $father_working_status)
 				                      	<option value="{{ $father_working_status->id }}">{{ $father_working_status->father_working_status }}</option>
@@ -243,17 +243,17 @@
 
 												<!-- Father's Name -->
 												<div class="wrap-input100" data-validate="Name is required">
-													<span class="label-input100">Mother's Name</span>
-													<input class="input100" type="text" name="mother_name" value="{{ old('father_name') }}">
+													<label class="label-input100" for="mother_name">Mother's Name</label>
+													<input class="input100" type="text" id="mother_name" name="mother_name" value="{{ old('father_name') }}">
 													<span class="focus-input100"></span>
 												</div>
 
 
 												<!-- Father's Occupations -->
 																<div class="wrap-input100 input100-select">
-																	<span class="label-input100">Mother's Occupations</span>
+																	<label class="label-input100" for="mother_occupation">Mother's Occupations</label>
 																	<div>
-																		<select class="selection-2" name="mother_occupation">
+																		<select class="selection-2" name="mother_occupation" id="mother_occupation">
 																			<option value=""></option>
 																			@foreach ($mother_working_statuses as $mother_working_status)
 																				<option value="{{ $mother_working_status->id }}">{{ $mother_working_status->mother_working_status }}</option>
@@ -267,24 +267,24 @@
 
 																        <!-- Alternative phone -->
 																				<div class="wrap-input100">
-																					<span class="label-input100">Alternative Number ( Own, Father, Mother)</span>
-																					<input class="input100" type="number" name="alt_phone" value="{{ old('alt_phone') }}">
+																					<label class="label-input100" for="alt_phone">Alternative Number ( Own, Father, Mother)</label>
+																					<input class="input100" id="alt_phone" type="text" name="alt_phone" value="{{ old('alt_phone') }}">
 																					<span class="focus-input100"></span>
 																				</div>
 
 																        <!-- How many siblings? -->
 																				<div class="wrap-input100">
-																					<span class="label-input100">How many siblings?</span>
-																					<input class="input100" type="number" name="siblings" value="{{ old('siblings') }}">
+																					<label class="label-input100" for="siblings">How many siblings?</label>
+																					<input class="input100" id="siblings" type="text" name="siblings" value="{{ old('siblings') }}">
 																					<span class="focus-input100"></span>
 																				</div>
 
 
                 <!-- have_seip -->
                         <div class="wrap-input100 input100-select">
-                          <span class="label-input100">Have done any SEIP training before?</span>
+                          <label class="label-input100" for="have_seip">Have done any SEIP training before?</label>
                           <div>
-                            <select class="selection-2" name="have_seip">
+                            <select class="selection-2" id="have_seip" name="have_seip">
                               <option value=""></option>
 
 
