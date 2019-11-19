@@ -134,16 +134,19 @@
 
                  <div class="row xs-mb-6">
                    @foreach ($trainings as $training)
-                     <div class="col-md-6 col-lg-4">
-                         <div class="info-card text-center" style="margin: 15px 0 !important;">
-                             <div class="info-card-header Info_headline">
-                                 <img src="{{ asset('uploads/training')}}/{{ $training->photo }}" alt="{{ $training->name }}">
-                             </div>
-                             <div class="info-card-body">
-                                 <h3 class="card-title">{{ $training->name }}</h3>
-                             </div>
-                         </div><!-- .info-card END -->
-                     </div>
+                       <div class="col-md-6 col-lg-4">
+                         <a href="{{ url('/training/single') }}/{{ $training->id }}">
+                           <div class="info-card text-center" style="margin: 15px 0 !important;">
+                               <div class="info-card-header Info_headline">
+                                   <img src="{{ asset('uploads/training')}}/{{ $training->photo }}" alt="{{ $training->name }}">
+                               </div>
+                               <div class="info-card-body">
+                                   <h3 class="card-title">{{ $training->name }}</h3>
+                               </div>
+                           </div><!-- .info-card END -->
+                         </a>
+                       </div>
+
                        @endforeach
                  </div>
                  <!-- .row END -->

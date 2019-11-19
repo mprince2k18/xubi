@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Route;
+
 use Illuminate\Http\Request;
 use Alert;
 use Image;
@@ -47,12 +49,24 @@ class TrainingController extends Controller
       return back();
     }
 
-
+// training_single
     public function training_single($training_id)
     {
-      $single_training_details = TrainingPage::find($training_id);
+      $single_training_details = TrainingPage::findOrFail($training_id);
       return view('training.single',compact('single_training_details'));
+
+      // 404 Error
+      if(!$single_training_details){
+            return abort(404);
+        }
+
+
     }
+
+
+
+
+
 
 
 

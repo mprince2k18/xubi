@@ -37,7 +37,7 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return void
      */
-  
+
 
     /**
      * Render an exception into an HTTP response.
