@@ -75,6 +75,10 @@
     .cta:active {
         transform: scale(0.96);
     }
+
+    .list-group-item {
+  border: none;
+  }
 </style>
 
 @endsection
@@ -108,39 +112,38 @@
 <!-- School Category Courses -->
 <section id="our-courses" class="our-courses pt90 pt650-992">
 
-    <div class="container">
+    {{-- <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="main-title text-center">
-                    <h4 class="mt0 text-uppercase">Xubisoft Training & Skill Development</h4>
+                    <h4 class="mt0 text-uppercase align-text-bottom">Xubisoft Training & Skill Development</h4>
                     <!-- <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p> -->
                 </div>
             </div>
-        </div>
+        </div> --}}
 
 
 
 
 
-        <div class="container">
-            <div class="row">
+    <div class="container">
+        <div class="row">
 
-                <div class="col-md-8">
-                    <ol class="list-group">
-                        <li class="list-group-item">Customized training package as per self/ organizational need.</li>
-                        <li class="list-group-item">Learning for career readiness and corporate grooming</li>
-                        <li class="list-group-item">Cost effective process reengineering for your bunch recruitment process.</li>
-                    </ol>
-                </div>
+            <div class="col-md-8">
+                <ol class="list-group">
+                    <li class="list-group-item"><i class="fas fa-dot-circle"></i> Customized training package as per self/ organizational need.</li>
+                    <li class="list-group-item"><i class="fas fa-dot-circle"></i> Learning for career readiness and corporate grooming</li>
+                    <li class="list-group-item"><i class="fas fa-dot-circle"></i> Cost effective process reengineering for your bunch recruitment process.</li>
+                </ol>
+            </div>
 
-                <div class="col-md-4">
-                    <img src="https://www.intactsoftware.com/wp-content/uploads/2019/04/End-User-Training_YELLOWNAVY.png" alt="">
-                </div>
-
+            <div class="col-md-4">
+                <img src="https://www.intactsoftware.com/wp-content/uploads/2019/04/End-User-Training_YELLOWNAVY.png" alt="">
             </div>
 
         </div>
 
+    </div>
 
 
 
@@ -149,18 +152,19 @@
 
 
 
-        <div class="row">
-            {{--
+
+    <div class="row">
+        {{--
           @forelse ($trainings as $training)
   				    <div class="col-sm-6 col-lg-4 text-center training_div">
       					<div class="img_hvr_box" style="background-image: url({{ asset('uploads/training') }}/{{ $training->photo }}">
-            <div class="overlay">
-                <div class="details">
-                    <span>{{ $training->name }}</span>
-                </div>
+        <div class="overlay">
+            <div class="details">
+                <span>{{ $training->name }}</span>
             </div>
         </div>
-        <a href="{{ url('/training/single') }}/{{ $training->id }}" class="btn btn-primary btn-gradient2">LEARN MORE</a>
+    </div>
+    <a href="{{ url('/training/single') }}/{{ $training->id }}" class="btn btn-primary btn-gradient2">LEARN MORE</a>
     </div>
     @empty
 
