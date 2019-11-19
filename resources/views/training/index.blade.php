@@ -77,8 +77,8 @@
     }
 
     .list-group-item {
-  border: none;
-  }
+        border: none;
+    }
 </style>
 
 @endsection
@@ -151,20 +151,21 @@
 
 
 
+    <div class="container">
 
 
-    <div class="row">
-        {{--
+        <div class="row">
+            {{--
           @forelse ($trainings as $training)
   				    <div class="col-sm-6 col-lg-4 text-center training_div">
       					<div class="img_hvr_box" style="background-image: url({{ asset('uploads/training') }}/{{ $training->photo }}">
-        <div class="overlay">
-            <div class="details">
-                <span>{{ $training->name }}</span>
+            <div class="overlay">
+                <div class="details">
+                    <span>{{ $training->name }}</span>
+                </div>
             </div>
         </div>
-    </div>
-    <a href="{{ url('/training/single') }}/{{ $training->id }}" class="btn btn-primary btn-gradient2">LEARN MORE</a>
+        <a href="{{ url('/training/single') }}/{{ $training->id }}" class="btn btn-primary btn-gradient2">LEARN MORE</a>
     </div>
     @empty
 
