@@ -201,8 +201,7 @@ Route::post('/admin/client/insert','ClientController@insert')->name('insert');
 
 // Training
 
-// Training_index
-Route::get('/training/single','TrainingPageController@single')->name('single');
+
 // Training_index
 Route::get('/admin/training','DashboardController@training_index')->name('training_index');
 // training_create
@@ -211,6 +210,12 @@ Route::post('/admin/training/create','TrainingController@create')->name('trainin
 Route::get('/admin/training/page','TrainingPageController@training_page')->name('training_page');
 // training_page
 Route::post('/admin/training/page/create','TrainingPageController@create')->name('training_page_create');
+// training_page
+Route::get('/admin/training/page/view','TrainingPageController@training_page_view')->name('training_page_view');
+// training_page_edit
+Route::get('/admin/training/page/edit/{trainingpage_id}','TrainingPageController@training_page_edit')->name('training_page_edit');
+// training_page_update
+Route::post('/admin/training/page/update','TrainingPageController@training_page_update')->name('training_page_update');
 
 
 // CAREER

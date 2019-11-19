@@ -424,6 +424,9 @@
 											<li>
 												<a href="{{ route('training_page') }}">Add Training Page</a>
 											</li>
+											<li>
+												<a href="{{ route('training_page_view') }}">View Training Page</a>
+											</li>
 										</ul>
 									</div>
 									<!-- dropdown-menu -->
