@@ -119,12 +119,37 @@ class TrainingPageController extends Controller
   function training_page_update(Request $request)
   {
 
-    // echo $request;
-    // print_r($request->all());
+
+    if($request->hasFile('thumbnail')){
+      if(TrainingPage::find($request->trainingpage_id)->thumbnail=='default.png'){
+        $photo_upload     = $request->thumbnail;
+        $photo_extension  =  $photo_upload->getClientOriginalExtension();
+        $photo_name       =  $request->thumbnail . "." . $photo_extension;
+        Image::make($photo_upload)->resize(825,458)->save(base_path('public/uploads/training_page/'.$photo_name),100);
+        TrainingPage::find($request->thumbnail)->update([
+        'thumbnail'          => $photo_name,
+      ]);
+      }
+
+
+      else {
+        //delete
+        $delete_photo=TrainingPage::find($request->trainingpage_id)->thumbnail;
+        unlink(base_path('public/uploads/training_page/'.$delete_photo));
+        //update
+        $photo_upload     = $request->thumbnail;
+        $photo_extension  =  $photo_upload->getClientOriginalExtension();
+        $photo_name       =  $request->trainingpage_id . "." . $photo_extension;
+        Image::make($photo_upload)->resize(825,458)->save(base_path('public/uploads/training_page/'.$photo_name),100);
+        TrainingPage::find($request->trainingpage_id)->update([
+        'thumbnail'          => $photo_name,
+      ]);
+      }
+    }
+
 
     TrainingPage::find($request->trainingpage_id)->update([
       'title'         =>$request->title,
-      'thumbnail'  =>$request->thumbnail,
       'course_description'   =>$request->course_description,
 
       'what_u_will_learn_1'=>$request->what_u_will_learn_1,
