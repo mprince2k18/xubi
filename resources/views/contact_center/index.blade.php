@@ -38,7 +38,98 @@
   padding: 20px 0;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
 
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: -webkit-linear-gradient(45deg, #2ecc71 0%, #70a1ff 100%);
+  background: linear-gradient(45deg, #2ecc71 0%,#70a1ff 100%);
+  border-radius: 15px;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  padding: 3em;
+  text-align: left;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  max-width: none;
+  width: calc(100% + 60px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+  transition: opacity 0.35s, transform 0.45s;
+  -webkit-transform: translate3d(-40px,0,0);
+  transform: translate3d(-40px,0,0);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  font-size: 17px;
+  background-color: transparent;
+  padding: 15% 0 10px 0;
+  text-align: left;
+}
+
+.hovereffect .overlay:before {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  border: 1px solid #fff;
+  content: '';
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+  transition: opacity 0.35s, transform 0.45s;
+  -webkit-transform: translate3d(-20px,0,0);
+  transform: translate3d(-20px,0,0);
+  border-radius: 15px;
+}
+
+.hovereffect a, .hovereffect p {
+  color: #FFF;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+  transition: opacity 0.35s, transform 0.45s;
+  -webkit-transform: translate3d(-10px,0,0);
+  transform: translate3d(-10px,0,0);
+}
+
+.hovereffect:hover img {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect:hover .overlay:before,
+.hovereffect:hover a, .hovereffect:hover p {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.contact-center-box{
+  padding-bottom: 20px;
+}
 
 </style>
 
@@ -79,7 +170,7 @@ Contact Center
       		<div class="container">
       			<div class="row">
 
-              @forelse ($trainings as $training)
+              {{-- @forelse ($trainings as $training)
       				    <div class="col-md-4 text-center">
                     <div class="box">
                       <div class="img_hvr_box" style="background-image: url({{ asset('uploads/training') }}/{{ $training->photo }}">
@@ -105,7 +196,89 @@ Contact Center
                     </div>
                   </div>
 
-              @endforelse
+              @endforelse --}}
+
+
+
+
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-center-box">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
+                          <div class="overlay">
+                              <h2 class="text-uppercase text-center">MCA Live Transper</h2>
+                              <p class="text-justify">Live transfer are always exclusive. We transfer you the merchants who are interested in obtaining funding for their business. SkyTech Solutions provides the most cost effective live transfer lead generation program.</p>
+                          </div>
+                  </div>
+              </div>
+
+
+
+
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-center-box">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
+                          <div class="overlay">
+                              <h2 class="text-uppercase text-center">MCA real time leads</h2>
+                              <p class="text-justify">Our Real time leads is the most popular and top leads we offer. This is a double verified quality leads with recording where merchant stated that they need funding asap and ready to fill out an application.</p>
+                          </div>
+                  </div>
+              </div>
+
+
+
+
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-center-box">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
+                          <div class="overlay">
+                              <h2 class="text-uppercase text-center">SOLAR APPOINTMENT SETTING</h2>
+                              <p class="text-justify">The solar power industry is rapidly growing, and with it comes the demand for quality solar appointment leads. SkyTech Solutions offers the best solar appointment setting services available on all the solar cities.</p>
+                          </div>
+                  </div>
+              </div>
+
+
+
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-center-box">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
+                          <div class="overlay">
+                              <h2 class="text-uppercase text-center">OUTBOUND SALES SERVICES</h2>
+                              <p class="text-justify">Since 2013, we have created a scalable and affordable international outbound call center solution that has helped our clients increase their return on investment (ROI).</p>
+                          </div>
+                  </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-center-box">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
+                          <div class="overlay">
+                              <h2 class="text-uppercase text-center">INBOUND CUSTOMER SUPPORT</h2>
+                              <p class="text-justify">We have highly skilled and experienced team to provide you 24/7 Inbound Customer Support. We have state of art infrastructure to provide best support to your customers.</p>
+                          </div>
+                  </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-center-box">
+                  <div class="hovereffect">
+                      <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
+                          <div class="overlay">
+                              <h2 class="text-uppercase text-center">DATA ENTRY SERVICES</h2>
+                              <p class="text-justify">TSkyTech outsourced data entry services helps you keep up with the flow of your business by allowing us to handle the tedious functions.</p>
+                          </div>
+                  </div>
+              </div>
+
+
+
+
+
+
+
+
+
 
 
       			</div>
@@ -157,5 +330,7 @@ Contact Center
 
       <!-- Custom script for all pages -->
       <script type="text/javascript" src="{{ asset('custom/js/training_script.js') }}"></script>
+
+
 
 @endsection
