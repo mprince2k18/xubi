@@ -16,7 +16,7 @@
     }
 
     .list-group {
-        padding-top: 55px;
+        padding-top: 35px;
     }
 
 
@@ -79,6 +79,11 @@
     .list-group-item {
         border: none;
     }
+
+    .training_img {
+        width: 55% !important;
+        margin: 20px;
+    }
 </style>
 
 @endsection
@@ -126,7 +131,7 @@
 
 
 
-    <div class="container">
+    <div class="container" style="border-style: groove;">
         <div class="row">
 
             <div class="col-md-8">
@@ -138,7 +143,7 @@
             </div>
 
             <div class="col-md-4">
-                <img src="https://www.intactsoftware.com/wp-content/uploads/2019/04/End-User-Training_YELLOWNAVY.png" alt="">
+                <img src="https://www.intactsoftware.com/wp-content/uploads/2019/04/End-User-Training_YELLOWNAVY.png" alt="" class="training_img">
             </div>
 
         </div>
@@ -202,7 +207,7 @@
                                 <h3 class="card-title">{{ $training->name }}</h3>
                             </div>
 
-                            <a href="#" class="cta">
+                            <a href="{{ url('/training/single') }}/{{ $training->id }}" class="cta">
                                 <span>more</span>
                                 <svg width="13px" height="10px" viewBox="0 0 13 10">
                                     <path d="M1,5 L11,5"></path>

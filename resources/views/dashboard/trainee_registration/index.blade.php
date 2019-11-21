@@ -63,7 +63,7 @@ All SEIP Trainee Registered List
                                             {{ $Seip_registered_trainee->relationBetweenSeip->seip_status }}
                                         </td>
                                         <td>
-                                            {{ $Seip_registered_trainee->created_at->format('d-m-Y') }}
+                                            {{ $Seip_registered_trainee->created_at->format('Y-m-d') }}
                                         </td>
                                         <td>
                                             {{-- {{ $Seip_registered_trainee->relationBetweenRemarks->remarks_status }} --}}
