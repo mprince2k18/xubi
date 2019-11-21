@@ -3,9 +3,11 @@
 @section('css')
 
 <!-- Main CSS -->
+
 <link href="{{ asset('custom/css/training_style.css') }}" rel="stylesheet">
 
 <style media="screen">
+    @import url('https://fonts.googleapis.com/css?family=Arima+Madurai&display=swap');
     .training_div {
         padding-bottom: 30px;
     }
@@ -84,6 +86,11 @@
         width: 55% !important;
         margin: 20px;
     }
+
+    .training_title {
+      font-family: 'Arima Madurai', cursive !important;
+      color: #000 !important;
+    }
 </style>
 
 @endsection
@@ -127,9 +134,13 @@
             </div>
         </div> --}}
 
-
-
-
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Xubisoft Training & Skill Development</h3>
+          </div>
+        </div>
+      </div>
 
     <div class="container" style="border-style: groove;">
         <div class="row">
@@ -197,14 +208,14 @@
 
             <div class="row xs-mb-6">
                 @foreach ($trainings as $training)
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-4 col-lg-4">
                     <a href="{{ url('/training/single') }}/{{ $training->id }}">
                         <div class="info-card text-center" style="margin: 15px 0 !important;">
                             <div class="info-card-header Info_headline">
                                 <img src="{{ asset('uploads/training')}}/{{ $training->photo }}" alt="{{ $training->name }}">
                             </div>
                             <div class="info-card-body">
-                                <h3 class="card-title">{{ $training->name }}</h3>
+                                <p class="card-title training_title">{{ $training->name }}</p>
                             </div>
 
                             <a href="{{ url('/training/single') }}/{{ $training->id }}" class="cta">
