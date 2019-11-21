@@ -1,84 +1,90 @@
 @extends('dashboard.trainee_registration.app')
 
 @section('title')
-  All SEIP Trainee Registered List
+All SEIP Trainee Registered List
 @endsection
 
 @section('css')
 <!-- Styles -->
-    <link href="{{ asset('custom/seip_reg/assets/css/lib/data-table/buttons.bootstrap.min.css') }}" rel="stylesheet" />
+<link href="{{ asset('custom/seip_reg/assets/css/lib/data-table/buttons.bootstrap.min.css') }}" rel="stylesheet" />
 @endsection
 
 @section('content')
 
 
 <div class="content-wrap">
-        <div class="main">
+    <div class="main">
 
-				<div class="main-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="card alert">
-								<div class="bootstrap-data-table-panel">
-									<table id="bootstrap-data-table-export" class="table table-striped table-bordered">
-										<thead>
-											<tr>
-												<th>ID</th>
-												<th>Quarter</th>
-												<th>Name</th>
-												<th>Email</th>
-												<th>Phone</th>
-												<th>University</th>
-												<th>NID</th>
-												{{-- <th>Rocket</th> --}}
-												<th>Education</th>
-												<th>Cureent Status</th>
-												<th>SEIP Status</th>
-												<th>Remarks</th>
-												<th>Action</th>
-											</tr>
-										</thead>
-										<tbody>
+        <div class="main-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card alert">
+                        <div class="bootstrap-data-table-panel">
+                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Quarter</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>University</th>
+                                        <th>NID</th>
+                                        <th>Gender</th>
+                                        {{-- <th>Rocket</th> --}}
+                                        <th>Education</th>
+                                        <th>Cureent Status</th>
+                                        <th>SEIP Status</th>
+                                        <th>Created At </th>
+                                        <th>Remarks</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                      @foreach ($Seip_registered_trainees as $Seip_registered_trainee)
-                        <tr>
-                          <td>{{ $Seip_registered_trainee->trainee_id }}</td>
-                          <td>{{ $Seip_registered_trainee->quarter_id }}</td>
-                          <td>{{ $Seip_registered_trainee->name }}</td>
-                          <td>{{ $Seip_registered_trainee->email }}</td>
-                          <td>{{ $Seip_registered_trainee->phone }}</td>
-                          <td>{{ $Seip_registered_trainee->university }}</td>
-                          <td>{{ $Seip_registered_trainee->nid }}</td>
-                          {{-- <td>{{ $Seip_registered_trainee->rocket_number }}</td> --}}
-                          <td>
-                            {{ $Seip_registered_trainee->relationBetweenEducation->education_qualification }}
-                          </td>
-                          <td>
-                            {{ $Seip_registered_trainee->relationBetweenWork->working_status }}
-                          </td>
-                          <td>
-                            {{ $Seip_registered_trainee->relationBetweenSeip->seip_status }}
-                          </td>
-                          <td>
-                            {{-- {{ $Seip_registered_trainee->relationBetweenRemarks->remarks_status }} --}}
-                            Bug Fixing
-                          </td>
-                          <td>
-                              <a href="{{ '/admin/trainee' }}/{{ $Seip_registered_trainee->id }}" class="btn btn-sm btn-primary">open</a>
-                          </td>
-                        </tr>
-                      @endforeach
+                                    @foreach ($Seip_registered_trainees as $Seip_registered_trainee)
+                                    <tr>
+                                        <td>{{ $Seip_registered_trainee->trainee_id }}</td>
+                                        <td>{{ $Seip_registered_trainee->quarter_id }}</td>
+                                        <td>{{ $Seip_registered_trainee->name }}</td>
+                                        <td>{{ $Seip_registered_trainee->email }}</td>
+                                        <td>{{ $Seip_registered_trainee->phone }}</td>
+                                        <td>{{ $Seip_registered_trainee->university }}</td>
+                                        <td>{{ $Seip_registered_trainee->nid }}</td>
+                                        <td>{{ $Seip_registered_trainee->relationBetweenGender->gender }}</td>
+                                        {{-- <td>{{ $Seip_registered_trainee->rocket_number }}</td> --}}
+                                        <td>
+                                            {{ $Seip_registered_trainee->relationBetweenEducation->education_qualification }}
+                                        </td>
+                                        <td>
+                                            {{ $Seip_registered_trainee->relationBetweenWork->working_status }}
+                                        </td>
+                                        <td>
+                                            {{ $Seip_registered_trainee->relationBetweenSeip->seip_status }}
+                                        </td>
+                                        <td>
+                                            {{ $Seip_registered_trainee->created_at->format('d-m-Y') }}
+                                        </td>
+                                        <td>
+                                            {{-- {{ $Seip_registered_trainee->relationBetweenRemarks->remarks_status }} --}}
+                                            Bug Fixing
+                                        </td>
+                                        <td>
+                                            <a href="{{ '/admin/trainee' }}/{{ $Seip_registered_trainee->id }}" class="btn btn-sm btn-primary">open</a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
 
-										</tbody>
-									</table>
-								</div>
-							</div><!-- /# card -->
-						</div><!-- /# column -->
-					</div><!-- /# row -->
-				</div><!-- /# main content -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><!-- /# card -->
+                </div><!-- /# column -->
+            </div><!-- /# row -->
+        </div><!-- /# main content -->
 
-        </div><!-- /# main -->
-    </div><!-- /# content wrap -->
+    </div><!-- /# main -->
+</div><!-- /# content wrap -->
 
 
 @endsection
