@@ -98,7 +98,7 @@ About
 
 
 
-
+{{--
 
 <!-- agency team section -->
 <section class="xs-section-padding gray-bg">
@@ -144,7 +144,7 @@ About
 
 		</div>
 </section>
-<!-- agency team section end -->
+<!-- agency team section end --> --}}
 
 <!-- agency office area section -->
 <section class="xs-section-padding agency-office-area" data-scrollax-parent="true">
