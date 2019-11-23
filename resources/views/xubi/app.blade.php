@@ -54,11 +54,8 @@
     #global-loader {
         position:fixed;
         z-index:50000;
-        /* background: url('https://static.wixstatic.com/media/a9c507_e7dfa5241a674cd88e4f79eea3ec1013~mv2.gif') no-repeat 50% 50% rgba(255, 255, 255); */
-        background: url('https://res.cloudinary.com/dvd2tat8q/image/upload/v1574480955/img/ezgif.com-video-to-gif_avrno1.gif');
+        background: url('https://static.wixstatic.com/media/a9c507_e7dfa5241a674cd88e4f79eea3ec1013~mv2.gif') no-repeat 50% 50% rgba(255, 255, 255);
         background-repeat: no-repeat;
-        background-size: cover;
-
         left:0;
         top:0;
         right:0;
