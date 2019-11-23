@@ -266,7 +266,7 @@ Contact Center
                       <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
                           <div class="overlay">
                               <h2 class="text-uppercase text-center">DATA ENTRY SERVICES</h2>
-                              <p class="text-justify">TSkyTech outsourced data entry services helps you keep up with the flow of your business by allowing us to handle the tedious functions.</p>
+                              <p class="text-justify">Xubisoft Ltd outsourced data entry services helps you keep up with the flow of your business by allowing us to handle the tedious functions.</p>
                           </div>
                   </div>
               </div>
