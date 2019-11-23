@@ -48,8 +48,8 @@
   position: relative;
   text-align: center;
   cursor: default;
-  background: -webkit-linear-gradient(45deg, #2ecc71 0%, #70a1ff 100%);
-  background: linear-gradient(45deg, #2ecc71 0%,#70a1ff 100%);
+  background: -webkit-linear-gradient(45deg, #2f3640 0%, #2f3542 100%);
+  background: linear-gradient(45deg, #2f3640 0%, #2f3542 100%);
   border-radius: 15px;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .hovereffect:hover img {
-  opacity: 0.6;
+  opacity: 0.1;
   filter: alpha(opacity=60);
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
@@ -203,9 +203,9 @@ Contact Center
 
               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-center-box">
                   <div class="hovereffect">
-                      <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
+                      <img class="img-responsive" src="https://image.flaticon.com/icons/svg/2255/2255067.svg" alt="">
                           <div class="overlay">
-                              <h2 class="text-uppercase text-center">MCA Live Transper</h2>
+                              <h2 class="text-uppercase text-center">MCA Live Transfer</h2>
                               <p class="text-justify">Live transfer are always exclusive. We transfer you the merchants who are interested in obtaining funding for their business. SkyTech Solutions provides the most cost effective live transfer lead generation program.</p>
                           </div>
                   </div>
@@ -216,7 +216,7 @@ Contact Center
 
               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-center-box">
                   <div class="hovereffect">
-                      <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
+                      <img class="img-responsive" src="https://image.flaticon.com/icons/svg/2255/2255073.svg" alt="">
                           <div class="overlay">
                               <h2 class="text-uppercase text-center">MCA real time leads</h2>
                               <p class="text-justify">Our Real time leads is the most popular and top leads we offer. This is a double verified quality leads with recording where merchant stated that they need funding asap and ready to fill out an application.</p>
@@ -229,7 +229,7 @@ Contact Center
 
               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-center-box">
                   <div class="hovereffect">
-                      <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
+                      <img class="img-responsive" src="https://image.flaticon.com/icons/svg/2258/2258891.svg" alt="">
                           <div class="overlay">
                               <h2 class="text-uppercase text-center">SOLAR APPOINTMENT SETTING</h2>
                               <p class="text-justify">The solar power industry is rapidly growing, and with it comes the demand for quality solar appointment leads. SkyTech Solutions offers the best solar appointment setting services available on all the solar cities.</p>
@@ -241,7 +241,7 @@ Contact Center
 
               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-center-box">
                   <div class="hovereffect">
-                      <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
+                      <img class="img-responsive" src="https://image.flaticon.com/icons/svg/1908/1908549.svg" alt="">
                           <div class="overlay">
                               <h2 class="text-uppercase text-center">OUTBOUND SALES SERVICES</h2>
                               <p class="text-justify">Since 2013, we have created a scalable and affordable international outbound call center solution that has helped our clients increase their return on investment (ROI).</p>
@@ -252,7 +252,7 @@ Contact Center
 
               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-center-box">
                   <div class="hovereffect">
-                      <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
+                      <img class="img-responsive" src="https://image.flaticon.com/icons/svg/1908/1908542.svg" alt="">
                           <div class="overlay">
                               <h2 class="text-uppercase text-center">INBOUND CUSTOMER SUPPORT</h2>
                               <p class="text-justify">We have highly skilled and experienced team to provide you 24/7 Inbound Customer Support. We have state of art infrastructure to provide best support to your customers.</p>
@@ -263,7 +263,7 @@ Contact Center
 
               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-center-box">
                   <div class="hovereffect">
-                      <img class="img-responsive" src="https://leadbalance.com/wp-content/uploads/2019/09/Insurance_Leads.png" alt="">
+                      <img class="img-responsive" src="https://image.flaticon.com/icons/svg/1871/1871092.svg" alt="">
                           <div class="overlay">
                               <h2 class="text-uppercase text-center">DATA ENTRY SERVICES</h2>
                               <p class="text-justify">Xubisoft Ltd outsourced data entry services helps you keep up with the flow of your business by allowing us to handle the tedious functions.</p>
