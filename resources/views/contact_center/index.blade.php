@@ -73,6 +73,7 @@
   transition: opacity 0.35s, transform 0.45s;
   -webkit-transform: translate3d(-40px,0,0);
   transform: translate3d(-40px,0,0);
+  opacity: 0.2;
 }
 
 .hovereffect h2 {
@@ -167,7 +168,11 @@ Contact Center
       <!-- School Category Courses -->
       	<section id="our-courses" class="our-courses our-courses-shape-2 pt90 pt650-992">
 
+
+
       		<div class="container">
+            <h2 class="text-uppercase">Manage Contact Center and Support</h2>
+            <hr>
       			<div class="row">
 
               {{-- @forelse ($trainings as $training)
@@ -303,12 +308,12 @@ Contact Center
                       <p class="text-left share-tech">We Create Fully Connected Systems So You Can Focus On Your Business</p>
                     </div>
 
-                    <div>
+                    {{-- <div>
                       <p class="text-left share-tech-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    </div>
+                    </div> --}}
 
                     <div class="pt-2">
-                      <a href="#" class="btn btn-primary btn-gradient3">GET STARTED</a>
+                      <a href="{{ route('contact') }}" class="btn btn-primary btn-gradient3">GET STARTED</a>
                     </div>
 
                   </div>

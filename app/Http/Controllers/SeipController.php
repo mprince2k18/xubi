@@ -134,10 +134,6 @@ class SeipController extends Controller
     }
 
 
-
-
-
-
     // trainee_index page
 
     function trainee_index()
