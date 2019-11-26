@@ -362,7 +362,7 @@
                             <div class="footer-widget">
                                 <div class="footer-logo-wraper">
                                     <a href="index.html" class="footer-logo">
-                                        <img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571742480/img/Xubisoft_Logo_l1ikli.png" alt="" draggable="false">
+                                        <img src="https://res.cloudinary.com/dvd2tat8q/image/upload/v1571742480/img/Xubisoft_Logo_l1ikli.png" alt="Xubisoft" draggable="false">
                                     </a>
                                 </div>
                             </div><!-- .footer-widget END -->

@@ -80,7 +80,7 @@ About
                         <span class="watermark-title">BEST</span>
                     </div>
 										<!-- .agency-section-title END -->
-                    <p>We work systematically to integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
+                    <p class="text-left">We work systematically to integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
                     <a href="{{ route('contact') }}" target="_blank" class="btn btn-primary">CONTATC US</a>
                 </div><!-- .agency-intro END -->
             </div>
