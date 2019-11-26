@@ -117,8 +117,8 @@ Xubisoft | IT Solution
                            <img src="{{ asset('uploads/info')}}/{{ $info->Info_banner }}" alt="{{ $info->Info_headline }}">
                        </div>
                        <div class="info-card-body">
-                           <h3 class="card-title">{{ $info->Info_headline }}</h3>
-                           <p>{{ $info->Info_message }}</p>
+                           <h3 class="card-title text-uppercase text-dark">{{ $info->Info_headline }}</h3>
+                           <p class="text-justify">{{ $info->Info_message }}</p>
                        </div>
                    </div><!-- .info-card END -->
                </div>
@@ -164,7 +164,7 @@ Xubisoft | IT Solution
                 <div class="col-md-6 align-self-center">
                     <div class="about-summary-content"> <i class="icon icon-agenda gradient-icon"></i>
                         <h2 class="section-title" style="font-family: 'Raleway', sans-serif;">Rather than hiding,<span class="gradient-title"><em>We stand in front of challenges</em></span></h2>
-                        <p class="text-left" style="font-size:18px;font-family: 'Raleway', sans-serif;">In the world of information technology, the concept of ‘today’ is abstract. its all about what is coming tomorrow. Anyone who is prepared for today only, will be obsolete tomorrow. we must be prepared for tomorrow to keep up today. We, Xubisoft, are a group of professionals banded together to take on the IT challenges of tomorrow. we have weathered storms and learnt to stand tall when it is rough and navigate our way through it. to us, no challenge is too big and no job is too small. We welcome you all to our world; together we will build a better, brighter and sustainable future for us all.</p>
+                        <p class="text-justify" style="font-size:18px;font-family: 'Raleway', sans-serif;">In the world of information technology, the concept of ‘today’ is abstract. its all about what is coming tomorrow. Anyone who is prepared for today only, will be obsolete tomorrow. we must be prepared for tomorrow to keep up today. We, Xubisoft, are a group of professionals banded together to take on the IT challenges of tomorrow. we have weathered storms and learnt to stand tall when it is rough and navigate our way through it. to us, no challenge is too big and no job is too small. We welcome you all to our world; together we will build a better, brighter and sustainable future for us all.</p>
                         <div class="btn-wraper">
                           {{-- <a href="#" class="btn btn-primary btn-gradient3">Get Started</a> --}}
                         </div>
@@ -200,7 +200,7 @@ Xubisoft | IT Solution
     <div class="swiper-slide">
         <div class="client-comments">
             <div class="client-massage">
-                <p class="text-left"> {{ $ceo->ceo_message }} </p>
+                <p class="text-justify"> {{ $ceo->ceo_message }} </p>
             </div>
             <div class="client-info clearfix">
                 <div class="client-avatar">
@@ -242,7 +242,7 @@ Xubisoft | IT Solution
                     <div class="success-summary">
                         <div class="success-summary-content"> <i class="icon icon-coins-2 gradient-icon"></i>
                             <h3 class="content-title font-weight-bold" style="font-family: 'Raleway', sans-serif;">Satisfied customers are our only customers</h3>
-                            <p class="text-left">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <p class="text-justify">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                         </div>
                         <div class="piechats-wraper clearfix">
                             <div class="single-piechart">
