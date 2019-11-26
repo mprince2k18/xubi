@@ -415,7 +415,7 @@
                                     </div>
                                 </form>
                                 <div class="copyright-text">
-                                    <p>Copyright 2018, <a href="https://themeforest.net/user/xpeedstudio/portfolio" target="_blank">XpeedStudio.</a>.</p>
+                                    <p>Copyright {{ now()->year }}, <a href="https://themeforest.net/user/xpeedstudio/portfolio" target="_blank">XpeedStudio.</a>.</p>
                                 </div>
                             </div><!-- .footer-widget END -->
                         </div>
