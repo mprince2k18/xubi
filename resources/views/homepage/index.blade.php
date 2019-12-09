@@ -429,7 +429,7 @@ Xubisoft | IT Solution
 
 
     <!-- agency media area section -->
-    <section class="xs-section-padding agency_media_section" data-scrollax-parent="true">
+    {{-- <section class="xs-section-padding agency_media_section" data-scrollax-parent="true">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
@@ -439,13 +439,13 @@ Xubisoft | IT Solution
                     </div>
                 </div>
             </div>
-            <!-- .row end -->
+
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog blog-style2">
-                        <div class="post-image"> <img src="{{ asset('xubisoft/assets/images/blog/agency-blog-4.jpg') }}" alt=""> </div>
+                        <div class="post-image"> <img src="{{ asset('xubisoft/assets/images/blog/agency-blog-4.jpg') }}" alt=""> </div> --}}
                         <!-- .post-image end -->
-                        <div class="post-body">
+                        {{-- <div class="post-body">
                             <div class="entry-header">
                                 <div class="entry-meta"> <a href="#" class="post-cat gradient-title"><i class="icon icon-folder"></i> WEB DEVELOPMENT</a> </div>
                                 <h4 class="entry-title">
@@ -458,14 +458,14 @@ Xubisoft | IT Solution
                                 </ul>
                             </div>
                         </div>
-                        <!-- .post-body end -->
-                    </div>
+
+                    </div> --}}
                     <!-- .single-blog post end -->
-                </div>
+                {{-- </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog blog-style2">
                         <div class="post-image"> <img src="{{ asset('xubisoft/assets/images/blog/agency-blog-5.jpg') }}" alt=""> </div>
-                        <!-- .post-image end -->
+
                         <div class="post-body">
                             <div class="entry-header">
                                 <div class="entry-meta"> <a href="#" class="post-cat gradient-title"><i class="icon icon-folder"></i> IOS APPS</a> </div>
@@ -479,10 +479,10 @@ Xubisoft | IT Solution
                                 </ul>
                             </div>
                         </div>
-                        <!-- .post-body end -->
-                    </div>
+
+                    </div> --}}
                     <!-- .single-blog post end -->
-                </div>
+                {{-- </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-post-list">
                         <div class="single-blog blog-style2">
@@ -492,7 +492,7 @@ Xubisoft | IT Solution
                                 <a href="blog-single.html">Italic Mountains, she had a last view back</a>
                             </h4> </div>
                         </div>
-                        <!-- .single-blog post end -->
+
                         <div class="single-blog blog-style2">
                             <div class="entry-header">
                                 <div class="entry-meta"> <a href="#" class="post-cat gradient-title"><i class="icon icon-folder"></i> FRONT END</a> </div>
@@ -500,7 +500,7 @@ Xubisoft | IT Solution
                                 <a href="blog-single.html">t is a country, in which roasted parts</a>
                             </h4> </div>
                         </div>
-                        <!-- .single-blog post end -->
+
                         <div class="single-blog blog-style2">
                             <div class="entry-header">
                                 <div class="entry-meta"> <a href="#" class="post-cat gradient-title"><i class="icon icon-folder"></i> IOS APPS</a> </div>
@@ -508,18 +508,22 @@ Xubisoft | IT Solution
                                 <a href="blog-single.html">The Big Oxmox advised her not to do so, because </a>
                             </h4> </div>
                         </div>
-                        <!-- .single-blog post end -->
+
                     </div>
                 </div>
             </div>
-            <!-- .row END -->
+
             <div class="btn-wraper text-center"> <a href="news-list.html" class="btn btn-primary btn-gradient3 icon-right">VIEW ALL</a> </div>
         </div>
-        <!-- .container END -->
-    </section>
+
+    </section> --}}
+
+
+
     <!-- agency media area section end -->
     <!-- call to action section -->
-    <section class="calltoaction-area" style="background-image: url({{ asset('xubisoft/assets/images/call-to-action.jpg') }};">
+
+    {{-- <section class="calltoaction-area" style="background-image: url({{ asset('xubisoft/assets/images/call-to-action.jpg') }};">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
@@ -529,14 +533,15 @@ Xubisoft | IT Solution
                     </div>
                 </div>
             </div>
-            <!-- .row END -->
+
         </div>
-        <!-- .container END -->
+
         <div class="xs-overlay gradient-bg"></div>
-    </section>
+    </section> --}}
     <!-- call to action section end -->
     <!-- agency review section -->
-    <section class="review-area xs-section-padding" style="background-image: url({{ asset('xubisoft/assets/images/map-bg.png') }}">
+
+    {{-- <section class="review-area xs-section-padding" style="background-image: url({{ asset('xubisoft/assets/images/map-bg.png') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
@@ -572,7 +577,6 @@ Xubisoft | IT Solution
                                 <p>System Engineer</p>
                             </div>
                         </div>
-                        <!-- ."review-content END -->
                         <div class="review-content text-center review-style2">
                             <div class="star-rating-wraper">
                                 <ul class="list-inline star-rating-list">
@@ -590,7 +594,6 @@ Xubisoft | IT Solution
                                 <p>Dental Assistant</p>
                             </div>
                         </div>
-                        <!-- ."review-content END -->
                         <div class="review-content text-center review-style2">
                             <div class="star-rating-wraper">
                                 <ul class="list-inline star-rating-list">
@@ -608,7 +611,6 @@ Xubisoft | IT Solution
                                 <p>Health Specialties Teacher, Postsecondary</p>
                             </div>
                         </div>
-                        <!-- ."review-content END -->
                         <div class="review-content text-center review-style2">
                             <div class="star-rating-wraper">
                                 <ul class="list-inline star-rating-list">
@@ -626,7 +628,6 @@ Xubisoft | IT Solution
                                 <p>Survey Researcher</p>
                             </div>
                         </div>
-                        <!-- ."review-content END -->
                         <div class="review-content text-center review-style2">
                             <div class="star-rating-wraper">
                                 <ul class="list-inline star-rating-list">
@@ -644,15 +645,14 @@ Xubisoft | IT Solution
                                 <p>General and Operations Manager</p>
                             </div>
                         </div>
-                        <!-- ."review-content END -->
                     </div>
-                    <!-- .review-slider END -->
                 </div>
             </div>
-            <!-- .row END -->
         </div>
-        <!-- .container END -->
-    </section>
+    </section> --}}
+
+
+
     <!-- agency review section end -->
     <!-- agency client slider area section -->
     <div class="agency_client_slider client-slider-style1">

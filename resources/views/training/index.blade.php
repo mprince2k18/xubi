@@ -7,7 +7,7 @@
 <link href="{{ asset('custom/css/training_style.css') }}" rel="stylesheet">
 
 <style media="screen">
-    @import url('https://fonts.googleapis.com/css?family=Arima+Madurai&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
     .training_div {
         padding-bottom: 30px;
     }
@@ -27,6 +27,7 @@
         margin: auto;
         padding: 19px 22px;
         transition: all 0.2s ease;
+        font-family: 'Ubuntu', sans-serif !important;
     }
 
     .cta:before {
@@ -36,7 +37,8 @@
         left: 0;
         display: block;
         border-radius: 28px;
-        background: rgba(255, 171, 157, 0.5);
+        background: #58AFEF;
+        /* background: rgba(255, 171, 157, 0.5); */
         width: 56px;
         height: 56px;
         transition: all 0.3s ease;
@@ -67,7 +69,8 @@
 
     .cta:hover:before {
         width: 100%;
-        background: #ffab9d;
+        background: #58AFEF;
+
     }
 
     .cta:hover svg {
@@ -88,7 +91,7 @@
     }
 
     .training_title {
-      font-family: 'Arima Madurai', cursive !important;
+      font-family: 'Ubuntu', sans-serif !important;
       color: #000 !important;
     }
 </style>
@@ -240,7 +243,9 @@
         <div class="growth-card-bg">
             <img src="{{ asset('xubisoft/assets/images/growth-bg.png') }}" alt="">
         </div>
-    </section> <!-- end growth grid section -->
+    </section>
+
+    <!-- end growth grid section -->
 
     <!-- Service block end -->
 

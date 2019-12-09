@@ -99,6 +99,11 @@
    }
 
 
+.widget-title{
+  color: #58AFEF !important;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+}
 
 
 

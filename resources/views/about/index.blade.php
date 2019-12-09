@@ -69,7 +69,7 @@ About
 </section><!-- end agency countdown section -->
 
 <!-- agency company intro section -->
-<section class="xs-section-padding">
+{{-- <section class="xs-section-padding">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -79,10 +79,9 @@ About
                         <h4 class="main-title">World’s best <em>Startup</em></h4>
                         <span class="watermark-title">BEST</span>
                     </div>
-										<!-- .agency-section-title END -->
                     <p class="text-left">We work systematically to integrate corporate responsibility in our core business and make our expertise available the benefit of the societies where we</p>
                     <a href="{{ route('contact') }}" target="_blank" class="btn btn-primary">CONTATC US</a>
-                </div><!-- .agency-intro END -->
+                </div>
             </div>
             <div class="col-lg-6">
                 <div class="agency-intro-video">
@@ -92,9 +91,10 @@ About
                     </a>
                 </div>
             </div>
-        </div><!-- .row END -->
-    </div><!-- .container END -->
-</section><!-- end agency company intro section -->
+        </div>
+    </div>
+</section> --}}
+<!-- end agency company intro section -->
 
 
 
@@ -190,7 +190,7 @@ About
 
 
 <!-- agency office area section -->
-<section class="xs-section-padding gray-bg agency-office-area" data-scrollax-parent="true">
+{{-- <section class="xs-section-padding gray-bg agency-office-area" data-scrollax-parent="true">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 mx-auto">
@@ -198,9 +198,9 @@ About
                     <h3 class="sub-title">OFFICE LIFE</h3>
                     <h4 class="main-title"><em>Environmet</em></h4>
                     <span class="watermark-title" data-scrollax="properties: { translateY: '-250px' }">OFFICE</span>
-                </div><!-- .agency-section-title END -->
+                </div>
             </div>
-        </div><!-- .row END -->
+        </div>
     </div>
     <div class="container-fluid px-0">
         <div class="agency-office-slider owl-carousel">
@@ -223,11 +223,12 @@ About
                 <img src="{{ asset('xubisoft/assets/images/office/office-3.jpg') }}" alt="">
             </div>
         </div>
-    </div><!-- .container END -->
-</section><!-- agency office area section end -->
+    </div>
+</section> --}}
+<!-- agency office area section end -->
 
 <!-- agency review area section -->
-<section class="xs-section-padding agency_review_section" data-scrollax-parent="true" style="background-image: url(assets/images/doodle-background/1.png)">
+{{-- <section class="xs-section-padding agency_review_section" data-scrollax-parent="true" style="background-image: url(assets/images/doodle-background/1.png)">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
@@ -251,7 +252,7 @@ About
                             <h5><em>Jenifar Linda</em></h5>
                             <p>HR Head</p>
                         </div>
-                    </div><!-- ."review-content END -->
+                    </div>
                     <div class="review-content text-center">
                         <i class="icon icon-quote watermark-icon"></i>
                         <p><em>I have read your assessment of yourself and I feel that, in many ways, I could have written it</em></p>
@@ -262,7 +263,7 @@ About
                             <h5><em>Loren Minda</em></h5>
                             <p>Program Head</p>
                         </div>
-                    </div><!-- ."review-content END -->
+                    </div>
                     <div class="review-content text-center">
                         <i class="icon icon-quote watermark-icon"></i>
                         <p><em>I have read your assessment of yourself and I feel that, in many ways, I could have written it</em></p>
@@ -273,12 +274,13 @@ About
                             <h5><em>Jhon Cris</em></h5>
                             <p>Design Head</p>
                         </div>
-                    </div><!-- ."review-content END -->
-                </div><!-- .review-slider END -->
+                    </div>
+                </div>
             </div>
-        </div><!-- .row END -->
-    </div><!-- .container END -->
-</section><!-- agency review area section end -->
+        </div>
+    </div>
+</section> --}}
+<!-- agency review area section end -->
 
 <!-- agency client slider area section -->
 <div class="agency_client_slider gray-bg">
